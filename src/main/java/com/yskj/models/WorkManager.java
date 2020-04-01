@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 workmanager@Datapublic class WorkManager extends BaseEntity {	private static final long serialVersionUID = 1L;	public WorkManager() {		super();	}	    //工作号ID    private String workID;    //用户ID    private String userID;    //    private Boolean status;}

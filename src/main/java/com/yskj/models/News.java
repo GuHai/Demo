@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 news@Datapublic class News extends BaseEntity {	private static final long serialVersionUID = 1L;	public News() {		super();	}	    //标题    private String title;    //内容    private String content;    //作者    private String author;    //描述    private String description;    private String publishTime;}

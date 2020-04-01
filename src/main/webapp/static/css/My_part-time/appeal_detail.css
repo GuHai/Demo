@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .head_info {
+  padding: 0.747rem;
+  font-size: 0.480rem;
+  width: 100%;
+  line-height: 0.747rem;
+  background-color: #fff;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .topList {
+  margin-top: 0.267rem;
+  background-color: #fff;
+  padding: 0 0.453rem;
+}
+.wrap .topList > li {
+  height: 1.067rem;
+  border-bottom: 1px solid #f2f5f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .topList > li > span:first-child {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .topList > li > span:last-child {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .topList > li > span:last-child > em {
+  font-style: normal;
+  margin-left: 0.213rem;
+}
+.wrap .topList > li > span:last-child.spanRed {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .btmList {
+  margin-top: 0.267rem;
+  background-color: #fff;
+  padding: 0 0.453rem;
+}
+.wrap .btmList .appeal_type {
+  height: 1.067rem;
+  border-bottom: 1px solid #f2f5f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .btmList .appeal_type > span:first-child {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .btmList .appeal_type > span:last-child {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .btmList .appeal_work > a {
+  width: 100%;
+  height: 1.067rem;
+  border-bottom: 1px solid #f2f5f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .btmList .appeal_work > a > span:first-child {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .btmList .appeal_work > a > span:last-child {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .btmList .appeal_work > a > span:last-child > i {
+  color: #999;
+  vertical-align: middle;
+}
+.wrap .btmList .appeal_origin {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.800rem;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .btmList .appeal_origin .appeal_origin_info {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.480rem;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .btmList .appeal_origin .pic_info {
+  margin-top: 0.267rem;
+  width: 2.987rem;
+  height: 2.987rem;
+  margin-bottom: 0.320rem;
+}

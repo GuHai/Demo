@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;import java.util.Date;//表名称 intentiondate@Datapublic class Intentiondate extends BaseEntity {	private static final long serialVersionUID = 1L;	public Intentiondate() {		super();	}	    //所属用户(关联user表主键)    private String userID;    //空闲时间    private String myDate;}

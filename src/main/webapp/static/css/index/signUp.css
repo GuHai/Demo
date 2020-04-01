@@ -1,0 +1,493 @@
+The compress option has been deprecated. We recommend you use a dedicated css minifier, for instance see less-plugin-clean-css. * {
+    padding: 0;
+    margin: 0
+}
+
+body, html {
+    background-color: #f2f5f7
+}
+
+.wrap .head {
+    padding: 0.45rem 0.2rem;
+    background-color: #fff;
+}
+
+.wrap .head .list-li {
+    height: 4rem;
+    /*background-color: #fff*/
+}
+
+.wrap .head .list-li .list-container {
+    box-shadow: 0px 0px 6px 2px #d7d7d7;
+    border-radius: 0.2rem;
+}
+
+.wrap .head .list-li .list-container .list-title {
+    display: flex;
+    justify-content: space-between;
+    height: 0.933rem;
+    width: 95%;
+    border-bottom: 1px solid #d7d7d7;
+    /* padding: 0 0.30rem; */
+    margin: 0 auto;
+}
+
+.wrap .head .list-li .list-container .list-title .title-content {
+    line-height: 0.933rem;
+    font-size: 0.4rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #333333
+}
+
+.wrap .head .list-li .list-container .list-title .titel-note {
+    font-size: 0.347rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 0.933rem;
+    letter-spacing: 0;
+    color: #666666
+}
+
+.wrap .head .list-li .list-container .list-content {
+    margin-top: 0.267rem;
+    padding: 0 0.30rem;
+}
+
+.wrap .head .list-li .list-container .list-content .content-tit {
+    float: left;
+    margin-right: 0.213rem;
+    margin-top: 0.16rem;
+    width: 1.333rem;
+    height: 1.333rem;
+    border-radius: 0.667rem;
+    background-color: #108ee9;
+    color: #fff;
+    text-align: center;
+    line-height: 1.333rem;
+    font-size: 0.4rem
+}
+
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg1 {
+    display: flex;
+    justify-content: space-between
+}
+
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg1 .content-msg1-lf {
+    font-size: 0.293rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #999999
+}
+
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg1 .content-msg1-lf > i {
+    margin-right: 5px;
+    font-size: 0.4rem;
+    color: #15bc83
+}
+
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg1 .content-msg1-rt {
+    font-size: 0.4rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #ff3b30
+}
+
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg2 {
+    display: flex;
+    justify-content: space-between
+}
+
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg2 .content-msg2-lf {
+    font-size: 0.293rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #999999
+}
+
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg2 .content-msg2-lf .line {
+    display: inline-block;
+    height: 0.267rem;
+    margin: 0 2px;
+    border-left: 1px solid #d7d7d7
+}
+
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg2 .content-msg2-rt {
+    font-size: 0.293rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #666666
+}
+
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg3 {
+    display: flex;
+    justify-content: space-between
+}
+
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg3 .content-msg3-lf {
+    font-size: 0.293rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #999999
+}
+
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg3 .content-msg3-rt {
+    font-size: 0.293rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #999999
+}
+
+.wrap .main .details {
+    padding: 0 0.453rem;
+    background-color: #fff;
+    overflow: hidden;
+    padding-bottom: 0.453rem;
+}
+
+.wrap .main .details .details-address {
+    padding-bottom: 0.267rem;
+    padding-top: 0.267rem;
+    margin-top: 0.267rem;
+    border-bottom: 1px solid #d2d5d7;
+    font-size: 0.347rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #333333
+}
+
+.wrap .main .details .details-address > span {
+    margin-left: 5px;
+    font-size: 0.32rem;
+    color: #999
+}
+
+.wrap .main .details .details-address > i {
+    float: right;
+    font-size: 0.427rem;
+    color: #108ee9
+}
+
+.wrap .main .details .details-workDate {
+    padding-bottom: 0.267rem;
+    padding-top: 0.267rem;
+    font-size: 0.347rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #333333;
+    overflow: hidden;
+}
+.wrap .main .details .details-workDate span.right{
+    float: right;
+    color: #ff3b30;
+    font-size: 0.3rem;
+}
+.wrap .main .details .details-resume {
+    display: block;
+    padding-bottom: 0.267rem;
+    padding-top: 0.267rem;
+    font-size: 0.347rem;
+    border-bottom: 1px solid #d2d5d7;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #333333;
+    border-top: 1px solid #d2d5d7;
+}
+
+.wrap .main .details .details-resume > .span_1 {
+    float: right;
+}
+
+.wrap .main .details .details-resume > .span_1 > .iconfont {
+    font-size: 0.4rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #999;
+}
+
+.wrap .main .details .details-resume > .span_1 > span {
+    margin-left: 0.267rem;
+    font-size: 0.32rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #999999;
+
+}
+
+.wrap .main .details .details-margin {
+    padding-bottom: 0.267rem;
+    padding-top: 0.267rem;
+    font-size: 0.347rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #333333
+}
+
+.wrap .main .details .details-margin > span {
+    margin-left: 0.267rem;
+    font-size: 0.32rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #999999;
+    float: right;
+}
+
+.wrap .main .details .details-margin > span > .money {
+    font-size: 0.4rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #ff3b30
+}
+
+.wrap .main .details .details-margin > span > .iconfont {
+    font-size: 0.4rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0;
+    color: #999
+}
+
+.wrap .main .confirm {
+    background-color: #fff;
+    border-top: 1px solid #d2d5d7;
+    width: 100%;
+    height: 1.333rem
+}
+
+.wrap .main .confirm .btn {
+    width: 9.093rem;
+    height: 0.933rem;
+    margin: 0.187rem 0.453rem;
+    border: none;
+    color: #fff;
+    font-size: 0.48rem;
+    background-color: #108ee9;
+    border-radius: 0.453rem
+}
+.wrap .main .btnBox{
+    margin-bottom:0;
+    margin-top: 0;
+    position:  fixed;
+    bottom:  0;
+    background: #fff;
+    height: 1.3rem;
+    line-height: 1.3rem;
+}
+.wrap .main .btnBox{
+    margin-bottom:0;
+    position:  fixed;
+    bottom:  0;
+    background: #fff;
+    height: 1.3rem;
+    line-height: 1.3rem;
+}
+.wrap .main .btnBox{
+    margin-bottom:0;
+    position:  fixed;
+    bottom:  0;
+    background: #fff;
+    height: 1.3rem;
+    line-height: 1.3rem;
+}
+.wrap .main .btnBox .btnsave{
+    /*width: 33.3%;*/
+    float: left;
+    text-align: center;
+}
+.wrap .main .btnBox .tips{
+    width: 30%;
+    border-top: 1px solid #d7d7d7;
+}
+.wrap .main .btnBox .tips a{
+    text-decoration: underline;
+    color: #999;
+}
+.wrap .main .btnBox .money{
+    width: 30%;
+    border-top: 1px solid #d7d7d7;
+}
+.wrap .main .btnBox .money span{
+    color: #108ee9;
+}
+.wrap .main .btnBox .money span.num{
+    font-size: 0.5rem;
+}
+.wrap .main .btnBox .enroll-btns{
+    background-color: #108ee9;
+    width: 40%;
+}
+.wrap .main .btnBox .enroll-btns a{
+    color: #fff;
+    font-size: 0.4rem;
+}
+.wrap .main .btnBox .tips-content{
+    display: none;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.3);
+}
+.wrap .main .btnBox .tips-content .main-content{
+    z-index: 999;
+    background-color: #fff;
+    opacity: 1;
+    margin: 4.0rem auto;
+    width: 80%;
+    height: 60%;
+    padding: 0 0.4rem;
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: left;
+}
+.wrap .main .btnBox .tips-content .main-content h1{
+    color: #333;
+    font-size: 0.5rem;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.wrap .main .btnBox .tips-content .main-content h2 {
+    font-size: 0.4rem;
+    color: #333;
+    line-height: 0.8rem;
+}
+.wrap .main .btnBox .tips-content .main-content h4 {
+    font-size: 0.32rem;
+    line-height: 0.48rem;
+    color: #999;
+}
+.wrap .main .btnBox .tips-content .main-content .closebtn {
+    display: block;
+    width: 100%;
+    height: 0.933rem;
+    background-color: #108ee9;
+    border-radius: 0.453rem;
+    color: #fff;
+    padding: 0;
+    border: none;
+    margin: 1.333rem auto;
+    text-align: center;
+    font-size: 0.4rem;
+    line-height: 0.933rem;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
+.wrap .main .foot_margin{
+    clear: both;
+    height: 0.2rem;
+    overflow: hidden;
+}
+.wrap .head .list-li .list-container .details-address {
+    height: 0.933rem;
+    line-height: 0.933rem;
+    width: 95%;
+    border-top: 1px solid #d7d7d7;
+    /* padding: 0 0.30rem; */
+    margin: 0 auto;
+}
+
+.wrap .head .list-li .list-container .details-address > span {
+    margin-left: 8px;
+    font-size: 0.32rem;
+    color: #999;
+    width: 75%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+
+.wrap .head .list-li .list-container .details-address > i {
+    float: right;
+    font-size: 0.427rem;
+    color: #108ee9
+}
+.wrap .main .details .select-content{
+    overflow: hidden;
+}
+.wrap .main .details .select-content .tipsmain{
+    float: right;
+    padding: 0.2rem 0;
+}
+.wrap .main .details .select-content .selectbtn{
+    position: relative;
+}
+.wrap .main .details .select-content .selectbtn .round{
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 100%;
+    display: inline-block;
+    position: absolute;
+    top: -1px;
+    left: -17px;
+}
+.wrap .main .details .select-content .selectable{
+    margin-right: 1.15rem;
+}
+.wrap .main .details .select-content .selectable .round{
+    background-color: #addeff;
+}
+.wrap .main .details .select-content .selected .round{
+    background-color: #108ee9;
+}
+.wrap .main .details .details-calendar .box .date>ul>.act_date {
+    background: #addeff;
+    border-radius: 50%;
+    color: #fff;
+}
+.wrap .main .details .details-calendar .box .date>ul>.select_date {
+    background: #108ee9;
+    border-radius: 50%;
+    color: #fff;
+}
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg3 .content-msg3-lf strong{
+    color: #ff3a2f;
+}
+.wrap .head .list-li .list-container .list-content .content-msg .content-msg3 .content-msg3-rt strong{
+    color: #15bc83;
+    font-size: 0.33rem;
+}
+.wrap .head .list-li .list-container .details-address > em{
+    color: #333;
+    width: 15%;
+    display: inline-block;
+    float: left;
+}
+@media screen and (max-width: 330px){
+    .wrap .head .list-li .list-container .details-address > em {
+        color: #333;
+        width: 18%;
+        display: inline-block;
+        float: left;
+    }
+    .wrap .head .list-li .list-container .details-address > span {
+        margin-left: 0;
+        font-size: 0.32rem;
+        color: #999;
+        width: 76%;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        float: left;
+    }
+}

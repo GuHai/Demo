@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yskj.dao.RedPacketReceiveDao">
+
+    <!-- 查询字段 -->
+    <sql id="columnList">
+	rpr.id,
+	 rpr.version, rpr.isDeleted, rpr.createBy, rpr.createTime, rpr.updateBy, rpr.updateTime, rpr.userId, rpr.redPacketId, rpr.money,rpr.isActivation,rpr.beenrecruitedID,rpr.beenrecruitedState
+</sql>
+
+
+    <!--通过id集合in查询-->
+    <sql id="inClause">
+        <if test="column!=null">
+            <if test="ids==null">
+                and 1=0
+            </if>
+            <if test="ids!=null">
+                <if test="ids.size>0">
+                    and rpr.${column} in
+                    <foreach item="items" index="index" collection="ids" open="(" separator="," close=")">
+                        #{items}
+                    </foreach>
+                </if>
+                <if test="ids.size==0">
+                    and 1=0
+                </if>
+            </if>
+        </if>
+    </sql>
+
+    <!-- 查询条件 -->
+    <sql id="whereClause">
+        where 1=1
+        <trim suffixOverrides=",">
+            <if test="condition.id != null">
+                and rpr.id = #{condition.id}
+            </if>
+            <if test="condition.version != null">and rpr.version = #{condition.version}</if>
+            <if test="condition.isDeleted != null">and rpr.isDeleted = #{condition.isDeleted}</if>
+            <if test="condition.createBy != null">and rpr.createBy = #{condition.createBy}</if>
+            <if test="condition.createTime != null">and rpr.createTime = #{condition.createTime}</if>
+            <if test="condition.updateBy != null">and rpr.updateBy = #{condition.updateBy}</if>
+            <if test="condition.updateTime != null">and rpr.updateTime = #{condition.updateTime}</if>
+            <if test="condition.userId != null">and rpr.userId = #{condition.userId}</if>
+            <if test="condition.redPacketId != null">and rpr.redPacketId = #{condition.redPacketId}</if>
+            <if test="condition.money != null">and rpr.money = #{condition.money}</if>
+            <if test="condition.isActivation != null">and rpr.isActivation = #{condition.isActivation}</if>
+            <if test="condition.beenrecruitedID != null">and rpr.beenrecruitedID = #{condition.beenrecruitedID}</if>
+            <if test="condition.beenrecruitedState != null">and rpr.beenrecruitedState = #{condition.beenrecruitedState}</if>
+
+        </trim>
+        <include refid="inClause"/>
+    </sql>
+
+    <!-- 模糊查询条件 -->
+    <sql id="whereLikeClause">
+        where 1=1
+        <trim suffixOverrides=",">
+            <if test="condition.id != null">
+                and rpr.id = #{condition.id}
+            </if>
+            <if test="condition.version != null">and UPPER(rpr.version) LIKE
+                UPPER(CONCAT(CONCAT('%',#{condition.version}),'%'))
+            </if>
+            <if test="condition.isDeleted != null">and UPPER(rpr.isDeleted) LIKE
+                UPPER(CONCAT(CONCAT('%',#{condition.isDeleted}),'%'))
+            </if>
+            <if test="condition.createBy != null">and UPPER(rpr.createBy) LIKE
+                UPPER(CONCAT(CONCAT('%',#{condition.createBy}),'%'))
+            </if>
+            <if test="condition.createTime != null">and UPPER(rpr.createTime) LIKE
+                UPPER(CONCAT(CONCAT('%',#{condition.createTime}),'%'))
+            </if>
+            <if test="condition.updateBy != null">and UPPER(rpr.updateBy) LIKE
+                UPPER(CONCAT(CONCAT('%',#{condition.updateBy}),'%'))
+            </if>
+            <if test="condition.updateTime != null">and UPPER(rpr.updateTime) LIKE
+                UPPER(CONCAT(CONCAT('%',#{condition.updateTime}),'%'))
+            </if>
+            <if test="condition.userId != null">and UPPER(rpr.userId) LIKE
+                UPPER(CONCAT(CONCAT('%',#{condition.userId}),'%'))
+            </if>
+            <if test="condition.redPacketId != null">and UPPER(rpr.redPacketId) LIKE
+                UPPER(CONCAT(CONCAT('%',#{condition.redPacketId}),'%'))
+            </if>
+            <if test="condition.money != null">and UPPER(rpr.money) LIKE
+                UPPER(CONCAT(CONCAT('%',#{condition.money}),'%'))
+            </if>
+            <if test="condition.isActivation != null">and UPPER(rpr.isActivation) LIKE
+                UPPER(CONCAT(CONCAT('%',#{condition.isActivation}),'%'))
+            </if>
+            <if test="condition.beenrecruitedID != null">and UPPER(rpr.beenrecruitedID) LIKE
+                UPPER(CONCAT(CONCAT('%',#{condition.beenrecruitedID}),'%'))
+            </if>
+            <if test="condition.beenrecruitedState != null">and UPPER(rpr.beenrecruitedState) LIKE
+                UPPER(CONCAT(CONCAT('%',#{condition.beenrecruitedState}),'%'))
+            </if>
+
+        </trim>
+        <include refid="inClause"/>
+    </sql>
+
+
+    <!-- 插入记录 -->
+    <insert id="add">
+  insert into red_packet_receive (id,version,isDeleted,createBy,createTime,updateBy,updateTime,userId,redPacketId,money,isActivation,beenrecruitedID,beenrecruitedState)
+  values(#{id,jdbcType=VARCHAR},#{version},#{isDeleted},#{createBy},#{createTime},#{updateBy},#{updateTime},#{userId},#{redPacketId},#{money},#{isActivation},#{beenrecruitedID},#{beenrecruitedState})
+</insert>
+
+
+    <!-- 修改记录，只修改只不为空的字段 -->
+    <update id="update">
+        update red_packet_receive set
+        <trim suffixOverrides=",">
+            <if test="version != null ">version=#{version},</if>
+            <if test="isDeleted != null ">isDeleted=#{isDeleted},</if>
+            <if test="createBy != null ">createBy=#{createBy},</if>
+            <if test="createTime != null ">createTime=#{createTime},</if>
+            <if test="updateBy != null ">updateBy=#{updateBy},</if>
+            <if test="updateTime != null ">updateTime=#{updateTime},</if>
+            <if test="userId != null ">userId=#{userId},</if>
+            <if test="redPacketId != null ">redPacketId=#{redPacketId},</if>
+            <if test="money != null ">money=#{money},</if>
+            <if test="isActivation != null ">isActivation=#{isActivation},</if>
+            <if test="beenrecruitedID != null ">beenrecruitedID=#{beenrecruitedID},</if>
+            <if test="beenrecruitedState != null ">beenrecruitedState=#{beenrecruitedState},</if>
+
+        </trim>
+        where id=#{id} and version = #{version}-1
+    </update>
+
+    <!-- 删除记录 -->
+    <delete id="del">
+	delete from red_packet_receive where id = #{id}
+</delete>
+
+    <!-- 根据id查询  -->
+    <select id="get" resultType="RedPacketReceive" parameterType="String">
+        select
+        <include refid="columnList"/>
+        from red_packet_receive rpr
+        where rpr.id = #{id} and rpr.isDeleted = false
+    </select>
+
+    <!-- 列表总数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from red_packet_receive rpr
+        <include refid="whereClause"/>
+    </select>
+
+    <!-- 查询page -->
+    <select id="findPage" resultType="RedPacketReceive">
+        select
+        <include refid="columnList"/>
+        from red_packet_receive rpr
+        <include refid="whereClause"/>
+        <if test="orderByClause!=null">${orderByClause}</if>
+    </select>
+
+    <!-- 模糊查询page -->
+    <select id="findLikePage" resultType="RedPacketReceive">
+        select
+        <include refid="columnList"/>
+        from red_packet_receive rpr
+        <include refid="whereLikeClause"/>
+        <if test="orderByClause!=null">${orderByClause}</if>
+    </select>
+
+    <!-- 查询列表list -->
+    <select id="findList" resultType="RedPacketReceive">
+        select
+        <include refid="columnList"/>
+        from red_packet_receive rpr
+        <include refid="whereClause"/>
+        <if test="orderByClause!=null">${orderByClause}</if>
+    </select>
+
+    <!--模糊查询list-->
+    <select id="findLikeList" resultType="RedPacketReceive">
+        select
+        <include refid="columnList"/>
+        from red_packet_receive rpr
+        <include refid="whereLikeClause"/>
+        <if test="orderByClause!=null">${orderByClause}</if>
+    </select>
+
+    <!-- 查询符合条件的数据的id集合 -->
+    <select id="findIds" resultType="String">
+        select rpr.${idsColumn}
+        from red_packet_receive rpr
+        <include refid="whereClause"/>
+        <if test="orderByClause!=null">${orderByClause}</if>
+    </select>
+
+    <!-- 查询符合模糊条件的数据的id集合 -->
+    <select id="findLikeIds" resultType="String">
+        select rpr.${idsColumn}
+        from red_packet_receive rpr
+        <include refid="whereLikeClause"/>
+        <if test="orderByClause!=null">${orderByClause}</if>
+    </select>
+
+    <!-- 获取一个对象通过非id -->
+    <select id="one" resultType="RedPacketReceive">
+        select
+        <include refid="columnList"/>
+        from red_packet_receive rpr
+        <include refid="whereClause"/>
+        <if test="orderByClause!=null">${orderByClause}</if>
+        limit 0,1
+    </select>
+
+    <!--如果你想返回一个HashMap 就实现这个select标签-->
+    <select id="queryHashMap" resultType="java.util.HashMap" parameterType="Object">
+    </select>
+
+    <!--红包表字段-->
+    <sql id="RedPacketAndUserColumnList">
+        rp.id,rp.version, rp.isDeleted, rp.createBy, rp.createTime, rp.updateBy, rp.updateTime, rp.forwardId, rp.remark, rp.residueCount, rp.oneOfMoney, rp.allOfMoney
+	    ,su.nickName AS 'forward.user.nickName',p.title AS 'forward.position.title',weixin.headimgurl AS 'forward.user.infoHeadImg'
+    </sql>
+    <!--根据用户id查询红包列表-->
+    <select id="findListByUserIdPage" resultType="RedPacket">
+        SELECT
+        <include refid="RedPacketAndUserColumnList"/>
+        FROM red_packet_receive rpr
+        LEFT JOIN red_packet rp ON rpr.redPacketId=rp.id
+        LEFT JOIN forward f ON rp.forwardId=f.id
+        LEFT JOIN position p ON f.positionId=p.id
+        LEFT JOIN shiro_user su ON su.id=f.userId
+        LEFT JOIN weixin weixin ON su.id=weixin.userID
+        WHERE rpr.userId=#{condition.userId} and rpr.isDeleted = FALSE AND rpr.beenrecruitedState = 4
+    </select>
+    
+</mapper>

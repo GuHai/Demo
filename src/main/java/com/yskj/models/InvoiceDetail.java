@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 invoicedetail@Datapublic class InvoiceDetail extends BaseEntity {	private static final long serialVersionUID = 1L;	public InvoiceDetail() {		super();	}	    //备注    private String mark;    //地址电话    private String addrphone;    //开户行账号    private String bankaccount;    //    private String userID;}

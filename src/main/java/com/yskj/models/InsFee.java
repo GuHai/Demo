@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;import java.math.BigDecimal;//表名称 insfee@Datapublic class InsFee extends BaseEntity {	private static final long serialVersionUID = 1L;	public InsFee() {		super();	}	    //类型 1天 2月 3年    private Integer type;    //所缴纳费用    private BigDecimal fee;    //保额    private BigDecimal insuredAmount;}

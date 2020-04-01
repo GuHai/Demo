@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 post_broker@Datapublic class Broker extends BaseEntity {	private static final long serialVersionUID = 1L;	public Broker() {		super();	}	    //经济人编码，用于二维码扫描    private String code;    //名称    private String name;    //经济人等级    private Integer level;    private Integer status ;}

@@ -1,0 +1,1590 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .nav {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 999;
+  border-bottom: 1px solid #EFEFF4;
+  /*-moz-box-shadow: 0px 2px 5px #ccc;*/
+  /*box-shadow: 0px 2px 5px #ccc;*/
+}
+.wrap .nav .navList {
+  height: 1.067rem;
+  background-color: #fff;
+}
+.wrap .nav .navList > li {
+  position: relative;
+  text-align: center;
+  line-height: 1.067rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .nav .navList .active {
+  color: #108EE9;
+}
+.wrap .nav .navList .line {
+  position: absolute;
+  top: 0.320rem;
+  right: 0;
+  height: 0.400rem;
+  border-left: 1px solid #EFEFF4;
+}
+.wrap .main {
+  margin-bottom: 1.600rem;
+  overflow-y: auto;
+}
+.wrap .main .workTody {
+  margin-top: 1.333rem;
+}
+.wrap .main .workTody .workList {
+  margin: 0.267rem 0.187rem 0 0.187rem;
+  height: 4.000rem;
+  background-color: #fff;
+}
+.wrap .main .workTody .workList .list-container {
+  padding: 0 0.267rem;
+  height: 100%;
+}
+.wrap .main .workTody .workList .list-container .list-title {
+  display: flex;
+  justify-content: space-between;
+  height: 0.933rem;
+  width: 100%;
+  border-bottom: 1px solid #EFEFF4;
+}
+.wrap .main .workTody .workList .list-container .list-title .title-content {
+  line-height: 0.933rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .workTody .workList .list-container .list-title .titel-note {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.933rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .workTody .workList .list-container .list-content {
+  display: block;
+  margin-top: 0.267rem;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-tit {
+  float: left;
+  margin-right: 0.213rem;
+  margin-top: 0.160rem;
+  width: 1.333rem;
+  height: 1.333rem;
+  border-radius: 0.667rem;
+  background-color: #108ee9;
+  color: #fff;
+  text-align: center;
+  line-height: 1.333rem;
+  font-size: 0.400rem;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg {
+  padding-left: 1.600rem;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg1 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg1 .content-msg1-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg1 .content-msg1-lf > i {
+  margin-right: 5px;
+  font-size: 0.320rem;
+  color: #15bc83;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg1 .content-msg1-rt {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg2 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg2 .content-msg2-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg2 .content-msg2-lf .line {
+  display: inline-block;
+  height: 0.267rem;
+  margin: 0 2px;
+  border-left: 1px solid #EFEFF4;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg2 .content-msg2-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg3 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg3 .content-msg3-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg3 .content-msg3-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg3 .content-msg3-rt i{
+  color: #15bc83;
+  font-style: normal;
+}
+.wrap .main .workTody .workList .list-container .list-content .content-msg .content-msg3 .content-msg3-rt > em {
+  font-style: normal;
+  color: #15bc83;
+}
+.wrap .main .workTody .workList .list-container .btnBox {
+  margin-top: 0.267rem;
+  text-align: right;
+}
+.wrap .main .workTody .workList .list-container .btnBox .btn_contact {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .workTody .workList .list-container .btnBox .btn_cancel {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .workTody .workList .list-container .btnBox .btn_think {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .workTody .workList .list-container .btnBox .btn_advisory {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .workTody .workList .list-container .btnBox .btn_status {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #ff3b30;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #ff3b30;
+}
+.wrap .main .workTody .workList .list-container .btnBox .btn_sign {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  color: #108EE9;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #108EE9;
+}
+.wrap .main .workTody .workList .list-container .btnBox .btn_signback {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  color: #108EE9;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #108EE9;
+}
+.wrap .main .partTime {
+  display: none;
+}
+.wrap .main .partTime .partTimeNav {
+  /*position: fixed;*/
+  /*top: 1.067rem;*/
+  height: 0.933rem;
+  background-color: #fff;
+  width: 100%;
+  padding: 0 0.320rem;
+  z-index: 666;
+  /*border-top: 1px solid #f2f5f7;*/
+  overflow: hidden;
+}
+.wrap .main .partTime .partTimeNav > li {
+  float: left;
+  width: 20%;
+  line-height: 0.933rem;
+  text-align: center;
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .partTime .partTimeNav .active {
+  border-bottom: 2px solid #108EE9;
+}
+.wrap .main .partTime .partTime_content {
+  /*margin-top: 1.267rem;*/
+}
+.wrap .main .partTime .partTime_content .allJob {
+  display: block;
+  margin-bottom: 0.933rem;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList {
+  margin: 0.267rem 0.187rem 0 0.187rem;
+  height: auto;
+  /*background-color: #fff;*/
+  overflow: hidden;
+  margin-top: 0;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList:first-child{
+  margin-top: 0.267rem;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container {
+  padding: 0 0.267rem;
+  height: auto;
+  margin-bottom: 0.267rem;
+  background: #fff;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-title {
+  display: flex;
+  justify-content: space-between;
+  height: 0.933rem;
+  width: 100%;
+  border-bottom: 1px solid #EFEFF4;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-title .title-content {
+  line-height: 0.933rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-title .titel-note {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.933rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content {
+  display: block;
+  margin-top: 0.267rem;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-tit {
+  float: left;
+  margin-right: 0.213rem;
+  margin-top: 0.160rem;
+  width: 1.333rem;
+  height: 1.333rem;
+  border-radius: 0.667rem;
+  background-color: #108ee9;
+  color: #fff;
+  text-align: center;
+  line-height: 1.333rem;
+  font-size: 0.400rem;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg {
+  padding-left: 1.600rem;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg1 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-lf > i {
+  margin-right: 5px;
+  font-size: 0.320rem;
+  color: #15bc83;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-rt {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg2 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-lf .line {
+  display: inline-block;
+  height: 0.267rem;
+  margin: 0 2px;
+  border-left: 1px solid #EFEFF4;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg3 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-rt > em {
+  font-style: normal;
+  color: #15bc83;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox {
+  text-align: right;
+  padding: 0.267rem 0;
+  overflow: hidden;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .btn_contact {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .btn_advisory {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .resignation {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .btn_cancel {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .btn_del {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .btn_status {
+   width: 1.733rem;
+   height: 0.613rem;
+   font-size: 0.293rem;
+   line-height: 0.613rem;
+   padding: 0;
+   margin: 0;
+   margin-right: 3px;
+   color: #ff3b30;
+   background-color: #fff;
+   border-radius: 5px;
+   border: solid 1px #ff3b30;
+ }
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .btn_sign {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  color: #108EE9;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #108EE9;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .btn_signback {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  color: #108EE9;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #108EE9;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .btn_think {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  color: #108EE9;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #108EE9;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .btn_edit{
+  width: 2.2rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #15bc83;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #15bc83;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .btn_inform {
+  width: 2.2rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #ff3b30;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #ff3b30;
+}
+.wrap .main .partTime .partTime_content .admit {
+  display: none;
+  margin-bottom: 0.933rem;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList {
+  margin: 0.267rem 0.187rem 0 0.187rem;
+  height: 4.000rem;
+  background-color: #fff;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container {
+  padding: 0 0.267rem;
+  height: 100%;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-title {
+  display: flex;
+  justify-content: space-between;
+  height: 0.933rem;
+  width: 100%;
+  border-bottom: 1px solid #EFEFF4;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-title .title-content {
+  line-height: 0.933rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-title .titel-note {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.933rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content {
+  display: block;
+  margin-top: 0.267rem;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-tit {
+  float: left;
+  margin-right: 0.213rem;
+  margin-top: 0.160rem;
+  width: 1.333rem;
+  height: 1.333rem;
+  border-radius: 0.667rem;
+  background-color: #108ee9;
+  color: #fff;
+  text-align: center;
+  line-height: 1.333rem;
+  font-size: 0.400rem;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg {
+  padding-left: 1.600rem;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg .content-msg1 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-lf > i {
+  margin-right: 5px;
+  font-size: 0.320rem;
+  color: #15bc83;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-rt {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg .content-msg2 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-lf .line {
+  display: inline-block;
+  height: 0.267rem;
+  margin: 0 2px;
+  border-left: 1px solid #EFEFF4;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg .content-msg3 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-rt > em {
+  font-style: normal;
+  color: #15bc83;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .btnBox {
+  margin-top: 0.267rem;
+  float: right;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .btnBox .btn_contact {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .btnBox .btn_advisory {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .btnBox .btn_think {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .btnBox .btn_cancel {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .btnBox .btn_sign {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  color: #108EE9;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #108EE9;
+}
+.wrap .main .partTime .partTime_content .admit .admit_workList .list-container .btnBox .btn_signback {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  color: #108EE9;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #108EE9;
+}
+.wrap .main .partTime .partTime_content .toPost {
+  display: none;
+  margin-bottom: 0.933rem;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList {
+  margin: 0.267rem 0.187rem 0 0.187rem;
+  height: 4.000rem;
+  background-color: #fff;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container {
+  padding: 0 0.267rem;
+  height: 100%;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-title {
+  display: flex;
+  justify-content: space-between;
+  height: 0.933rem;
+  width: 100%;
+  border-bottom: 1px solid #EFEFF4;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-title .title-content {
+  line-height: 0.933rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-title .titel-note {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.933rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content {
+  display: block;
+  margin-top: 0.267rem;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-tit {
+  float: left;
+  margin-right: 0.213rem;
+  margin-top: 0.160rem;
+  width: 1.333rem;
+  height: 1.333rem;
+  border-radius: 0.667rem;
+  background-color: #108ee9;
+  color: #fff;
+  text-align: center;
+  line-height: 1.333rem;
+  font-size: 0.400rem;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg {
+  padding-left: 1.600rem;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg .content-msg1 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-lf > i {
+  margin-right: 5px;
+  font-size: 0.320rem;
+  color: #15bc83;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-rt {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg .content-msg2 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-lf .line {
+  display: inline-block;
+  height: 0.267rem;
+  margin: 0 2px;
+  border-left: 1px solid #EFEFF4;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg .content-msg3 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-rt > em {
+  font-style: normal;
+  color: #15bc83;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .btnBox {
+  margin-top: 0.267rem;
+  float: right;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .btnBox .btn_contact {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .btnBox .btn_advisory {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .btnBox .btn_think {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .btnBox .btn_cancel{
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .btnBox .btn_status {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #ff3b30;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #ff3b30;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .btnBox .btn_sign {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  color: #108EE9;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #108EE9;
+}
+.wrap .main .partTime .partTime_content .toPost .toPost_workList .list-container .btnBox .btn_signback {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  color: #108EE9;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #108EE9;
+}
+.wrap .main .partTime .partTime_content .account {
+  display: none;
+  margin-bottom: 0.933rem;
+}
+.wrap .main .partTime .partTime_content .account .account_workList {
+  margin: 0.267rem 0.187rem 0 0.187rem;
+  height: 4.000rem;
+  background-color: #fff;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container {
+  padding: 0 0.267rem;
+  height: 100%;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-title {
+  display: flex;
+  justify-content: space-between;
+  height: 0.933rem;
+  width: 100%;
+  border-bottom: 1px solid #EFEFF4;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-title .title-content {
+  line-height: 0.933rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-title .titel-note {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.933rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content {
+  display: block;
+  margin-top: 0.267rem;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-tit {
+  float: left;
+  margin-right: 0.213rem;
+  margin-top: 0.160rem;
+  width: 1.333rem;
+  height: 1.333rem;
+  border-radius: 0.667rem;
+  background-color: #108ee9;
+  color: #fff;
+  text-align: center;
+  line-height: 1.333rem;
+  font-size: 0.400rem;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg {
+  padding-left: 1.600rem;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg .content-msg1 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-lf > i {
+  margin-right: 5px;
+  font-size: 0.320rem;
+  color: #15bc83;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-rt {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg .content-msg2 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-lf .line {
+  display: inline-block;
+  height: 0.267rem;
+  margin: 0 2px;
+  border-left: 1px solid #EFEFF4;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg .content-msg3 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-rt > em {
+  font-style: normal;
+  color: #15bc83;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .btnBox {
+  margin-top: 0.267rem;
+  float: right;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .btnBox .btn_contact {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .btnBox .btn_advisory {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .btnBox .btn_think {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .btnBox .btn_cancel {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666666;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .btnBox .btn_status {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  color: #ff3b30;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #ff3b30;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .btnBox .btn_sign {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  color: #108EE9;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #108EE9;
+}
+.wrap .main .partTime .partTime_content .account .account_workList .list-container .btnBox .btn_signback {
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  color: #108EE9;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #108EE9;
+}
+.wrap .main .partTime .partTime_content .assess {
+  display: none;
+  margin-bottom: 0.933rem;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList {
+  margin: 0.267rem 0.187rem 0 0.187rem;
+  height: 4.000rem;
+  background-color: #fff;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container {
+  padding: 0 0.267rem;
+  height: 100%;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-title {
+  display: flex;
+  justify-content: space-between;
+  height: 0.933rem;
+  width: 100%;
+  border-bottom: 1px solid #EFEFF4;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-title .title-content {
+  line-height: 0.933rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-title .titel-note {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.933rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content {
+  display: block;
+  margin-top: 0.267rem;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-tit {
+  float: left;
+  margin-right: 0.213rem;
+  margin-top: 0.160rem;
+  width: 1.333rem;
+  height: 1.333rem;
+  border-radius: 0.667rem;
+  background-color: #108ee9;
+  color: #fff;
+  text-align: center;
+  line-height: 1.333rem;
+  font-size: 0.400rem;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-msg {
+  padding-left: 1.600rem;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-msg .content-msg1 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-lf > i {
+  margin-right: 5px;
+  font-size: 0.320rem;
+  color: #15bc83;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-msg .content-msg1 .content-msg1-rt {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-msg .content-msg2 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-lf .line {
+  display: inline-block;
+  height: 0.267rem;
+  margin: 0 2px;
+  border-left: 1px solid #EFEFF4;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-msg .content-msg2 .content-msg2-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-msg .content-msg3 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .list-content .content-msg .content-msg3 .content-msg3-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .btnBox {
+  margin-top: 0.267rem;
+}
+.wrap .main .partTime .partTime_content .assess .assess_workList .list-container .btnBox .btn_account {
+  float: right;
+  width: 1.733rem;
+  height: 0.613rem;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  padding: 0;
+  margin: 0;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #666;
+}
+.wrap .main .workFilter {
+  margin-top: 1.333rem;
+  display: none;
+  padding: 0.267rem 0.453rem;
+}
+.wrap .main .workFilter .post_sort {
+  position: relative;
+}
+.wrap .main .workFilter .post_sort > h3 {
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .workFilter .post_sort .sortList {
+  margin-top: 0.267rem;
+}
+.wrap .main .workFilter .post_sort .sortList > li {
+  float: left;
+  padding: 0.160rem 0.347rem;
+  background-color: #fff;
+  font-size: 0.373rem;
+  border: 1px solid #fff;
+  text-align: center;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+  border-radius: 0.933rem;
+  margin-right: 0.400rem;
+  margin-bottom: 0.267rem;
+}
+.wrap .main .workFilter .post_sort .sortList .active {
+  border: 1px solid #108EE9;
+  color: #108EE9;
+}
+.wrap .main .workFilter .post_sort .toggle {
+  position: absolute;
+  right: 0px;
+  bottom: 0.400rem;
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .workFilter .post_sort .toggle > i {
+  vertical-align: middle;
+}
+.wrap .main .workFilter .region {
+  margin-top: 0.533rem;
+}
+.wrap .main .workFilter .region > h3 {
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .workFilter .region .regionList {
+  margin-top: 0.267rem;
+}
+.wrap .main .workFilter .region .regionList > li {
+  float: left;
+  padding: 0.160rem 0.347rem;
+  background-color: #fff;
+  font-size: 0.373rem;
+  border: 1px solid #fff;
+  text-align: center;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+  border-radius: 0.933rem;
+  margin-right: 0.400rem;
+  margin-bottom: 0.267rem;
+}
+.wrap .main .workFilter .region .regionList .active {
+  border: 1px solid #108EE9;
+  color: #108EE9;
+}
+.wrap .main .workFilter .leisure {
+  margin-top: 0.533rem;
+}
+.wrap .main .workFilter .leisure > h3 {
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+  margin-bottom: 0.267rem;
+}
+.wrap .main .workFilter .leisure .details-calendar .date > ol {
+  background-color: #fff;
+}
+.wrap .main .workFilter .leisure .details-calendar .date > ul {
+  background-color: #fff;
+}
+.wrap .main .workFilter .btnBox {
+  width: 100%;
+  margin-top: 0.533rem;
+  margin-bottom: 1.867rem;
+}
+.wrap .main .workFilter .btnBox .btn_save {
+  width: 9.093rem;
+  height: 1.067rem;
+  background-color: #108ee9;
+  border-radius: 0.533rem;
+  margin: auto;
+  padding: 0;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.067rem;
+  letter-spacing: 0px;
+  color: #ffffff;
+  border: none;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg4{
+  overflow: hidden;
+}
+.wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .list-content .content-msg .content-msg4 span{
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .content-msg .content-msg4 span .date1{
+  color: #108EE9;
+}
+.wrap .main .content-msg .content-msg4 span .date2{
+  color: #FF4036;
+}
+.wrap .main .partTime .partTime_content .list-container .list-content .content-msg3-rt i{
+  color: #4ccca0;
+  font-weight: bold;
+}
+
+.wrap .main .code_posi{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 0.267rem;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 0.453rem;
+}
+.wrap .main .code_posi .txt{
+  color: #ff3b30;
+  font-size: 0.373rem;
+  font-family: PingFang-SC-Medium;
+}
+.wrap .main .code_posi .icon-arrow-right{
+  color: #999;
+}
+.wrap .main .scan_posi{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 0.267rem;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 0.453rem;
+}
+.wrap .main .scan_posi .txt{
+  color: #108ee9;
+  font-size: 0.373rem;
+  font-family: PingFang-SC-Medium;
+}
+.wrap .main .scan_posi .icon-arrow-right{
+  color: #999;
+}
+.wrap .main .sign_posi {
+  background-color: #f3ebe4;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 0.453rem;
+  display: block;
+  width: 100%;
+}
+.wrap .main .sign_posi p{
+  font-size: 0.32rem;
+  color: #e8541e;
+}
+.wrap .main .sign_posi{
+  margin-bottom: 0.267rem;
+}
+@media screen and (max-width: 768px) {
+  .wrap .main .workTody .workList{
+    height: 4.000rem;
+  }
+}
+@media screen and (max-width: 330px) {
+  .wrap .main .workTody .workList{
+    height: 4.300rem;
+  }
+  .wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .btn_edit{
+    width: 2.75rem;
+  }
+  .wrap .main .partTime .partTime_content .allJob .allJob_workList .list-container .btnBox .btn_inform {
+    width: 2.75rem;
+  }
+}
+
+/*****************扫码已结算****************************/
+.wrap .scan_list_box .main{
+  position: relative;
+  overflow: hidden;
+}
+.wrap .scan_list_box .main{
+  position: relative;
+  overflow: hidden;
+}
+.wrap .scan_list_box .main .scan_list li{
+  background: #fff;
+  padding: 0.267rem 0.453rem;
+  margin-bottom: 0.267rem;
+}
+.wrap .scan_list_box .main .scan_list li .title{
+  color: #333;
+  font-size: 0.4rem;
+}
+.wrap .scan_list_box .main .scan_list li .time{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.267rem;
+}
+.wrap .scan_list_box .main .scan_list li .time .hour{
+  color: #999;
+  font-size: 0.347rem;
+}
+.wrap .scan_list_box .main .scan_list li .time .money{
+  color: #ff3b30;
+  font-size: 0.5rem;
+}

@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;import java.util.Date;//表名称 bankcard@Datapublic class Bankcard extends BaseEntity {	private static final long serialVersionUID = 1L;	public Bankcard() {		super();	}	    //银行卡卡号    private String cardNumber;    //所属人（关联基础信息表主键）    private String infoID;}

@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 dictstati@Datapublic class Dictstati extends BaseEntity {	private static final long serialVersionUID = 1L;	public Dictstati() {		super();	}	    //    private String dictID;    //    private Boolean status;}

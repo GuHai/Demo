@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 version@Datapublic class Version extends BaseEntity {	private static final long serialVersionUID = 1L;	public Version() {		super();	}	    //    private String title;    //    private String content;    //    private String description;    //    private String versionNo;    private String publishTime;}

@@ -1,0 +1,107 @@
+/*添加标签*/
+.tag_content_list .post-sort{height: auto;overflow: hidden;margin-bottom: 0.3rem;padding: 0 0.5rem;}
+.tag_content_list .post-sort h3{font-size: 0.4rem;font-weight: normal;font-stretch: normal;letter-spacing: 0px;color: #333333;text-align: left;padding: 0.35rem 0;}
+.tag_content_list .post-sort .chooselist li{float: left;position: relative; padding: 0.160rem 0.347rem;background-color: #fff;font-size: 0.373rem;border: 1px solid #d7d7d7;text-align: center;font-weight: normal;font-stretch: normal;letter-spacing: 0px;color: #666666;border-radius: 0.933rem;margin-right: 0.400rem;margin-bottom: 0.267rem;}
+.tag_content_list .post-sort .chooselist li input.tagcontent{/*width: 1.5rem;*/line-height: 0.58rem;margin-bottom: 0;border: 0;height: 0.58rem;padding: 0;font-size: 0.373rem;text-align: center;}
+.tag_content_list .nav_footer,.desc_content_list .nav_footer {width: 100%;height: auto;overflow: hidden;margin: 0 auto;display: -webkit-flex;display: flex;-webkit-justify-content: center;justify-content: center;text-align: center;position:  fixed;bottom: 0.5rem;padding: 0 0.5rem;}
+.tag_content_list .nav_footer > a,.desc_content_list .nav_footer > a {width: 100%;height: 0.933rem;border-radius: 0.667rem;font-size: 0.373rem;line-height: 0.933rem;margin-right: 3.5rem;}
+.tag_content_list .nav_footer a.resetting,.desc_content_list .nav_footer a.resetting{border: 1px solid #108ee9;color: #108ee9;margin-left: 0;background-color: #fff}
+.tag_content_list .nav_footer a.confirm,.desc_content_list .nav_footer a.confirm{background: #108ee9;color: #fff;margin-right: 0;}
+.tag_content_list .post-sort:first-child{margin-top: 0.5rem}
+.tag_content_list .post-sort .chooselist li .del {position: absolute;right: 0.2rem;top: 20%;}
+.tag_content_list .post-sort .chooselist.customlist li.btn1{color: #ff3b30;border: 1px solid #ff3b30;}
+.tag_content_list .post-sort .chooselist li.active{color: #108ee9;border: 1px solid #108ee9;}
+/*.tag_content_list .post-sort .chooselist.customlist li{border: 1px solid #108ee9}*/
+
+/*发布职位*/
+.wrap .postjob-content .cate .catebox {position: absolute;top: 30%;left: 10%;width: 80%;height: auto;overflow: hidden;background: #fff;border-radius: 6px;}
+.wrap .postjob-content form .mui-tips{padding-left: 0.45rem;}
+.wrap .postjob-content form .mui-tips .tips{color: #108ee9;font-size: 0.33rem;line-height: 1.5;}
+.wrap .postjob-content form .mui-tips .tips span{font-size: 0.4rem}
+.wrap .postjob-content .modal-mask {display: none;position: fixed;top: 0;left: 0; z-index: 99; width: 100%;height: 100%;background: rgba(0, 0, 0, .5);}
+.wrap .postjob-content .modal-container {padding: 0 0.453rem;position: absolute;top: 12%;height: auto;overflow: hidden;border-radius: 6px;}
+.wrap .postjob-content .modal-container .details-calendar{padding: 0}
+.wrap .postjob-content .modal-container .details-calendar .date>ul{background: #fff;}
+.wrap .postjob-content .modal-container .details-calendar .date>ul>.act_wk{color: #000;}
+.wrap .postjob-content .modal-container .details-calendar .date>ul>.act_date{color:#fff;}
+.wrap .postjob-content .modal-container .details-calendar .data-head{border-top-left-radius: 0.3rem;border-top-right-radius: 0.3rem;}
+.wrap .postjob-content .modal-footer {border-top: .01rem solid #d0cfcf;text-align: center;width: 100%;padding: 0.5rem 0;background-color: #fff;}
+.wrap .postjob-content .modal-footer .tips{color:#108ee9;font-size: 0.375rem;text-align:  left;padding-left: 0.5rem;padding-bottom: 0.3rem;}
+.wrap .postjob-content .modal-footer .modal-default-button {color: #108ee9;text-align:  right;width:  100%;display:  block;padding-right: 0.5rem;font-size: 0.4rem;font-weight:  bold;}
+.wrap .postjob-content .mui-input-row label ~ input{font-size: 0.373rem;color: #666;text-align: left;}
+.wrap .postjob-content .mui-input-group .mui-input-row .input-money{float: left;width: 50%;}
+.wrap .postjob-content .mui-input-group .mui-input-row .input-money input{text-align: left;padding-left: 0;font-size: 0.373rem;}
+.wrap .postjob-content .mui-input-group .mui-input-row .date-time{float: left;}
+.wrap .postjob-content .mui-input-group .mui-input-row .date-time select{color: #666;font-size: 0.373rem;height: 40px;}
+.wrap .postjob-content .mui-input-group .mui-input-row .date-time i{position: absolute;right: 13px;top: 10px;color: #666;}
+.wrap .postjob-content .btnBox{margin-bottom:0;margin-top: 0;position:  fixed;bottom:  0;background: #fff;height: 1.3rem;line-height: 1.3rem;}
+.wrap .postjob-content .btnBox{margin-bottom:0;position:  fixed;bottom:  0;background: #fff;height: 1.3rem;line-height: 1.3rem;}
+.wrap .postjob-content .btnBox{margin-bottom:0;position:  fixed;bottom:  0;background: #fff;height: 1.3rem;line-height: 1.3rem;}
+.wrap .postjob-content .btnBox .btnsave{/*width: 33.3%;*/float: left;text-align: center;}
+.wrap .postjob-content .btnBox .tips{width: 30%;}
+.wrap .postjob-content .btnBox .tips a{text-decoration: underline;color: #999;}
+.wrap .postjob-content .btnBox .money{width: 30%;}
+.wrap .postjob-content .btnBox .money span{color: #108ee9;}
+.wrap .postjob-content .btnBox .money span.num{font-size: 0.5rem;}
+.wrap .postjob-content .btnBox .enroll-btns{background-color: #108ee9;width: 40%;}
+.wrap .postjob-content .btnBox .enroll-btns a{color: #fff;font-size: 0.4rem;}
+/*.wrap .postjob-content .btnBox .tips-content{display:none;position: fixed;z-index: 998;top: 0;right: 0;bottom: 0;left: 0;background-color: rgba(0,0,0,.3);overflow:  hidden;height: 100%;}*/
+/*.wrap .postjob-content .btnBox .tips-content .main-content{z-index: 999;background-color: #fff;opacity: 1;margin: 4.0rem auto;width: 80%;height: 60%;padding: 0 0.4rem;border-radius: 5px;overflow-y: auto;overflow-x: hidden;text-align: left;overflow:  hidden;}*/
+.wrap .postjob-content .btnBox .tips-content .main-content h1{color: #333;font-size: 0.5rem;text-align: center;margin: 0.5rem 0;}
+.wrap .postjob-content .btnBox .tips-content .main-content h2 {font-size: 0.4rem;color: #333;line-height: 0.8rem;}
+.wrap .postjob-content .btnBox .tips-content .main-content h4 {font-size: 0.32rem;line-height: 0.48rem;color: #999;}
+.wrap .postjob-content .btnBox .tips-content .main-content .closebtn {display: block;width: 100%;height: 0.933rem;background-color: #108ee9;border-radius: 0.453rem;color: #fff;padding: 0;border: none;margin: 1.333rem auto;text-align: center;font-size: 0.4rem;line-height: 0.933rem;letter-spacing: 0px;}
+.wrap .postjob-content .nav-select {background-color: #fff;overflow-y: auto;height: 440px;padding: 0.453rem 0.453rem 0 0.453rem;width: 100%;}
+.wrap .postjob-content .cate-content .nav-select li {padding: 0 0.400rem;border: 1px solid #d7d7d7;text-align: left;height: 0.8rem;line-height: 0.8rem;font-size: 0.400rem;font-weight: normal;font-stretch: normal;letter-spacing: 0px;color: #666666;width: 29.65%;display:  flex;display: -webkit-flex; /* Safari */text-align:  center;justify-content: space-around;align-items: center;float:  left;margin: 0 0.5rem 0.35rem 0;border-radius: 0.5rem;}
+.wrap .postjob-content .mui-input-div .release{color: #666;}
+.wrap .postjob-content .cate-content{display: none;}
+.wrap .postjob-content .details-calendar .date>ul>.act_date{background: #108ee9;}
+.wrap .postjob-content .mui-input-row label i{color: #ff3b30;}
+.wrap .postjob-content .mui-input-div input::-webkit-input-placeholder{color: #666;}
+.wrap .postjob-content .mui-input-row .mui-input-div.release a{color: #666;}
+.wrap .postjob-content .mui-input-row .mui-input-div .placeaddr,.wrap .postjob-content .mui-input-row .mui-input-div .gatherAddr{display: inline-block;white-space:  nowrap;text-overflow:  ellipsis;overflow:  hidden;width: 90%;float:  left;}
+.wrap .postjob-content .mui-input-row .mui-input-div .icon-fujin{display: inline-block;width: 10%;text-align: center;margin: 0 auto;}
+.wrap .postjob-content .cate-content .nav-select li:nth-child(3n+3){margin-right: 0;}
+/*.wrap .postjob-content .btnBox .tips-content .main-content .desc-content{!*height: 85%;overflow:  hidden;overflow-y: scroll; -webkit-overflow-scrolling:touch;*!margin-bottom: 1.8rem;}*/
+/*.wrap .postjob-content .btnBox .tips-content .main-content .comfirmbtns{position: fixed;bottom: 117px;width: 70%;background:  #fff;display:  block;}*/
+/*.wrap .postjob-content .mui-input-group .mui-input-row{height: auto}*/
+.wrap .postjob-content .btnBox .tips-content .main-content .close{position: absolute;top: -0.3rem;color: #666;right: 0rem;}
+.wrap .postjob-content .btnBox .tips-content .main-content span{font-size: 0.60rem;}
+
+.wrap .postjob-content .btnBox .tips-content .main-content{position:fixed;width: 80%;height:auto;border-radius:4px;background-color:#fff;left: 50%;margin-left: -40%;top: 10%;}
+.wrap .postjob-content .btnBox .tips-content .main-content .desc-content{min-height:350px;max-height:500px;height:350px;display:block;overflow-y:scroll;text-align:  left;padding:  0 0.4rem;}
+.wrap .postjob-content .btnBox .tips-content .main-content .comfirmbtns{display:block;margin:10px auto;width:240px;border-radius: 22px;background-color: #108ee9;color:#fff;text-align:center;cursor:pointer;}
+.wrap .postjob-content .btnBox .tips-content{position:fixed;top:0;left:0;z-index:9;display:none;width:100%;height:100%;background-color:rgba(1,1,1,.5)}
+.wrap .mui-input-group .mui-input-row:after{background: none}
+.wrap .cate .catebox .cateT{position: relative;width: 100%;padding: 0 1.067rem;}
+
+/*职位描述*/
+.desc_content_list .desc_content_main{}
+.desc_content_list .desc_content_main .textarea{border: 0;padding: 0.5rem;font-size: 0.37rem;height: 12rem;color: #999;}
+
+
+/*底部*/
+.foot-margin{content: '';clear: both;height: 1.3rem;}
+.mui-hbutton {width: 100%;height: 1.3rem;line-height: 1.3rem;overflow: hidden;display: -webkit-flex;display: flex;-webkit-justify-content: center;justify-content: center;text-align: center;position:  fixed;bottom: 0;background: #fff;border-top: 1px solid #d7d7d7;}
+.mui-hbutton > a {width: 100%;font-size: 0.473rem;color: #fff;}
+.mui-hbutton > a.mui-hbut-on {background: #f2f5f7;border: 1px solid #108ee9;color: #108ee9;}
+.mui-hbutton > a.save_issue{width: 55%;background: #fff;color: #666;}
+.mui-hbutton > a.issue{width: 45%;background: #108ee9;color: #fff;}
+
+.wrap .postjob-content .choose_foot{position: fixed;z-index: 1;bottom: 0;width: 100%;text-align: center;height: 1.6rem;background-color: #fff;padding: 0.3rem 0.453rem;border-top: 1px solid #f2f5f7;display:  flex;justify-content:  space-between;}
+.wrap .postjob-content .choose_foot a{display: flex;justify-content: space-between;background: #108ee9;color:  #fff;border-radius: 0.8rem;width:  50%;margin-right:  10px;}
+.wrap .postjob-content .choose_foot > a .head-lf_span {font-size: 0.457rem;font-weight: normal;font-stretch: normal;line-height: 1rem;letter-spacing: 0px;color: #fff;display:  inline-block;width: 100%;height: 1rem;text-align:  center;}
+.wrap .postjob-content .choose_foot > a .head-rt_span {color: #b4b4b4;font-size: 0.480rem;line-height: 1.300rem;width:  10%;display: inline-block;text-align: right;}
+.wrap .postjob-content .choose_foot a:last-child{margin-right:0}
+
+.release_work_number{display:none;position: fixed;top: 0;left: 0;z-index: 9999;width: 100%;height: 100%;background: rgba(0,0,0,.5);}
+.release_work_number .work-number-list{background: #fff;position: absolute;bottom: 0;left: 0;right: 0;padding: 0.267rem 0.453rem;}
+.release_work_number .work-number-list h3{font-size: 0.347rem;color: #999;}
+.release_work_number .work-number-list li{overflow:hidden;font-size: 0.4rem;color: #333;display: flex;justify-content: space-between;border-bottom: 1px solid #d7d7d7;height: 1.2rem;line-height: 1.2rem;}
+.release_work_number .work-number-list .mui-input-row label{padding: 0!important;width: auto;line-height: 1.2rem;}
+.release_work_number .work-number-list .mui-checkbox input[type=checkbox]{position: static;width: auto;}
+.release_work_number .work-number-list li .txt{color: #999;font-size: 0.32rem;}
+.release_work_number .workbox{margin-top: 0.4rem;text-align: center;}
+.release_work_number .workbox .tips{font-size: 12px;color: #999;}
+.release_work_number .workbox .Releasebtns{background: #108ee9;color: #fff;font-size: 0.48rem;border-radius: 0.5rem;text-align: center;width: 100%;display: block;height: 1.067rem;line-height: 1.067rem;}
+.release_work_number .work-number-list .mui-checkbox input[type=checkbox][disabled]:before {opacity: 1;}

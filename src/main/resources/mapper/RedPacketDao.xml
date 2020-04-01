@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yskj.dao.RedPacketDao" >
+
+<!-- 查询字段 -->
+<sql id="columnList" >
+	rp.id,
+	 rp.version, rp.isDeleted, rp.createBy, rp.createTime, rp.updateBy, rp.updateTime, rp.forwardId, rp.remark, rp.residueCount, rp.oneOfMoney, rp.allOfMoney,rp.state,rp.orderNumber,rp.positionID
+</sql>
+
+
+<!--通过id集合in查询-->
+<sql id="inClause">
+    <if test="column!=null">
+        <if test="ids==null">
+            and 1=0
+        </if>
+        <if test="ids!=null">
+            <if test="ids.size>0">
+                and  rp.${column} in
+                <foreach item="items" index="index" collection="ids" open="(" separator="," close=")">
+                    #{items}
+                </foreach>
+            </if>
+            <if test="ids.size==0">
+                and 1=0
+            </if>
+        </if>
+    </if>
+</sql>
+
+<!-- 查询条件 -->
+<sql id="whereClause">
+where 1=1
+<trim  suffixOverrides="," >
+	<if test="condition.id != null" >
+	    and rp.id = #{condition.id}
+	</if>
+	<if test="condition.version != null" >and  rp.version = #{condition.version}</if>
+<if test="condition.isDeleted != null" >and  rp.isDeleted = #{condition.isDeleted}</if>
+<if test="condition.createBy != null" >and  rp.createBy = #{condition.createBy}</if>
+<if test="condition.createTime != null" >and  rp.createTime = #{condition.createTime}</if>
+<if test="condition.updateBy != null" >and  rp.updateBy = #{condition.updateBy}</if>
+<if test="condition.updateTime != null" >and  rp.updateTime = #{condition.updateTime}</if>
+<if test="condition.forwardId != null" >and  rp.forwardId = #{condition.forwardId}</if>
+<if test="condition.remark != null" >and  rp.remark = #{condition.remark}</if>
+<if test="condition.residueCount != null" >and  rp.residueCount = #{condition.residueCount}</if>
+<if test="condition.oneOfMoney != null" >and  rp.oneOfMoney = #{condition.oneOfMoney}</if>
+<if test="condition.allOfMoney != null" >and  rp.allOfMoney = #{condition.allOfMoney}</if>
+<if test="condition.state != null" >and  rp.state = #{condition.state}</if>
+<if test="condition.orderNumber != null" >and  rp.orderNumber = #{condition.orderNumber}</if>
+<if test="condition.positionID != null" >and  rp.positionID = #{condition.positionID}</if>
+
+</trim>
+<include refid="inClause"/>
+</sql>
+
+<!-- 模糊查询条件 -->
+<sql id="whereLikeClause">
+where 1=1
+<trim  suffixOverrides="," >
+	<if test="condition.id != null" >
+	    and rp.id = #{condition.id}
+	</if>													 		
+	<if test="condition.version != null" >and  UPPER(rp.version) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.version}),'%'))</if>
+<if test="condition.isDeleted != null" >and  UPPER(rp.isDeleted) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.isDeleted}),'%'))</if>
+<if test="condition.createBy != null" >and  UPPER(rp.createBy) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.createBy}),'%'))</if>
+<if test="condition.createTime != null" >and  UPPER(rp.createTime) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.createTime}),'%'))</if>
+<if test="condition.updateBy != null" >and  UPPER(rp.updateBy) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.updateBy}),'%'))</if>
+<if test="condition.updateTime != null" >and  UPPER(rp.updateTime) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.updateTime}),'%'))</if>
+<if test="condition.forwardId != null" >and  UPPER(rp.forwardId) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.forwardId}),'%'))</if>
+<if test="condition.remark != null" >and  UPPER(rp.remark) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.remark}),'%'))</if>
+<if test="condition.residueCount != null" >and  UPPER(rp.residueCount) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.residueCount}),'%'))</if>
+<if test="condition.oneOfMoney != null" >and  UPPER(rp.oneOfMoney) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.oneOfMoney}),'%'))</if>
+<if test="condition.allOfMoney != null" >and  UPPER(rp.allOfMoney) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.allOfMoney}),'%'))</if>
+<if test="condition.state != null" >and  UPPER(rp.state) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.state}),'%'))</if>
+<if test="condition.orderNumber != null" >and  UPPER(rp.orderNumber) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.orderNumber}),'%'))</if>
+<if test="condition.positionID != null" >and  UPPER(rp.positionID) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.positionID}),'%'))</if>
+
+</trim>
+<include refid="inClause"/>
+</sql>
+
+
+
+
+
+<!-- 插入记录 -->
+<insert id="add"  >
+  insert into red_packet (id,version,isDeleted,createBy,createTime,updateBy,updateTime,forwardId,remark,residueCount,oneOfMoney,allOfMoney,state,orderNumber,positionID)
+  values(#{id,jdbcType=VARCHAR},#{version},#{isDeleted},#{createBy},#{createTime},#{updateBy},#{updateTime},#{forwardId},#{remark},#{residueCount},#{oneOfMoney},#{allOfMoney},#{state},#{orderNumber},#{positionID})
+</insert>
+
+
+
+<!-- 修改记录，只修改只不为空的字段 -->
+<update id="update" >
+	update red_packet set
+	<trim  suffixOverrides="," >
+	<if test="version != null ">version=#{version},</if>
+<if test="isDeleted != null ">isDeleted=#{isDeleted},</if>
+<if test="createBy != null ">createBy=#{createBy},</if>
+<if test="createTime != null ">createTime=#{createTime},</if>
+<if test="updateBy != null ">updateBy=#{updateBy},</if>
+<if test="updateTime != null ">updateTime=#{updateTime},</if>
+<if test="forwardId != null ">forwardId=#{forwardId},</if>
+<if test="remark != null ">remark=#{remark},</if>
+<if test="residueCount != null ">residueCount=#{residueCount},</if>
+<if test="oneOfMoney != null ">oneOfMoney=#{oneOfMoney},</if>
+<if test="allOfMoney != null ">allOfMoney=#{allOfMoney},</if>
+<if test="state != null ">state=#{state},</if>
+<if test="orderNumber != null ">orderNumber=#{orderNumber},</if>
+<if test="positionID != null ">positionID=#{positionID},</if>
+
+	</trim> where id=#{id} and version = #{version}-1
+</update>
+
+<!-- 删除记录 -->
+<delete id="del" >
+	delete from red_packet where id = #{id}
+</delete>
+
+<!-- 根据id查询  -->
+<select id="get"   resultType="RedPacket"  parameterType="String">
+	select <include refid="columnList" /> 
+	from red_packet  rp
+	where  rp.id = #{id}  and rp.isDeleted = false
+</select>
+
+<!-- 列表总数-->
+<select id="count" resultType="java.lang.Long" >
+	select count(1) 
+	from red_packet  rp
+	<include refid="whereClause"/>
+</select>
+
+<!-- 查询page -->
+<select id="findPage" resultType="RedPacket" >
+	select 
+	<include refid="columnList"/>
+	from red_packet rp
+	<include refid="whereClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 模糊查询page -->
+<select id="findLikePage" resultType="RedPacket" >
+	select 
+	<include refid="columnList"/>
+	from red_packet rp
+	<include refid="whereLikeClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询列表list -->
+<select id="findList" resultType="RedPacket" >
+	select
+	<include refid="columnList"/>
+	from red_packet rp
+	<include refid="whereClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!--模糊查询list-->
+<select id="findLikeList" resultType="RedPacket" >
+	select
+	<include refid="columnList"/>
+	from red_packet rp
+	<include refid="whereLikeClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询符合条件的数据的id集合 -->
+<select id="findIds" resultType="String">
+	select rp.${idsColumn}
+	from red_packet rp
+    <include refid="whereClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询符合模糊条件的数据的id集合 -->
+<select id="findLikeIds" resultType="String">
+	select rp.${idsColumn}
+	from red_packet rp
+    <include refid="whereLikeClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 获取一个对象通过非id -->
+<select id="one" resultType="RedPacket" >
+     select
+    <include refid="columnList"/>
+     from red_packet rp
+    <include refid="whereClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+    limit 0,1
+</select>
+
+<!--如果你想返回一个HashMap 就实现这个select标签-->
+<select id="queryHashMap" resultType="java.util.HashMap"  parameterType="Object">
+</select>
+
+    <select id="getRedPacketBack"   resultType="RedPacket"  parameterType="String">
+        select <include refid="columnList" />
+        from red_packet  rp
+        where  rp.id = #{id}
+    </select>
+
+	<!--级联查询-->
+	<sql id="redpacketdetailList">
+		r.id as 'id',
+		r.version as 'version',r.forwardId as 'forwardId',r.remark as 'remark',r.residueCount as 'residueCount',r.oneOfMoney as 'oneOfMoney',r.allOfMoney as 'allOfMoney',r.orderNumber as 'orderNumber',r.positionID as 'positionID',
+		forward.id as 'forward.id',
+		forward.version as 'forward.version',forward.userId as 'forward.userId',forward.positionId as 'forward.positionId',forward.forwardingCode as 'forward.forwardingCode',
+		position.id as 'forward.position.id',
+		position.version as 'forward.position.version',position.title as 'forward.position.title',position.salaryType as 'forward.position.salaryType',position.recruitStartTime as 'forward.position.recruitStartTime',position.recruitEndTime as 'forward.position.recruitEndTime',position.salary as 'forward.position.salary',position.dailySalary as 'forward.position.dailySalary',position.liquidatedDamages as 'forward.position.liquidatedDamages',position.recruitsSum as 'forward.position.recruitsSum',position.sexRequirements as 'forward.position.sexRequirements',position.workPalce as 'forward.position.workPalce',position.workDate as 'forward.position.workDate',position.aggregate as 'forward.position.aggregate',position.setDate as 'forward.position.setDate',position.contacts as 'forward.position.contacts',position.contactNumber as 'forward.position.contactNumber',position.settlement as 'forward.position.settlement',position.matters as 'forward.position.matters',position.jobRequirements as 'forward.position.jobRequirements',position.jobContent as 'forward.position.jobContent',position.includeBoard as 'forward.position.includeBoard',position.controlSleep as 'forward.position.controlSleep',position.interview as 'forward.position.interview',position.baseTask as 'forward.position.baseTask',position.commission as 'forward.position.commission',position.train as 'forward.position.train',position.beenRecruitedSum as 'forward.position.beenRecruitedSum',position.workTypeID as 'forward.position.workTypeID',position.userID as 'forward.position.userID',position.open as 'forward.position.open',position.type as 'forward.position.type',position.startTime as 'forward.position.startTime',position.endTime as 'forward.position.endTime',position.publishTime as 'forward.position.publishTime',forward.rewardID as 'forward.rewardID',
+		payRedPacketUser.id as 'forward.payRedPacketUser.id',
+		payRedPacketUser.version as 'forward.payRedPacketUser.version',payRedPacketUser.accountNo as 'forward.payRedPacketUser.accountNo',payRedPacketUser.password as 'forward.payRedPacketUser.password',payRedPacketUser.weChatNo as 'forward.payRedPacketUser.weChatNo',payRedPacketUser.nickName as 'forward.payRedPacketUser.nickName',payRedPacketUser.sex as 'forward.payRedPacketUser.sex',payRedPacketUser.phoneNumber as 'forward.payRedPacketUser.phoneNumber',payRedPacketUser.lastLoginTime as 'forward.payRedPacketUser.lastLoginTime',payRedPacketUser.loginTime as 'forward.payRedPacketUser.loginTime',payRedPacketUser.status as 'forward.payRedPacketUser.status',paypersonalauthen.realName as 'forward.payRedPacketUser.realName',payRedPacketUser.IDCard as 'forward.payRedPacketUser.IDCard',payRedPacketUser.infoHeadImg as 'forward.payRedPacketUser.infoHeadImg',payRedPacketUser.locked as 'forward.payRedPacketUser.locked',payRedPacketUser.userSig as 'forward.payRedPacketUser.userSig',payRedPacketUser.birthday as 'forward.payRedPacketUser.birthday',payRedPacketUser.pinyin as 'forward.payRedPacketUser.pinyin',
+		payattachment.id as 'forward.payRedPacketUser.attachment.id',
+		payattachment.version as 'forward.payRedPacketUser.attachment.version',payattachment.datestr as 'forward.payRedPacketUser.attachment.datestr',payattachment.path as 'forward.payRedPacketUser.attachment.path',payattachment.name as 'forward.payRedPacketUser.attachment.name',payattachment.title as 'forward.payRedPacketUser.attachment.title',payattachment.type as 'forward.payRedPacketUser.attachment.type',payattachment.refID as 'forward.payRedPacketUser.attachment.refID',
+		payweixin.id as 'forward.payRedPacketUser.weixin.id',
+		payweixin.version as 'forward.payRedPacketUser.weixin.version',payweixin.nickname as 'forward.payRedPacketUser.weixin.nickname',payweixin.sex as 'forward.payRedPacketUser.weixin.sex',payweixin.province as 'forward.payRedPacketUser.weixin.province',payweixin.city as 'forward.payRedPacketUser.weixin.city',payweixin.country as 'forward.payRedPacketUser.weixin.country',payweixin.headimgurl as 'forward.payRedPacketUser.weixin.headimgurl',payweixin.privilegeStr as 'forward.payRedPacketUser.weixin.privilegeStr',payweixin.unionid as 'forward.payRedPacketUser.weixin.unionid',payweixin.openid as 'forward.payRedPacketUser.weixin.openid',payweixin.userID as 'forward.payRedPacketUser.weixin.userID',payweixin.refreshToken as 'forward.payRedPacketUser.weixin.refreshToken',payweixin.accessToken as 'forward.payRedPacketUser.weixin.accessToken',payweixin.refreshTokenTime as 'forward.payRedPacketUser.weixin.refreshTokenTime',payweixin.accessTokenTime as 'forward.payRedPacketUser.weixin.accessTokenTime',payweixin.ticket as 'forward.payRedPacketUser.weixin.ticket',payweixin.ticketTime as 'forward.payRedPacketUser.weixin.ticketTime',r.state as 'state',
+		redPacketReceiveList.id as 'redPacketReceiveList.id',
+		redPacketReceiveList.version as 'redPacketReceiveList.version',redPacketReceiveList.userId as 'redPacketReceiveList.userId',redPacketReceiveList.redPacketId as 'redPacketReceiveList.redPacketId',redPacketReceiveList.money as 'redPacketReceiveList.money',redPacketReceiveList.isActivation as 'redPacketReceiveList.isActivation',redPacketReceiveList.beenrecruitedID as 'redPacketReceiveList.beenrecruitedID',redPacketReceiveList.beenrecruitedState as 'redPacketReceiveList.beenrecruitedState',
+		getRedPacketUser.id as 'redPacketReceiveList.getRedPacketUser.id',
+		getRedPacketUser.version as 'redPacketReceiveList.getRedPacketUser.version',getRedPacketUser.accountNo as 'redPacketReceiveList.getRedPacketUser.accountNo',getRedPacketUser.password as 'redPacketReceiveList.getRedPacketUser.password',getRedPacketUser.weChatNo as 'redPacketReceiveList.getRedPacketUser.weChatNo',getRedPacketUser.nickName as 'redPacketReceiveList.getRedPacketUser.nickName',getRedPacketUser.sex as 'redPacketReceiveList.getRedPacketUser.sex',getRedPacketUser.phoneNumber as 'redPacketReceiveList.getRedPacketUser.phoneNumber',getRedPacketUser.lastLoginTime as 'redPacketReceiveList.getRedPacketUser.lastLoginTime',getRedPacketUser.loginTime as 'redPacketReceiveList.getRedPacketUser.loginTime',getRedPacketUser.status as 'redPacketReceiveList.getRedPacketUser.status',getpersonalauthen.realName as 'redPacketReceiveList.getRedPacketUser.realName',getRedPacketUser.IDCard as 'redPacketReceiveList.getRedPacketUser.IDCard',getRedPacketUser.infoHeadImg as 'redPacketReceiveList.getRedPacketUser.infoHeadImg',getRedPacketUser.locked as 'redPacketReceiveList.getRedPacketUser.locked',getRedPacketUser.userSig as 'redPacketReceiveList.getRedPacketUser.userSig',getRedPacketUser.birthday as 'redPacketReceiveList.getRedPacketUser.birthday',getRedPacketUser.pinyin as 'redPacketReceiveList.getRedPacketUser.pinyin',
+		getattachment.id as 'redPacketReceiveList.getRedPacketUser.attachment.id',
+		getattachment.version as 'redPacketReceiveList.getRedPacketUser.attachment.version',getattachment.datestr as 'redPacketReceiveList.getRedPacketUser.attachment.datestr',getattachment.path as 'redPacketReceiveList.getRedPacketUser.attachment.path',getattachment.name as 'redPacketReceiveList.getRedPacketUser.attachment.name',getattachment.title as 'redPacketReceiveList.getRedPacketUser.attachment.title',getattachment.type as 'redPacketReceiveList.getRedPacketUser.attachment.type',getattachment.refID as 'redPacketReceiveList.getRedPacketUser.attachment.refID',
+		getweixin.id as 'redPacketReceiveList.getRedPacketUser.weixin.id',
+		getweixin.version as 'redPacketReceiveList.getRedPacketUser.weixin.version',getweixin.nickname as 'redPacketReceiveList.getRedPacketUser.weixin.nickname',getweixin.sex as 'redPacketReceiveList.getRedPacketUser.weixin.sex',getweixin.province as 'redPacketReceiveList.getRedPacketUser.weixin.province',getweixin.city as 'redPacketReceiveList.getRedPacketUser.weixin.city',getweixin.country as 'redPacketReceiveList.getRedPacketUser.weixin.country',getweixin.headimgurl as 'redPacketReceiveList.getRedPacketUser.weixin.headimgurl',getweixin.privilegeStr as 'redPacketReceiveList.getRedPacketUser.weixin.privilegeStr',getweixin.unionid as 'redPacketReceiveList.getRedPacketUser.weixin.unionid',getweixin.openid as 'redPacketReceiveList.getRedPacketUser.weixin.openid',getweixin.userID as 'redPacketReceiveList.getRedPacketUser.weixin.userID',getweixin.refreshToken as 'redPacketReceiveList.getRedPacketUser.weixin.refreshToken',getweixin.accessToken as 'redPacketReceiveList.getRedPacketUser.weixin.accessToken',getweixin.refreshTokenTime as 'redPacketReceiveList.getRedPacketUser.weixin.refreshTokenTime',getweixin.accessTokenTime as 'redPacketReceiveList.getRedPacketUser.weixin.accessTokenTime',getweixin.ticket as 'redPacketReceiveList.getRedPacketUser.weixin.ticket',getweixin.ticketTime as 'redPacketReceiveList.getRedPacketUser.weixin.ticketTime'
+		,redPacketReceiveList.updateTime as 'redPacketReceiveList.updateTime'
+	</sql>
+
+	<!--redpacketPosition映射-->
+	<resultMap id="redpacketPositionMap" type="Position">
+		<id property="id" column="forward.position.id" />
+		<result property="version" column="forward.position.version" />
+		<result property="title" column="forward.position.title" />
+		<result property="salaryType" column="forward.position.salaryType" />
+		<result property="recruitStartTime" column="forward.position.recruitStartTime" />
+		<result property="recruitEndTime" column="forward.position.recruitEndTime" />
+		<result property="salary" column="forward.position.salary" />
+		<result property="dailySalary" column="forward.position.dailySalary" />
+		<result property="liquidatedDamages" column="forward.position.liquidatedDamages" />
+		<result property="recruitsSum" column="forward.position.recruitsSum" />
+		<result property="sexRequirements" column="forward.position.sexRequirements" />
+		<result property="workPalce" column="forward.position.workPalce" />
+		<result property="workDate" column="forward.position.workDate" />
+		<result property="aggregate" column="forward.position.aggregate" />
+		<result property="setDate" column="forward.position.setDate" />
+		<result property="contacts" column="forward.position.contacts" />
+		<result property="contactNumber" column="forward.position.contactNumber" />
+		<result property="settlement" column="forward.position.settlement" />
+		<result property="matters" column="forward.position.matters" />
+		<result property="jobRequirements" column="forward.position.jobRequirements" />
+		<result property="jobContent" column="forward.position.jobContent" />
+		<result property="includeBoard" column="forward.position.includeBoard" />
+		<result property="controlSleep" column="forward.position.controlSleep" />
+		<result property="interview" column="forward.position.interview" />
+		<result property="baseTask" column="forward.position.baseTask" />
+		<result property="commission" column="forward.position.commission" />
+		<result property="train" column="forward.position.train" />
+		<result property="beenRecruitedSum" column="forward.position.beenRecruitedSum" />
+		<result property="workTypeID" column="forward.position.workTypeID" />
+		<result property="userID" column="forward.position.userID" />
+		<result property="open" column="forward.position.open" />
+		<result property="type" column="forward.position.type" />
+		<result property="startTime" column="forward.position.startTime" />
+		<result property="endTime" column="forward.position.endTime" />
+		<result property="publishTime" column="forward.position.publishTime" />
+	</resultMap>
+
+	<!--redpacketAttachment映射-->
+	<resultMap id="payRedpacketAttachmentMap" type="Attachment">
+		<id property="id" column="forward.payRedPacketUser.attachment.id" />
+		<result property="version" column="forward.payRedPacketUser.attachment.version" />
+		<result property="datestr" column="forward.payRedPacketUser.attachment.datestr" />
+		<result property="path" column="forward.payRedPacketUser.attachment.path" />
+		<result property="name" column="forward.payRedPacketUser.attachment.name" />
+		<result property="title" column="forward.payRedPacketUser.attachment.title" />
+		<result property="type" column="forward.payRedPacketUser.attachment.type" />
+		<result property="refID" column="forward.payRedPacketUser.attachment.refID" />
+	</resultMap>
+
+	<!--redpacketWeixin映射-->
+	<resultMap id="payRedpacketWeixinMap" type="Weixin">
+		<id property="id" column="forward.payRedPacketUser.weixin.id" />
+		<result property="version" column="forward.payRedPacketUser.weixin.version" />
+		<result property="nickname" column="forward.payRedPacketUser.weixin.nickname" />
+		<result property="sex" column="forward.payRedPacketUser.weixin.sex" />
+		<result property="province" column="forward.payRedPacketUser.weixin.province" />
+		<result property="city" column="forward.payRedPacketUser.weixin.city" />
+		<result property="country" column="forward.payRedPacketUser.weixin.country" />
+		<result property="headimgurl" column="forward.payRedPacketUser.weixin.headimgurl" />
+		<result property="privilegeStr" column="forward.payRedPacketUser.weixin.privilegeStr" />
+		<result property="unionid" column="forward.payRedPacketUser.weixin.unionid" />
+		<result property="openid" column="forward.payRedPacketUser.weixin.openid" />
+		<result property="userID" column="forward.payRedPacketUser.weixin.userID" />
+		<result property="refreshToken" column="forward.payRedPacketUser.weixin.refreshToken" />
+		<result property="accessToken" column="forward.payRedPacketUser.weixin.accessToken" />
+		<result property="refreshTokenTime" column="forward.payRedPacketUser.weixin.refreshTokenTime" />
+		<result property="accessTokenTime" column="forward.payRedPacketUser.weixin.accessTokenTime" />
+		<result property="ticket" column="forward.payRedPacketUser.weixin.ticket" />
+		<result property="ticketTime" column="forward.payRedPacketUser.weixin.ticketTime" />
+	</resultMap>
+
+	<!--redpacketUser映射-->
+	<resultMap id="payRedpacketUserMap" type="User">
+		<id property="id" column="forward.payRedPacketUser.id" />
+		<result property="version" column="forward.payRedPacketUser.version" />
+		<result property="accountNo" column="forward.payRedPacketUser.accountNo" />
+		<result property="password" column="forward.payRedPacketUser.password" />
+		<result property="weChatNo" column="forward.payRedPacketUser.weChatNo" />
+		<result property="nickName" column="forward.payRedPacketUser.nickName" />
+		<result property="sex" column="forward.payRedPacketUser.sex" />
+		<result property="phoneNumber" column="forward.payRedPacketUser.phoneNumber" />
+		<result property="lastLoginTime" column="forward.payRedPacketUser.lastLoginTime" />
+		<result property="loginTime" column="forward.payRedPacketUser.loginTime" />
+		<result property="status" column="forward.payRedPacketUser.status" />
+		<result property="realName" column="forward.payRedPacketUser.realName" />
+		<result property="IDCard" column="forward.payRedPacketUser.IDCard" />
+		<result property="infoHeadImg" column="forward.payRedPacketUser.infoHeadImg" />
+		<result property="locked" column="forward.payRedPacketUser.locked" />
+		<result property="userSig" column="forward.payRedPacketUser.userSig" />
+		<result property="birthday" column="forward.payRedPacketUser.birthday" />
+		<result property="pinyin" column="forward.payRedPacketUser.pinyin" />
+		<association property="attachment"  javaType="Attachment" resultMap="payRedpacketAttachmentMap"/>
+		<association property="weixin"  javaType="Weixin" resultMap="payRedpacketWeixinMap"/>
+	</resultMap>
+
+	<!--redpacketForward映射-->
+	<resultMap id="redpacketForwardMap" type="Forward">
+		<id property="id" column="forward.id" />
+		<result property="version" column="forward.version" />
+		<result property="userId" column="forward.userId" />
+		<result property="positionId" column="forward.positionId" />
+		<result property="forwardingCode" column="forward.forwardingCode" />
+		<result property="rewardID" column="forward.rewardID" />
+		<association property="position"  javaType="Position" resultMap="redpacketPositionMap"/>
+		<association property="payRedPacketUser"  javaType="User" resultMap="payRedpacketUserMap"/>
+	</resultMap>
+
+	<!--redpacketAttachment映射-->
+	<resultMap id="getRedpacketAttachmentMap" type="Attachment">
+		<id property="id" column="redPacketReceiveList.getRedPacketUser.attachment.id" />
+		<result property="version" column="redPacketReceiveList.getRedPacketUser.attachment.version" />
+		<result property="datestr" column="redPacketReceiveList.getRedPacketUser.attachment.datestr" />
+		<result property="path" column="redPacketReceiveList.getRedPacketUser.attachment.path" />
+		<result property="name" column="redPacketReceiveList.getRedPacketUser.attachment.name" />
+		<result property="title" column="redPacketReceiveList.getRedPacketUser.attachment.title" />
+		<result property="type" column="redPacketReceiveList.getRedPacketUser.attachment.type" />
+		<result property="refID" column="redPacketReceiveList.getRedPacketUser.attachment.refID" />
+	</resultMap>
+
+	<!--redpacketWeixin映射-->
+	<resultMap id="getRedpacketWeixinMap" type="Weixin">
+		<id property="id" column="redPacketReceiveList.getRedPacketUser.weixin.id" />
+		<result property="version" column="redPacketReceiveList.getRedPacketUser.weixin.version" />
+		<result property="nickname" column="redPacketReceiveList.getRedPacketUser.weixin.nickname" />
+		<result property="sex" column="redPacketReceiveList.getRedPacketUser.weixin.sex" />
+		<result property="province" column="redPacketReceiveList.getRedPacketUser.weixin.province" />
+		<result property="city" column="redPacketReceiveList.getRedPacketUser.weixin.city" />
+		<result property="country" column="redPacketReceiveList.getRedPacketUser.weixin.country" />
+		<result property="headimgurl" column="redPacketReceiveList.getRedPacketUser.weixin.headimgurl" />
+		<result property="privilegeStr" column="redPacketReceiveList.getRedPacketUser.weixin.privilegeStr" />
+		<result property="unionid" column="redPacketReceiveList.getRedPacketUser.weixin.unionid" />
+		<result property="openid" column="redPacketReceiveList.getRedPacketUser.weixin.openid" />
+		<result property="userID" column="redPacketReceiveList.getRedPacketUser.weixin.userID" />
+		<result property="refreshToken" column="redPacketReceiveList.getRedPacketUser.weixin.refreshToken" />
+		<result property="accessToken" column="redPacketReceiveList.getRedPacketUser.weixin.accessToken" />
+		<result property="refreshTokenTime" column="redPacketReceiveList.getRedPacketUser.weixin.refreshTokenTime" />
+		<result property="accessTokenTime" column="redPacketReceiveList.getRedPacketUser.weixin.accessTokenTime" />
+		<result property="ticket" column="redPacketReceiveList.getRedPacketUser.weixin.ticket" />
+		<result property="ticketTime" column="redPacketReceiveList.getRedPacketUser.weixin.ticketTime" />
+	</resultMap>
+
+	<!--redpacketUser映射-->
+	<resultMap id="getRedpacketUserMap" type="User">
+		<id property="id" column="redPacketReceiveList.getRedPacketUser.id" />
+		<result property="version" column="redPacketReceiveList.getRedPacketUser.version" />
+		<result property="accountNo" column="redPacketReceiveList.getRedPacketUser.accountNo" />
+		<result property="password" column="redPacketReceiveList.getRedPacketUser.password" />
+		<result property="weChatNo" column="redPacketReceiveList.getRedPacketUser.weChatNo" />
+		<result property="nickName" column="redPacketReceiveList.getRedPacketUser.nickName" />
+		<result property="sex" column="redPacketReceiveList.getRedPacketUser.sex" />
+		<result property="phoneNumber" column="redPacketReceiveList.getRedPacketUser.phoneNumber" />
+		<result property="lastLoginTime" column="redPacketReceiveList.getRedPacketUser.lastLoginTime" />
+		<result property="loginTime" column="redPacketReceiveList.getRedPacketUser.loginTime" />
+		<result property="status" column="redPacketReceiveList.getRedPacketUser.status" />
+		<result property="realName" column="redPacketReceiveList.getRedPacketUser.realName" />
+		<result property="IDCard" column="redPacketReceiveList.getRedPacketUser.IDCard" />
+		<result property="infoHeadImg" column="redPacketReceiveList.getRedPacketUser.infoHeadImg" />
+		<result property="locked" column="redPacketReceiveList.getRedPacketUser.locked" />
+		<result property="userSig" column="redPacketReceiveList.getRedPacketUser.userSig" />
+		<result property="birthday" column="redPacketReceiveList.getRedPacketUser.birthday" />
+		<result property="pinyin" column="redPacketReceiveList.getRedPacketUser.pinyin" />
+		<association property="attachment"  javaType="Attachment" resultMap="getRedpacketAttachmentMap"/>
+		<association property="weixin"  javaType="Weixin" resultMap="getRedpacketWeixinMap"/>
+	</resultMap>
+
+	<!--redpacketRedPacketReceive映射-->
+	<resultMap id="redpacketRedPacketReceiveMap" type="RedPacketReceive">
+		<id property="id" column="redPacketReceiveList.id" />
+		<result property="version" column="redPacketReceiveList.version" />
+		<result property="userId" column="redPacketReceiveList.userId" />
+		<result property="redPacketId" column="redPacketReceiveList.redPacketId" />
+		<result property="money" column="redPacketReceiveList.money" />
+		<result property="isActivation" column="redPacketReceiveList.isActivation" />
+		<result property="beenrecruitedID" column="redPacketReceiveList.beenrecruitedID" />
+		<result property="beenrecruitedState" column="redPacketReceiveList.beenrecruitedState" />
+		<result property="updateTime" column="redPacketReceiveList.updateTime" />
+		<association property="getRedPacketUser"  javaType="User" resultMap="getRedpacketUserMap"/>
+	</resultMap>
+
+	<!--redpacketRedPacket映射-->
+	<resultMap id="redpacketRedPacketMap" type="RedPacket">
+		<id property="id" column="id" />
+		<result property="version" column="version" />
+		<result property="forwardId" column="forwardId" />
+		<result property="remark" column="remark" />
+		<result property="residueCount" column="residueCount" />
+		<result property="oneOfMoney" column="oneOfMoney" />
+		<result property="allOfMoney" column="allOfMoney" />
+		<result property="orderNumber" column="orderNumber" />
+		<result property="positionID" column="positionID" />
+		<result property="state" column="state" />
+		<association property="forward"  javaType="Forward" resultMap="redpacketForwardMap"/>
+		<collection property="redPacketReceiveList" resultMap="redpacketRedPacketReceiveMap" />
+	</resultMap>
+
+	<!--对象的多级映射 mapList mapPage mapOne-->
+	<select id="redpacketmap" resultMap="redpacketRedPacketMap"  >
+		select
+		<include refid="redpacketdetailList"/>
+		from  red_packet r
+		left join forward forward on r.forwardId = forward.id
+		left join position position on forward.positionId = position.id
+		left join shiro_user payRedPacketUser on forward.userId = payRedPacketUser.id
+		left join personalauthen paypersonalauthen on paypersonalauthen.userID = payRedPacketUser.id
+		left join attachment payattachment on payRedPacketUser.infoHeadImg = payattachment.id
+		left join weixin payweixin on payRedPacketUser.id = payweixin.userID
+		left join red_packet_receive redPacketReceiveList on r.id = redPacketReceiveList.redPacketId
+		left join shiro_user getRedPacketUser on redPacketReceiveList.userId = getRedPacketUser.id
+		left join personalauthen getpersonalauthen on getpersonalauthen.userID = getRedPacketUser.id
+		left join attachment getattachment on getRedPacketUser.infoHeadImg = getattachment.id
+		left join weixin getweixin on getRedPacketUser.id = getweixin.userID
+		where r.id = #{id}
+	</select>
+
+	<!--级联查询-->
+	<sql id="redpacketortherdetailList">
+		r.id as 'id',
+		r.version as 'version',r.forwardId as 'forwardId',r.remark as 'remark',r.residueCount as 'residueCount',r.oneOfMoney as 'oneOfMoney',r.allOfMoney as 'allOfMoney',r.orderNumber as 'orderNumber',r.state as 'state',
+		redPacketReceiveList.id as 'redPacketReceiveList.id',
+		redPacketReceiveList.version as 'redPacketReceiveList.version',redPacketReceiveList.userId as 'redPacketReceiveList.userId',redPacketReceiveList.redPacketId as 'redPacketReceiveList.redPacketId',redPacketReceiveList.money as 'redPacketReceiveList.money',redPacketReceiveList.isActivation as 'redPacketReceiveList.isActivation',redPacketReceiveList.beenrecruitedID as 'redPacketReceiveList.beenrecruitedID',redPacketReceiveList.beenrecruitedState as 'redPacketReceiveList.beenrecruitedState',redPacketReceiveList.updateTime as 'redPacketReceiveList.updateTime',
+		getRedPacketUser.id as 'redPacketReceiveList.getRedPacketUser.id',
+		getRedPacketUser.version as 'redPacketReceiveList.getRedPacketUser.version',getRedPacketUser.accountNo as 'redPacketReceiveList.getRedPacketUser.accountNo',getRedPacketUser.password as 'redPacketReceiveList.getRedPacketUser.password',getRedPacketUser.weChatNo as 'redPacketReceiveList.getRedPacketUser.weChatNo',getRedPacketUser.nickName as 'redPacketReceiveList.getRedPacketUser.nickName',getRedPacketUser.sex as 'redPacketReceiveList.getRedPacketUser.sex',getRedPacketUser.phoneNumber as 'redPacketReceiveList.getRedPacketUser.phoneNumber',getRedPacketUser.lastLoginTime as 'redPacketReceiveList.getRedPacketUser.lastLoginTime',getRedPacketUser.loginTime as 'redPacketReceiveList.getRedPacketUser.loginTime',getRedPacketUser.status as 'redPacketReceiveList.getRedPacketUser.status',getRedPacketUser.realName as 'redPacketReceiveList.getRedPacketUser.realName',getRedPacketUser.IDCard as 'redPacketReceiveList.getRedPacketUser.IDCard',getRedPacketUser.infoHeadImg as 'redPacketReceiveList.getRedPacketUser.infoHeadImg',getRedPacketUser.locked as 'redPacketReceiveList.getRedPacketUser.locked',getRedPacketUser.userSig as 'redPacketReceiveList.getRedPacketUser.userSig',getRedPacketUser.birthday as 'redPacketReceiveList.getRedPacketUser.birthday',getRedPacketUser.pinyin as 'redPacketReceiveList.getRedPacketUser.pinyin',
+		getRedPacketAttachment.id as 'redPacketReceiveList.getRedPacketUser.attachment.id',
+		getRedPacketAttachment.version as 'redPacketReceiveList.getRedPacketUser.attachment.version',getRedPacketAttachment.datestr as 'redPacketReceiveList.getRedPacketUser.attachment.datestr',getRedPacketAttachment.path as 'redPacketReceiveList.getRedPacketUser.attachment.path',getRedPacketAttachment.name as 'redPacketReceiveList.getRedPacketUser.attachment.name',getRedPacketAttachment.title as 'redPacketReceiveList.getRedPacketUser.attachment.title',getRedPacketAttachment.type as 'redPacketReceiveList.getRedPacketUser.attachment.type',getRedPacketAttachment.refID as 'redPacketReceiveList.getRedPacketUser.attachment.refID',
+		getRedPacketWeixin.id as 'redPacketReceiveList.getRedPacketUser.weixin.id',
+		getRedPacketWeixin.version as 'redPacketReceiveList.getRedPacketUser.weixin.version',getRedPacketWeixin.nickname as 'redPacketReceiveList.getRedPacketUser.weixin.nickname',getRedPacketWeixin.sex as 'redPacketReceiveList.getRedPacketUser.weixin.sex',getRedPacketWeixin.province as 'redPacketReceiveList.getRedPacketUser.weixin.province',getRedPacketWeixin.city as 'redPacketReceiveList.getRedPacketUser.weixin.city',getRedPacketWeixin.country as 'redPacketReceiveList.getRedPacketUser.weixin.country',getRedPacketWeixin.headimgurl as 'redPacketReceiveList.getRedPacketUser.weixin.headimgurl',getRedPacketWeixin.privilegeStr as 'redPacketReceiveList.getRedPacketUser.weixin.privilegeStr',getRedPacketWeixin.unionid as 'redPacketReceiveList.getRedPacketUser.weixin.unionid',getRedPacketWeixin.openid as 'redPacketReceiveList.getRedPacketUser.weixin.openid',getRedPacketWeixin.userID as 'redPacketReceiveList.getRedPacketUser.weixin.userID',getRedPacketWeixin.refreshToken as 'redPacketReceiveList.getRedPacketUser.weixin.refreshToken',getRedPacketWeixin.accessToken as 'redPacketReceiveList.getRedPacketUser.weixin.accessToken',getRedPacketWeixin.refreshTokenTime as 'redPacketReceiveList.getRedPacketUser.weixin.refreshTokenTime',getRedPacketWeixin.accessTokenTime as 'redPacketReceiveList.getRedPacketUser.weixin.accessTokenTime',getRedPacketWeixin.ticket as 'redPacketReceiveList.getRedPacketUser.weixin.ticket',getRedPacketWeixin.ticketTime as 'redPacketReceiveList.getRedPacketUser.weixin.ticketTime',r.positionID as 'positionID',
+		position.id as 'position.id',
+		position.version as 'position.version',position.title as 'position.title',position.salaryType as 'position.salaryType',position.recruitStartTime as 'position.recruitStartTime',position.recruitEndTime as 'position.recruitEndTime',position.salary as 'position.salary',position.dailySalary as 'position.dailySalary',position.liquidatedDamages as 'position.liquidatedDamages',position.recruitsSum as 'position.recruitsSum',position.sexRequirements as 'position.sexRequirements',position.workPalce as 'position.workPalce',position.workDate as 'position.workDate',position.aggregate as 'position.aggregate',position.setDate as 'position.setDate',position.contacts as 'position.contacts',position.contactNumber as 'position.contactNumber',position.settlement as 'position.settlement',position.matters as 'position.matters',position.jobRequirements as 'position.jobRequirements',position.jobContent as 'position.jobContent',position.includeBoard as 'position.includeBoard',position.controlSleep as 'position.controlSleep',position.interview as 'position.interview',position.baseTask as 'position.baseTask',position.commission as 'position.commission',position.train as 'position.train',position.beenRecruitedSum as 'position.beenRecruitedSum',position.workTypeID as 'position.workTypeID',position.userID as 'position.userID',position.open as 'position.open',position.type as 'position.type',position.startTime as 'position.startTime',position.endTime as 'position.endTime',position.publishTime as 'position.publishTime',position.isPush as 'position.isPush',
+		positionUser.id as 'position.positionUser.id',
+		positionUser.version as 'position.positionUser.version',positionUser.accountNo as 'position.positionUser.accountNo',positionUser.password as 'position.positionUser.password',positionUser.weChatNo as 'position.positionUser.weChatNo',positionUser.nickName as 'position.positionUser.nickName',positionUser.sex as 'position.positionUser.sex',positionUser.phoneNumber as 'position.positionUser.phoneNumber',positionUser.lastLoginTime as 'position.positionUser.lastLoginTime',positionUser.loginTime as 'position.positionUser.loginTime',positionUser.status as 'position.positionUser.status',positionUser.realName as 'position.positionUser.realName',positionUser.IDCard as 'position.positionUser.IDCard',positionUser.infoHeadImg as 'position.positionUser.infoHeadImg',positionUser.locked as 'position.positionUser.locked',positionUser.userSig as 'position.positionUser.userSig',positionUser.birthday as 'position.positionUser.birthday',positionUser.pinyin as 'position.positionUser.pinyin',
+		positionAttachment.id as 'position.positionUser.attachment.id',
+		positionAttachment.version as 'position.positionUser.attachment.version',positionAttachment.datestr as 'position.positionUser.attachment.datestr',positionAttachment.path as 'position.positionUser.attachment.path',positionAttachment.name as 'position.positionUser.attachment.name',positionAttachment.title as 'position.positionUser.attachment.title',positionAttachment.type as 'position.positionUser.attachment.type',positionAttachment.refID as 'position.positionUser.attachment.refID',
+		positionWeixin.id as 'position.positionUser.weixin.id',
+		positionWeixin.version as 'position.positionUser.weixin.version',positionWeixin.nickname as 'position.positionUser.weixin.nickname',positionWeixin.sex as 'position.positionUser.weixin.sex',positionWeixin.province as 'position.positionUser.weixin.province',positionWeixin.city as 'position.positionUser.weixin.city',positionWeixin.country as 'position.positionUser.weixin.country',positionWeixin.headimgurl as 'position.positionUser.weixin.headimgurl',positionWeixin.privilegeStr as 'position.positionUser.weixin.privilegeStr',positionWeixin.unionid as 'position.positionUser.weixin.unionid',positionWeixin.openid as 'position.positionUser.weixin.openid',positionWeixin.userID as 'position.positionUser.weixin.userID',positionWeixin.refreshToken as 'position.positionUser.weixin.refreshToken',positionWeixin.accessToken as 'position.positionUser.weixin.accessToken',positionWeixin.refreshTokenTime as 'position.positionUser.weixin.refreshTokenTime',positionWeixin.accessTokenTime as 'position.positionUser.weixin.accessTokenTime',positionWeixin.ticket as 'position.positionUser.weixin.ticket',positionWeixin.ticketTime as 'position.positionUser.weixin.ticketTime'
+	</sql>
+
+	<!--redpacketortherAttachment映射-->
+	<resultMap id="redpacketortherAttachmentMap" type="Attachment">
+		<id property="id" column="redPacketReceiveList.getRedPacketUser.attachment.id" />
+		<result property="version" column="redPacketReceiveList.getRedPacketUser.attachment.version" />
+		<result property="datestr" column="redPacketReceiveList.getRedPacketUser.attachment.datestr" />
+		<result property="path" column="redPacketReceiveList.getRedPacketUser.attachment.path" />
+		<result property="name" column="redPacketReceiveList.getRedPacketUser.attachment.name" />
+		<result property="title" column="redPacketReceiveList.getRedPacketUser.attachment.title" />
+		<result property="type" column="redPacketReceiveList.getRedPacketUser.attachment.type" />
+		<result property="refID" column="redPacketReceiveList.getRedPacketUser.attachment.refID" />
+	</resultMap>
+
+	<!--redpacketortherWeixin映射-->
+	<resultMap id="redpacketortherWeixinMap" type="Weixin">
+		<id property="id" column="redPacketReceiveList.getRedPacketUser.weixin.id" />
+		<result property="version" column="redPacketReceiveList.getRedPacketUser.weixin.version" />
+		<result property="nickname" column="redPacketReceiveList.getRedPacketUser.weixin.nickname" />
+		<result property="sex" column="redPacketReceiveList.getRedPacketUser.weixin.sex" />
+		<result property="province" column="redPacketReceiveList.getRedPacketUser.weixin.province" />
+		<result property="city" column="redPacketReceiveList.getRedPacketUser.weixin.city" />
+		<result property="country" column="redPacketReceiveList.getRedPacketUser.weixin.country" />
+		<result property="headimgurl" column="redPacketReceiveList.getRedPacketUser.weixin.headimgurl" />
+		<result property="privilegeStr" column="redPacketReceiveList.getRedPacketUser.weixin.privilegeStr" />
+		<result property="unionid" column="redPacketReceiveList.getRedPacketUser.weixin.unionid" />
+		<result property="openid" column="redPacketReceiveList.getRedPacketUser.weixin.openid" />
+		<result property="userID" column="redPacketReceiveList.getRedPacketUser.weixin.userID" />
+		<result property="refreshToken" column="redPacketReceiveList.getRedPacketUser.weixin.refreshToken" />
+		<result property="accessToken" column="redPacketReceiveList.getRedPacketUser.weixin.accessToken" />
+		<result property="refreshTokenTime" column="redPacketReceiveList.getRedPacketUser.weixin.refreshTokenTime" />
+		<result property="accessTokenTime" column="redPacketReceiveList.getRedPacketUser.weixin.accessTokenTime" />
+		<result property="ticket" column="redPacketReceiveList.getRedPacketUser.weixin.ticket" />
+		<result property="ticketTime" column="redPacketReceiveList.getRedPacketUser.weixin.ticketTime" />
+	</resultMap>
+
+	<!--redpacketortherUser映射-->
+	<resultMap id="redpacketortherUserMap" type="User">
+		<id property="id" column="redPacketReceiveList.getRedPacketUser.id" />
+		<result property="version" column="redPacketReceiveList.getRedPacketUser.version" />
+		<result property="accountNo" column="redPacketReceiveList.getRedPacketUser.accountNo" />
+		<result property="password" column="redPacketReceiveList.getRedPacketUser.password" />
+		<result property="weChatNo" column="redPacketReceiveList.getRedPacketUser.weChatNo" />
+		<result property="nickName" column="redPacketReceiveList.getRedPacketUser.nickName" />
+		<result property="sex" column="redPacketReceiveList.getRedPacketUser.sex" />
+		<result property="phoneNumber" column="redPacketReceiveList.getRedPacketUser.phoneNumber" />
+		<result property="lastLoginTime" column="redPacketReceiveList.getRedPacketUser.lastLoginTime" />
+		<result property="loginTime" column="redPacketReceiveList.getRedPacketUser.loginTime" />
+		<result property="status" column="redPacketReceiveList.getRedPacketUser.status" />
+		<result property="realName" column="redPacketReceiveList.getRedPacketUser.realName" />
+		<result property="IDCard" column="redPacketReceiveList.getRedPacketUser.IDCard" />
+		<result property="infoHeadImg" column="redPacketReceiveList.getRedPacketUser.infoHeadImg" />
+		<result property="locked" column="redPacketReceiveList.getRedPacketUser.locked" />
+		<result property="userSig" column="redPacketReceiveList.getRedPacketUser.userSig" />
+		<result property="birthday" column="redPacketReceiveList.getRedPacketUser.birthday" />
+		<result property="pinyin" column="redPacketReceiveList.getRedPacketUser.pinyin" />
+		<association property="attachment"  javaType="Attachment" resultMap="redpacketortherAttachmentMap"/>
+		<association property="weixin"  javaType="Weixin" resultMap="redpacketortherWeixinMap"/>
+	</resultMap>
+
+	<!--redpacketortherRedPacketReceive映射-->
+	<resultMap id="redpacketortherRedPacketReceiveMap" type="RedPacketReceive">
+		<id property="id" column="redPacketReceiveList.id" />
+		<result property="version" column="redPacketReceiveList.version" />
+		<result property="userId" column="redPacketReceiveList.userId" />
+		<result property="redPacketId" column="redPacketReceiveList.redPacketId" />
+		<result property="money" column="redPacketReceiveList.money" />
+		<result property="isActivation" column="redPacketReceiveList.isActivation" />
+		<result property="beenrecruitedID" column="redPacketReceiveList.beenrecruitedID" />
+		<result property="beenrecruitedState" column="redPacketReceiveList.beenrecruitedState" />
+		<result property="updateTime" column="redPacketReceiveList.updateTime" />
+		<association property="getRedPacketUser"  javaType="User" resultMap="redpacketortherUserMap"/>
+	</resultMap>
+
+	<!--redpacketortherAttachment映射-->
+	<resultMap id="redpacketortherPositionAttachmentMap" type="Attachment">
+		<id property="id" column="position.positionUser.attachment.id" />
+		<result property="version" column="position.positionUser.attachment.version" />
+		<result property="datestr" column="position.positionUser.attachment.datestr" />
+		<result property="path" column="position.positionUser.attachment.path" />
+		<result property="name" column="position.positionUser.attachment.name" />
+		<result property="title" column="position.positionUser.attachment.title" />
+		<result property="type" column="position.positionUser.attachment.type" />
+		<result property="refID" column="position.positionUser.attachment.refID" />
+	</resultMap>
+
+	<!--redpacketortherWeixin映射-->
+	<resultMap id="redpacketortherPositionWeixinMap" type="Weixin">
+		<id property="id" column="position.positionUser.weixin.id" />
+		<result property="version" column="position.positionUser.weixin.version" />
+		<result property="nickname" column="position.positionUser.weixin.nickname" />
+		<result property="sex" column="position.positionUser.weixin.sex" />
+		<result property="province" column="position.positionUser.weixin.province" />
+		<result property="city" column="position.positionUser.weixin.city" />
+		<result property="country" column="position.positionUser.weixin.country" />
+		<result property="headimgurl" column="position.positionUser.weixin.headimgurl" />
+		<result property="privilegeStr" column="position.positionUser.weixin.privilegeStr" />
+		<result property="unionid" column="position.positionUser.weixin.unionid" />
+		<result property="openid" column="position.positionUser.weixin.openid" />
+		<result property="userID" column="position.positionUser.weixin.userID" />
+		<result property="refreshToken" column="position.positionUser.weixin.refreshToken" />
+		<result property="accessToken" column="position.positionUser.weixin.accessToken" />
+		<result property="refreshTokenTime" column="position.positionUser.weixin.refreshTokenTime" />
+		<result property="accessTokenTime" column="position.positionUser.weixin.accessTokenTime" />
+		<result property="ticket" column="position.positionUser.weixin.ticket" />
+		<result property="ticketTime" column="position.positionUser.weixin.ticketTime" />
+	</resultMap>
+
+	<!--redpacketortherUser映射-->
+	<resultMap id="redpacketortherPositionUserMap" type="User">
+		<id property="id" column="position.positionUser.id" />
+		<result property="version" column="position.positionUser.version" />
+		<result property="accountNo" column="position.positionUser.accountNo" />
+		<result property="password" column="position.positionUser.password" />
+		<result property="weChatNo" column="position.positionUser.weChatNo" />
+		<result property="nickName" column="position.positionUser.nickName" />
+		<result property="sex" column="position.positionUser.sex" />
+		<result property="phoneNumber" column="position.positionUser.phoneNumber" />
+		<result property="lastLoginTime" column="position.positionUser.lastLoginTime" />
+		<result property="loginTime" column="position.positionUser.loginTime" />
+		<result property="status" column="position.positionUser.status" />
+		<result property="realName" column="position.positionUser.realName" />
+		<result property="IDCard" column="position.positionUser.IDCard" />
+		<result property="infoHeadImg" column="position.positionUser.infoHeadImg" />
+		<result property="locked" column="position.positionUser.locked" />
+		<result property="userSig" column="position.positionUser.userSig" />
+		<result property="birthday" column="position.positionUser.birthday" />
+		<result property="pinyin" column="position.positionUser.pinyin" />
+		<association property="attachment"  javaType="Attachment" resultMap="redpacketortherPositionAttachmentMap"/>
+		<association property="weixin"  javaType="Weixin" resultMap="redpacketortherPositionWeixinMap"/>
+	</resultMap>
+
+	<!--redpacketortherPosition映射-->
+	<resultMap id="redpacketortherPositionMap" type="Position">
+		<id property="id" column="position.id" />
+		<result property="version" column="position.version" />
+		<result property="title" column="position.title" />
+		<result property="salaryType" column="position.salaryType" />
+		<result property="recruitStartTime" column="position.recruitStartTime" />
+		<result property="recruitEndTime" column="position.recruitEndTime" />
+		<result property="salary" column="position.salary" />
+		<result property="dailySalary" column="position.dailySalary" />
+		<result property="liquidatedDamages" column="position.liquidatedDamages" />
+		<result property="recruitsSum" column="position.recruitsSum" />
+		<result property="sexRequirements" column="position.sexRequirements" />
+		<result property="workPalce" column="position.workPalce" />
+		<result property="workDate" column="position.workDate" />
+		<result property="aggregate" column="position.aggregate" />
+		<result property="setDate" column="position.setDate" />
+		<result property="contacts" column="position.contacts" />
+		<result property="contactNumber" column="position.contactNumber" />
+		<result property="settlement" column="position.settlement" />
+		<result property="matters" column="position.matters" />
+		<result property="jobRequirements" column="position.jobRequirements" />
+		<result property="jobContent" column="position.jobContent" />
+		<result property="includeBoard" column="position.includeBoard" />
+		<result property="controlSleep" column="position.controlSleep" />
+		<result property="interview" column="position.interview" />
+		<result property="baseTask" column="position.baseTask" />
+		<result property="commission" column="position.commission" />
+		<result property="train" column="position.train" />
+		<result property="beenRecruitedSum" column="position.beenRecruitedSum" />
+		<result property="workTypeID" column="position.workTypeID" />
+		<result property="userID" column="position.userID" />
+		<result property="open" column="position.open" />
+		<result property="type" column="position.type" />
+		<result property="startTime" column="position.startTime" />
+		<result property="endTime" column="position.endTime" />
+		<result property="publishTime" column="position.publishTime" />
+		<result property="isPush" column="position.isPush" />
+		<association property="positionUser"  javaType="User" resultMap="redpacketortherPositionUserMap"/>
+	</resultMap>
+
+	<!--redpacketortherRedPacket映射-->
+	<resultMap id="redpacketortherRedPacketMap" type="RedPacket">
+		<id property="id" column="id" />
+		<result property="version" column="version" />
+		<result property="forwardId" column="forwardId" />
+		<result property="remark" column="remark" />
+		<result property="residueCount" column="residueCount" />
+		<result property="oneOfMoney" column="oneOfMoney" />
+		<result property="allOfMoney" column="allOfMoney" />
+		<result property="orderNumber" column="orderNumber" />
+		<result property="state" column="state" />
+		<result property="positionID" column="positionID" />
+		<association property="position"  javaType="Position" resultMap="redpacketortherPositionMap"/>
+		<collection property="redPacketReceiveList" resultMap="redpacketortherRedPacketReceiveMap" />
+	</resultMap>
+
+	<!--对象的多级映射 mapList mapPage mapOne-->
+	<select id="redpacketorthermap" resultMap="redpacketortherRedPacketMap" >
+		select
+		<include refid="redpacketortherdetailList"/>
+		from  red_packet r
+		left join red_packet_receive redPacketReceiveList on r.id = redPacketReceiveList.redPacketId
+		left join shiro_user getRedPacketUser on redPacketReceiveList.userId = getRedPacketUser.id
+		left join attachment getRedPacketAttachment on getRedPacketUser.infoHeadImg = getRedPacketAttachment.id
+		left join weixin getRedPacketWeixin on getRedPacketUser.id = getRedPacketWeixin.userID
+		left join position position on r.positionID = position.id
+		left join shiro_user positionUser on position.userID = positionUser.id
+		left join attachment positionAttachment on positionUser.infoHeadImg = positionAttachment.id
+		left join weixin positionWeixin on positionUser.id = positionWeixin.userID
+		where r.id = #{id}
+	</select>
+
+
+</mapper>

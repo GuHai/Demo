@@ -1,0 +1,1 @@
+package com.yskj.dao;import java.util.HashMap;import java.util.List;import com.yskj.models.PageParam;import com.yskj.models.QueryParam;import com.yskj.models.Refund;public interface RefundDao extends Dao {	Refund mapOne(QueryParam queryParam);	List<HashMap> queryHashMap(PageParam pageParam);}

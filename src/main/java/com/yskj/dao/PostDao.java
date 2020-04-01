@@ -1,0 +1,1 @@
+package com.yskj.dao;import java.util.HashMap;import java.util.List;import com.yskj.models.PageParam;import com.yskj.models.Post;import com.yskj.models.QueryParam;public interface PostDao extends Dao {	List<HashMap> queryHashMap(PageParam pageParam);	Post postJobInfo(QueryParam queryParam);}

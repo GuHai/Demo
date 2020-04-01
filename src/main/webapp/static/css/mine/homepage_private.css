@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .pic_box {
+  width: 100%;
+}
+.wrap .pic_box > img {
+  width: 100%;
+  display: block;
+}
+.wrap .contentBox {
+  height: 1.920rem;
+  width: 100%;
+  padding: 0 0.453rem;
+  padding-top: 0.160rem;
+  background-color: #fff;
+}
+.wrap .contentBox .pic_toux {
+  float: left;
+  width: 1.333rem;
+  height: 1.333rem;
+  border-radius: 50%;
+}
+.wrap .contentBox .contentRight {
+  position: relative;
+  margin-left: 1.600rem;
+}
+.wrap .contentBox .contentRight .con_div1 {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .contentBox .contentRight .con_div2 {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .contentBox .contentRight .con_p {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.427rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .contentBox .contentRight .con_p > i {
+  height: 0.213rem;
+  border-left: 1px solid #999;
+  margin: 0 5px;
+}
+.wrap .contentBox .contentRight .con_div3 {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  width: 1.333rem;
+  height: 0.613rem;
+  background-color: #ff3b30;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.293rem;
+  line-height: 0.613rem;
+  text-align: center;
+}
+.wrap .tabList {
+  margin-top: 0.267rem;
+  background-color: #fff;
+  height: 1.067rem;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .tabList > li {
+  width: 100%;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.067rem;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .tabList > li > span {
+  margin: auto;
+  display: block;
+  width: 1.600rem;
+}
+.wrap .tabList .active {
+  font-size: 0.400rem;
+  color: #333333;
+  width: 1.600rem;
+  border-bottom: 2px solid #108EE9;
+}
+.wrap .tabContent {
+  margin: 0.187rem 0.267rem;
+  margin-bottom: 1.600rem;
+}
+.wrap .tabContent .tab_job {
+  display: block;
+}
+.wrap .tabContent .tab_job .list-container {
+  margin-top: 0.267rem;
+  padding: 0.267rem;
+  height: 100%;
+  height: 3.467rem;
+  background-color: #fff;
+}
+.wrap .tabContent .tab_job .list-container .list-title {
+  display: flex;
+  justify-content: space-between;
+  height: 0.933rem;
+  width: 100%;
+  border-bottom: 1px solid #d7d7d7;
+}
+.wrap .tabContent .tab_job .list-container .list-title .title-content {
+  line-height: 0.933rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .tabContent .tab_job .list-container .list-title .titel-note {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.933rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .tabContent .tab_job .list-container .list-content {
+  margin-top: 0.267rem;
+}
+.wrap .tabContent .tab_job .list-container .list-content .content-tit {
+  float: left;
+  margin-right: 0.213rem;
+  margin-top: 0.160rem;
+  width: 1.333rem;
+  height: 1.333rem;
+  border-radius: 0.667rem;
+  background-color: #108ee9;
+  color: #fff;
+  text-align: center;
+  line-height: 1.333rem;
+  font-size: 0.400rem;
+}
+.wrap .tabContent .tab_job .list-container .list-content .content-msg .content-msg1 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .tabContent .tab_job .list-container .list-content .content-msg .content-msg1 .content-msg1-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .tabContent .tab_job .list-container .list-content .content-msg .content-msg1 .content-msg1-lf > i {
+  margin-right: 5px;
+  font-size: 0.400rem;
+  color: #15bc83;
+}
+.wrap .tabContent .tab_job .list-container .list-content .content-msg .content-msg1 .content-msg1-rt {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .tabContent .tab_job .list-container .list-content .content-msg .content-msg2 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .tabContent .tab_job .list-container .list-content .content-msg .content-msg2 .content-msg2-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .tabContent .tab_job .list-container .list-content .content-msg .content-msg2 .content-msg2-lf .line {
+  display: inline-block;
+  height: 0.267rem;
+  margin: 0 2px;
+  border-left: 1px solid #d7d7d7;
+}
+.wrap .tabContent .tab_job .list-container .list-content .content-msg .content-msg2 .content-msg2-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .tabContent .tab_job .list-container .list-content .content-msg .content-msg3 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .tabContent .tab_job .list-container .list-content .content-msg .content-msg3 .content-msg3-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .tabContent .tab_job .list-container .list-content .content-msg .content-msg3 .content-msg3-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .tabContent .tab_js {
+  display: none;
+  padding: 0.267rem 0.400rem;
+  background-color: #fff;
+  text-indent: 2em;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .fiexd_btn {
+  width: 100%;
+  position: fixed;
+  bottom: 0.400rem;
+  left: 0;
+}
+.wrap .fiexd_btn > a {
+  display: block;
+  margin: auto;
+  width: 9.093rem;
+  height: 1.067rem;
+  background-color: #108ee9;
+  border-radius: 0.533rem;
+  color: #fff;
+  font-size: 0.400rem;
+  line-height: 1.067rem;
+  text-align: center;
+}

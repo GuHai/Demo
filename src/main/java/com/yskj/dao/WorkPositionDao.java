@@ -1,0 +1,1 @@
+package com.yskj.dao;import com.yskj.models.PageParam;import com.yskj.models.QueryParam;import com.yskj.models.WorkPosition;import java.util.HashMap;import java.util.List;public interface WorkPositionDao extends Dao {	List<HashMap> queryHashMap(PageParam pageParam);	List<WorkPosition> getSHPosition(QueryParam queryParam);}

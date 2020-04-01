@@ -1,0 +1,106 @@
+.goodness {
+    text-align: left;
+    margin-top: 20px;
+}
+.sub-title .title p{
+    color: #108ee9;
+    font-size: 30px;
+    height: 32px;
+    line-height: 32px;
+}
+.model_case_content {
+    margin: 30px 0;
+    width: 410px;
+    height: 160px;
+    background: url(../images/bg_c.png) no-repeat center;
+    box-sizing: border-box;
+    padding: 32px 42px;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #221815;
+    text-align: left;
+    background-size: 396px 159px;
+    text-indent: 2em;
+}
+.module-case,.module-goods{
+    overflow: hidden;
+    padding-right: 0;
+    padding-left: 0;
+}
+.module-goods.half-module .sub-title h3,.module-goods.half-module .sub-title h2{
+    text-align: left;
+}
+@media screen and (max-width: 999px) {
+    .sub-title .title p{
+        color: #108ee9;
+        font-size: 30px;
+        height: 32px;
+        line-height: 32px;
+    }
+    .model_case_content {
+        margin: 30px 0 0 0;
+        width: 100%;
+        height: 210px;
+        background: url(../images/bg_c.png) no-repeat center;
+        box-sizing: border-box;
+        padding: 32px 42px;
+        font-size: 18px;
+        font-weight: normal;
+        letter-spacing: 1px;
+        color: #221815;
+        text-align: left;
+        background-size: 285px 198px;
+        text-indent: 2em;
+    }
+    .goodness {
+        padding: 20px;
+        padding-bottom: 0;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 767px) {
+    .sub-title .title p{
+        color: #108ee9;
+        font-size: 30px;
+        height: 32px;
+        line-height: 32px;
+    }
+    .model_case_content {
+        margin: 30px 0 0 0;
+        width: 100%;
+        height: 210px;
+        background: url(../images/bg_c.png) no-repeat center;
+        box-sizing: border-box;
+        padding: 32px 42px;
+        font-size: 18px;
+        font-weight: normal;
+        letter-spacing: 1px;
+        color: #221815;
+        text-align: left;
+        background-size: 358px 198px;
+        text-indent: 2em;
+    }
+    .goodness {
+        padding: 20px;
+        padding-bottom: 0;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 330px) {
+  .model_case_content {
+        margin: 30px 0 0 0;
+        width: 100%;
+        height: 210px;
+        background: url(../images/bg_c.png) no-repeat center;
+        box-sizing: border-box;
+        padding: 32px 42px;
+        font-size: 18px;
+        font-weight: normal;
+        letter-spacing: 1px;
+        color: #221815;
+        text-align: left;
+        background-size: 285px 198px;
+        text-indent: 2em;
+    }
+}

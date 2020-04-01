@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .addCard {
+  padding: 0 0.453rem;
+  background-color: #fff;
+}
+.wrap .addCard > a {
+  height: 1.333rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .addCard > a > div {
+  font-size: 0.400rem;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .addCard > a > div .icon--jia {
+  margin-right: 0.400rem;
+  font-size: 0.587rem;
+  color: #108EE9;
+  vertical-align: middle;
+}
+.wrap .addCard > a .icon-arrow-right {
+  color: #999;
+  font-size: 0.427rem;
+}
+.wrap .cardList {
+  margin-top: 0.267rem;
+  background-color: #fff;
+}
+.wrap .cardList > li {
+  height: 1.600rem;
+  padding: 0.347rem 0.453rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f2f5f7;
+}
+.wrap .cardList > li .card {
+  width: 5.333rem;
+}
+.wrap .cardList > li .card > img {
+  float: left;
+  width: 0.800rem;
+  height: 0.800rem;
+  margin-right: 0.267rem;
+}
+.wrap .cardList > li .card > div {
+  line-height: 0.427rem;
+}
+.wrap .cardList > li .icon-gou {
+  color: #108EE9;
+  font-size: 0.587rem;
+  display: none;
+}
+.wrap .cardList > li .active {
+  display: block;
+}

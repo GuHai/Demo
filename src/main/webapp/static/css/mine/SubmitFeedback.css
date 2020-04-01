@@ -1,0 +1,400 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .textarea {
+  padding: 5px 0.453rem;
+  border: none;
+  height: 3.467rem;
+  overflow: hidden;
+  font-size: 0.373rem;
+  color: #666;
+}
+.wrap .tips {
+  margin-right: 0.453rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  text-align: right;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap ::placeholder {
+  font-size: 0.4rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .upload {
+  margin-top: 10px;
+  height: 3.467rem;
+  width: 100%;
+  /*background-color: #fff;*/
+}
+.wrap .upload > img {
+  width: 3.2rem;
+  /* margin-top: 0.266rem; */
+  margin-left: 0.453rem;
+}
+.wrap .upload > label {
+  margin: 0.267rem 0.453rem;
+  display: inline-block;
+  width: 2.987rem;
+  height: 2.987rem;
+  text-align: center;
+  background-color: #f2f5f7;
+}
+.wrap .upload > label > input[type=file] {
+  display: none;
+}
+.wrap .upload > label > i {
+  line-height: 2.987rem;
+  color: #d7d7d7;
+  font-size: 1.067rem;
+}
+.wrap .btnBox {
+  margin-top: 0.533rem;
+  width: 100%;
+  position: fixed;
+  height: 2.667rem;
+  background: #f2f5f7;
+  bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0.32rem;
+}
+.wrap .btnBox .btn {
+  display: block;
+  width: 9.093rem;
+  height: 0.933rem;
+  background-color: #108ee9;
+  border-radius: 0.453rem;
+  color: #fff;
+  padding: 0;
+  border: none;
+  margin: auto;
+  text-align: center;
+  font-size: 0.4rem;
+  line-height: 0.933rem;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.wrap .btnBox .btn:active {
+  background-color: #108EE9;
+}
+.wrap .list-box .posi {
+  height: 1.173rem;
+  padding: 0 0.453rem;
+  background-color: #fff;
+  border-bottom: 1px solid #f2f5f7;
+}
+.wrap .list-box .posi .link {
+  height: 1.173rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .list-box .posi.typeposi{
+  margin-bottom: 0.267rem;
+}
+.wrap .list-box .posi .link .txt {
+  font-size: 0.400rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .list-box .posi .link #hisposi{
+  font-size: 0.347rem;
+  color: #999;
+}
+.wrap .list-box .posi .link #typeselect{
+  font-size: 0.347rem;
+  color: #999;
+}
+.wrap .list-box .posi .link .iconfont {
+  /*margin-left: 5px;*/
+  color: #999;
+}
+.wrap .btnBox .records{
+  color: #108ee9;
+  font-size: 0.373rem;
+  letter-spacing: 0;
+  font-style: normal;
+  text-align: center;
+  width: 100%;
+  margin-top: 0.4rem;
+  display: block;
+}
+.mui-poppicker .mui-poppicker-header {
+  background-color: #fff;
+}
+.wrap .mui-poppicker-header .mui-btn{
+  border: 0;
+  color: #108ee9;
+  font-size: 0.4rem;
+}
+.mui-poppicker-header .mui-btn{
+  background:none;
+  color: #108ee9;
+  border: 0;
+  font-size: 0.4rem;
+}
+.mui-poppicker .mui-poppicker-body .mui-picker {
+  background-color: #fff;
+}
+
+.wrap.page_SubmitIntroduction .btnBox{
+  position: static;
+}
+
+.wraptext .text {
+  padding: 0.613rem 0.453rem;
+  background-color: #f2f5f7
+}
+.wraptext .text h5 {
+  text-indent: 2em;
+  font-size: 0.373rem;
+  font-weight: normal;
+  line-height: 0.587rem;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wraptext .back {
+  margin-top: 0.667rem;
+  width: 100%;
+}
+.wraptext .back .btn {
+  display: block;
+  width: 9.093rem;
+  height: 1.067rem;
+  background-color: #108ee9;
+  border-radius: 0.533rem;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 0;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.067rem;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+  border: none;
+}
+.wraptext .back.intrbtns{
+  position: fixed;
+  background: #f2f5f7;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  height: 1.867rem;
+  padding: 0.45rem 0.453rem;
+}
+
+
+/********************************* 投诉历史 historyComplaint.jsp ***********************************/
+.page_complaint .list-box{}
+.page_complaint .list-box li{
+  overflow: hidden;
+  padding: 0.267rem;
+  margin: 0 0.187rem;
+  background-color: #fff;
+  margin-bottom: 0.267rem;
+  border-radius: 3px;
+}
+.page_complaint .list-box li:last-child{
+  margin-bottom: 0;
+}
+.page_complaint .list-box li .top-flex{
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  border-bottom: 1px solid #efeff4;
+  padding-bottom: 0.16rem;
+}
+.page_complaint .list-box li .top-flex h3{
+  font-size: 0.427rem;
+  color: #333;
+}
+.page_complaint .list-box li .top-flex p{
+  font-size: 0.32rem;
+  color: #999;
+}
+.page_complaint .list-box li .right span{
+  color: #ff3b30;
+  font-size: 0.347rem;
+}
+.page_complaint .list-box li .right span.iconfont{
+  color: #999;
+  font-size: 0.347rem;
+}
+.page_complaint .list-box li .content{
+  font-size: 0.4rem;
+  color: #666;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding-top: 0.267rem;
+}
+
+/***************** 产品功能建议 SubmitAdvise.jsp*******************************/
+.wrap.page_advise .list-box .posi.typeposi input{
+  border: 0;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.wrap.page_advise .btnBox {
+  margin-top: 0.533rem;
+  width: 100%;
+  position: fixed;
+  height: 1.867rem;
+  background: #f2f5f7;
+  bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0.4rem;
+}
+/***************** 举报详情 report_details.jsp*******************************/
+.page_report_details .report-list .r-hd{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0.453rem;
+  align-items: center;
+  background-color: #fff;
+}
+.page_report_details .report-list .r-hd .right{
+
+}
+.page_report_details .report-list .r-hd .left .tit{
+  font-size: 0.427rem;
+  color: #333333;
+  display: block;
+}
+.page_report_details .report-list .r-hd .left .time{
+  font-size: 0.32rem;
+  color: #999999;
+  display: block;
+}
+.page_report_details .report-list .r-hd .right .statu{
+  font-size: 0.347rem;
+  color: #ff3b30;
+}
+.page_report_details .report-list .tel-box {
+  background-color: #fff;
+  margin-top: 0.267rem;
+  padding: 0.267rem 0.453rem;
+
+}
+.page_report_details .report-list .tel-box p{
+  display: flex;
+  justify-content: space-between;
+}
+.page_report_details .report-list .tel-box p .tit{
+  font-size: 0.373rem;
+  color: #333;
+}
+.page_report_details .report-list .tel-box p .name,.page_report_details .report-list .tel-box p a{
+  font-size: 0.347rem;
+  color: #999;
+}
+.page_report_details .report-list .main-box{
+  background-color: #fff;
+  margin-top: 0.267rem;
+  padding: 0.267rem 0.453rem;
+}
+.page_report_details .report-list .main-box .content{
+  overflow: hidden;
+ }
+.page_report_details .report-list .main-box .content .title{
+  color: #333;
+  font-size: 0.427rem;
+  margin-bottom: 0.133rem;
+}
+.page_report_details .report-list .main-box .content .desc{
+  color: #999;
+  font-size: 0.347rem;
+}
+.page_report_details .report-list .img-box {
+  margin-top: 0.267rem;
+  background-color: #fff;
+}
+.page_report_details .report-list .z_photo .z_file {
+  position: relative;
+  width: 2.987rem;
+  height: 2.987rem;
+  background-color: #f2f5f7;
+  text-align: center;
+  line-height: 2.987rem;
+}
+.page_report_details .report-list .z_file .file {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+.page_report_details .report-list .z_photo .up-section {
+  position: relative;
+  margin-right: 2px;
+  margin-bottom: 0.267rem;
+}
+.page_report_details .report-list .up-section .close-upimg {
+  position: absolute;
+  top: 0.160rem;
+  right: 0.213rem;
+  display: none;
+  z-index: 10;
+}
+.page_report_details .report-list .up-section .up-span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.5);
+}
+.page_report_details .report-list .up-section:hover {
+  border: 2px solid #f15134;
+}
+.page_report_details .report-list .up-section:hover .close-upimg {
+  display: block;
+}
+.page_report_details .report-list .up-section:hover .up-span {
+  visibility: visible;
+}
+.page_report_details .report-list .z_photo .up-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-left:2px;
+  margin-top:2px;
+}
+.page_report_details .report-list .upimg-div .up-section {
+  width: 2.960rem;
+  height: 2.987rem;
+}
+.page_report_details .report-list .img-box .upimg-div .z_file {
+  width: 2.933rem;
+  height: 2.933rem;
+  margin-right: 0.133rem;
+  margin-bottom: 0.133rem;
+}
+.page_report_details .report-list .img-box .upimg-div .z_file:nth-child(3n+3){
+  margin-right:0;
+}
+.page_report_details .report-list .img-box .z_file .add-img {
+  display: block;
+  width: 2.960rem;
+  height: 2.987rem;
+}

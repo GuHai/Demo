@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 tomorrowjob@Datapublic class TomorrowJob extends BaseEntity {	private static final long serialVersionUID = 1L;	public TomorrowJob() {		super();	}	    private String positionID;    private String userID;    private String beenID;}

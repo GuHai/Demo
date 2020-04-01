@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .head {
+  height: 1.067rem;
+  background-color: #fff;
+  padding: 0 0.453rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .head .head_span {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #108ee9;
+}
+.wrap .head .head_div {
+  height: 1.067rem;
+  padding: 0.213rem 0;
+}
+.wrap .head .head_div .btn_contact {
+  width: 1.733rem;
+  height: 0.613rem;
+  border-radius: 5px;
+  font-size: 0.293rem;
+  color: #666;
+  padding: 0;
+  margin-right: 0.400rem;
+  border: solid 1px #666666;
+}
+.wrap .head .head_div .btn_contact:active,
+.wrap .head .head_div .btn_advisory:active {
+  background-color: #f2f5f7;
+}
+.wrap .head .head_div .btn_advisory {
+  width: 1.733rem;
+  height: 0.613rem;
+  border-radius: 5px;
+  border: solid 1px #666666;
+  font-size: 0.293rem;
+  color: #666;
+  padding: 0;
+}
+.wrap .recordList {
+  margin-top: 0.267rem;
+  background-color: #fff;
+  padding: 0 0.453rem;
+}
+.wrap .recordList > li {
+  height: 1.440rem;
+  padding-bottom: 0.267rem;
+  padding-top: 0.267rem;
+  border-bottom: 1px solid #f2f5f7;
+}
+.wrap .recordList > li .checkboxs {
+  float: left;
+  width: 0.800rem;
+  height: 0.800rem;
+  line-height: 0.800rem;
+}
+.wrap .recordList > li .checkboxs > input[type=checkbox] {
+  width: 0.400rem;
+  height: 0.400rem;
+  left: 0;
+}
+.wrap .recordList > li .checkboxs > input[type=checkbox]:before {
+  font-size: 0.533rem;
+}
+.wrap .recordList > li .list_content {
+  margin-left: 0.800rem;
+}
+.wrap .recordList > li .list_content > div {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .recordList > li .list_content .divSpan {
+  line-height: 0.347rem;
+}
+.wrap .recordList > li .list_content .divSpan .content_while {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .recordList > li .list_content .divSpan .content_while .content_time {
+  font-style: normal;
+  margin-left: 0.213rem;
+}
+.wrap .recordList > li .list_content .divSpan .content_money {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .recordList > li .list_content .divP {
+  line-height: 0.747rem;
+}
+.wrap .recordList > li .list_content .divP > p {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .btnBox {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  padding: 0.400rem 0.453rem;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .btnBox .btn_end {
+  width: 3.200rem;
+  height: 1.067rem;
+  color: #108ee9;
+  font-size: 0.480rem;
+  border-radius: 0.533rem;
+  border: solid 1px #108ee9;
+}
+.wrap .btnBox .btn_end:active {
+  background-color: #f2f5f7;
+  color: #108ee9;
+}
+.wrap .btnBox .btn_confirm {
+  width: 3.200rem;
+  height: 1.067rem;
+  background-color: #108ee9;
+  border-radius: 0.533rem;
+  color: #fff;
+  font-size: 0.400rem;
+  border: none;
+}
+.wrap .btnBox .btn_confirm:active {
+  background-color: #108ee9;
+  color: #fff;
+}

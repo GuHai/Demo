@@ -1,0 +1,767 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap .head .banner {
+  position: relative;
+}
+.main {
+  width: 100%;
+  padding-bottom: 175px;
+  background-color: #f3f4f7;
+}
+.main .container_bg {
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+.main .job_title {
+  font-size: 30px;
+  color: #323134;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-weight: bold;
+  line-height: 24px;
+}
+.main .job_title span {
+  display: inline-block;
+  float: left;
+}
+.main .job_title .add {
+  width: 40px;
+  margin-left: 10px;
+  height: 24px;
+  background-image: url("../images1/add.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main .join_title {
+  line-height: 20px;
+  color: #323134;
+  font-size: 26px;
+  line-height: 27px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.main .join_title span {
+  font-weight: bold;
+}
+.main .sub_title {
+  line-height: 30px;
+  font-family: MicrosoftYaHei-Bold;
+  font-size: 32px;
+  letter-spacing: 3px;
+  color: #999999;
+  margin: 0;
+}
+.main .product {
+  width: 100%;
+  height: 1320px;
+  overflow: hidden;
+}
+.main .product .product_content {
+  margin: 100px auto;
+  position: relative;
+}
+.main .product .product_content .product_box {
+  margin-top: 27px;
+}
+.main .product .product_content .product_box img {
+  transition: all 1s;
+  transform: scale(1);
+}
+.main .product .product_content .product_box img:hover {
+  transform: scale(1.05);
+}
+.main .product .product_content .product_box .company {
+  margin-bottom: 20px;
+}
+.main .product .product_content .product_box .company p {
+  margin: 0;
+  text-indent: 2em;
+  font-size: 20px;
+}
+.main .product .product_content .product_left {
+  width: 584px;
+  float: left;
+  position: relative;
+  z-index: 200;
+}
+.main .product .product_content .product_left .product_img {
+  width: 100%;
+}
+.main .product .product_content .product_left .product_bg2 {
+  z-index: 100;
+  position: absolute;
+  bottom: -54px;
+  right: -10px;
+}
+.main .product .product_content .product_left .product_text {
+  position: relative;
+  text-indent: 2em;
+  font-size: 24px;
+  color: #666666;    /*line-height: 24px;*/
+  padding: 44px 77px 44px 74px;
+  background-color: #fff;
+}
+.main .product .product_content .product_left .product_text .quotes-up {
+  width: 54px;
+  height: 28px;
+  top: 17px;
+  left: 30px;
+  position: absolute;
+  background-image: url("../images1/quotes-up.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main .product .product_content .product_left .product_text .quotes-down {
+  width: 54px;
+  height: 28px;
+  right: 70px;
+  bottom: 17px;
+  position: absolute;
+  background-position: center;
+  background-image: url("../images1/quotes-down.png");
+  background-repeat: no-repeat;
+}
+.main .product .product_content .product_right {
+  width: 416px;
+  float: left;
+  position: relative;
+  z-index: 200;
+}
+.main .product .product_content .product_right .product_title {
+  font-size: 48px;
+  color: #999999;
+  text-align: right;
+  padding-right: 60px;
+  background-image: url("../images1/product_title.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.main .product .product_content .product_right .product_project {
+  position: absolute;
+  top: 80px;
+  left: -16px;
+}
+.main .product .product_content .product_right .product_manage {
+  position: absolute;
+  top: 353px;
+  left: -70px;
+}
+.main .product .product_content .product_right .product_bg {
+  position: absolute;
+  top: 51px;
+  left: -10px;
+}
+.main .product .product_content .product_right .product_wages {
+  position: absolute;
+  top: 690px;
+  left: 0px;
+}
+.main .join {
+  position: relative;
+  height: 790px;
+  padding: 110px 0;
+  background-image: url("../images1/join_BG.png");
+  background-position: center 140px;
+  background-repeat: no-repeat;
+}
+.main .join .hand {
+  position: absolute;
+  width: 264px;
+  top: 372px;
+  left: 50%;
+  box-shadow: 0 10px 20px rgba(34, 35, 54, 0.1);
+  transform: translate(-50%, 0);
+}
+.main .join .hand img {
+  width: 100%;
+}
+.main .join .hand h2 {
+  background-color: #fff;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  color: #3591d0;
+  padding-top: 28px;
+  margin: 0;
+  padding-bottom: 28px;
+  text-align: center;
+}
+.main .join .hand p {
+  background-color: #fff;
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+  color: #666666;
+  margin: 0;
+}
+.main .join .hand p:last-child {
+  padding-bottom: 35px;
+}
+.main .join .join_box {
+  padding-top: 265px;
+}
+.main .join .join_box h2 {
+  font-size: 24px;
+  line-height: 24px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  color: #333333;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+.main .join .join_box p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  color: #fefefe;
+}
+.main .join .join_left {
+  float: left;
+  width: 362px;
+}
+.main .join .join_right {
+  float: right;
+  width: 362px;
+}
+.main .plan {
+  padding-top: 100px;
+}
+.main .plan .plan_title {
+  background-image: url("../images1/plan_BG.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  margin-bottom: 50px;
+}
+.main .plan .develop-two {
+  padding-left: 232px;
+  margin-top: -50px;
+}
+.foot {
+  width: 100%;
+  height: 368px;
+  position: relative;
+  background: url("../images1/foot.jpg") no-repeat center top;
+  background-size: cover;
+}
+.foot .foot_fixe_box {
+  height: 200px;
+}
+.foot .foot_fixe {
+  position: absolute;
+  left: 50%;
+  top: -75px;
+  margin-left: -500px;
+  width: 1000px;
+  height: 150px;
+  background-color: #ffffff;
+  box-shadow: 0px -5px 7px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  display: -webkit-flex;    /* Safari */
+  justify-content: space-between;
+}
+.foot .foot_fixe .adorn1 {
+  width: 40px;
+  height: 40px;
+  background-color: #108ee9;
+  align-self: flex-start;
+}
+.foot .foot_fixe .foot_fixe_con {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;    /* Safari */
+  justify-content: space-around;
+  align-items: center;
+}
+.foot .foot_fixe .foot_fixe_con .tel > img {
+  width: 20px;
+  height: 20px;
+  vertical-align: sub;
+}
+.foot .foot_fixe .foot_fixe_con .tel > span {
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.foot .foot_fixe .foot_fixe_con .address > img {
+  width: 20px;
+  vertical-align: sub;
+}
+.foot .foot_fixe .foot_fixe_con .address > span {
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.foot .foot_fixe .adorn2 {
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+}
+.foot .foot_fixe .adorn2 > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.foot .f_link {
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+.foot .f_link span.dot {
+  margin: 0 5px;
+}
+.foot .f_link a {
+  color: #fff;
+}
+.foot .record {
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;    /*line-height: 368px;*/
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.main .about_us {
+  padding: 110px 0;
+  padding-bottom: 0;
+  position: relative;
+}
+.main .about_us .about_title {
+  margin-bottom: 30px;
+}
+.main .about_us .about_box_text {
+  background-color: #fff;
+  padding: 50px;
+  position: relative;
+  height: 440px;
+  box-shadow: 0 0 20px #999;
+}
+.main .about_us .about_box_text p {
+  text-indent: 2em;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+.main .about_us .about_box_text .quotes-up {
+  width: 54px;
+  height: 28px;
+  top: 17px;
+  left: 30px;
+  position: absolute;
+  background-image: url("../images1/quotes-up.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main .about_us .about_box_text .quotes-down {
+  width: 54px;
+  height: 28px;
+  right: 70px;
+  bottom: 40px;
+  position: absolute;
+  background-position: center;
+  background-image: url(../images1/quotes-down.png);
+  background-repeat: no-repeat;
+}
+.main .about_us .about_us_img img {
+  width: 100%;
+}
+.main .about_us .min_about_box, .main .about_us .mob_about_box {
+  display: none;
+}
+.main .about_us .about_content_box, .main .about_us .about_us_img {
+  height: 537px;    /*overflow: hidden;*/
+}
+.main .about_us .description {
+  position: absolute;
+  bottom: 15px;
+  padding: 0 30px;
+}
+.main .about_us .description h3 {
+  font-size: 32px;
+  color: #fff;
+}
+.main .about_us .description .txt {
+  margin-top: 30px;
+}
+.main .about_us .description .txt p {
+  font-size: 22px;
+  color: #fff;
+}
+@media screen and (max-width:1024px) {
+  .foot .foot_fixe_box {
+    height: 100px;
+  }
+  .head .header .navbar-default {
+    display: block;
+  }
+  .head .header .list {
+    display: none;
+  }
+  .main .product .product_content {
+    margin: 30px auto;
+    position: relative;
+  }
+  .main .product .product_content {
+    margin: 30px auto;
+    position: relative;
+  }
+  .main .product .product_content .product_left .product_text {
+    padding: 20px 0px 20px 5px;
+    position: relative;
+    text-indent: 2em;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .main .product .product_content .product_left {
+    width: 55%;
+  }
+  .main .product .product_content .product_left .product_text .quotes-up {
+    top: 5px;
+    left: -10px;
+  }
+  .main .product .product_content .product_left .product_text .quotes-down {
+    right: 0px;
+    bottom: 15px;
+  }
+  .main .product .product_content .product_left .product_module {
+    width: 100%;
+  }
+  .main .product .product_content .product_right {
+    width: 45%;
+  }
+  .main .product .product_content .product_right .product_title {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    padding-right: 50px;
+  }
+  .main .plan {
+    padding-top: 30px;
+    padding-bottom: 110px;
+  }
+  .main .product {
+    height: auto;
+  }
+  .main .job_title {
+    font-size: 22px;
+  }
+  .main .plan .plan_title {
+    background-image: none;
+    margin-bottom: 15px;
+  }
+  .main .join_title {
+    font-size: 22px;
+  }
+  .main .sub_title {
+    font-size: 28px;
+  }
+  .main .join .join_box h2 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .main .join .join_box p {
+    font-size: 13px;
+  }
+  .banner .apply-link {
+    box-sizing: border-box;
+    display: block;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #000000;
+    border-radius: 10px;
+    border: solid 4px #5ac8ff;
+    color: #83ebff;
+    font-size: 28px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+@media screen and (max-width:999px) {
+  .foot .foot_fixe_box {
+    height: 100px;
+  }
+  .main .product .product_content .product_box .company p {
+    font-size: 14px;
+  }
+  .main .about_us {
+    padding: 0;
+  }
+  .main .about_us .min_about_box, .main .about_us .mob_about_box {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .main .about_us .about_us_img {
+    height: auto;
+  }
+  .main .about_us .description h3 {
+    font-size: 16px
+  }
+  .main .about_us .description .txt p {
+    font-size: 15px;
+  }
+  .main .plan .develop-two {
+    padding-left: 15px;
+    margin-top: 0;
+  }
+  .foot .foot_fixe {
+    position: inherit;
+    top: -100px;
+    left: inherit;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+  }
+  .foot .record {
+    line-height: 25px;
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    text-align: center;
+    transform: translate(0, -50%);
+  }
+}
+@media screen and (max-width:768px) {
+  .foot .foot_fixe_box {
+    height: 100px;
+  }
+  .main .product .product_content .product_box .company p {
+    font-size: 14px;
+  }
+  .main .about_us .col-sm-6.relative {
+    display: none;
+  }
+  .main .about_us {
+    padding: 0;
+    margin-bottom: 110px;
+  }
+  .main .about_us .min_about_box, .main .about_us .mob_about_box {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .main .about_us .about_us_img {
+    height: auto;
+  }
+  .main .about_us .description h3 {
+    font-size: 16px
+  }
+  .main .about_us .description .txt p {
+    font-size: 15px;
+  }
+  .main .plan .develop-two {
+    padding-left: 15px;
+    margin-top: 0;
+  }
+  .main .product .product_content {
+    margin: 30px auto;
+    position: relative;
+  }
+  .main .product .product_content .product_left .product_text {
+    padding: 20px 0px 20px 5px;
+    position: relative;
+    text-indent: 2em;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .main .product .product_content .product_left {
+    width: 55%;
+  }
+  .main .product .product_content .product_left .product_text .quotes-up {
+    top: 5px;
+    left: -10px;
+  }
+  .main .product .product_content .product_left .product_text .quotes-down {
+    right: 0px;
+    bottom: 15px;
+  }
+  .main .product .product_content .product_left .product_module {
+    width: 100%;
+  }
+  .main .product .product_content .product_right {
+    width: 45%;
+  }
+  .main .product .product_content .product_right .product_title {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    padding-right: 50px;
+  }
+  .main .plan {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .main .product {
+    height: auto;
+  }
+  .main .job_title {
+    font-size: 22px;
+  }
+  .main .plan .plan_title {
+    background-image: none;
+    margin-bottom: 15px;
+  }
+  .main .join_title {
+    font-size: 22px;
+  }
+  .main .sub_title {
+    font-size: 28px;
+  }
+  .main .join .join_box h2 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .main .join .join_box p {
+    font-size: 13px;
+  }
+  .row {
+    overflow: hidden;
+  }
+  .development {
+    float: left;
+    width: 50%;
+  }
+  .plan_content .development .development-text {
+    background-size: 125px;
+    overflow: hidden;
+    height: 125px;
+  }
+  .development .development-text h4 {
+    left: 60px;
+    top: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .development .development-text p {
+    left: 50px;
+    top: 65px;
+  }
+  .development .development-text span {
+    left: 50px;
+    top: 88px;
+  }
+  .main {
+    padding-bottom: 30px;
+  }
+  .main .product .product_content .product_right .product_bg {
+    position: absolute;
+    top: 51px;
+    right: 0;
+    width: 100%;
+    left: 0;
+  }
+  .main .product .product_content .product_right .product_project {
+    position: absolute;
+    top: 80px;
+    left: 4px;
+    width: 100%;
+  }
+  .main .product .product_content .product_right .product_manage {
+    position: absolute;
+    top: 178px;
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+  .main .product .product_content .product_right .product_wages {
+    position: absolute;
+    top: 300px;
+    right: 0px;
+    width: 100%;
+  }
+  .main .product .product_content .product_left .product_text .quotes-up {
+    background-size: 20px;
+  }
+  .main .product .product_content .product_left .product_text .quotes-down {
+    background-size: 20px;
+  }
+  .main .product .product_content .product_left .product_bg2 {
+    z-index: 100;
+    position: absolute;
+    bottom: 30px;
+    right: -140px;
+    width: 75%;
+  }
+  .main .join .hand {
+    position: inherit;
+    float: right;
+    transform: none;
+    width: 44%;
+    margin-top: 50px;
+  }
+  .foot {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: url("../images1/foot.jpg") no-repeat center top;
+    background-size: cover;
+  }
+  .foot .foot_fixe {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    height: 180px;
+  }
+  .foot .record {
+    line-height: 25px;
+    position: static;
+    bottom: 2%;
+    width: 100%;
+    text-align: center;
+    transform: translate(0, -50%);
+    font-size: 16px;
+  }
+  .wrap .mask .fixe_codeBox1 {
+    z-index: 100001;
+    width: 80%;
+    height: 300px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 2px 2px #e5e5e5;
+    position: absolute;
+    left: 10%;
+    top: -160px;
+  }
+  .main .about_us .about_box {
+    display: none;
+  }
+  .main .about_us .about_box_text {
+    padding: 45px 20px;
+    height: auto;
+  }
+  .main .about_us .about_box_text .quotes-up {
+    top: 15px;
+    left: 0px;
+  }
+  .main .about_us .about_box_text .quotes-down {
+    right: 5px;
+    bottom: 15px;
+  }
+}

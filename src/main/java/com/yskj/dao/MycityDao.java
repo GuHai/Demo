@@ -1,0 +1,1 @@
+package com.yskj.dao;import java.util.HashMap;import java.util.List;import com.yskj.models.Mycity;import com.yskj.models.PageParam;import com.yskj.models.QueryParam;public interface MycityDao extends Dao {	List<HashMap> queryHashMap(PageParam pageParam);	List<Mycity> mapList(QueryParam queryParam);	Mycity mapOne(QueryParam queryParam);}

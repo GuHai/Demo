@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body, html {
+  /*background-color: #2e3132 !important;*/
+}
+/*.wrap {
+  width: 100%;
+  height: 100%;
+}*/
+.wrap .content {
+  background-color: #fff;
+  width: 8.667rem;
+  height: auto;
+  border-radius: 5px;
+}
+.wrap .content.QRcodeContent{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
+  -webkit-transform: translate3d(-50%,-50%,0) scale(1);
+  transform: translate3d(-50%,-50%,0) scale(1);
+}
+.wrap .content .head {
+  padding: 0.533rem;
+  overflow: hidden;
+  padding-bottom: 0.667rem;
+}
+.wrap .head .close.iconbtns{
+  position: absolute;
+  right: 0.267rem;
+  top: 0.267rem;
+}
+.wrap .head .close.iconbtns span.icon-guanbi{
+  color: #666;
+  padding: 0.533rem;
+}
+.wrap .content .tipstxt{
+    color: #333;
+    font-size: 0.373rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+.wrap .content .head .close.iconbtns{
+  position: absolute;
+  top: 0.267rem;
+  right: 0.453rem;
+}
+.wrap .content .head .close.iconbtns span{
+  color: #666;
+}
+.wrap .content .head .imgBox {
+  float: left;
+  width: 1.067rem;
+  height: 1.067rem;
+  border-radius: 0.533rem;
+}
+.wrap .content .head .imgBox .photoImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.wrap .content .head .infoBox {
+  margin-left: 1.333rem;
+  margin-top: 0.13rem;
+}
+.wrap .content .head .infoBox .nameP {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #414141;
+  line-height:  1;
+}
+.wrap .content .head .infoBox .noteP {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+  line-height:  1;
+  margin-top: 0.213rem;
+}
+.wrap .content .tipstxt{
+  color: #333;
+  font-size: 0.373rem;
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+.wrap .content .codeBox {
+  width: 6.667rem;
+  height: 6.667rem;
+  margin: auto;
+}
+.wrap .content .codeBox > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.wrap .content .msgBox {
+  font-size: 0.320rem;
+  text-align: center;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+  padding-bottom: 0.533rem;
+  margin-top: 0.347rem;
+}
+.wrap .content.page_pay_code{
+  position: absolute;
+  top: 50%;
+  width: 85% ;
+  left:7.5%;
+  margin-top: 2rem;
+}

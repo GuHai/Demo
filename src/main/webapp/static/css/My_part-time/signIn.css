@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .head_title {
+  height: 1.333rem;
+  background-color: #fff;
+  padding: 0 0.453rem;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .head_title > span:first-child {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.333rem;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .head_title > span:last-child {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.333rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .sign_time {
+  margin-top: 0.267rem;
+  height: 1.067rem;
+  border-bottom: 1px solid #f2f5f7;
+  background-color: #fff;
+  padding: 0 0.453rem;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .sign_time .sign_time_year {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.067rem;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .sign_time .sign_time_year .sign_time_week {
+  margin-left: 0.213rem;
+}
+.wrap .sign_time .sign_time_minute {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.067rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .sign_address {
+  height: 1.067rem;
+  background-color: #fff;
+  padding: 0 0.453rem;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .sign_address .sign_address_test {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.067rem;
+  letter-spacing: 0px;
+  color: #333333;
+  width: 25%;
+  display: inline-block;
+}
+.wrap .sign_address .sign_address_test > i {
+  color: #108EE9;
+  font-size: 0.427rem;
+  margin-right: 5px;
+}
+.wrap .sign_address .sign_address_address {
+  font-size: 0.4rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.067rem;
+  letter-spacing: 0px;
+  color: #666666;
+  width: 75%;
+  display: inline-block;
+}
+.wrap .sign_address .sign_address_address .iconfont{
+  color: #108EE9;
+  font-size: 0.4rem;
+  margin-left: 0.133rem;
+}
+.wrap .textarea {
+  margin-top: 0.267rem;
+  padding: 5px 0.453rem;
+  border: none;
+  font-size: 0.400rem;
+}
+.wrap .tips {
+  margin-right: 0.453rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  text-align: right;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap ::placeholder {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .upload {
+  margin-top: 0.267rem;
+  height: 3.467rem;
+  width: 100%;
+ /* background-color: #fff;*/
+  padding: 0.266rem;
+}
+.wrap .upload > img {
+  width: 2.982rem;
+  height: 2.982rem;
+  border: none;
+  margin-right: 4px;
+}
+.wrap .btnBox {
+  margin-top: 0.533rem;
+  width: 100%;
+}
+.wrap .btnBox .btn_sub {
+  display: block;
+  width: 9.093rem;
+  height: 0.933rem;
+  background-color: #108ee9;
+  border-radius: 0.453rem;
+  color: #fff;
+  padding: 0;
+  border: none;
+  margin: auto;
+  text-align: center;
+  font-size: 0.400rem;
+  line-height: 0.933rem;
+  letter-spacing: 0px;
+}
+/********************** 签到记录 sign_in_view.jsp ******************************/
+.page_sign_in_view .sign_list_box .sign-box{
+  overflow: hidden;
+}
+.page_sign_in_view .sign_list_box .sign-box li{
+  background-color: #fff;
+  margin-bottom: 0.267rem;
+  padding: 0.453rem;
+}
+.page_sign_in_view .sign_list_box .sign-box .sign-hd{
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.267rem;
+}
+.page_sign_in_view .sign_list_box .sign-box .sign-hd .addr{
+  font-size: 0.32rem;
+  color: #333;
+}
+.page_sign_in_view .sign_list_box .sign-box .sign-hd .icon-fujin{
+  margin: 0;
+  font-size: 0.373rem;
+}
+.page_sign_in_view .sign_list_box .sign-box .sign-hd .time{
+  font-size: 0.32rem;
+  color: #999;
+}
+.page_sign_in_view .sign_list_box .sign-box .content{
+  font-size: 0.347rem;
+  color: #999;
+}
+.page_sign_in_view .sign_list_box .img-box {
+  margin-top: 0.267rem;
+  background-color: #fff;
+}
+.page_sign_in_view .sign_list_box .z_photo .z_file {
+  position: relative;
+  width: 2.987rem;
+  height: 2.987rem;
+  background-color: #f2f5f7;
+  text-align: center;
+  line-height: 2.987rem;
+}
+.page_sign_in_view .sign_list_box .z_file .file {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+.page_sign_in_view .sign_list_box .z_photo .up-section {
+  position: relative;
+  margin-right: 2px;
+  margin-bottom: 0.267rem;
+}
+.page_sign_in_view .sign_list_box .up-section .close-upimg {
+  position: absolute;
+  top: 0.160rem;
+  right: 0.213rem;
+  display: none;
+  z-index: 10;
+}
+.page_sign_in_view .sign_list_box .up-section .up-span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.5);
+}
+.page_sign_in_view .sign_list_box .up-section:hover {
+  border: 2px solid #f15134;
+}
+.page_sign_in_view .sign_list_box .up-section:hover .close-upimg {
+  display: block;
+}
+.page_sign_in_view .sign_list_box .up-section:hover .up-span {
+  visibility: visible;
+}
+.page_sign_in_view .sign_list_box .z_photo .up-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-left:2px;
+  margin-top:2px;
+}
+.page_sign_in_view .sign_list_box .upimg-div .up-section {
+  width: 2.960rem;
+  height: 2.987rem;
+}
+.page_sign_in_view .sign_list_box .img-box .upimg-div .z_file {
+  width: 2.933rem;
+  height: 2.933rem;
+  margin-right: 0.133rem;
+  margin-bottom: 0.133rem;
+}
+.page_sign_in_view .sign_list_box .img-box .upimg-div .z_file:nth-child(3n+3){
+  margin-right:0;
+}
+.page_sign_in_view .sign_list_box .img-box .z_file .add-img {
+  display: block;
+  width: 2.960rem;
+  height: 2.987rem;
+}

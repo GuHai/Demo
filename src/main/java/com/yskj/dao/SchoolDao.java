@@ -1,0 +1,1 @@
+package com.yskj.dao;import java.util.HashMap;import java.util.List;import com.yskj.models.PageParam;import com.yskj.models.QueryParam;import com.yskj.models.School;public interface SchoolDao extends Dao {	List<HashMap> queryHashMap(PageParam pageParam);	List<School> attachedSchoolPage(QueryParam queryParam);}

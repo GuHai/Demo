@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 txadmin@Datapublic class TxAdmin extends BaseEntity {	private static final long serialVersionUID = 1L;	public TxAdmin() {		super();	}	    //    private String userID;    //    private String device;    private String validcode;    private String email;}

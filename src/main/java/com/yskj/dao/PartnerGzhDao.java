@@ -1,0 +1,1 @@
+package com.yskj.dao;import java.util.HashMap;import java.util.List;import com.yskj.models.PageParam;import com.yskj.models.PartnerGzh;import com.yskj.models.QueryParam;public interface PartnerGzhDao extends Dao {	List<HashMap> queryHashMap(PageParam pageParam);	PartnerGzh pumapOne(QueryParam queryParam);}

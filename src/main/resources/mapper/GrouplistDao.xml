@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yskj.dao.GrouplistDao" >
+
+<!-- 查询字段 -->
+<sql id="columnList" >
+	g.id,g.groupID ,g.userNickName,
+	 g.userID, g.positionID, g.userType,g.groupName , g.createTime, g.updateTime, g.version, g.isDeleted, g.createBy, g.updateBy
+</sql>
+
+
+<!--通过id集合in查询-->
+<sql id="inClause">
+    <if test="column!=null">
+        <if test="ids==null">
+            and 1=0
+        </if>
+        <if test="ids!=null">
+            <if test="ids.size>0">
+                and  g.${column} in
+                <foreach item="items" index="index" collection="ids" open="(" separator="," close=")">
+                    #{items}
+                </foreach>
+            </if>
+            <if test="ids.size==0">
+                and 1=0
+            </if>
+        </if>
+    </if>
+</sql>
+
+<!-- 查询条件 -->
+<sql id="whereClause">
+where 1=1
+<trim  suffixOverrides="," >
+	<if test="condition.id != null" >
+	    and g.id = #{condition.id}
+	</if>
+	<if test="condition.userID != null" >and  g.userID = #{condition.userID}</if>
+<if test="condition.positionID != null" >and  g.positionID = #{condition.positionID}</if>
+<if test="condition.userType != null" >and  g.userType = #{condition.userType}</if>
+<if test="condition.createTime != null" >and  g.createTime = #{condition.createTime}</if>
+<if test="condition.updateTime != null" >and  g.updateTime = #{condition.updateTime}</if>
+<if test="condition.version != null" >and  g.version = #{condition.version}</if>
+<if test="condition.isDeleted != null" >and  g.isDeleted = #{condition.isDeleted}</if>
+<if test="condition.createBy != null" >and  g.createBy = #{condition.createBy}</if>
+<if test="condition.updateBy != null" >and  g.updateBy = #{condition.updateBy}</if>
+<if test="condition.groupName != null" >and  g.groupName = #{condition.groupName}</if>
+<if test="condition.groupID != null" >and  g.groupID = #{condition.groupID}</if>
+<if test="condition.userNickName != null" >and  g.userNickName = #{condition.userNickName}</if>
+</trim>
+<include refid="inClause"/>
+</sql>
+
+<!-- 模糊查询条件 -->
+<sql id="whereLikeClause">
+where 1=1
+<trim  suffixOverrides="," >
+	<if test="condition.id != null" >
+	    and g.id = #{condition.id}
+	</if>													 		
+	<if test="condition.userID != null" >and  UPPER(g.userID) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.userID}),'%'))</if>
+<if test="condition.positionID != null" >and  UPPER(g.positionID) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.positionID}),'%'))</if>
+<if test="condition.userType != null" >and  UPPER(g.userType) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.userType}),'%'))</if>
+<if test="condition.createTime != null" >and  UPPER(g.createTime) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.createTime}),'%'))</if>
+<if test="condition.updateTime != null" >and  UPPER(g.updateTime) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.updateTime}),'%'))</if>
+<if test="condition.version != null" >and  UPPER(g.version) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.version}),'%'))</if>
+<if test="condition.isDeleted != null" >and  UPPER(g.isDeleted) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.isDeleted}),'%'))</if>
+<if test="condition.createBy != null" >and  UPPER(g.createBy) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.createBy}),'%'))</if>
+<if test="condition.updateBy != null" >and  UPPER(g.updateBy) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.updateBy}),'%'))</if>
+<if test="condition.groupName != null" >and  UPPER(g.groupName) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.groupName}),'%'))</if>
+<if test="condition.groupID != null" >and  UPPER(g.groupID) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.groupID}),'%'))</if>
+<if test="condition.userNickName != null" >and  UPPER(g.userNickName) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.userNickName}),'%'))</if>
+</trim>
+<include refid="inClause"/>
+</sql>
+
+
+
+
+
+<!-- 插入记录 -->
+<insert id="add"  >
+  insert into grouplist (id,groupID,userNickName,userID,positionID,userType,groupName,createTime,updateTime,version,isDeleted,createBy,updateBy)
+  values(#{id,jdbcType=VARCHAR},#{groupID,jdbcType=VARCHAR},#{userNickName},#{userID},#{positionID},#{userType},#{groupName},#{createTime},#{updateTime},#{version},#{isDeleted},#{createBy},#{updateBy})
+</insert>
+
+
+
+<!-- 修改记录，只修改只不为空的字段 -->
+<update id="update" >
+	update grouplist set
+	<trim  suffixOverrides="," >
+	<if test="userID != null ">userID=#{userID},</if>
+<if test="positionID != null ">positionID=#{positionID},</if>
+<if test="userType != null ">userType=#{userType},</if>
+<if test="createTime != null ">createTime=#{createTime},</if>
+<if test="updateTime != null ">updateTime=#{updateTime},</if>
+<if test="version != null ">version=#{version},</if>
+<if test="isDeleted != null ">isDeleted=#{isDeleted},</if>
+<if test="createBy != null ">createBy=#{createBy},</if>
+<if test="updateBy != null ">updateBy=#{updateBy},</if>
+<if test="groupName != null ">groupName=#{groupName},</if>
+<if test="groupID != null ">groupID=#{groupID},</if>
+<if test="userNickName != null ">userNickName=#{userNickName},</if>
+	</trim> where id=#{id} and version = #{version}-1
+</update>
+
+<!-- 删除记录 -->
+<delete id="del" >
+	delete from grouplist where id = #{id}
+</delete>
+
+<!-- 根据id查询  -->
+<select id="get"   resultType="Grouplist"  parameterType="String">
+	select <include refid="columnList" /> 
+	from grouplist  g
+	where  g.id = #{id}  and g.isDeleted = false
+</select>
+
+<!-- 列表总数-->
+<select id="count" resultType="java.lang.Long" >
+	select count(1) 
+	from grouplist  g
+	<include refid="whereClause"/>
+</select>
+
+<!-- 查询page -->
+<select id="findPage" resultType="Grouplist" >
+	select 
+	<include refid="columnList"/>
+	from grouplist g
+	<include refid="whereClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 模糊查询page -->
+<select id="findLikePage" resultType="Grouplist" >
+	select 
+	<include refid="columnList"/>
+	from grouplist g
+	<include refid="whereLikeClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询列表list -->
+<select id="findList" resultType="Grouplist" >
+	select
+	<include refid="columnList"/>
+	from grouplist g
+	<include refid="whereClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!--模糊查询list-->
+<select id="findLikeList" resultType="Grouplist" >
+	select
+	<include refid="columnList"/>
+	from grouplist g
+	<include refid="whereLikeClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询符合条件的数据的id集合 -->
+<select id="findIds" resultType="String">
+	select g.${idsColumn}
+	from grouplist g
+    <include refid="whereClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询符合模糊条件的数据的id集合 -->
+<select id="findLikeIds" resultType="String">
+	select g.${idsColumn}
+	from grouplist g
+    <include refid="whereLikeClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 获取一个对象通过非id -->
+<select id="one" resultType="Grouplist" >
+     select
+    <include refid="columnList"/>
+     from grouplist g
+    <include refid="whereClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+    limit 0,1
+</select>
+
+<!--如果你想返回一个HashMap 就实现这个select标签-->
+<select id="queryHashMap" resultType="java.util.HashMap"  parameterType="Object">
+</select>
+
+	<!--获得群成员-->
+	<select id="getGroupUser" parameterType="java.lang.String" resultType="com.yskj.models.Grouplist">
+		SELECT * FROM grouplist WHERE groupID = #{groupID}
+	</select>
+
+	<select id="getGroupUserInfo" parameterType="java.lang.String" resultType="java.util.Map">
+		SELECT
+		g.userNickName,g.userType,g.groupID,
+		IFNULL(CONCAT('/',attachment.`path`,'/',attachment.`datestr`,'/',attachment.`name`),weixin.`headimgurl`) as 'headimgurl'
+		,g.userID,g.id,g.version
+		FROM grouplist g
+		LEFT JOIN weixin weixin
+		ON weixin.`userID` = g.userID
+		LEFT JOIN shiro_user shiro_user
+		ON shiro_user.`id` = weixin.userID
+		left join attachment attachment
+		on attachment.id = shiro_user.infoHeadImg
+ 		WHERE groupID = #{groupID}
+	</select>
+	
+	<delete id="clearGroupByGroupID">
+		delete from grouplist where groupID = #{groupID}
+	</delete>
+
+	<update id="updateGroupNameTitleByPosition" parameterType="com.yskj.models.Grouplist">
+		update grouplist set
+		groupName=#{groupName}
+		WHERE  positionID=#{positionID}
+	</update>
+
+</mapper>

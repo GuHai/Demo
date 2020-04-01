@@ -1,0 +1,1 @@
+package com.yskj.dao;import java.util.HashMap;import java.util.List;import com.yskj.models.InsProfessionList;import com.yskj.models.PageParam;import com.yskj.models.QueryParam;public interface InsProfessionListDao extends Dao {	List<HashMap> queryHashMap(PageParam pageParam);	List<InsProfessionList>findListByLevel(QueryParam queryParam);}

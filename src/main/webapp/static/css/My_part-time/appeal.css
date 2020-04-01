@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .title {
+  height: 1.333rem;
+  background-color: #fff;
+  line-height: 1.333rem;
+  text-align: center;
+  font-size: 0.480rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .jesuan {
+  margin-top: 0.267rem;
+  padding: 0 0.453rem;
+  height: 1.067rem;
+  background-color: #fff;
+  border-bottom: 1px solid #f2f5f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .jesuan .jesuan_lf {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .jesuan .jesuan_rt {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .jesuan .jesuan_rt > i {
+  color: #666;
+  vertical-align: middle;
+}
+.wrap .textarea {
+  padding: 5px 0.453rem;
+  border: none;
+  font-size: 0.400rem;
+}
+.wrap ::placeholder {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .tips {
+  padding-right: 0.453rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  text-align: right;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .upload {
+  height: 3.467rem;
+  width: 100%;
+}
+.wrap .upload > label {
+  margin: 0.267rem 0.453rem;
+  display: inline-block;
+  width: 2.987rem;
+  height: 2.987rem;
+  text-align: center;
+  background-color: #fff;
+}
+.wrap .upload > label > input[type=file] {
+  display: none;
+}
+.wrap .upload > label > i {
+  line-height: 2.987rem;
+  color: #d7d7d7;
+  font-size: 1.067rem;
+}
+.wrap .btnBox {
+  position: fixed;
+  bottom: 0.400rem;
+  width: 100%;
+  padding: 0 0.453rem;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .btnBox .btn_cancel {
+  display: block;
+  width: 3.200rem;
+  height: 1.067rem;
+  border: 1px solid #108ee9;
+  border-radius: 0.533rem;
+  color: #108EE9;
+  padding: 0;
+  font-size: 0.480rem;
+  letter-spacing: 0px;
+}
+.wrap .btnBox .btn_cancel:active {
+  background-color: #f2f5f7;
+  color: #108EE9;
+}
+.wrap .btnBox .btn_sub {
+  display: block;
+  width: 3.200rem;
+  height: 1.067rem;
+  background-color: #108ee9;
+  border-radius: 0.533rem;
+  border: solid 1px #108ee9;
+  font-size: 0.480rem;
+  font-weight: normal;
+  font-stretch: normal;
+  padding: 0;
+  letter-spacing: 0px;
+  border: none;
+  color: #ffffff;
+}
+.wrap .btnBox .btn_sub:active {
+  background-color: #108EE9;
+}
+.mui-poppicker {
+  background-color: #fff;
+}
+.mui-poppicker .mui-poppicker-header {
+  border-bottom: 1px solid #f2f5f7;
+}
+.mui-poppicker .mui-poppicker-header .mui-btn {
+  border: none;
+  color: #108ee9;
+  font-size: 0.400rem;
+}
+.mui-poppicker .mui-poppicker-header .mui-btn-blue {
+  background-color: #fff;
+}
+.mui-poppicker .mui-poppicker-body {
+  border-top: none;
+}
+.mui-poppicker .mui-poppicker-body .mui-picker {
+  background-color: #fff;
+}
+.mui-poppicker .mui-poppicker-body .mui-picker .visible {
+  font-size: 0.427rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.mui-poppicker .mui-poppicker-body .mui-picker .highlight {
+  font-size: 0.480rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}

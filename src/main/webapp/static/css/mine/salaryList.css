@@ -1,0 +1,85 @@
+.wrap .nav .navList {background-color: #fff;}
+.wrap .nav .navList > li {float: left;height: 1.067rem;width: 50%;text-align: center;line-height: 1.067rem;font-size: 0.400rem;letter-spacing: 0px;color: #666666;}
+.wrap .nav .navList .active a {color: #108EE9;border-bottom: 2px solid #108EE9;padding-bottom: 0.28rem;}
+/*.wrap .main {margin-top: 0.267rem;}*/
+.wrap .main .tips{background-color: #fff;margin-bottom: 0.3rem;padding: 0.2rem 0.5rem;}
+.wrap .main .tips p{color: #108ee9;font-size: 0.4rem;}
+.wrap .main .allList {/*background-color: #fff;*/ margin-top: 0.267rem;}
+.wrap .main .allList > li {border-bottom: 1px solid #d7d7d7;background-color: #fff;}
+.wrap .main .allList > li:last-child{border-bottom: 0}
+.wrap .main .allList > li > a {display: block;height: 1.600rem;padding: 0.347rem 0.453rem;}
+.wrap .main .allList > li > a > i {float: left;margin-right: 0.267rem;font-size: 0.693rem;line-height: 0.960rem;color: #00b60d;vertical-align: middle;}
+.wrap .main .allList > li > a .contenBox {width: 58%;float: left;line-height: 0.507rem;overflow:  hidden;text-overflow:  ellipsis;white-space:  nowrap;}
+.wrap .main .allList > li > a .contenBox .list-title {font-size: 0.373rem;letter-spacing: 0px;color: #414141;padding-bottom: 0.1rem;white-space:  nowrap;text-overflow: ellipsis;display: inline-block;}
+.wrap .main .allList > li > a .contenBox .list-time {font-size: 0.347rem;letter-spacing: 0px;color: #999;}
+.wrap .main .allList > li > a .contenBox .list-time > span {margin-right: 0.400rem;}
+.wrap .main .allList > li > a .money {line-height: 0.507rem;width: 30%;overflow:  hidden;}
+.wrap .main .allList > li > a .money > p:first-child {font-size: 0.373rem;letter-spacing: 0px;color: #ff3b30;text-align: right;font-family: "Microsoft YaHei";padding-bottom: 0.1rem;}
+.wrap .main .allList > li > a .money > p:last-child {font-size: 0.320rem;text-align: right;letter-spacing: 0px;color: #999;}
+
+.wrap .main .withdrawList {display: none;}
+.wrap .main .withdrawList > li{overflow: hidden;margin-bottom: 0.267rem;background-color: #fff;}
+.wrap .main .withdrawList > li > a {display: block;padding: 0.347rem 0.453rem;}
+.wrap .main .withdrawList > li .pers-list {position: relative;}
+.wrap .main .withdrawList > li .duty-man {height: auto;overflow: hidden;}
+.wrap .main .withdrawList > li .duty-man .Dman-name {width: 100%;height: auto;overflow: hidden;}
+.wrap .main .withdrawList > li .duty-man .Dman-name .pers-img {float: left;width: 1.2rem;/* height: 1.2rem; */border-radius: 50%;overflow: hidden;line-height: 1.2rem;background: #ddd;width: 15%;}
+.wrap .main .withdrawList > li .duty-man .Dman-name .pers-img img {width: 100%;height: 100%;}
+.wrap .main .withdrawList > li .duty-man .Dman-name .pers-name {position: relative;padding-left: 0.267rem;height: auto;overflow: hidden;font-size: 0.427rem;color: #333;width: 65%;float:  left;}
+.wrap .main .withdrawList > li .duty-man .Dman-name .pers-name .Dnam-tT {width: 100%;overflow: hidden;line-height: 0.693rem;position: relative;}
+.wrap .main .withdrawList > li .duty-man .Dman-name .pers-name .Dnam-tT .DT-p1 {float: left;overflow: hidden;color: #333;}
+.wrap .main .withdrawList > li .duty-man .Dman-name .pers-name .Dnam-tF {width: 100%;overflow: hidden;font-size: 0.267rem;color: #999;}
+.wrap .main .withdrawList > li .duty-man .Dman-name .pers-name .Dnam-tF > p {float: left;color: #ff3b30;}
+.wrap .main .withdrawList > li .duty-man .statu{float:  left; width: 20%;text-align:  right;color: #ff3b30;}
+.wrap .main .withdrawList > li .record{border-bottom: 1px solid #d7d7d7;padding-top: 0.4rem;padding-bottom: 0.2rem;}
+.wrap .main .withdrawList > li .record span.txt{color: #999;}
+.wrap .main .withdrawList > li .accounts{padding-top: 0.2rem;}
+.wrap .main .withdrawList > li .accounts span.txt{color: #999;}
+.wrap .main .withdrawList > li .accounts span.txt span.yen{color: #ff3b30;}
+.wrap .main .withdrawList > li .icon-arrow-right{float: right;color: #999;}
+.wrap .main .withdrawList > li span.txt i{color: #000;font-style: normal;}
+
+/*订单详情*/
+.wrap .top{background-color: #108ee9;}
+.wrap .top .title{text-align: left;color: #fff;padding: 0.5rem;overflow:  hidden;}
+.wrap .top .head {position: relative;text-align: center;font-size: 1.120rem;letter-spacing: 0px;color: #fff;overflow:  hidden;padding: 0.5rem 0;}
+.wrap .top .statu{color: #fff;text-align: center;padding-bottom: 0.5rem;font-size: 0.4rem;}
+.wrap .infoList {margin-top: 0.267rem;background-color: #fff;}
+.wrap .infoList > li {padding: 0 0.453rem;height: 1.200rem;border-bottom: 1px solid #f2f5f7;display: flex;justify-content: space-between;align-items: center;}
+.wrap .infoList > li .list-name {font-size: 0.400rem;letter-spacing: 0px;color: #333333;}
+.wrap .infoList > li .list-info {font-size: 0.320rem;letter-spacing: 0px;color: #666666;}
+.wrap .infoList > li .list-info > i {margin-left: 5px;vertical-align: middle;color: #999;}
+.wrap .infoList > li .list-info .list-info-month {font-style: normal;margin-right: 5px;}
+.wrap .infoList > li .list-info .list-info-time {font-style: normal;}
+.wrap .accountList{background-color: #fff;}
+.wrap .accountList .otherlist{padding: 0.3rem 0.453rem;border-bottom: 1px solid #f2f5f7;height:  auto;}
+.wrap .accountList .list-name{font-size: 0.400rem;letter-spacing: 0px;color: #333333;}
+.wrap .accountList .list-info{font-size: 0.320rem;letter-spacing: 0px;color: #666666;padding-left: 0.4rem;}
+.wrap .remarks {padding: 0.400rem 0.453rem;margin-top: 0.267rem;background-color: #fff;}
+.wrap .remarks > h2 {font-size: 0.400rem;font-weight: normal;font-stretch: normal;letter-spacing: 0px;color: #333333;}
+.wrap .remarks .remarks-text {/*text-indent: 2em;*/margin-top: 0.160rem;font-size: 0.320rem;font-weight: normal;font-stretch: normal;letter-spacing: 0px;color: #666666;padding-left: 0.4rem;}
+.wrap .foot-fixed {position: fixed;left: 0;bottom: 0;height: 1.333rem;width: 100%;text-align:  center;line-height: 1.333rem;font-size: 0.47rem;}
+.wrap .foot-fixed .money{width: 65%;color: #108ee9;float:  left;background:  #fff;overflow:  hidden;}
+.wrap .foot-fixed .payment{width: 35%;background-color: #108ee9;float: left;overflow:  hidden;}
+.wrap .foot-fixed .payment a.pay{color: #fff;}
+
+
+
+.wrap .nav .navList {
+    background-color: #fff;
+}
+.wrap .nav .navList > li {
+    float: left;
+    height: 1.067rem;
+    width: 1.733rem;
+    margin: 0 0.800rem;
+    text-align: center;
+    line-height: 1.067rem;
+    font-size: 0.400rem;
+    letter-spacing: 0px;
+    color: #666666;
+}
+.wrap .nav .navList .active {
+    color: #108EE9;
+    border-bottom: 2px solid #108EE9;
+}

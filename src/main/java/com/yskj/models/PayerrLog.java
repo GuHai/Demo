@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 payerrlog@Datapublic class PayerrLog extends BaseEntity {    public static final String BZJZF = "01";    public static final String BZJTH = "02";	private static final long serialVersionUID = 1L;	public PayerrLog() {		super();	}	    //    private String json;    //    private String type;}

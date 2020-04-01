@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 chatgroup@Datapublic class ChatGroup extends BaseEntity {	private static final long serialVersionUID = 1L;	public ChatGroup() {		super();	}	    //用户ID    private String userID;}

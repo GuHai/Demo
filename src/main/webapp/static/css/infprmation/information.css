@@ -1,0 +1,555 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .head-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 997;
+  left: 0;
+  height: 1.067rem;
+  background-color: #fff;
+  border-bottom: 1px solid #efeff4;
+}
+.wrap .head-fixed .tabList{
+  display: flex;
+  justify-content: center;
+}
+.wrap .head-fixed > ul > li {
+  float: left;
+  text-align: center;
+  line-height: 1.067rem;
+}
+.wrap .head-fixed > ul .head-li {
+  width: 50%;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .head-fixed > ul .active {
+  color: #108EE9;
+}
+.wrap .head-fixed > ul .line {
+  height: 0.533rem;
+  border-left: 1px solid #ddd;
+  margin-top: 0.267rem;
+}
+.wrap .main .news-content {
+  margin-top: 1.333rem;
+  display: block;
+}
+.wrap .main .news-content .sesslist {
+  width: 100%;
+  /*background-color: #fff;*/
+}
+.wrap .main .news-content .sesslist .sessinfo {
+  height: 1.8rem;
+  border-bottom: 1px solid #f2f5f7;
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+  /* padding-top: 0.125rem; */
+  background: #FFF;
+  padding: 0 0.453rem;
+}
+.wrap .main .news-content .sesslist .sessinfo:last-child{
+  border-bottom: 0;
+}
+.wrap .main .news-content .sesslist .sessinfo .sessinfo-lf {
+  float: left;
+  position: relative;
+  width: 1.33rem;
+  height: 1.33rem;
+  margin-top: 0.187rem;
+  margin-right: 0.267rem;
+  overflow: hidden;
+}
+.wrap .main .news-content .sesslist .sessinfo .sessinfo-lf img{
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.wrap .main .news-content .sesslist .sessinfo .sessinfo-lf .faceImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.wrap .main .news-content .sesslist .sessinfo .sessinfo-lf .groupImg {
+  width: 47%;
+  height: 47%;
+  border-radius: 10%;
+  float: left;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+.wrap .main .news-content .sesslist .sessinfo .sessinfo-lf .groupImg:nth-child(2n+2){
+  margin-right:0;
+}
+.wrap .main .news-content .sesslist .sessinfo .sessinfo-lf > em {
+  position: absolute;
+  font-style: normal;
+  width: 0.453rem;
+  height: 0.453rem;
+  top: -4px;
+  right: -2px;
+  border-radius: 50%;
+  background-color: #ff3b30;
+  text-align: center;
+  line-height: 0.453rem;
+  color: #fff;
+  font-size: 0.293rem;
+}
+.wrap .main .news-content .sesslist .sessinfo .sessinfo-rt {
+  position: relative;
+  margin-left: 1.200rem;
+  padding-top: 12px;
+}
+.wrap .main .news-content .sesslist .sessinfo .sessinfo-rt .nameDiv {
+  font-size: 0.42rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+  line-height: 1;
+}
+.wrap .main .news-content .sesslist .sessinfo .sessinfo-rt .msgDiv {
+  font-size: 0.35rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1;
+  padding-top: 0.267rem;
+  margin-top: 0;
+}
+.wrap .main .news-content .sesslist .sessinfo .sessinfo-rt .timeDiv {
+  position: absolute;
+  top: 0.35rem;
+  right: 0px;
+  font-size: 0.267rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .contact-content {
+  display: none;
+  margin-top: 1.333rem;
+}
+.wrap .main .contact-content .mui-indexed-list {
+  border: none;
+}
+.wrap .main .contact-content .mui-indexed-list-inner .mui-indexed-list-item {
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #323232;
+}
+.wrap .main .contact-content .mui-indexed-list-inner .mui-indexed-list-item > img {
+  width: 0.853rem;
+  height: 0.853rem;
+  margin-right: 0.160rem;
+}
+.wrap .main .contact-content .mui-indexed-list-inner .mui-table-view-cell {
+  padding: 0.187rem 0.400rem;
+}
+.wrap .main .contact-content .mui-indexed-list-group {
+  background-color: #f2f5f7;
+}
+.wrap .main .contact-content .mui-indexed-list-search {
+  height: 1.333rem;
+  background-color: #fff;
+}
+.wrap .main .contact-content .mui-indexed-list-search .mui-indexed-list-search-input {
+  height: 0.800rem;
+  width: 9.093rem;
+  margin: 0.267rem 0.453rem;
+  background-color: #f2f5f7;
+  border-radius: 0.400rem;
+  font-size: 0.373rem;
+  text-align: left;
+}
+.wrap .main .contact-content .mui-indexed-list-search ::placeholder {
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .contact-content .mui-indexed-list-bar {
+  background-color: #fff;
+}
+.wrap .main .attention-content {
+  display: none;
+  margin-top: 1.333rem;
+}
+.wrap .main .attention-content .contentBox {
+  margin-top: 0.267rem;
+  background-color: #fff;
+  padding: 0.267rem 0.453rem;
+  padding-bottom: 0.400rem;
+}
+.wrap .main .attention-content .contentBox .attention-head {
+  height: 1.333rem;
+  position: relative;
+}
+.wrap .main .attention-content .contentBox .attention-head .media .mediaImg {
+  width: 0.933rem;
+  height: 0.933rem;
+  float: left;
+  margin-right: 0.267rem;
+  border-radius: 0.453rem;
+}
+.wrap .main .attention-content .contentBox .attention-head .media .mediaImg .media-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.wrap .main .attention-content .contentBox .attention-head .media .attention-nick {
+  margin-left: 1.200rem;
+}
+.wrap .main .attention-content .contentBox .attention-head .media .attention-nick > p:first-child {
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .attention-content .contentBox .attention-head .media .attention-nick > p:last-child {
+  font-size: 0.267rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .attention-content .contentBox .attention-head .media .attention-gz {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.333rem;
+  height: 0.613rem;
+  text-align: center;
+  line-height: 0.613rem;
+  background-color: #ff3b30;
+  border-radius: 5px;
+  color: #fff;
+}
+.wrap .main .attention-content .contentBox .attention-msg > p {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .attention-content .contentBox .attention-msg .attention-photo {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.wrap .main .attention-content .contentBox .attention-msg .attention-photo .imgBox {
+  width: 2.960rem;
+  height: 2.960rem;
+  margin-top: 3px;
+  margin-right: 2px;
+}
+.wrap .main .attention-content .contentBox .attention-msg .attention-photo .imgBox > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li {
+  height: 2.933rem;
+  background-color: #f2f5f7;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container {
+  margin: 0.267rem;
+  margin-top: 0;
+  height: 100%;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-title {
+  display: flex;
+  justify-content: space-between;
+  height: 0.933rem;
+  width: 100%;
+  border-bottom: 1px solid #efeff4;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-title .title-content {
+  line-height: 0.933rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-title .titel-note {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.933rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content {
+  margin-top: 0.267rem;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content .content-tit {
+  float: left;
+  margin-right: 0.213rem;
+  margin-top: 0.160rem;
+  width: 1.333rem;
+  height: 1.333rem;
+  border-radius: 0.667rem;
+  background-color: #108ee9;
+  color: #fff;
+  text-align: center;
+  line-height: 1.333rem;
+  font-size: 0.400rem;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content .content-msg .content-msg1 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content .content-msg .content-msg1 .content-msg1-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content .content-msg .content-msg1 .content-msg1-lf > i {
+  margin-right: 5px;
+  font-size: 0.400rem;
+  color: #15bc83;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content .content-msg .content-msg1 .content-msg1-rt {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content .content-msg .content-msg2 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content .content-msg .content-msg2 .content-msg2-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content .content-msg .content-msg2 .content-msg2-lf .line {
+  display: inline-block;
+  height: 0.267rem;
+  margin: 0 2px;
+  border-left: 1px solid #efeff4;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content .content-msg .content-msg2 .content-msg2-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content .content-msg .content-msg3 {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content .content-msg .content-msg3 .content-msg3-lf {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .attention-content .contentBox .attention-msg .list-li .list-container .list-content .content-msg .content-msg3 .content-msg3-rt {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .attention-content .add-fixed {
+  width: 1.200rem;
+  height: 1.200rem;
+  line-height: 1.200rem;
+  text-align: center;
+  background-color: #108EE9;
+  font-size: 0.480rem;
+  border-radius: 50%;
+  bottom: 75px;
+  position: fixed;
+  right: 17px;
+}
+.wrap .main .attention-content .add-fixed > a {
+  color: #fff;
+}
+.wrap .main .attention-content .contentBox  figure {
+  width: 2.960rem;
+  height: 2.960rem;
+  margin-top: 3px;
+  margin-right: 2px;
+  margin-bottom: 0;
+  margin-left: 0;
+  float: left;
+}
+.wrap .main .attention-content .contentBox  figure  img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.wrap .main .fans-content {
+  display: none;
+  margin-top: 1.333rem;
+}
+.wrap .main .fans-content .mui-indexed-list {
+  border: none;
+}
+.wrap .main .fans-content .mui-indexed-list-inner .mui-indexed-list-item {
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #323232;
+}
+.wrap .main .fans-content .mui-indexed-list-inner .mui-indexed-list-item > img {
+  width: 0.853rem;
+  height: 0.853rem;
+  margin-right: 0.160rem;
+}
+.wrap .main .fans-content .mui-indexed-list-inner .mui-table-view-cell {
+  padding: 0.187rem 0.400rem;
+}
+.wrap .main .fans-content .mui-indexed-list-group {
+  background-color: #f2f5f7;
+}
+.wrap .main .fans-content .mui-indexed-list-search {
+  height: 1.333rem;
+  background-color: #fff;
+}
+.wrap .main .fans-content .mui-indexed-list-search .mui-indexed-list-search-input {
+  height: 0.800rem;
+  width: 9.093rem;
+  margin: 0.267rem 0.453rem;
+  background-color: #f2f5f7;
+  border-radius: 0.400rem;
+  font-size: 0.373rem;
+  text-align: left;
+}
+.wrap .main .fans-content .mui-indexed-list-search ::placeholder {
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .fans-content .mui-indexed-list-bar {
+  background-color: #fff;
+}
+.wrap .main .fans-content {
+  display: none;
+  margin-top: 1.333rem;
+}
+
+.wrap .main .groupchat_content {
+  margin-top: 1.333rem;
+  width: 100%;
+}
+.wrap .main .groupchat_content .mui-content{
+  background: none;
+}
+
+/*公共样式*/
+.wrap .main  .sessinfo {
+  height: 1.8rem;
+  border-bottom: 1px solid #f2f5f7;
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+  background: #FFF;
+  padding: 0 0.453rem;
+}
+.wrap .sessinfo .sessinfo-lf {
+  float: left;
+  position: relative;
+  width: 1.33rem;
+  height: 1.33rem;
+  margin-top: 0.187rem;
+  margin-right: 0.267rem;
+  border-radius: 10%;
+}
+.wrap .main .sessinfo .sessinfo-lf .faceImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+.wrap .main .sessinfo .sessinfo-rt {
+  position: relative;
+  margin-left: 1.200rem;
+  padding-top: 12px;
+  padding-right: 0.323rem;
+}
+.wrap .main .sessinfo .sessinfo-rt .nameDiv {
+  font-size: 0.42rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+}
+.wrap .main .sessinfo .sessinfo-rt .msgDiv {
+  font-size: 0.35rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 0.2rem;
+}
+.wrap .main .sessinfo .sessinfo-rt .timeDiv {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.453rem;
+  font-size: 0.267rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .sessinfo .content-tit {
+  background-color: #108ee9;
+  color: #fff;
+  text-align: center;
+  line-height: 1.333rem;
+  font-size: 0.42rem;
+}
+.wrap .main .sessinfo .sessinfo-lf > em {
+  position: absolute;
+  font-style: normal;
+  width: 0.453rem;
+  height: 0.453rem;
+  top: -4px;
+  right: -2px;
+  border-radius: 50%;
+  background-color: #ff3b30;
+  text-align: center;
+  line-height: 0.453rem;
+  color: #fff;
+  font-size: 0.293rem;
+}

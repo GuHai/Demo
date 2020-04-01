@@ -1,0 +1,1 @@
+package com.yskj.dao;import com.yskj.models.Invoice;import com.yskj.models.PageParam;import com.yskj.models.QueryParam;import java.util.HashMap;import java.util.List;public interface InvoiceDao extends Dao {	List<HashMap> queryHashMap(PageParam pageParam);	List<Invoice> getInvoiceHistoryInfoList(QueryParam queryParam);	Invoice submInvoice_check(String id);}

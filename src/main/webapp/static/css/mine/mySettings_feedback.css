@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+/******************************* 我要反馈********************************/
+.wrap .heep-zpgl {
+  height: 2.400rem;
+  padding: 0.400rem 0.453rem;
+  background-color: #fff;
+}
+.wrap .heep-zpgl > h1 {
+  margin-bottom: 5px;
+  font-size: 0.400rem;
+  font-weight: 600;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .heep-zpgl > p {
+  text-indent: 1em;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.693rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .heep-shlc {
+  background-color: #fff;
+  height: 2.400rem;
+  margin-top: 0.267rem;
+  padding: 0.400rem 0.453rem;
+}
+.wrap .heep-shlc > h1 {
+  margin-bottom: 5px;
+  font-size: 0.400rem;
+  font-weight: 600;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .heep-shlc > p {
+  text-indent: 1em;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.693rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .btn_fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 1.333rem;
+  width: 100%;
+  background-color: #fff;
+}
+.wrap .btn_fixed .btn {
+  display: block;
+  width: 9.093rem;
+  height: 0.933rem;
+  padding: 0;
+  margin: 0.187rem auto;
+  background-color: #108ee9;
+  border-radius: 0.453rem;
+  color: #fff;
+  font-size: 0.400rem;
+  text-align: center;
+  line-height: 0.933rem;
+}
+a{ text-decoration:none}
+/********************************** end ************************************/
+
+.page_feedback .list {
+  height: 1.173rem;
+  padding: 0 0.453rem;
+  background-color: #fff;
+  border-bottom: 1px solid #f2f5f7;
+  margin-bottom: 0.267rem;
+}
+.page_feedback .list .link {
+  height: 1.173rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page_feedback .list .link .txt {
+  font-size: 0.400rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.page_feedback .list .link .iconfont {
+  margin-left: 5px;
+  color: #999;
+}

@@ -1,0 +1,27 @@
+/*群设置*/
+.wrap .page_group_content{display: block;}
+.wrap .page_group_content .group_content{background-color: #fff;padding: 0.453rem;padding-bottom: 0;overflow: hidden;}
+.wrap .page_group_content .group_content .list{overflow: hidden;height: auto;}
+.wrap .page_group_content .group_content .list li{float: left;width: 20%;overflow: hidden;text-align:  center;vertical-align:  middle;}
+.wrap .page_group_content .group_content .list li .picture_box{width: 1.2rem;height: 1.2rem;line-height: 1.2rem;border-radius: 100%;text-align: center;display: inline-block;}
+.wrap .page_group_content .group_content .list li .picture_box img{width: 100%;border-radius: 100%;vertical-align:  middle;}
+.wrap .page_group_content .group_content .list li .name{text-align: center;overflow:  hidden;height: 0.6rem;line-height: 0.6rem;text-overflow:  ellipsis;white-space:  nowrap;width: 1.333rem;display:  inline-block;color: #666;}
+.wrap .page_group_content .group_content .moreview{display:none;height: 0.8rem;line-height: 0.8rem;text-align: center;width: 100%;background:  #fff;color: #999;}
+.wrap .page_group_content .edit_nick_box{overflow: hidden;padding: 0.453rem;margin-top: 0.3rem;background: #fff;color: #333;font-size: 0.37rem;}
+.wrap .page_group_content .edit_nick_box .title{float: left;}
+.wrap .page_group_content .edit_nick_box .nick{float: right;}
+.wrap .page_group_content .edit_nick_box .nick .name{color: #999;}
+.wrap .page_group_content .foot_fixed{position: fixed;bottom: 0;right: 0;left: 0;background:  #fff;padding: 0.435rem;}
+.wrap .page_group_content .foot_fixed .Signout{background-color: #FF3B30;color: #fff;width:  100%;display: block;text-align:  center;height: 1rem;line-height: 1rem;font-size: 0.375rem;border-radius: 0.15rem;}
+
+/*修改昵称*/
+.wrap .page_nick_content{display: none;}
+.wrap .page_nick_content .edit_box{margin-bottom: 1rem;}
+.wrap .page_nick_content .edit_box .edit_input input{border: 0;margin-bottom: 10px;}
+.wrap .page_nick_content .edit_box .tips{color: #999;padding:0  0.453rem;}
+.wrap .page_nick_content .operation_btn{display: flex;justify-content: space-around;}
+.wrap .page_nick_content .operation_btn a{width: 3.2rem;padding: 0.15rem 0;text-align: center;border-radius:  0.8rem;display: inline-block;}
+.wrap .page_nick_content .operation_btn .cancel{border:1px solid #108ee9;color:#108ee9;}
+.wrap .page_nick_content .operation_btn .confirm{border:1px solid #108ee9;color:#fff;background-color: #108ee9;}
+.wrap .page_nick_content .edit_box .edit_input form{position: relative;}
+.wrap .page_nick_content .edit_box .edit_input .icon-shanchu1{display:none;font-size: 22px;position: absolute;z-index: 1;top: 10px;right: 0.453rem;width: 20px;height: 20px;text-align: center;color: #999;}

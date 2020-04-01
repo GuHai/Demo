@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 link@Datapublic class Link extends BaseEntity {	private static final long serialVersionUID = 1L;	public Link() {		super();	}	    //    private String title;    //    private String link;    private String content;    private Boolean init;}

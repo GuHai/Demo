@@ -1,0 +1,156 @@
+/********************** newAcountt.jsp 待结算 ***********************/
+.wrap .tabList {position: fixed;top: 0px;width: 100%;height: 1.067rem;background-color: #fff;display: flex;justify-content: space-around;z-index: 99;}
+.wrap .tabList li {width: 50%; position:relative;line-height: 1.067rem;text-align: center;font-size: 0.373rem;font-weight: normal;font-stretch: normal;letter-spacing: 0px;color: #666;}
+.wrap .tabList li a{color: #666;}
+.wrap .tabList li:last-child:before{content:'';border-left: 1px solid #efeff4;position: absolute;left: 0;top: 25%;height: 0.567rem;}
+.wrap .tabList li.active a{border-bottom: 2px solid #108ee9;padding-bottom: 0.25rem;}
+.wrap .main .nullContent{margin: 6rem 1.5rem;text-align: center;}
+.wrap .main .nullContent .txt{color: #666666;font-size: 0.4rem;margin-bottom: 0.8rem;}
+.wrap .main .nullContent .foundbutton .found_btns{background: #108ee9;text-align: center;color: #fff;font-size: 0.48rem;border-radius: 0.533rem;width: 100%;display: block;height: 1.067rem;line-height: 1.067rem;}
+
+/*创建领工资二维码*/
+.wrap .main .found_code_content{display: none;position: fixed;top: 0;left: 0;z-index: 999;width: 100%;height: 100%;background: rgba(0, 0, 0, .5);}
+.wrap .main .found_code_content .code_list{position: absolute;top: 50%;left: 50%;width: 85%;height: 280px;overflow: hidden;background: #fff;text-align: center;border-radius: 0.267rem;-webkit-transition-duration: 400ms;transition-duration: 400ms;-webkit-transform: translate3d(-50%,-50%,0) scale(1);transform: translate3d(-50%,-50%,0) scale(1);}
+.wrap .main .found_code_content .code_list .title{height: 55px;line-height: 55px;background: #108ee9;color: #fff;font-size: 0.48rem;text-align: center;}
+.wrap .main .found_code_content .code_list .input-list{padding:0.667rem 0.533rem;padding-top: 0.267rem}
+.wrap .main .found_code_content .code_list .input-list .row-input{margin-bottom: 0.267rem;}
+.wrap .main .found_code_content .code_list .input-list .row-input:last-child{margin-bottom: 0;}
+.wrap .main .found_code_content .code_list .input-list .row-input input{margin-bottom: 0;border: 0;background-color: #f2f5f7;color: #666;font-size: 0.32rem;}
+.wrap .main .found_code_content .code_list .input-list .row-input input::-webkit-input-placeholder{color: #999;}
+.wrap .main .found_code_content .code_list .btns{display: flex;justify-content: space-around;}
+.wrap .main .found_code_content .code_list .btns a{height: 0.907rem;line-height: 34px;padding: 0 0.8rem;}
+.wrap .main .found_code_content .code_list .btns .cancel-btn{border-radius: 0.453rem;border: 1px solid #999;color: #666;font-size: 0.4rem;}
+.wrap .main .found_code_content .code_list .btns .confirm-btn{border-radius: 0.453rem;border: 1px solid #3498db;background: #3498db;color: #fff;font-size: 0.4rem;}
+
+
+
+.wrap .main .accountsList .account-list-ul{margin-top: 1.3rem;}
+.wrap .main .accountsList .account-list-ul .posi-list{padding: 0.4rem 0.453rem;background-color: #fff;margin-bottom: 0.267rem;}
+.wrap .main .accountsList .account-list-ul .posi-list .head-flex{display: flex;justify-content: space-between;}
+.wrap .main .accountsList .account-list-ul .posi-list .head-flex .title{font-size: 0.4rem;color: #333;}
+.wrap .main .accountsList .account-list-ul .posi-list .head-flex .mui-switch{width: 60px;height: 20px;}
+.wrap .main .accountsList .account-list-ul .posi-list .head-flex .mui-switch .mui-switch-handle{width: 18px;height: 18px;}
+.wrap .main .accountsList .account-list-ul .posi-list .head-flex .mui-switch:before{top: -2px;font-size: 0.267rem;}
+.wrap .main .accountsList .account-list-ul .posi-list .head-flex .mui-switch.mui-active {border-color: #108ee9;background-color: #108ee9;}
+.wrap .main .accountsList .account-list-ul .posi-list .inform-list{border-radius:5px;background-color: #f2f5f7;overflow: hidden;height: 1.067rem;margin: 0.267rem 0;}
+.wrap .main .accountsList .account-list-ul .posi-list .inform-list .ul-list li{float: left;margin-left: 0.133rem;overflow: hidden;}
+.wrap .main .accountsList .account-list-ul .posi-list .inform-list .ul-list li.ellipsis{color: #108ee9;font-weight: bold;line-height: 40px;}
+.wrap .main .accountsList .account-list-ul .posi-list .inform-list .ul-list li:first-child{margin-left: 0.267rem;}
+.wrap .main .accountsList .account-list-ul .posi-list .inform-list .ul-list li img{vertical-align: middle;border-radius: 100%;height: 0.8rem;width: 0.8rem;margin: 0.133rem 0;}
+.wrap .main .accountsList .account-list-ul .edit-btns{display: flex;justify-content: space-between;}
+.wrap .main .accountsList .account-list-ul .edit-btns .left{height: 0.693rem;line-height: 0.893rem;overflow: hidden;position: relative;}
+.wrap .main .accountsList .account-list-ul .edit-btns .left .icon-shanchu2{font-size: 0.48rem;color: #666;position: absolute;top: 1px;}
+.wrap .main .accountsList .account-list-ul .edit-btns .left i{font-size: 0.4rem;color: #666;margin-left: 0.5rem;}
+.wrap .main .accountsList .account-list-ul .edit-btns .right{overflow:hidden;}
+.wrap .main .accountsList .account-list-ul .edit-btns .right a{width: 2.0rem;height: 0.693rem;line-height: 0.73rem;font-size: 0.32rem;display: inline-block;border-radius: 0.133rem;text-align: center;float: left;}
+.wrap .main .accountsList .account-list-ul .edit-btns a.share-btn{border: 1px solid #108ee9;color: #108ee9;}
+.wrap .main .accountsList .account-list-ul .edit-btns a.addUser{border: 1px solid #108ee9;color: #108ee9;margin-right: 0.4rem}
+.wrap .main .accountsList .account-list-ul .edit-btns a.salary-btn{background-color: #108ee9;color: #fff;margin-left: 0.4rem;}
+.wrap .main .accountsList .account-list-ul .edit-btns .moreview{text-align:center;border: 1px solid #108ee9;height: 0.8rem;line-height:0.8rem;color: #108ee9;border-radius: 0.547rem;display: block;width: 90%;font-size: 0.32rem;margin: 0 0.45rem;}
+.wrap .main .accountsList .account-list-ul .posi-list .head-flex .time{font-size: 0.267rem;color: #666}
+.wrap .foot_flex {position: fixed;width: 100%;height: 55px;z-index: 99;left: 0px;bottom: 0;background-color: #fff;text-align: center;padding: 0 0.453rem;}
+.wrap .foot_flex .set_up_btns{width: 100%;background-color: #108ee9;color: #fff;font-size: 0.48rem;height: 40px;margin: 0.213rem 0;border-radius: 0.533rem;line-height: 40px;display: block;text-align: center;}
+
+
+/*创建领工资二维码*/
+.found_code_content .code_list .select_posi{display: flex;justify-content: space-between;height: 40px;line-height: 40px;padding: 0 0.453rem;border-bottom: 1px solid #efeff4;}
+.found_code_content .code_list .select_posi .txt{color: #333333;font-size: 14px;}
+.found_code_content .code_list .select_posi .now_posi{color: #999;font-size: 0.32rem;}
+.found_code_content .code_list .select_posi .now_posi span{font-size: 0.32rem;}
+.typediv .posi_box_list{display: none;position: fixed;top: 0;left: 0;z-index: 9999;width: 100%;height: 100%;background: rgba(0, 0, 0, .5);}
+.typediv .posi_box_list .posi_cocntent{position: absolute;bottom: 0;right: 0;left: 0;width: 100%;height:auto;max-height: 200px;overflow: hidden;background: #fff;}
+.typediv .posi_box_list .posi_cocntent .ul-select li{border-bottom: 1px solid #efeff4;padding: 0 0.453rem;height: 40px;line-height: 40px;font-size: 14px;color: #666;}
+.typediv .posi_box_list .posi_cocntent .close-ul{padding: 0 0.453rem;height: 40px;line-height: 40px;}
+.typediv .posi_box_list .posi_cocntent .close-ul a{color: #108ee9;font-size: 14px;}
+
+/*分享二维码*/
+.wrap .share_code_code{position: fixed;top: 0;left: 0;z-index: 9999;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.5);}
+.wrap .share_code_code .mainlist{background: url("../../images/share_bg.png") no-repeat center;background-size: 100% 100%;width: 82.666%;position:  absolute;top: 5%;left: 8%;right: 10%;height: 68%;padding-bottom: 0;z-index: 99;}
+.wrap .share_code_code .mainlist .posi_box_list{position: absolute;width: 82.666%;left: 8%;right: 10%;bottom: 15%;}
+.wrap .share_code_code .mainlist .posi_box_list .posi_tit{color: #333333;font-size:0.4rem;margin-bottom: 0.267rem;font-weight: 500;text-align: center;}
+.wrap .share_code_code .mainlist .posi_box_list .flex{width: 100%;overflow: hidden;}
+.wrap .share_code_code .mainlist .posi_box_list .flex .icon-shizhong{color: #15bc83;font-size: 0.293rem}
+.wrap .share_code_code .mainlist .posi_box_list .flex .icon-fujin{color: #108ee9;font-size: 0.293rem;margin: 0}
+.wrap .share_code_code .mainlist .posi_box_list .posi_sub{color: #666666;font-size: 0.347rem;width: auto;float: left;}
+.wrap .share_code_code .mainlist .posi_box_list .posi_sub:last-child{margin-left: 0.667rem;}
+.wrap .share_code_code .mainlist .posi_box_list .posi_depict{color: #fff;font-size:0.4rem;margin-top: 0.533rem;}
+.wrap .share_code_code .mainlist .posi_box_list .posi_detail{color: #d1eeff;font-size:0.32rem;margin-top: 0.133rem;line-height: 18px;}
+.wrap .share_code_code .mainlist .code_box{text-align: center;}
+.wrap .share_code_code .mainlist .code_box .code_img{height: 3.5rem;width: 3.5rem;margin:  0 auto;text-align:  center;position: absolute;top: 38%;left: 29%;}
+.wrap .share_code_code .mainlist .code_box .code_img img{width: 100%;height: 100%;vertical-align: middle;border: 4px solid #fff;}
+.wrap .share_code_code .mainlist .code_txt{position: absolute;top: 27.5%;left: 35%;}
+.wrap .share_code_code .mainlist .code_txt h3{font-size: 0.4rem;color: #7c5825;/* margin-bottom: 0.267rem; */font-weight: bold;}
+.wrap .share_code_code .mainlist .code_txt p{font-size: 0.32rem;color: #d1eeff;}
+.wrap .share_code_code .mainlist.codelist{width: 85%;top: 18%;left: 8%;border-radius: 5px;}
+.wrap .share_code_code .down-box{position:fixed;bottom: 17.8%;left: 45%;text-align: center;z-index: 11;}
+.wrap .share_code_code .down-box .line{position: relative}
+.wrap .share_code_code .down-box .line:after{content: '';position: absolute;top: -100px;left: 47%;width: 1px;height: 100px;background: #ffff;z-index: 11;}
+.wrap .share_code_code .down-box .icon-shanchu1{color: #fff;font-size: 0.6rem;}
+
+
+/***************************************结算页面 Settlement.jsp*******************************/
+.wrap .evList {width: 100%;overflow: hidden;margin: 0.493rem 0 1.733rem 0;background: #fff;}
+.wrap .evList .evLbox {display: block;height: auto;overflow: hidden;border-bottom: 1px solid #efeff4;padding:0;position: relative;}
+.wrap .evLb-man {position: relative;height: 1.867rem;overflow: hidden;width: 88%;margin-left: 12%;overflow: hidden;}
+.wrap .evLb-man .evLb-mT {position: relative;width: 100%;overflow: hidden;/*padding: 5px 0;*/padding: 0.3rem 0;/* padding-left: 0.2rem; */}
+.wrap .evLb-man .evLb-mT .evLb-qq {float: left;/*width: 80%;*/width: 75%;overflow: hidden;}
+.wrap .evLb-man .evLb-mT .evLb-qq .qqbox {float: left;width: 1.067rem;height: 1.067rem;border-radius: 50%;overflow: hidden;background: #ddd;margin-top: 0.085rem}
+.wrap .evLb-man .evLb-mT .evLb-qq .qqbox img {width: 100%;height: 100%;}
+.wrap .evLb-man .evLb-mT .evLb-qq .tbox {padding-left: 10px;height: auto;overflow: hidden;font-size: 0.347rem;color: #999;}
+.wrap .evLb-man .evLb-mT .evLb-qq .tbox > p {margin: 0;padding: 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 0.32rem;color: #999;}
+.wrap .evLb-man .evLb-mT .evLb-qq .tbox .tboxS {font-size: 0.4rem;color: #333;}
+.wrap .evLb-man .evLb-mT .evLb-qq .tbox .tsala {font-size: 0.347rem;color: #999;margin-top: 0.267rem;line-height: 1;}
+.wrap .evLb-man .evLb-mT .evLb-qq .tbox .reward{font-size: 0.32rem;color: #999;}
+.wrap .evLb-man .evLb-mT .evLb-qq .tbox .reward span{color: #ff3b30;margin-left: 0.15rem;}
+.wrap .evLb-man .evLb-mT .evLb-link {font-size: 0.4rem;color: #108ee9;float: right;}
+.wrap .evLb-man .evLb-mp {height: auto;overflow: hidden;font-size: 0.32rem;color: #666;line-height: 0.587rem;}
+.wrap .evList .evLbox .mui-checkbox.mui-left input[type=checkbox]{/* left: 8%; *//* top: 50%; */position: static;text-align: center;line-height: 1.8;}
+.wrap .evList .evLbox .mui-checkbox{width: 12%;text-align: center;height: auto;margin-top: 0;position: absolute;top: 30%;left: 0;}
+.wrap .evLb-man .evLb-mT .h-settle {position:absolute;right: 0.453rem;top: 45%;width: 28%;height: auto;overflow: hidden;}
+.wrap .evLb-man .evLb-mT .h-settle .yuan{position:absolute;right: 0;top: 5%;font-size: 0.4rem;}
+.wrap .evLb-man .evLb-mT .press{position:absolute;right: 0.5rem;top: 0;background-color: #14bd83;color: #fff;/*padding: 0 0.2rem;*/border-bottom-right-radius: 0.1rem;border-bottom-left-radius: 0.1rem;height: 0.4rem;width: 1.067rem;text-align: center;line-height: 0.4rem;font-size: 0.267rem;}
+.wrap .evLb-man .evLb-mT .h-settle .set_put {height: auto;width: 2rem;border-radius: 0px;padding: 0;margin: 0;border-top: 0;border-left: 0;border-right: 0;font-size: 0.533rem;color: #ff3b30;text-align: center;float: left;}
+.wrap .headtips {margin-bottom:0.267rem;height: 0.800rem;display: flex;top: 0;left: 0;padding: 0 0.453rem;line-height: 0.800rem;background-color: rgba(255, 148, 62, 0.1);    font-size: 0.320rem;font-weight: normal;font-stretch: normal;letter-spacing: 0px;color: #e8541e;}
+
+
+.payment-bar{clear:both;overflow:hidden;width:100%;height: 2.133rem;position:fixed;bottom:0;border-top:1px solid #e0e0e0;background:#fff;margin-top: 0;}
+.payment-bar .all-checkbox{float:left;line-height: 50px;height: 50px;width: 20%;text-align:  center;color: #666;font-size: 0.4rem;margin-top: 0;}
+.payment-bar .mui-checkbox.mui-left input[type=checkbox]{left: 12%;top: 31%;}
+.payment-bar .mui-checkbox.mui-left label{margin-left: 0.4rem;font-size: 0.347rem;color: #999;line-height: 2;}
+.payment-bar .shop-total{float:left;-webkit-box-flex:1.0;text-align: right;width: 45%;line-height:  50px;}
+.payment-bar .shop-total .tol{display:block;font-size:0.48rem;color: #108ee9;margin-right: 0.2rem;}
+.payment-bar .shop-total span{display:block;font-size:0.32rem;}
+.payment-bar .settlement{display:inline-block;float:right;width: 35%;height: 50px;line-height:50px;text-align:center;color:#fff;font-size:16px;background:#108ee9;}
+.mui-checkbox, .mui-radio{float:left;width:0.800rem;height:0.800rem;margin-top:3px;}
+.payment-bar .brokerage{height: 0.8rem;line-height: 0.8rem;border-bottom: 1px solid #EFEFF4;overflow: hidden}
+.payment-bar .brokerage .txt{float: left;color: #999;font-size: 0.32rem;padding: 0 0.453rem;padding-right: 0.267rem;}
+.payment-bar .brokerage .txt span{color: #fe3a3b;}
+.payment-bar .brokerage .mui-switch{float: left;width: 0.933rem;height: 0.453rem;margin: 0.16rem 0;border: 0;background: #d7d7d7;}
+.payment-bar .brokerage .mui-switch .mui-switch-handle{width: 0.427rem;height: 0.427rem;top: 0px;}
+.payment-bar .brokerage .mui-switch.mui-active {border-color: #108ee9;background-color: #108ee9;}
+/*
+.payment-bar .brokerage .mui-switch.mui-active .mui-switch-handle{transition-duration: 0.2s;transform: translate(16px, 0px);}
+*/
+
+
+
+/*************************accounts_end_details.jsp 已结算页面**************************/
+.wrap .head-flex-top .head-flex .list-ul{position: fixed;top: 0;height: 50px;background: #fff;display: flex;justify-content: space-around;padding: 0.2rem 0;}
+.wrap .head-flex-top .head-flex .list-ul li{position: relative;text-align:  center;width: 50%;}
+.wrap .head-flex-top .head-flex .list-ul li .num{color: #108ee9;font-size: 0.693rem}
+.wrap .head-flex-top .head-flex .list-ul li .txt{color: #666666;font-size: 0.32rem;}
+.wrap .head-flex-top .head-flex .list-ul li:last-child:before{content: '';position: absolute;left: 0;border-left: 1px solid #d7d7d7;height: 30px;top: 2px;}
+.wrap .main .endList{margin-top: 1.7rem;}
+.wrap .main .endList {overflow: hidden;}
+.wrap .main .endList li{border-bottom: 1px solid #efeff4;padding: 0.287rem 0.453rem;background-color: #fff;height: auto;overflow: hidden;padding-bottom: 0.2rem;display: flex;justify-content: space-between;}
+.wrap .main .endList li .left{float: left;/* width: 70%; */}
+.wrap .main .endList li .right{float: left;/* width: 30%; */text-align: right;}
+.wrap .main .endList li .left .photo{height: 0.933rem;width: 0.933rem;overflow: hidden;float: left;border-radius: 100%;}
+.wrap .main .endList li .left .photo img{width: 100%;height: 100%;vertical-align: middle}
+.wrap .main .endList li .left .inform{float: left;margin-left: 0.267rem;}
+.wrap .main .endList li .left .inform .name{color: #333;font-size: 0.347rem}
+.wrap .main .endList li .left .inform .tel{color: #999;font-size: 0.32rem}
+.wrap .main .endList li .right .price{color: #ff3b30;font-size: 0.427rem;font-family: PingFang-SC-Medium;line-height: 2.2;}
+
+
+

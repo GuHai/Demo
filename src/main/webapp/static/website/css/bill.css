@@ -1,0 +1,584 @@
+.main-panel .content-wrapper .row .hd-box{
+    overflow: hidden;
+    position: relative;
+}
+.main-panel .content-wrapper .row .hd-box .left-txt{
+    /* float: right; */
+    line-height: 40px;
+    font-size: 20px;
+    color: #999;
+    margin-top: 10px;
+}
+.main-panel .content-wrapper .row .hd-box .right-button{
+    /* float: left; */
+}
+.main-panel .content-wrapper .row .right-button button{
+    padding: 0;
+    margin-right: 15px;
+}
+.main-panel .content-wrapper .row .right-button button.testpush{
+    padding: 0.875rem 2.5rem;
+}
+.main-panel .content-wrapper .row .right-button button.Import{
+    padding: 0.875rem 2.5rem;
+}
+.main-panel .content-wrapper .row .right-button a{
+    color: #fff;
+    overflow: hidden;
+    display: block;
+    padding: 0.875rem 2.5rem;
+}
+.main-panel .content-wrapper .row .right-button .btn-info:first-child{
+    margin-right: 30px;
+}
+.main-panel .content-wrapper .row .table-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    /*background-color: #fff;*/
+    background-clip: border-box;
+    border-radius: 0.3125rem;
+    max-height: 515px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.main-panel .content-wrapper .row .table-list .main-body{
+    max-height: 80%;
+    overflow-y: scroll;
+}
+.main-panel .content-wrapper .row .table-list .main-body .table{
+    border:0;
+    margin: 0;
+}
+.main-panel .content-wrapper .row .table-list .main-body .table .btns{
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    width: 80px;
+    margin-right: 10px;
+}
+.main-panel .content-wrapper .row .table-list .main-body .table .btns.view-details{
+    background-color: #108EE9;
+}
+.main-panel .content-wrapper .row .table-list .main-body .table .btns:last-child{
+    margin-right: 0;
+}
+.main-panel .content-wrapper .row .table-list .main-body .table .btns.export{
+    background-color: #5cb85c;
+}
+.main-panel .content-wrapper .row .table-list .main-body .table .btns.continue{
+    background-color: #d9534f;
+}
+.main-panel .content-wrapper .row .table-list .main-body .table .btns.continue.delete{
+    background-color: #999;
+}
+.main-panel .content-wrapper .row .table-list .main-body .table>thead>tr>th{
+    border-bottom:0;
+    vertical-align: middle;
+    text-align: center;
+}
+.table>thead>tr>th input,.table td input{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+}
+ .row-bottom .all-total input[type="checkbox"]{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+.main-panel .content-wrapper .row .table-list .main-body .table td{
+    border-top: 1px solid #ebedf2;
+    vertical-align: middle;
+    /*padding: 5px 0;*/
+    text-align: center;
+}
+.main-panel .content-wrapper .row .table-list .main-body .table td.colo{
+    color: #108EE9;
+}
+.main-panel .content-wrapper .row .table-list .main-body .table td.colo.current{
+    color: #ff3b30;
+}
+
+.row .table-list .label-box{
+    padding: 20px 50px;
+}
+.row .table-list .label-box label{
+    position: relative;
+}
+.row .table-list .label-box input[type="checkbox"]{
+    position: absolute;
+    left: 0;
+    top:20%;
+    width: 18px;
+    height: 18px;
+}
+.row .table-list .label-box label span{
+    padding-left: 20px;
+    color: #777;
+    line-height: 1.8;
+}
+.main-panel .content-wrapper .row-bottom{
+    overflow: hidden;
+    float: right;
+}
+
+.main-panel .content-wrapper .row-bottom .brokerage{
+    position: relative;
+    text-align: right;
+    color: #999;
+}
+.main-panel .content-wrapper .row-bottom .brokerage input[type="checkbox"]{
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.main-panel .content-wrapper .row-bottom .brokerage span{
+    padding-left: 20px;
+}
+.main-panel .content-wrapper .row-bottom .brokerage span:last-child{
+    color: #ff3b30;
+    padding-left: 0px;
+}
+.main-panel .content-wrapper .row-bottom .foot{
+    /*float: right;*/
+    overflow: hidden;
+}
+.main-panel .content-wrapper .row-bottom .foot .uploadbtns{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.main-panel .content-wrapper .row-bottom .all-total{
+    float: right;
+    margin-right: 20px;
+    height: 44px;
+    line-height: 44px;
+    overflow: hidden;
+}
+.main-panel .content-wrapper .row-bottom .all-total label{
+    font-size: 15px;
+    color: #666;
+    position: relative;
+}
+.main-panel .content-wrapper .row-bottom .all-total label i{
+    font-style: normal;
+}
+.main-panel .content-wrapper .row-bottom .all-total .sum{
+    font-size: 15px;
+    color: #666;
+}
+.main-panel .content-wrapper .row-bottom .all-total .sum .total-amount{
+    color: #ff3b30;
+    font-size: 22px;
+}
+.popup-backdrop{
+    position: fixed;
+    _position: absolute;
+    pointer-events: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99999;
+}
+.popup-backdrop .main-content{
+    background-color: #fff;
+    width: 480px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 2px;
+    left: 40%;
+    position: fixed;
+    top: 22%;
+    padding: 40px;
+    padding-bottom: 30px;
+}
+.popup-backdrop .main-content form{
+    margin-bottom: 0;
+}
+.popup-backdrop .main-content .dialog-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #d9d9d9;
+}
+.popup-backdrop .main-content .dialog-close:hover{
+    color: #999;
+    text-decoration: none;
+}
+.popup-backdrop .main-content .blockquote {
+    padding: 15px;
+    border-left: 5px solid #108ee9;
+    border-radius: 0 2px 2px 0;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    padding-bottom: 8px;
+    /* margin: 15px; */
+    margin-bottom: 20px;
+}
+.popup-backdrop .main-content .blockquote a{
+    color: #108ee9;
+}
+.popup-backdrop .main-content .tips{
+    font-size: 13px;
+    margin: 15px;
+    color: #ff3b30;
+}
+.popup-backdrop .main-content .upload-form{
+    margin-bottom: 20px;
+    position:relative;
+}
+.popup-backdrop .main-content .upload-form .txt{
+    height: 35px;
+    border:1px solid #cdcdcd;
+    width: 300px;
+    background: #fff;
+}
+.popup-backdrop .main-content .upload-form .btn{
+    background-color: #eee;
+    border: 1px solid #CDCDCD;
+    height: 35px;
+    width: 70px;
+    color: #666;
+    padding: 0;
+}
+.popup-backdrop .main-content .upload-form .file{
+    position: absolute;
+    top: -5px;
+    right: 0;
+    height: 45px;
+    filter: alpha(opacity:0);
+    opacity: 0;
+    width: 100px;
+}
+.popup-backdrop .main-content .input input{
+    height: 40px;
+    line-height: 40px;
+    padding: 5px 10px;
+    width: 265px;
+    overflow: hidden;
+    border: 1px solid #cdcdcd;
+    padding-right: 0;
+    color: #333;
+}
+.popup-backdrop .main-content .input label input{
+    vertical-align: middle;
+}
+.popup-backdrop .main-content .text{
+    margin-bottom: 20px;
+}
+.popup-backdrop .main-content .text .title{
+    width: 90px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 15px;
+}
+.popup-backdrop .main-content .text:last-child{
+    margin-bottom: 0;
+}
+.popup-backdrop .main-content .text .tipstxt{
+    font-size: 13px;
+}
+.popup-backdrop .main-content .text .tipstxt em{
+    font-size: 11px;
+    color: #ff3b30;
+    font-style: normal;
+    display: block;
+    padding-left: 17px;
+}
+.popup-backdrop .main-content .text .tipstxt i{
+    font-style: normal;
+}
+.popup-backdrop .main-content .foot{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.popup-backdrop .main-content .foot .btn{
+    text-align: center;
+}
+
+.paging-box{
+    margin: 0 auto;
+    width: 50%;
+}
+.paging-box .list{
+    overflow: hidden;
+    margin: 20px 0;
+}
+.paging-box .tfootRight{
+    float:left;
+    margin-left:10px;
+}
+.paging-box .tfootRight input {
+    width: 80px;
+    /*padding-left: 10px;*/
+    height: 30px;
+    border: 1px solid #d9d9d9;
+    color: #333;
+    text-align: center;
+}
+.paging-box .tfootRight button {
+    width: 60px;
+    height: 30px;
+    border: 1px solid #d9d9d9;
+    color: #333;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.paging-box span.Pagebtns {
+    padding: 4px 15px 4px 15px;
+    border: 1px solid #d9d9d9;
+    color: #333;
+}
+.paging-box .firstPage{
+    margin-right:10px;
+    cursor: pointer;
+    float:left;
+    margin-left:10px;
+}
+.paging-box .lastPage{
+    margin-right:10px;
+    cursor: pointer;
+    float:left;
+}
+.paging-box .pagenumberBox{
+    float: left;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.paging-box .num-box{
+    float:left;
+    overflow: hidden;
+}
+.paging-box .typeNumber{
+    display:none;
+    width:20px;
+    height:20px;
+    text-align:center;
+    line-height:20px;
+    border:1px solid #666;
+    margin-right:5px;
+    float:left;
+    margin-top:2.5px;
+}
+.paging-box .pagenumberBox a {
+    float: left;
+    padding: 4px 9px 4px 9px;
+    border: 1px solid #d9d9d9;
+    /*margin-left: 5px;*/
+    margin-right: 5px;
+    cursor: pointer;
+    color: #333;
+}
+.paging-box .pagenumberBoxa {
+    background: #ff6666 !important;
+    padding: 5px 10px 5px 10px !important;
+    color: white !important;
+    border: none !important;
+}
+.paging-box .nextPage{
+    margin-right:10px;
+    float:left;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.paging-box .endPage{
+    cursor: pointer;
+    float:left;
+}
+.paging-box .option-box{
+    float: left;
+    margin-left: 10px;
+}
+.paging-box .option-box select {
+    width: auto;
+    padding-left: 10px;
+    height: 30px;
+    border: 1px solid #d9d9d9;
+    color: #333;
+}
+.payment{
+    /*margin: 20px auto;*/
+    overflow: hidden;
+    float: right;
+}
+.payment .paybtns{
+  float: left;
+}
+.main-panel .content-wrapper .tips{
+    color: #ff3b30;
+    font-size: 13px;
+    line-height: 3;
+    text-align: right;
+}
+.dialog-mask{
+    position: fixed;
+    _position: absolute;
+    pointer-events: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99999;
+}
+.dialog-mask .contentmain {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1001;
+    margin: -210px 0 0 -180px;
+    width: 350px;
+    height: 370px;
+    border-radius: 10px;
+    background: #fff;
+    padding: 40px 0;
+    overflow: hidden;
+}
+.dialog-mask .contentmain .dialog-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: #999;
+}
+.dialog-mask .dialog-mask-main .login-tab {
+    margin-bottom: 17px;
+    text-align: center;
+    padding: 0;
+}
+.dialog-mask .dialog-mask-main .login-tab li {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 18px;
+}
+.dialog-mask .dialog-mask-main .login-tab .current {
+    border-bottom: 2px solid #108ee9;
+    color: #108ee9;
+}
+.dialog-mask .dialog-mask-main .login-wrap {
+    width: 252px;
+    height: 252px;
+    margin: 0 auto;
+    overflow: hidden;
+    transform: scale(0.88);
+    transform-origin: top center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.dialog-mask .dialog-mask-main .login-desc {
+    margin-top: -36px;
+    color: #666;
+    text-align: center;
+}
+
+.dialog-mask .contentmain .list-box{
+    overflow: hidden;
+    position: relative;
+    clear: both;
+    margin-bottom: 15px;
+    zoom: 1;
+}
+.dialog-mask .contentmain .list-box .label-txt {
+    display: block;
+    float: left;
+    height: 42px;
+    width: 65px;
+    margin-right: 10px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 700;
+    text-align: right;
+}
+.dialog-mask .contentmain .list-box input{
+    display: block;
+    position: relative;
+    float: left;
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #666;
+    transition: .3s;
+    height: 42px;
+}
+.dialog-mask .contentmain .list-box input.verifyCode{
+    width: 145px;
+}
+.dialog-mask .contentmain .list-box .verifyCodeSend {
+    border: 1px solid #ddd;
+    height: 40px;
+    background: #f6f6f6;
+    color: #666;
+    font-weight: 400;
+    width: 145px;
+    float: left;
+    margin-right: 10px;
+    font-size: 14px;
+    border-radius: 0;
+}
+.dialog-mask .contentmain .foot {
+    display: flex;
+    justify-content: space-around;
+}
+.table .btns {
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    width: 80px;
+    margin-right: 10px;
+}
+.table .btns.continue {
+    background-color: #d9534f;
+}
+.btns.continue.delete {
+    background-color: #999;
+}
+.right-button{
+    overflow: hidden;
+}
+.fileinput{
+    float: left;
+}
+.fileinput .fileinput-button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 15px;
+}
+.fileinput .fileinput-button span{
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    display: inline-block;
+    background: #108EE9;
+    color: #fff;
+    border-radius: 5px;
+}
+.fileinput .fileinput-button input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    /* font-size: 40px; */
+    width: 140px;
+    height: 45px;
+}

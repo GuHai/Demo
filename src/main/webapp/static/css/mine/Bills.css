@@ -1,0 +1,331 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .nav{
+  background-color: #fff;
+  height: 1.067rem;
+  padding: 0 0.453rem;
+  position:  fixed;
+  display:  block;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid #d7d7d7;
+}
+.wrap .nav a.filterbtns{
+  line-height: 1.067rem;
+  font-size: 0.373rem;
+  color: rgb(102,102,102);
+}
+.wrap .nav a.filterbtns.current{
+  color: #108ee9;
+}
+.wrap .nav a.filterbtns span{
+  font-size: 0.373rem;
+}
+.wrap .nav .filterList{
+  display: none;
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  right: 0;
+}
+.wrap .nav .filterList .popup-backdrop{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  padding-bottom: 0;
+}
+.wrap .nav .filterList .popup-backdrop h3{
+  font-size: 0.373rem;
+  color: rgb(51,51,51);
+  padding-bottom: 0.3rem;
+  padding: 0.3rem 0.453rem;
+}
+.wrap .nav .filterList .list{
+  overflow: hidden;
+  padding: 0 0.453rem;
+}
+.wrap .nav .filterList .list li{
+  width: 31%;
+  border: 1px solid #d7d7d7;
+  float:  left;
+  margin-right:  0.3rem;
+  margin-bottom:  0.3rem;
+  text-align: center;
+  padding: 0.2rem 0;
+  border-radius: 0.8rem;
+  font-size: 0.373rem;
+  color: rgb(102,102,102);
+}
+.wrap .nav .filterList .filter-list-msg li.curr{
+  border-color: rgb(13, 155, 242);
+  color: rgb(13, 155, 242);
+}
+.wrap .nav .filterList .list li:nth-child(3n+3){
+  margin-right:  0rem;
+}
+.wrap .nav .filterList .popup-backdrop .btns{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.wrap .nav .filterList .popup-backdrop .btns a{
+  width: 50%;
+  display: inline-block;
+  height: 1.2rem;
+  font-size: 0.48rem;
+  line-height:1.2rem ;
+}
+.wrap .nav .filterList .popup-backdrop .btns a.reset{
+  background: rgb(242,245,247);
+  color: #108ee9;
+}
+.wrap .nav .filterList .popup-backdrop .btns a.confirm{
+  background: #108ee9;
+  color: #fff;
+}
+.wrap .nav .navList {
+  background-color: #fff;
+}
+.wrap .nav .navList > li {
+  float: left;
+  height: 1.067rem;
+  width: 1.733rem;
+  margin: 0 0.800rem;
+  text-align: center;
+  line-height: 1.067rem;
+  font-size: 0.400rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .nav .navList .active {
+  color: #108EE9;
+  border-bottom: 2px solid #108EE9;
+}
+.wrap .marTop {
+  margin-top: 1.067rem;
+}
+.wrap .main .allList {
+  background-color: #fff;
+}
+.wrap .main .allList > li {
+  border-bottom: 1px solid #f2f5f7;
+}
+.wrap .main .allList > li > a {
+  display: block;
+  height: 1.600rem;
+  padding: 0.347rem 0.453rem;
+}
+.wrap .main .allList > li > a > i {
+  float: left;
+  margin-right: 0.267rem;
+  font-size: 0.8rem;
+  line-height: 0.960rem;
+  color: #00b60d;
+  vertical-align: middle;
+}
+.wrap .main .allList > li > a > i.icon-chongzhi1{
+  color: #108ee9;
+}
+.wrap .main .allList > li > a > i.icon-weixin{
+  color: #00b60d;
+}
+.wrap .main .allList > li > a > i.icon-ticheng{
+  color: #ff943e;
+}
+.wrap .main .allList > li > a > i.icon-baozhengjin{
+  color: #15bc83;
+}
+.wrap .main .allList > li > a > i.icon-gongzi2{
+  color: #e8541e;
+}
+.wrap .main .allList > li > a > i.icon-hongbao{
+  color: #ff3b30;
+}
+.wrap .main .allList > li > a > i.icon-gongzi{
+  color: #108ee9;
+}
+.wrap .main .allList > li > a > i.icon-zhaoshanghezuo{
+  color: #15bc83;
+}
+.wrap .main .allList > li > a > i.icon-shunfeng1{
+  color: #15bc83;
+}
+.wrap .main .allList > li > a .contenBox {
+  width: 58%;
+  float: left;
+  line-height: 0.507rem;
+  overflow:  hidden;
+  text-overflow:  ellipsis;
+  white-space:  nowrap;
+}
+.wrap .main .allList > li > a .contenBox .list-title {
+  font-size: 0.373rem;
+  letter-spacing: 0px;
+  color: #414141;
+  display:  inline-block;
+}
+.wrap .main .allList > li > a .contenBox .list-time {
+  font-size: 0.347rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .allList > li > a .contenBox .list-time > span {
+  margin-right: 0.400rem;
+}
+.wrap .main .allList > li > a .money {
+  line-height: 0.507rem;
+  width: 30%;
+  overflow: hidden;
+}
+.wrap .main .allList > li > a .money > p:first-child {
+  font-size: 0.480rem;
+  letter-spacing: 0px;
+  color: #333333;
+  text-align: right;
+}
+.wrap .main .allList > li > a .money > p:last-child {
+  font-size: 0.320rem;
+  text-align: right;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .main .wageList {
+  display: none;
+  background-color: #fff;
+}
+.wrap .main .wageList > li {
+  border-bottom: 1px solid #f2f5f7;
+}
+.wrap .main .wageList > li > a {
+  display: block;
+  height: 1.600rem;
+  padding: 0.347rem 0.453rem;
+}
+.wrap .main .wageList > li > a > i {
+  float: left;
+  margin-right: 0.267rem;
+  font-size: 0.693rem;
+  line-height: 0.960rem;
+  color: #00b60d;
+  vertical-align: middle;
+}
+.wrap .main .wageList > li > a .contenBox {
+  width: 3.200rem;
+  float: left;
+  line-height: 0.507rem;
+}
+.wrap .main .wageList > li > a .contenBox .list-title {
+  font-size: 0.373rem;
+  letter-spacing: 0px;
+  color: #414141;
+}
+.wrap .main .wageList > li > a .contenBox .list-time {
+  font-size: 0.347rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .wageList > li > a .contenBox .list-time > span {
+  margin-right: 0.400rem;
+}
+.wrap .main .wageList > li > a .money {
+  line-height: 0.507rem;
+}
+.wrap .main .wageList > li > a .money > p:first-child {
+  font-size: 0.480rem;
+  letter-spacing: 0px;
+  color: #333333;
+  text-align: right;
+}
+.wrap .main .wageList > li > a .money > p:last-child {
+  font-size: 0.320rem;
+  text-align: right;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .main .withdrawList {
+  display: none;
+  background-color: #fff;
+}
+.wrap .main .withdrawList > li {
+  border-bottom: 1px solid #f2f5f7;
+}
+.wrap .main .withdrawList > li > a {
+  display: block;
+  height: 1.600rem;
+  padding: 0.347rem 0.453rem;
+}
+.wrap .main .withdrawList > li > a > i {
+  float: left;
+  margin-right: 0.267rem;
+  font-size: 0.693rem;
+  line-height: 0.960rem;
+  color: #00b60d;
+  vertical-align: middle;
+}
+.wrap .main .withdrawList > li > a .contenBox {
+  width: 57%;
+  float: left;
+  line-height: 0.507rem;
+  margin-left: 0.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wrap .main .withdrawList > li > a .contenBox .list-title {
+  font-size: 0.373rem;
+  letter-spacing: 0px;
+  color: #414141;
+  display: inline-block;
+}
+.wrap .main .withdrawList > li > a .contenBox .list-time {
+  font-size: 0.347rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .withdrawList > li > a .contenBox .list-time > span {
+  margin-right: 0.400rem;
+}
+.wrap .main .withdrawList > li > a .money {
+  line-height: 0.507rem;
+  width: 30%;
+  overflow: hidden;
+}
+.wrap .main .withdrawList > li > a .money > p:first-child {
+  font-size: 0.480rem;
+  letter-spacing: 0px;
+  color: #333333;
+  text-align: right;
+}
+.wrap .main .withdrawList > li > a .money > p:last-child {
+  font-size: 0.320rem;
+  text-align: right;
+  letter-spacing: 0px;
+  color: #ff3b30;
+}
+.wrap .main .withdrawList > li > a .money > p.sum {
+  font-size: 0.48rem;
+  text-align: right;
+  letter-spacing: 0px;
+  color: #333;
+}
+.wrap .main .withdrawList > li > a .photo {
+  float: left;
+  width: 1.067rem;
+  height: 1.067rem;
+  border-radius: 100%;
+  background-color: #108ee9;
+  overflow: hidden;
+}
+.wrap .main .withdrawList > li > a .photo img{
+  width: 100%;
+}

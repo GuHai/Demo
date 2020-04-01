@@ -1,0 +1,22 @@
+/************************* 审核 examine.jsp***************************/
+.wrap .head1 {position: relative;background-color: #108ee9;text-align: center;}
+.wrap .head1 .status{font-size: 30px;color: #fff;}
+.wrap .head1 .title{font-size: 15px;color: #fff;}
+.wrap .handle {margin-top: 0.267rem;background-color: #fff;height: 2.8rem;}
+.wrap .handle h4.title{font-size: 0.400rem;color: #333333;padding: 0 0 0.3rem 0.453rem;}
+.wrap .handle.hand-bar{padding:0;height: auto;padding-top: 0.4rem;}
+.wrap .handle .step{overflow: hidden;width: 100%;padding: 0 0.453rem;padding-left: 1.8rem;}
+.wrap .handle .step li.normal {width: 100%;display: inline-block;position: relative;color: #999;height: 2.5rem;}
+.wrap .handle .step li.normal sub{width: 0.5rem;height: 0.5rem;border-radius: 100%;display: inline-block;background: #999;}
+.wrap .handle .step li.normal .hr{width: 0.1rem;height: 100%;background-color: #999;position: absolute;top: -90%;left: 2.5%;}
+.wrap .handle .step li.current{color: #108ee9;}
+.wrap .handle .step li.current sub{background: #108ee9;position: relative;z-index: 2;float: left;}
+.wrap .handle .step li.current .hr{color: #108ee9;}
+.wrap .handle .step .txt{/* height: 1.5rem; *//* overflow: hidden; */display: block;float: left;padding-left: 0.2rem;}
+.wrap .handle .step li.normal.current .txt p{color: #108ee9;}
+.wrap .handle .step li.normal.current .hr{background-color: #108ee9;}
+.btnBox .btn-input-button{display: flex;justify-content: space-around;}
+.btnBox .btn-input-button .pass{background: #108ee9;border-radius: 0.5rem;color: #fff;font-size: 0.4rem;width: 40%;border: 1px solid #108ee9;}
+.btnBox .btn-input-button .fail{border: 1px solid #108ee9;border-radius: 0.5rem;color: #108ee9;background: none;font-size: 0.4rem;width: 40%}
+.wrap .handle .step li.normal.current .txt p.reason{color: #ff3b30;font-size: 0.4rem;}
+

@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 instype@Datapublic class InsType extends BaseEntity {	private static final long serialVersionUID = 1L;	public InsType() {		super();	}	    //保险名称    private String name;    //保险描述    private String description;}

@@ -1,0 +1,1 @@
+package com.yskj.dao;import com.yskj.models.PageParam;import com.yskj.models.QueryParam;import java.util.HashMap;import java.util.List;import java.util.Map;public interface AttentionDao extends Dao {	List<HashMap> queryHashMap(PageParam pageParam);	List<Map> getFocusList(QueryParam queryParam);	List<Map> getFansList(QueryParam queryParam);}

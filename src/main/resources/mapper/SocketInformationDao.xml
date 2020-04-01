@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yskj.dao.SocketInformationDao" >
+
+<!-- 查询字段 -->
+<sql id="columnList" >
+	s.id,
+	 s.fromuser, s.touser, s.messsag, s.type, s.needbr, s.createTime, s.updateTime, s.version, s.isDeleted, s.createBy, s.updateBy, s.locked ,s.sessionID
+</sql>
+
+
+<!--通过id集合in查询-->
+<sql id="inClause">
+    <if test="column!=null">
+        <if test="ids==null">
+            and 1=0
+        </if>
+        <if test="ids!=null">
+            <if test="ids.size>0">
+                and  s.${column} in
+                <foreach item="items" index="index" collection="ids" open="(" separator="," close=")">
+                    #{items}
+                </foreach>
+            </if>
+            <if test="ids.size==0">
+                and 1=0
+            </if>
+        </if>
+    </if>
+</sql>
+
+<!-- 查询条件 -->
+<sql id="whereClause">
+where 1=1
+<trim  suffixOverrides="," >
+	<if test="condition.id != null" >
+	    and s.id = #{condition.id}
+	</if>
+	<if test="condition.fromuser != null" >and  s.fromuser = #{condition.fromuser}</if>
+<if test="condition.sessionID != null" >and  s.sessionID = #{condition.sessionID}</if>
+<if test="condition.touser != null" >and  s.touser = #{condition.touser}</if>
+<if test="condition.messsag != null" >and  s.messsag = #{condition.messsag}</if>
+<if test="condition.type != null" >and  s.type = #{condition.type}</if>
+<if test="condition.needbr != null" >and  s.needbr = #{condition.needbr}</if>
+<if test="condition.createTime != null" >and  s.createTime = #{condition.createTime}</if>
+<if test="condition.updateTime != null" >and  s.updateTime = #{condition.updateTime}</if>
+<if test="condition.version != null" >and  s.version = #{condition.version}</if>
+<if test="condition.isDeleted != null" >and  s.isDeleted = #{condition.isDeleted}</if>
+<if test="condition.createBy != null" >and  s.createBy = #{condition.createBy}</if>
+<if test="condition.updateBy != null" >and  s.updateBy = #{condition.updateBy}</if>
+<if test="condition.locked != null" >and  s.locked = #{condition.locked}</if>
+
+</trim>
+<include refid="inClause"/>
+</sql>
+
+<!-- 模糊查询条件 -->
+<sql id="whereLikeClause">
+where 1=1
+<trim  suffixOverrides="," >
+	<if test="condition.id != null" >
+	    and s.id = #{condition.id}
+	</if>
+	<if test="condition.fromuser != null" >and  UPPER(s.fromuser) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.fromuser}),'%'))</if>
+<if test="condition.sessionID != null" >and  UPPER(s.sessionID) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.sessionID}),'%'))</if>
+<if test="condition.touser != null" >and  UPPER(s.touser) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.touser}),'%'))</if>
+<if test="condition.messsag != null" >and  UPPER(s.messsag) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.messsag}),'%'))</if>
+<if test="condition.type != null" >and  UPPER(s.type) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.type}),'%'))</if>
+<if test="condition.needbr != null" >and  UPPER(s.needbr) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.needbr}),'%'))</if>
+<if test="condition.createTime != null" >and  UPPER(s.createTime) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.createTime}),'%'))</if>
+<if test="condition.updateTime != null" >and  UPPER(s.updateTime) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.updateTime}),'%'))</if>
+<if test="condition.version != null" >and  UPPER(s.version) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.version}),'%'))</if>
+<if test="condition.isDeleted != null" >and  UPPER(s.isDeleted) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.isDeleted}),'%'))</if>
+<if test="condition.createBy != null" >and  UPPER(s.createBy) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.createBy}),'%'))</if>
+<if test="condition.updateBy != null" >and  UPPER(s.updateBy) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.updateBy}),'%'))</if>
+<if test="condition.locked != null" >and  UPPER(s.locked) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.locked}),'%'))</if>
+
+</trim>
+<include refid="inClause"/>
+</sql>
+
+
+
+
+
+<!-- 插入记录 -->
+<insert id="add"  >
+  insert into socketinformation (id,fromuser,touser,messsag,type,needbr,createTime,updateTime,version,isDeleted,createBy,updateBy,locked,sessionID)
+  values(#{id,jdbcType=VARCHAR},#{fromuser},#{touser},#{messsag},#{type},#{needbr},#{createTime},#{updateTime},#{version},#{isDeleted},#{createBy},#{updateBy},#{locked},#{sessionID})
+</insert>
+
+
+
+<!-- 修改记录，只修改只不为空的字段 -->
+<update id="update" >
+	update socketinformation set
+	<trim  suffixOverrides="," >
+	<if test="fromuser != null ">fromuser=#{fromuser},</if>
+<if test="sessionID != null ">sessionID=#{sessionID},</if>
+<if test="touser != null ">touser=#{touser},</if>
+<if test="messsag != null ">messsag=#{messsag},</if>
+<if test="type != null ">type=#{type},</if>
+<if test="needbr != null ">needbr=#{needbr},</if>
+<if test="createTime != null ">createTime=#{createTime},</if>
+<if test="updateTime != null ">updateTime=#{updateTime},</if>
+<if test="version != null ">version=#{version},</if>
+<if test="isDeleted != null ">isDeleted=#{isDeleted},</if>
+<if test="createBy != null ">createBy=#{createBy},</if>
+<if test="updateBy != null ">updateBy=#{updateBy},</if>
+<if test="locked != null ">locked=#{locked},</if>
+
+	</trim> where id=#{id} and version = #{version}-1
+</update>
+
+<!-- 删除记录 -->
+<delete id="del" >
+	delete from socketinformation where id = #{id}
+</delete>
+
+<!-- 根据id查询  -->
+<select id="get"   resultType="SocketInformation"  parameterType="String">
+	select <include refid="columnList" /> 
+	from socketinformation  s
+	where  s.id = #{id}  and s.isDeleted = false
+</select>
+
+<!-- 列表总数-->
+<select id="count" resultType="java.lang.Long" >
+	select count(1) 
+	from socketinformation  s
+	<include refid="whereClause"/>
+</select>
+
+<!-- 查询page -->
+<select id="findPage" resultType="SocketInformation" >
+	select 
+	<include refid="columnList"/>
+	from socketinformation s
+	<include refid="whereClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 模糊查询page -->
+<select id="findLikePage" resultType="SocketInformation" >
+	select 
+	<include refid="columnList"/>
+	from socketinformation s
+	<include refid="whereLikeClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询列表list -->
+<select id="findList" resultType="SocketInformation" >
+	select
+	<include refid="columnList"/>
+	from socketinformation s
+	<include refid="whereClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!--模糊查询list-->
+<select id="findLikeList" resultType="SocketInformation" >
+	select
+	<include refid="columnList"/>
+	from socketinformation s
+	<include refid="whereLikeClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询符合条件的数据的id集合 -->
+<select id="findIds" resultType="String">
+	select s.${idsColumn}
+	from socketinformation s
+    <include refid="whereClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询符合模糊条件的数据的id集合 -->
+<select id="findLikeIds" resultType="String">
+	select s.${idsColumn}
+	from socketinformation s
+    <include refid="whereLikeClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 获取一个对象通过非id -->
+<select id="one" resultType="SocketInformation" >
+     select
+    <include refid="columnList"/>
+     from socketinformation s
+    <include refid="whereClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+    limit 0,1
+</select>
+
+<!--如果你想返回一个HashMap 就实现这个select标签-->
+<select id="queryHashMap" resultType="java.util.HashMap"  parameterType="Object">
+</select>
+
+	<!--级联查询-->
+	<sql id="detailList">
+		s.id as 'id',
+		s.version as 'version',s.fromuser as 'fromuser',s.touser as 'touser',s.messsag as 'messsag',s.type as 'type',s.needbr as 'needbr',s.locked as 'locked',s.sessionID as 'sessionID',s.createTime AS 'createTime',
+		fromUserObj.id as 'fromUserObj.id',
+		fromUserObj.version as 'fromUserObj.version',fromUserObj.nickName as 'fromUserObj.nickName',fromUserObj.sex as 'fromUserObj.sex',fromUserObj.phoneNumber as 'fromUserObj.phoneNumber', CONCAT_WS('/',fromAttachment.path,fromAttachment.datestr,fromAttachment.name) as 'fromUserObj.infoHeadImg',
+		fromweixin.id as 'fromUserObj.weixin.id',
+		fromweixin.version as 'fromUserObj.weixin.version',fromweixin.nickname as 'fromUserObj.weixin.nickname',fromweixin.sex as 'fromUserObj.weixin.sex',fromweixin.province as 'fromUserObj.weixin.province',fromweixin.city as 'fromUserObj.weixin.city',fromweixin.country as 'fromUserObj.weixin.country',fromweixin.headimgurl as 'fromUserObj.weixin.headimgurl',fromweixin.privilegeStr as 'fromUserObj.weixin.privilegeStr',fromweixin.unionid as 'fromUserObj.weixin.unionid',fromweixin.openid as 'fromUserObj.weixin.openid',fromweixin.userID as 'fromUserObj.weixin.userID',fromweixin.refreshToken as 'fromUserObj.weixin.refreshToken',fromweixin.accessToken as 'fromUserObj.weixin.accessToken',fromweixin.refreshTokenTime as 'fromUserObj.weixin.refreshTokenTime',fromweixin.accessTokenTime as 'fromUserObj.weixin.accessTokenTime',fromweixin.ticket as 'fromUserObj.weixin.ticket',fromweixin.ticketTime as 'fromUserObj.weixin.ticketTime',
+		toUserObj.id as 'toUserObj.id',
+		toUserObj.version as 'toUserObj.version',toUserObj.nickName as 'toUserObj.nickName',toUserObj.sex as 'toUserObj.sex',toUserObj.phoneNumber as 'toUserObj.phoneNumber',CONCAT_WS('/',toAttachment.path,toAttachment.datestr,toAttachment.name) as 'toUserObj.infoHeadImg',
+		toweixin.id as 'toUserObj.weixin.id',
+		toweixin.version as 'toUserObj.weixin.version',toweixin.nickname as 'toUserObj.weixin.nickname',toweixin.sex as 'toUserObj.weixin.sex',toweixin.province as 'toUserObj.weixin.province',toweixin.city as 'toUserObj.weixin.city',toweixin.country as 'toUserObj.weixin.country',toweixin.headimgurl as 'toUserObj.weixin.headimgurl',toweixin.privilegeStr as 'toUserObj.weixin.privilegeStr',toweixin.unionid as 'toUserObj.weixin.unionid',toweixin.openid as 'toUserObj.weixin.openid',toweixin.userID as 'toUserObj.weixin.userID',toweixin.refreshToken as 'toUserObj.weixin.refreshToken',toweixin.accessToken as 'toUserObj.weixin.accessToken',toweixin.refreshTokenTime as 'toUserObj.weixin.refreshTokenTime',toweixin.accessTokenTime as 'toUserObj.weixin.accessTokenTime',toweixin.ticket as 'toUserObj.weixin.ticket',toweixin.ticketTime as 'toUserObj.weixin.ticketTime'
+	</sql>
+
+	<!--Attachment映射-->
+	<resultMap id="fromAttachmentMap" type="Attachment">
+		<id property="id" column="fromUserObj.attachment.id" />
+		<result property="version" column="fromUserObj.attachment.version" />
+		<result property="datestr" column="fromUserObj.attachment.datestr" />
+		<result property="path" column="fromUserObj.attachment.path" />
+		<result property="name" column="fromUserObj.attachment.name" />
+		<result property="title" column="fromUserObj.attachment.title" />
+		<result property="type" column="fromUserObj.attachment.type" />
+		<result property="refID" column="fromUserObj.attachment.refID" />
+	</resultMap>
+
+	<!--Weixin映射-->
+	<resultMap id="fromWeixinMap" type="Weixin">
+		<id property="id" column="fromUserObj.weixin.id" />
+		<result property="version" column="fromUserObj.weixin.version" />
+		<result property="nickname" column="fromUserObj.weixin.nickname" />
+		<result property="sex" column="fromUserObj.weixin.sex" />
+		<result property="province" column="fromUserObj.weixin.province" />
+		<result property="city" column="fromUserObj.weixin.city" />
+		<result property="country" column="fromUserObj.weixin.country" />
+		<result property="headimgurl" column="fromUserObj.weixin.headimgurl" />
+		<result property="privilegeStr" column="fromUserObj.weixin.privilegeStr" />
+		<result property="unionid" column="fromUserObj.weixin.unionid" />
+		<result property="openid" column="fromUserObj.weixin.openid" />
+		<result property="userID" column="fromUserObj.weixin.userID" />
+		<result property="refreshToken" column="fromUserObj.weixin.refreshToken" />
+		<result property="accessToken" column="fromUserObj.weixin.accessToken" />
+		<result property="refreshTokenTime" column="fromUserObj.weixin.refreshTokenTime" />
+		<result property="accessTokenTime" column="fromUserObj.weixin.accessTokenTime" />
+		<result property="ticket" column="fromUserObj.weixin.ticket" />
+		<result property="ticketTime" column="fromUserObj.weixin.ticketTime" />
+	</resultMap>
+
+	<!--User映射-->
+	<resultMap id="fromUserMap" type="User">
+		<id property="id" column="fromUserObj.id" />
+		<result property="version" column="fromUserObj.version" />
+		<result property="nickName" column="fromUserObj.nickName" />
+		<result property="sex" column="fromUserObj.sex" />
+		<result property="phoneNumber" column="fromUserObj.phoneNumber" />
+		<result property="infoHeadImg" column="fromUserObj.infoHeadImg" />
+		<association property="weixin"  javaType="Weixin" resultMap="fromWeixinMap"/>
+	</resultMap>
+
+	<!--Attachment映射-->
+	<resultMap id="toAttachmentMap" type="Attachment">
+		<id property="id" column="toUserObj.attachment.id" />
+		<result property="version" column="toUserObj.attachment.version" />
+		<result property="datestr" column="toUserObj.attachment.datestr" />
+		<result property="path" column="toUserObj.attachment.path" />
+		<result property="name" column="toUserObj.attachment.name" />
+		<result property="title" column="toUserObj.attachment.title" />
+		<result property="type" column="toUserObj.attachment.type" />
+		<result property="refID" column="toUserObj.attachment.refID" />
+	</resultMap>
+
+	<!--Weixin映射-->
+	<resultMap id="toWeixinMap" type="Weixin">
+		<id property="id" column="toUserObj.weixin.id" />
+		<result property="version" column="toUserObj.weixin.version" />
+		<result property="nickname" column="toUserObj.weixin.nickname" />
+		<result property="sex" column="toUserObj.weixin.sex" />
+		<result property="province" column="toUserObj.weixin.province" />
+		<result property="city" column="toUserObj.weixin.city" />
+		<result property="country" column="toUserObj.weixin.country" />
+		<result property="headimgurl" column="toUserObj.weixin.headimgurl" />
+		<result property="privilegeStr" column="toUserObj.weixin.privilegeStr" />
+		<result property="unionid" column="toUserObj.weixin.unionid" />
+		<result property="openid" column="toUserObj.weixin.openid" />
+		<result property="userID" column="toUserObj.weixin.userID" />
+		<result property="refreshToken" column="toUserObj.weixin.refreshToken" />
+		<result property="accessToken" column="toUserObj.weixin.accessToken" />
+		<result property="refreshTokenTime" column="toUserObj.weixin.refreshTokenTime" />
+		<result property="accessTokenTime" column="toUserObj.weixin.accessTokenTime" />
+		<result property="ticket" column="toUserObj.weixin.ticket" />
+		<result property="ticketTime" column="toUserObj.weixin.ticketTime" />
+	</resultMap>
+
+	<!--User映射-->
+	<resultMap id="toUserMap" type="User">
+		<id property="id" column="toUserObj.id" />
+		<result property="version" column="toUserObj.version" />
+		<result property="nickName" column="toUserObj.nickName" />
+		<result property="sex" column="toUserObj.sex" />
+		<result property="phoneNumber" column="toUserObj.phoneNumber" />
+		<result property="infoHeadImg" column="toUserObj.infoHeadImg" />
+		<association property="weixin"  javaType="Weixin" resultMap="toWeixinMap"/>
+	</resultMap>
+
+	<!--SocketInformation映射-->
+	<resultMap id="SocketInformationMap" type="SocketInformation">
+		<id property="id" column="id" />
+		<result property="version" column="version" />
+		<result property="createTime" column="createTime" />
+		<result property="fromuser" column="fromuser" />
+		<result property="touser" column="touser" />
+		<result property="messsag" column="messsag" />
+		<result property="type" column="type" />
+		<result property="needbr" column="needbr" />
+		<result property="locked" column="locked" />
+		<result property="sessionID" column="sessionID" />
+		<association property="fromUserObj"  javaType="User" resultMap="fromUserMap"/>
+		<association property="toUserObj"  javaType="User" resultMap="toUserMap"/>
+	</resultMap>
+
+	<!--SocketInformation映射-->
+	<resultMap id="SocketInformationMap1" type="SocketInformation">
+		<id property="id" column="id" />
+		<result property="version" column="version" />
+		<result property="fromuser" column="fromuser" />
+		<result property="createTime" column="createTime" />
+		<result property="touser" column="touser" />
+		<result property="messsag" column="messsag" />
+		<result property="type" column="type" />
+		<result property="needbr" column="needbr" />
+		<result property="locked" column="locked" />
+		<result property="noReadCount" column="noReadCount" />
+		<result property="sessionID" column="sessionID" />
+		<association property="fromUserObj"  javaType="User" resultMap="fromUserMap"/>
+		<association property="toUserObj"  javaType="User" resultMap="toUserMap"/>
+	</resultMap>
+
+	<select id="getHistoryChatInfoPage" resultMap="SocketInformationMap" >
+		SELECT
+		*
+		FROM(SELECT
+		<include refid="detailList"/>
+		FROM  socketinformation s
+		LEFT JOIN shiro_user fromUserObj ON s.fromuser = fromUserObj.id
+		left join attachment fromAttachment on fromAttachment.id = fromUserObj.infoHeadImg
+		LEFT JOIN weixin fromweixin ON fromUserObj.id = fromweixin.userID
+		LEFT JOIN shiro_user toUserObj ON s.touser = toUserObj.id
+		LEFT join attachment toAttachment on toAttachment.id = toUserObj.infoHeadImg
+		LEFT JOIN weixin toweixin ON toUserObj.id = toweixin.userID ORDER BY s.createTime DESC
+		) s
+		WHERE (s.fromuser = #{condition.sendUser} AND s.touser = #{condition.touser}) OR (s.touser = #{condition.sendUser} AND s.fromuser = #{condition.touser})
+		ORDER BY s.createTime DESC
+	</select>
+
+	<!-- 查询SessionID -->
+	<select id="getSessionID" resultType="SocketInformation" >
+		SELECT
+		*
+		FROM socketinformation s
+		WHERE (s.fromuser = #{condition.touser} AND s.touser = #{condition.fromuser}) OR (s.touser = #{condition.touser} AND s.fromuser = #{condition.fromuser})
+		ORDER BY s.createTime DESC
+		LIMIT 0,1;
+	</select>
+
+	<select id="getC2CUserInfo" resultType="java.util.Map" >
+		SELECT
+		USER.id,USER.nickName,
+		IFNULL(CONCAT('/',attachment.`path`,'/',attachment.`datestr`,'/',attachment.`name`),weixin.`headimgurl`) as 'headimgurl'
+		,USER.realName
+		FROM shiro_user USER
+		LEFT JOIN personalauthen personalauthen
+			ON USER.id = personalauthen.`userID`
+		LEFT JOIN attachment attachment
+			ON USER.infoHeadImg = attachment.id
+		LEFT JOIN weixin weixin
+			ON USER.id = weixin.userID
+		WHERE USER.id = #{id}
+	</select>
+	
+	<update id="updateMessageType">
+		update socketinformation set
+		type=#{condition.type}
+	  	WHERE 1=1
+	  	<trim suffixOverrides=",">
+			<if test="condition.id != null ">and id=#{condition.id},</if>
+			<if test="condition.sessionID != null "> and sessionID=#{condition.sessionID},</if>
+		</trim>
+	</update>
+	
+	<select id="getUserMass" resultType="java.lang.Integer">
+
+        SELECT COUNT(*) FROM socketinformation s WHERE s.touser = #{condition.userID} AND s.type = 1 AND s.isDeleted = #{condition.isDeleted};
+
+	</select>
+
+
+	<sql id="detailList1">
+		ss.id AS 'id',
+        ss.fromuser AS 'fromuser',
+        ss.touser AS 'touser',
+        ss.messsag AS 'messsag',
+        ss.sessionID AS 'sessionID',
+        ss.createTime AS 'createTime'
+	</sql>
+
+	<resultMap id="SocketInformationMap2" type="SocketInformation">
+		<id property="id" column="id" />
+		<result property="fromuser" column="fromuser" />
+		<result property="createTime" column="createTime" />
+		<result property="touser" column="touser" />
+		<result property="messsag" column="messsag" />
+		<result property="noReadCount" column="noReadCount" />
+		<result property="sessionID" column="sessionID" />
+	</resultMap>
+
+	<!--User映射-->
+	<resultMap id="fromUserMap2" type="User">
+		<id property="id" column="fromUserObj.id" />
+		<result property="nickName" column="fromUserObj.nickName" />
+		<result property="realName" column="fromUserObj.realName" />
+		<association property="weixin"  javaType="Weixin" resultMap="fromWeixinMap2"/>
+	</resultMap>
+
+	<resultMap id="toUserMap2" type="User">
+		<id property="id" column="toUserObj.id" />
+		<result property="nickName" column="toUserObj.nickName" />
+		<result property="realName" column="toUserObj.realName" />
+		<association property="weixin"  javaType="Weixin" resultMap="toWeixinMap2"/>
+	</resultMap>
+
+	<resultMap id="toWeixinMap2" type="Weixin">
+		<result property="headimgurl" column="toUserObj.weixin.headimgurl" />
+	</resultMap>
+
+	<resultMap id="fromWeixinMap2" type="Weixin">
+		<result property="headimgurl" column="fromUserObj.weixin.headimgurl" />
+	</resultMap>
+
+	<!--对象的多级映射 mapList mapPage mapOne-->
+	<!-- 查找单人聊天记录 -->
+	<select id="recentChat" resultMap="SocketInformationMap2" >
+		SELECT
+		<include refid="detailList1"/>
+		,(SELECT
+        COUNT(1)
+        FROM
+        socketinformation sss
+        WHERE sss.touser = #{userID}
+        AND sss.type = 1
+        AND sss.fromuser = ss.`fromuser`)noReadCount
+        FROM
+        (SELECT
+            sessionID,
+            MAX(createTime) AS TIME
+            FROM
+                (SELECT
+                    s.id,
+                    s.`createTime`,
+                    s.`messsag`,
+                    s.`sessionID`,
+                    s.`fromuser`,
+                    s.`touser`
+                FROM
+                  socketinformation s
+                WHERE (
+                    s.fromuser = #{userID}
+                    OR s.touser = #{userID}
+                )
+                AND s.touser NOT LIKE 'group_%'
+                ORDER BY s.`createTime` DESC) temp
+            GROUP BY sessionID) temp2
+        LEFT JOIN socketinformation ss
+        ON ss.sessionID = temp2.sessionID
+        AND ss.createTime = temp2.time
+        ORDER BY ss.createTime DESC ;
+	</select>
+
+	<!--  查找群聊天记录 -->
+	<select id="recentChatGroup" resultType="java.util.Map" >
+		SELECT * FROM (
+			SELECT
+				s.messsag,
+				s.createTime ,
+				s.`sessionID`,
+				grouplist.`groupID`,
+				grouplist.`groupName`,
+				huntingtype.`codeGrade`,
+				huntingtype.`name`,
+        		(SELECT noreadcount FROM groupchatnoread groupchatnoread WHERE groupchatnoread.`userID` = #{userID} AND groupchatnoread.`groupID` = grouplist.`groupID`) noreadcount
+			FROM
+				grouplist grouplist
+    			LEFT JOIN socketinformation s
+					ON s.touser = grouplist.`groupID`
+				LEFT JOIN groupchatnoread groupchatnoread
+					ON grouplist.`groupID` = groupchatnoread.`groupID`
+				LEFT JOIN POSITION POSITION
+					ON position.`ID` = grouplist.`positionID`
+				LEFT JOIN huntingtype huntingtype
+					ON huntingtype.id = position.`workTypeID`
+			WHERE
+    			grouplist.userID = #{userID} ORDER BY s.createTime DESC
+		) s GROUP  BY s.groupID ORDER BY s.createTime DESC
+	</select>
+
+	<select id="getGroupHistoryChatPage" resultType="java.util.Map" parameterType="com.yskj.models.PageParam">
+		SELECT
+			s.messsag,
+    		s.fromuser,
+			IFNULL(shiro_user.realName,shiro_user.nickName) as 'nickName',
+			IFNULL(CONCAT('/',attachment.`path`,'/',attachment.`datestr`,'/',attachment.`name`),weixin.`headimgurl`) as 'headimgurl',
+			shiro_user.id
+		FROM
+			socketinformation s
+			LEFT JOIN shiro_user shiro_user
+			ON shiro_user.`id` = s.fromuser
+			LEFT JOIN attachment attachment
+			ON shiro_user.infoHeadImg = attachment.id
+			LEFT JOIN weixin weixin
+			ON weixin.userID = shiro_user.`id`
+		WHERE s.touser = #{condition.touser}
+		order by s.createTime desc
+	</select>
+
+	<select id="getGrouplistSessionID" resultType="SocketInformation" parameterType="java.lang.String">
+		SELECT
+		*
+		FROM socketinformation s
+		WHERE s.touser = #{groupID}
+		LIMIT 0,1;
+	</select>
+	
+	<select id="getHeadImgByID" parameterType="java.lang.String" resultType="java.lang.String">
+		select
+		IFNULL(CONCAT('/',attachment.`path`,'/',attachment.`datestr`,'/',attachment.`name`),weixin.`headimgurl`) as 'headimgurl'
+		from weixin
+		LEFT JOIN shiro_user shiro_user
+		ON shiro_user.`id` = weixin.userID
+		left join attachment attachment
+		on attachment.id = shiro_user.infoHeadImg
+		where userID = #{userID}
+	</select>
+
+	<select id="getGroupMsgCount" resultType="java.lang.Integer" parameterType="java.lang.String">
+
+		SELECT SUM(g.noreadcount) FROM groupchatnoread g WHERE g.userID = #{userID} and isDeleted = false
+
+	</select>
+
+</mapper>

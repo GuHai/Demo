@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;import java.math.BigDecimal;//表名称 bondtransactioncpe@Datapublic class Bondtransactioncpe extends Bondtransaction {    private String cpeID;    private String cpeName;}

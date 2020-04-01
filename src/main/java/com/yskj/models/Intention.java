@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;import java.util.List;@Datapublic class Intention {    List<Intentionaddress> intentionaddresses ;    List<Intentiontype> intentiontypes;    Intentiondate intentiondate;}

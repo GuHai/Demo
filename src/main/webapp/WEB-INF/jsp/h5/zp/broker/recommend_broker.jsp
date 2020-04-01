@@ -1,0 +1,108 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 2018/12/8
+  Time: 10:25
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>已推荐</title>
+    <jsp:include page="../../zp/base/resource.jsp"/>
+    <link rel="stylesheet" href="/ijob/static/css/broker/broker.css?version=4">
+</head>
+<body>
+<div class="recommend-broker-index">
+    <div class="recom-hd">
+        <div class="tips">求职者在7天之内没有面试或入职成功，将转移至未入职列表</div>
+    </div>
+    <div class="list-main-box">
+        <div class="info-box">
+            <ul>
+                <script type="text/html" id="template" data-url="/ijob/api/FullTimeController/myBrokerPersonDetail">
+                    {{each list as post}}
+                        <li class="ul-li">
+                            <div onclick="ijob.gotoPage({path:'/h5/zp/broker/broker_job_details?postForBroker.id={{post.post.id}}'})">
+                                <div class="hd-txt">
+                                    <div class="name">
+                                        <span class="call">{{post.recommend.name}}</span>
+                                        <span class="sex">{{post.recommend.sex | enums:'SexType'}}</span>
+                                        {{if post.recommend.age != null && post.recommend.age !='' && post.recommend.age != 0}}
+                                        <span class="age">{{post.recommend.age}}岁</span>
+                                        {{/if}}
+                                    </div>
+                                    <div class="tel">
+                                        <span class="iconfont icon-dianhua"></span>
+                                        <a href="tel:{{post.recommend.phoneNumber}}" class="number">{{post.recommend.phoneNumber}}</a>
+                                    </div>
+                                </div>
+                                <div class="data-list">
+                                    <ul>
+                                        <li>
+                                            <div class="tit">{{post.post.title}}</div>
+                                            <%--<div class="type">岗位类型</div>--%>
+                                        </li>
+                                        <li>
+                                            <div class="name">{{post.post.company.company}}</div>
+                                        </li>
+                                        <li>
+                                            <div class="money">{{post.post.postForBroker.commission}}{{post.post.postForBroker.unit |enums:'UnitType'}}</div>
+                                            <%--<div class="desc">佣金</div>--%>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="remark">
+                                <em>备注：</em>
+                                <span class="r_content" data-text="{{post.recommend.mark}}">{{post.recommend.mark}}</span>
+                                <span class="icon"><span class="iconfont icon-arrow-down1"></span></span>
+                            </div>
+                        </li>
+                    {{/each}}
+                </script>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $("#template").loadData({condition:{type1:1}}).then(function (result) {
+        console.log(result);
+        var remarks = $(".remark") ;
+        var more = true;
+        function conceal() {
+            $(".r_content").each(function (i,item) {
+                //判断是否有备注，如果没有则隐藏
+                var _this = $(this);
+                if (_this.text() == "" || _this.text() == null){
+                    $(remarks[i]).hide();
+                }
+                // 字数限制，超过部分...代替，后缀点击展开，点击后展开全文
+                var maxheight=20;
+                var em = _this.next(".icon");
+                if(_this.text().length>maxheight){
+                    _this.html(_this.text().substring(0,maxheight));
+                    _this.html(_this.html()+'...');
+                    more = true;
+                    em.html("<span class=\"launch iconfont icon-arrow-down1\"></span>");
+                }else {
+                    em.hide();
+                }
+            });
+        }
+        conceal();
+        $('.remark .icon').unbind().click(function(){
+            console.log(more)
+            if(more){
+                $(this).prev().html($(this).prev(".r_content").data("text"));
+                $(this).html("<span class=\"retract iconfont icon-arrow-up\"></span>");
+                more = false;
+            }else{
+                conceal();
+            }
+        });
+    });
+</script>
+</body>
+</html>

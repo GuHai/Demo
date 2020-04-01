@@ -1,0 +1,1 @@
+package com.yskj.dao;import com.yskj.models.Adver;import com.yskj.models.PageParam;import java.util.HashMap;import java.util.List;import java.util.Map;public interface AdverDao extends Dao {	List<HashMap> queryHashMap(PageParam pageParam);	List<Adver> getAdverInfo(Map map);}

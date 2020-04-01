@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .headBox {
+  height: 4.000rem;
+  width: 100%;
+  padding: 0 0.453rem;
+  background-color: #108ee9;
+}
+.wrap .headBox .headBox_top {
+  height: 1.067rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .headBox .headBox_top .headBox_topSpan {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.wrap .headBox .headBox_top .headBox_topDiv {
+  padding: 0.267rem 0;
+}
+.wrap .headBox .headBox_top .headBox_topDiv .btn_contact {
+  width: 1.733rem;
+  font-size: 0.293rem;
+  color: #fff;
+  padding: 0;
+  height: 0.613rem;
+  background-color: #108ee9;
+  border-radius: 5px;
+  border: solid 1px #ffffff;
+}
+.wrap .headBox .headBox_top .headBox_topDiv .btn_advisory {
+  width: 1.733rem;
+  height: 0.613rem;
+  border-radius: 5px;
+  font-size: 0.293rem;
+  color: #fff;
+  padding: 0;
+  background-color: #108ee9;
+  border: solid 1px #ffffff;
+}
+.wrap .headBox .headBox_btm .nubP {
+  font-size: 1.120rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 2.400rem;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.wrap .headBox .headBox_btm .msgP {
+  margin-top: -0.667rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.480rem;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.wrap .main {
+  margin-top: 0.267rem;
+}
+.wrap .main .orderNumber {
+  padding: 0 0.453rem;
+  height: 1.173rem;
+  background-color: #fff;
+  border-bottom: 1px solid #f2f5f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .main .orderNumber > span:first-child {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .orderNumber > span:last-child {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .jsTime {
+  padding: 0 0.453rem;
+  height: 1.173rem;
+  background-color: #fff;
+  border-bottom: 1px solid #f2f5f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .main .jsTime > span:first-child {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .jsTime > span:last-child {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .jsTime > span:last-child > em {
+  font-style: normal;
+  margin-left: 0.213rem;
+}
+.wrap .main .jsDate {
+  padding: 0.400rem 0.453rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  background-color: #fff;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .jsDate > p {
+  margin-top: 5px;
+  padding-left: 0.533rem;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .remarks {
+  padding: 0.400rem 0.453rem;
+  margin-top: 0.267rem;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  background-color: #fff;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .remarks > p {
+  margin-top: 5px;
+  padding-left: 0.533rem;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .btnBox {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  padding: 0.400rem 0.453rem;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .btnBox .btn_end {
+  width: 3.200rem;
+  height: 1.067rem;
+  color: #108ee9;
+  font-size: 0.480rem;
+  border-radius: 0.533rem;
+  border: solid 1px #108ee9;
+}
+.wrap .btnBox .btn_end:active {
+  background-color: #f2f5f7;
+  color: #108ee9;
+}
+.wrap .btnBox .btn_confirm {
+  width: 3.200rem;
+  height: 1.067rem;
+  background-color: #108ee9;
+  border-radius: 0.533rem;
+  color: #fff;
+  font-size: 0.400rem;
+  border: none;
+}
+.wrap .btnBox .btn_confirm:active {
+  background-color: #108ee9;
+  color: #fff;
+}

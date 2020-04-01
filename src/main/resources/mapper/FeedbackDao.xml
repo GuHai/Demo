@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yskj.dao.FeedbackDao" >
+
+<!-- 查询字段 -->
+<sql id="columnList" >
+	f.id,
+	 f.userID, f.feedContent, f.feedImg, f.createTime, f.updateTime, f.version, f.isDeleted, f.createBy, f.updateBy,f.positionID,f.type,f.tel
+</sql>
+
+
+<!--通过id集合in查询-->
+<sql id="inClause">
+    <if test="column!=null">
+        <if test="ids==null">
+            and 1=0
+        </if>
+        <if test="ids!=null">
+            <if test="ids.size>0">
+                and  f.${column} in
+                <foreach item="items" index="index" collection="ids" open="(" separator="," close=")">
+                    #{items}
+                </foreach>
+            </if>
+            <if test="ids.size==0">
+                and 1=0
+            </if>
+        </if>
+    </if>
+</sql>
+
+<!-- 查询条件 -->
+<sql id="whereClause">
+where 1=1
+<trim  suffixOverrides="," >
+	<if test="condition.id != null" >
+	    and f.id = #{condition.id}
+	</if>
+	<if test="condition.userID != null" >and  f.userID = #{condition.userID}</if>
+<if test="condition.feedContent != null" >and  f.feedContent = #{condition.feedContent}</if>
+<if test="condition.feedImg != null" >and  f.feedImg = #{condition.feedImg}</if>
+<if test="condition.createTime != null" >and  f.createTime = #{condition.createTime}</if>
+<if test="condition.updateTime != null" >and  f.updateTime = #{condition.updateTime}</if>
+<if test="condition.version != null" >and  f.version = #{condition.version}</if>
+<if test="condition.isDeleted != null" >and  f.isDeleted = #{condition.isDeleted}</if>
+<if test="condition.createBy != null" >and  f.createBy = #{condition.createBy}</if>
+<if test="condition.updateBy != null" >and  f.updateBy = #{condition.updateBy}</if>
+<if test="condition.positionID != null" >and  f.positionID = #{condition.positionID}</if>
+<if test="condition.type != null" >and  f.type = #{condition.type}</if>
+<if test="condition.tel != null" >and  f.tel = #{condition.tel}</if>
+
+</trim>
+<include refid="inClause"/>
+</sql>
+
+<!-- 模糊查询条件 -->
+<sql id="whereLikeClause">
+where 1=1
+<trim  suffixOverrides="," >
+	<if test="condition.id != null" >
+	    and f.id = #{condition.id}
+	</if>													 		
+	<if test="condition.userID != null" >and  UPPER(f.userID) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.userID}),'%'))</if>
+<if test="condition.feedContent != null" >and  UPPER(f.feedContent) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.feedContent}),'%'))</if>
+<if test="condition.feedImg != null" >and  UPPER(f.feedImg) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.feedImg}),'%'))</if>
+<if test="condition.createTime != null" >and  UPPER(f.createTime) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.createTime}),'%'))</if>
+<if test="condition.updateTime != null" >and  UPPER(f.updateTime) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.updateTime}),'%'))</if>
+<if test="condition.version != null" >and  UPPER(f.version) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.version}),'%'))</if>
+<if test="condition.isDeleted != null" >and  UPPER(f.isDeleted) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.isDeleted}),'%'))</if>
+<if test="condition.createBy != null" >and  UPPER(f.createBy) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.createBy}),'%'))</if>
+<if test="condition.updateBy != null" >and  UPPER(f.updateBy) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.updateBy}),'%'))</if>
+<if test="condition.positionID != null" >and  UPPER(f.positionID) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.positionID}),'%'))</if>
+<if test="condition.type != null" >and  UPPER(f.type) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.type}),'%'))</if>
+<if test="condition.tel != null" >and  UPPER(f.tel) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.tel}),'%'))</if>
+
+</trim>
+<include refid="inClause"/>
+</sql>
+
+
+
+
+
+<!-- 插入记录 -->
+<insert id="add"  >
+  insert into feedback (id,userID,feedContent,feedImg,createTime,updateTime,version,isDeleted,createBy,updateBy,positionID,type,tel)
+  values(#{id,jdbcType=VARCHAR},#{userID},#{feedContent},#{feedImg},#{createTime},#{updateTime},#{version},#{isDeleted},#{createBy},#{updateBy},#{positionID},#{type},#{tel})
+</insert>
+
+
+
+<!-- 修改记录，只修改只不为空的字段 -->
+<update id="update" >
+	update feedback set
+	<trim  suffixOverrides="," >
+	<if test="userID != null ">userID=#{userID},</if>
+<if test="feedContent != null ">feedContent=#{feedContent},</if>
+<if test="feedImg != null ">feedImg=#{feedImg},</if>
+<if test="createTime != null ">createTime=#{createTime},</if>
+<if test="updateTime != null ">updateTime=#{updateTime},</if>
+<if test="version != null ">version=#{version},</if>
+<if test="isDeleted != null ">isDeleted=#{isDeleted},</if>
+<if test="createBy != null ">createBy=#{createBy},</if>
+<if test="updateBy != null ">updateBy=#{updateBy},</if>
+<if test="positionID != null ">positionID=#{positionID},</if>
+<if test="type != null ">type=#{type},</if>
+<if test="tel != null ">tel=#{tel},</if>
+
+	</trim> where id=#{id} and version = #{version}-1
+</update>
+
+<!-- 删除记录 -->
+<delete id="del" >
+	delete from feedback where id = #{id}
+</delete>
+
+<!-- 根据id查询  -->
+<select id="get"   resultType="Feedback"  parameterType="String">
+	select <include refid="columnList" /> 
+	from feedback  f
+	where  f.id = #{id}  and f.isDeleted = false
+</select>
+
+<!-- 列表总数-->
+<select id="count" resultType="java.lang.Long" >
+	select count(1) 
+	from feedback  f
+	<include refid="whereClause"/>
+</select>
+
+<!-- 查询page -->
+<select id="findPage" resultType="Feedback" >
+	select 
+	<include refid="columnList"/>,
+	worklist.status
+	from feedback f
+	left join worklist worklist
+		ON worklist.refID = f.id
+	<include refid="whereClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 模糊查询page -->
+<select id="findLikePage" resultType="Feedback" >
+	select 
+	<include refid="columnList"/>
+	from feedback f
+	<include refid="whereLikeClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询列表list -->
+<select id="findList" resultType="Feedback" >
+	select
+	<include refid="columnList"/>
+	from feedback f
+	<include refid="whereClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!--模糊查询list-->
+<select id="findLikeList" resultType="Feedback" >
+	select
+	<include refid="columnList"/>
+	from feedback f
+	<include refid="whereLikeClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询符合条件的数据的id集合 -->
+<select id="findIds" resultType="String">
+	select f.${idsColumn}
+	from feedback f
+    <include refid="whereClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询符合模糊条件的数据的id集合 -->
+<select id="findLikeIds" resultType="String">
+	select f.${idsColumn}
+	from feedback f
+    <include refid="whereLikeClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 获取一个对象通过非id -->
+<select id="one" resultType="Feedback" >
+     select
+    <include refid="columnList"/>
+     from feedback f
+    <include refid="whereClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+    limit 0,1
+</select>
+
+<!--如果你想返回一个HashMap 就实现这个select标签-->
+<select id="queryHashMap" resultType="java.util.HashMap"  parameterType="Object">
+</select>
+
+
+
+	<!--级联查询-->
+	<sql id="detailList">
+		f.id as 'id',
+		f.version as 'version',f.userID as 'userID',f.feedContent as 'feedContent',f.feedImg as 'feedImg',
+		feedImgObj.id as 'feedImgObj.id',
+		feedImgObj.version as 'feedImgObj.version',feedImgObj.datestr as 'feedImgObj.datestr',feedImgObj.path as 'feedImgObj.path',feedImgObj.name as 'feedImgObj.name',feedImgObj.title as 'feedImgObj.title',feedImgObj.type as 'feedImgObj.type',feedImgObj.refID as 'feedImgObj.refID'
+	</sql>
+
+	<!--Attachment映射-->
+	<resultMap id="AttachmentMap" type="Attachment">
+		<id property="id" column="feedImgObj.id" />
+		<result property="version" column="feedImgObj.version" />
+		<result property="datestr" column="feedImgObj.datestr" />
+		<result property="path" column="feedImgObj.path" />
+		<result property="name" column="feedImgObj.name" />
+		<result property="title" column="feedImgObj.title" />
+		<result property="type" column="feedImgObj.type" />
+		<result property="refID" column="feedImgObj.refID" />
+	</resultMap>
+
+	<!--Feedback映射-->
+	<resultMap id="FeedbackMap" type="Feedback">
+		<id property="id" column="id" />
+		<result property="version" column="version" />
+		<result property="userID" column="userID" />
+		<result property="feedContent" column="feedContent" />
+		<result property="feedImg" column="feedImg" />
+		<result property="name" column="name" />
+		<result property="tel" column="tel" />
+		<association property="feedImgObj"  javaType="Attachment" resultMap="AttachmentMap"/>
+	</resultMap>
+
+	<!--对象的多级映射 mapList mapPage mapOne-->
+	<select id="mapOne" resultMap="FeedbackMap" >
+		select
+		<include refid="detailList"/>,
+		su.realName as 'realName',su.phoneNumber as 'tel'
+		from  feedback f
+		left join attachment feedImgObj on f.feedImg = feedImgObj.id
+		left join shiro_user su on su.id = f.createBy
+		<include refid="whereClause"/>
+		<if test="orderByClause!=null">${orderByClause}</if>
+	</select>
+
+
+	<!--级联查询-->
+	<sql id="detailListOne">
+		f.id as 'id',
+		f.version as 'version',f.userID as 'userID',f.feedContent as 'feedContent',f.feedImg as 'feedImg',f.positionID as 'positionID',f.type as 'type',f.updateTime as 'updateTime',f.tel as 'tel',
+		feedImgObj.id as 'feedImgObj.id',
+		feedImgObj.version as 'feedImgObj.version',feedImgObj.datestr as 'feedImgObj.datestr',feedImgObj.path as 'feedImgObj.path',feedImgObj.name as 'feedImgObj.name',feedImgObj.title as 'feedImgObj.title',feedImgObj.type as 'feedImgObj.type',feedImgObj.refID as 'feedImgObj.refID'
+	</sql>
+
+	<!--Attachment映射-->
+	<resultMap id="AttachmentMapOne" type="Attachment">
+		<id property="id" column="feedImgObj.id" />
+		<result property="version" column="feedImgObj.version" />
+		<result property="datestr" column="feedImgObj.datestr" />
+		<result property="path" column="feedImgObj.path" />
+		<result property="name" column="feedImgObj.name" />
+		<result property="title" column="feedImgObj.title" />
+		<result property="type" column="feedImgObj.type" />
+		<result property="refID" column="feedImgObj.refID" />
+	</resultMap>
+
+	<!--Feedback映射-->
+	<resultMap id="FeedbackMapOne" type="Feedback">
+		<id property="id" column="id" />
+		<result property="version" column="version" />
+		<result property="userID" column="userID" />
+		<result property="feedContent" column="feedContent" />
+		<result property="feedImg" column="feedImg" />
+		<result property="positionID" column="positionID" />
+		<result property="type" column="type" />
+		<result property="tel" column="tel" />
+		<result property="status" column="status" />
+		<result property="updateTime" column="updateTime" />
+		<result property="mainName" column="mainName" />
+		<result property="contacts" column="contacts" />
+		<result property="contactNumber" column="contactNumber" />
+		<result property="positionTitle" column="title" />
+		<association property="feedImgObj"  javaType="Attachment" resultMap="AttachmentMapOne"/>
+	</resultMap>
+
+	<!--对象的多级映射 mapList mapPage mapOne-->
+	<select id="getHistoryFeedBackDetail" resultMap="FeedbackMapOne" >
+		select
+		<include refid="detailListOne"/>
+		,worklist.status as 'status',
+		position.title as 'title',
+		IFNULL(su.realName,su.nickName) as mainName,
+		position.contacts as 'contacts',
+		position.contactNumber as 'contactNumber'
+		from  feedback f
+		left join attachment feedImgObj on f.feedImg = feedImgObj.id
+		left join worklist worklist on f.id = worklist.refID
+		left join position position on position.id = f.positionID
+		left join shiro_user su on su.id = f.userID
+		where f.id = #{id}
+	</select>
+</mapper>

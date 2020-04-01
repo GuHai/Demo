@@ -1,0 +1,100 @@
+.wrap .tips{font-size: 0.4rem;color: #333333;text-align:  center;padding-top: 0.453rem;}
+.wrap .myform{padding: 0.453rem}
+.wrap .myform ul li{border-bottom: 1px solid #efeff4;background: #fff}
+.wrap .myform ul li:last-child{border-bottom: 0;}
+.wrap .myform ul li.gender{border-bottom: 0;display: flex;justify-content: space-between;padding: 0px 15px;overflow: hidden;}
+.wrap .myform ul li.gender .tit{line-height: 1.067rem;font-size: 0.373rem;color: #333333}
+.wrap .myform ul li.gender .info_gender_radio{display: flex;font-size: 0.32rem;color: #999;}
+.wrap .myform ul li.gender .mui-left{margin-right: 0.533rem;/* position: absolute; *//* right: 0; */width:  50px;text-align:  right;}
+.wrap .myform ul li.gender .mui-left:last-child{margin-right:0}
+.wrap .myform ul li.gender .mui-left input{position: absolute;font-size: 22px;height: auto;left: 0.213rem;top: 0.2rem;}
+.wrap .myform ul li.gender .mui-left span{line-height: 1.067rem;}
+.wrap .myform ul li.gender .mui-radio input[type=radio]:before{font-size: 0.587rem;}
+.wrap .myform ul li.gender .mui-radio input[type=radio]:checked:before{content: '\e442';}
+.wrap .myform ul li.mobile{margin-top: 0.267rem;border-bottom: 0;}
+.wrap .myform ul li.code{margin-top: 0.267rem;background:none;display: flex;justify-content: space-between;}
+.wrap .myform ul li input{border: 0;font-size: 0.373rem;/*height: 1.067rem;line-height: 1.067rem;*/margin-bottom: 0;}
+.wrap .myform ul li.code input{width: 40%;}
+.wrap .myform ul li.code span{width: 40%;border: 1px solid #108ee9;color:#108ee9;display: inline-block;height: 1.067rem;line-height: 1.067rem;text-align: center;border-radius: 0.133rem;font-size: 0.373rem;font-weight: 500;}
+.wrap .myform .btnconfirm{background: #108ee9;color: #fff;margin-top: 0.667rem;border-radius: 0.533rem;text-align: center;height: 1.067rem;line-height: 1.067rem;font-size: 0.48rem;}
+
+
+/************************************** 完善个人信息 perfect_inform.jsp ******************************/
+.page_perfect_inform .pf_hd{background: url("../images/pf_hd.png") no-repeat;height: 155px;position: relative;width: 100%;background-size: 100% 100%;}
+.page_perfect_inform .pf_hd .hd-main{position: absolute;/* left: 42%; */top: 80%;text-align: center;margin: 0 auto;width: 100%;}
+.page_perfect_inform .pf_hd .hd-main .photo{width: 1.6rem;height: 1.6rem;overflow: hidden;border-radius: 100%;text-align: center;margin: 0 auto;vertical-align: middle;}
+.page_perfect_inform .pf_hd .hd-main .photo img{width: 100%;height: 100%;vertical-align: middle;}
+.page_perfect_inform .pf_hd .hd-main .name{font-size: 0.427rem;color: #333;text-align: center}
+.page_perfect_inform .pf_main{padding: 0 0.453rem;margin-top: 2.4rem;}
+.page_perfect_inform .pf_main .row-list{border-bottom: 1px solid #d7d7d7;padding-bottom: 0.267rem;}
+.page_perfect_inform .pf_main .row-list .tit{font-size: 0.32rem;color: #999}
+.page_perfect_inform .pf_main .select-type{overflow: hidden;display: flex;}
+.page_perfect_inform .pf_main .mui-radio.mui-left input[type=radio] {position: static;text-align: center;line-height: 26px;width: auto;}
+.page_perfect_inform .pf_main .select-type .st_radio{float: left;margin-right: 1.6rem;}
+.page_perfect_inform .pf_main .select-type .so_radio{float: left;}
+.page_perfect_inform .pf_main .select-type label{padding: 0;}
+.page_perfect_inform .pf_main .mui-radio input[type=radio]:checked:before{content: '\e442';font-size: 0.533rem;}
+.page_perfect_inform .pf_main .mui-radio input[type=radio]:before {content: '\e411';font-size: 0.533rem;}
+.page_perfect_inform .pf_main .select-type label .txt{font-size: 0.4rem;color: #333;}
+.page_perfect_inform .pf_main .row-list.mg-top{margin-top: 0.533rem;padding-bottom:0;}
+.page_perfect_inform .pf_main .row-list .input input::placeholder{color: #999}
+.page_perfect_inform .pf_main .row-list .input input[type=text]{margin-bottom: 0;border: 0;background: none;padding-left: 0;font-size: 0.4rem;color: #333;}
+.page_perfect_inform .button-box{margin-top: 1.33rem;padding: 0 0.453rem}
+.page_perfect_inform .button-box .nextbtns{background: #108ee9;color: #fff;font-size: 0.48rem;border-radius: 0.5rem;width: 100%;height: 1.067rem;text-align: center;display: block;line-height: 1.067rem;}
+.page_perfect_inform .search-list{position: relative;}
+.page_perfect_inform .search-list .search-main{position: absolute;width: 100%;background: #fff;top: 0;}
+.page_perfect_inform .search-list li{font-size: 0.4rem;color: #333;padding: 0.267rem 0;border-bottom: 1px solid #d7d7d7;}
+.page_perfect_inform .search-list li span{color: #108ee9;}
+
+
+
+
+/************************** 设置求职意向 job_intension.jsp**********************/
+.page_job_intension{ padding-top: 0.533rem}
+.page_job_intension .type-list{padding: 0 0.453rem}
+.page_job_intension .type-list h3{font-weight: normal;font-size: 0.373rem;color: #333;line-height: 0.8rem;}
+.page_job_intension .type-list ul{overflow: hidden;}
+.page_job_intension .type-list ul li{float: left;font-size: 0.373rem;color: #666;background: #fff;border-radius: 0.5rem;width: 2.0rem;height: 0.933rem;line-height: 0.933rem;text-align: center;margin-right: 0.362rem;margin-bottom: 0.267rem;border: 1px solid transparent;}
+.page_job_intension .type-list ul li:nth-child(4n+4){margin-right: 0}
+.page_job_intension .type-list ul li.curr{color: #108ee9;border: 1px solid #108ee9}
+.page_job_intension .type-list.area_list{margin-top: 0.8rem;padding: 0 0.453rem}
+.page_job_intension .type-list.area_list .flex{display: flex;justify-content: space-between;height: 30px;overflow: hidden;margin-bottom: 0.133rem;}
+.page_job_intension .type-list.area_list .flex .region{color: #108ee9;font-size: 0.32rem;line-height: 0.8rem;}
+.page_job_intension .type-list.area_list .flex .region .icon-fujin{color: #108ee9;margin-left: 0.05rem;font-size: 0.32rem;}
+.page_job_intension .button-box{text-align: center;padding: 0.267rem 0.453rem;background: #f2f5f7;position: fixed;width: 100%;bottom: 0;}
+.page_job_intension .button-box .nextbtns{background: #108ee9;color: #fff;font-size: 0.48rem;border-radius: 0.5rem;width: 100%;height: 1.067rem;text-align: center;display: block;line-height: 1.067rem;}
+.page_job_intension .button-box .skip{color: #999;text-align: center;font-size: 0.347rem;margin-top: 0.267rem;display: block;}
+.page_job_intension .button-box .arrow-1 {position: relative;z-index: 999;}
+.page_job_intension .button-box .arrow-1 em{position:absolute;left: 2px;top: 3px;width:0;height:0;border: 6px solid #999;border-left-color: #999;border-right:none;border-top-color:transparent;border-bottom-color:transparent;}
+.page_job_intension .button-box .arrow-1 i{position:absolute;border: 6px solid rgb(242, 245, 247);border-left-color: rgb(242, 245, 247);border-right:none;border-top-color:transparent;border-bottom-color:transparent;z-index:999;left: 0px;top: 3px;}
+.page_job_intension .button-box .arrow-2 {position: relative;z-index: 11;}
+.page_job_intension .button-box .arrow-2 em{position:absolute;left: 7px;top: 3px;width:0;height:0;border: 6px solid #bbbbbb;border-left-color: #bbbbbb;border-right:none;border-top-color:transparent;border-bottom-color:transparent;}
+.page_job_intension .button-box .arrow-2 i{position:absolute;border: 6px solid #f2f5f7;border-left-color: #f2f5f7;border-right:none;border-top-color:transparent;border-bottom-color:transparent;z-index:999;left: 6px;top: 3px;}
+.page_job_intension .type-list ul li.morebtns{color: #108ee9;margin-right: 0}
+.page_job_intension .type-list ul li.morebtns span{color: #108ee9;}
+
+
+
+
+/******************************* 设置成功 set_success.jsp*************************/
+.page_set_success .set_hd{ background: #fff;padding: 0.453rem}
+.page_set_success .set_hd .hd-lilst{font-size: 0.4rem}
+.page_set_success .set_hd .hd-lilst .school{color: #108ee9;}
+.page_set_success .school-list .mainbox p.tit{color: #999;font-size: 0.32rem;padding: 0.133rem 0.453rem}
+.page_set_success .school-list .mainbox{}
+.page_set_success .school-list .mainbox li{display: flex;padding: 0.267rem 0.453rem;background: #fff;justify-content: space-between;border-bottom: 1px solid #d7d7d7;justify-items: center;}
+.page_set_success .school-list .mainbox li:last-child{border-bottom: 0;}
+.page_set_success .school-list .mainbox li .left{overflow: hidden;width: 100%;}
+.page_set_success .school-list .mainbox li .left .photo{width: 1.33rem;height: 1.33rem;border-radius: 100%;float: left;margin-right: 0.267rem;}
+.page_set_success .school-list .mainbox li .left .photo img{width:100%;max-height: 100%;vertical-align: middle;}
+.page_set_success .school-list .mainbox li .left .inform{float: left;width: 76%;}
+.page_set_success .school-list .mainbox li .left .inform .name{font-size: 0.427rem;color: #333;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.page_set_success .school-list .mainbox li .left .inform .fans{font-size: 0.347rem;color: #999;margin-top: 0.133rem}
+.page_set_success .school-list .mainbox li .left .inform .fans .num{color: #108ee9;}
+.page_set_success .school-list .mainbox li .follow{position: relative;width: 20%;overflow: hidden;}
+.page_set_success .school-list .mainbox li .follow .btns{display: inline-block;background: #fff;color: #666666;width: 1.33rem;height: 0.613rem;border-radius: 0.133rem;text-align: center;line-height: 0.613rem;position: absolute;right: 0;top: 25%;bottom: 0;border: 1px solid #666;}
+.page_set_success .school-list .mainbox li .follow .Alreadybtns{background: #ff3b30;color: #fff;border: 1px solid #ff3b30}
+.page_set_success .setbox{text-align: center;position: fixed;width: 100%;bottom: 0;background: #f2f5f7;height: 1.6rem;padding: 0.267rem 0.453rem;}
+.page_set_success .setbox .nextbtns{background: #108ee9;color: #fff;font-size: 0.48rem;border-radius: 0.5rem;width: 100%;height: 1.067rem;text-align: center;display: block;line-height: 1.067rem;}
+
+

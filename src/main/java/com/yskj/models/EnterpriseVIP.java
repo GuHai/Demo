@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 enterprisevip@Datapublic class EnterpriseVIP extends BaseEntity {	private static final long serialVersionUID = 1L;	public EnterpriseVIP() {		super();	}	    private String userID;    private Integer state;}

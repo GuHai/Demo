@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrap .head_title {
+  height: 100px;
+  width: 100%;
+  background: radial-gradient(2.667rem 2.667rem at 80% 50%, #61c4fa, rgba(16, 143, 234, 0.9));
+}
+.wrap .head_title .head_title_lf {
+  float: left;
+  height: 100%;
+  width: 60%;
+  padding: 0.533rem 0.453rem;
+  /* background-color: rgba(16, 142, 233, 0.9); */
+  font-size: 0.533rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.wrap .head_title .head_title_rt {
+  float:  left;
+  position: relative;
+  width: 40%;
+  height: 100%;
+  margin:  0 auto;
+  text-align:  center;
+}
+.wrap .head_title .head_title_rt > img {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 100%;
+}
+.wrap .main {
+  margin-top: 0.267rem;
+}
+.wrap .main .ulBox {
+  margin-top: 0.267rem;
+}
+.wrap .main .ulBox .conterList {
+  padding: 0 0.453rem;
+  background-color: #fff;
+}
+.wrap .main .ulBox .conterList .layout {
+  height: 1.067rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f2f5f7;
+}
+.wrap .main .ulBox .conterList .layout > span:first-child {
+  font-size: 0.347rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .ulBox .conterList .layout > span:last-child {
+  font-size: 0.32rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .ulBox .conterList .layout > .p_money {
+  font-size: 0.347rem;
+  color: #ff3b30;
+  font-style: normal;
+}
+.dataPoint {
+  margin-top: 0.533rem;
+  font-size: 0.32rem;
+  letter-spacing: 0px;
+  color: #999999;
+  text-align: center;
+}
+.wrap .foot_fixed {
+  position: fixed;
+  bottom: 0;
+  height: 1.333rem;
+  width: 100%;
+}
+.wrap .foot_fixed .btn_verify {
+  width: 100%;
+  height: 1.333rem;
+  background-color: #108EE9;
+  color: #fff;
+  font-size: 0.48rem;
+  line-height: 0.667rem;
+  text-align: center;
+}
+.wrap .head_title .head_title_lf p{
+  color: #fff;
+  margin-top: 0.3rem;
+  font-size: 0.32rem;
+ }
+.wrap .main .dataPoint {
+  margin-top: 0.533rem;
+  font-size: 0.3rem;
+  letter-spacing: 0px;
+  color: #ff3b30;
+  text-align: left;
+  padding: 0 0.453rem;
+}
+.wrap .main .btnBox{
+  padding: 0 0.453rem;
+}
+.wrap .main .btnBox .btn_save{
+  width: 100%;
+  height: 40px;
+  background-color: #108ee9;
+  border-radius: 20px;
+  margin: auto;
+  padding: 0;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 40px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  border: none;
+}
+.wrap .main .btnBox .btn_save.btnsave{
+  display: block;
+  margin-top: 5px;
+  background-color: #f2f5f7;
+  color: #666;
+  text-align: right;
+  font-size: 0.35rem;
+  text-decoration: underline;
+  width: 100%;
+}
+.wrap .edit_post{
+  text-align: center;
+  font-size: 0.32rem;
+}
+.wrap .edit_post .txt span{
+  color: #333;
+}
+.wrap .edit_post .txt .tips{
+  color: #999;
+  margin-bottom: 0.133rem;
+}
+.wrap .edit_post .txt .editBtn{
+  color: #108ee9;
+  margin-left: 0.133rem;
+}
+.wrap .edit_post .txt .editBtn span{
+  color: #108ee9;
+  font-size: 0.32rem;
+}
+.edit-popup-backdrop{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+}
+.edit-popup-backdrop .select_content{
+  background-color: #fff;
+  border-radius: 0.133rem;
+  width: 80%;
+  left: 10%;
+  position: absolute;
+  top: 35%;
+}
+.edit-popup-backdrop .select_content .row-lilst{
+  display: flex;
+  justify-content: space-between;
+  height: 1.333rem;
+  line-height: 1.333rem;
+  margin: 0 0.453rem;
+  border-bottom: 1px solid #efeff4;
+}
+.edit-popup-backdrop .select_content .row-lilst.last-child{
+  border-bottom: 0;
+}
+.edit-popup-backdrop .select_content  .tit{
+  font-size: 0.48rem;
+  color: #333;
+  text-align: center;
+  height: 1.333rem;
+  line-height: 1.333rem;
+  border-bottom: 1px solid #efeff4;
+}
+.edit-popup-backdrop .select_content .row-lilst .left{
+  font-size: 0.4rem;
+  color: #333;
+}
+.edit-popup-backdrop .select_content .row-lilst .tips{
+  color: #ff3b30;
+}
+.edit-popup-backdrop .select_content .row-lilst .icon-arrow-right{
+  color: #666;
+}
+.edit-popup-backdrop .select_content  .cancelbtn{
+  font-size: 0.48rem;
+  color: #108ee9;
+  text-align: center;
+  height: 1.333rem;
+  line-height: 1.333rem;
+  border-top: 1px solid #efeff4;
+}

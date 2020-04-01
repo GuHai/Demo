@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yskj.dao.RewardDao" >
+
+<!-- 查询字段 -->
+<sql id="columnList" >
+	r.id,
+	 r.hourlyWage, r.rewardMoney, r.rewardType, r.positionID, r.createTime, r.updateTime, r.createBy, r.updateBy, r.version, r.isDeleted
+</sql>
+
+
+<!--通过id集合in查询-->
+<sql id="inClause">
+    <if test="column!=null">
+        <if test="ids==null">
+            and 1=0
+        </if>
+        <if test="ids!=null">
+            <if test="ids.size>0">
+                and  r.${column} in
+                <foreach item="items" index="index" collection="ids" open="(" separator="," close=")">
+                    #{items}
+                </foreach>
+            </if>
+            <if test="ids.size==0">
+                and 1=0
+            </if>
+        </if>
+    </if>
+</sql>
+
+<!-- 查询条件 -->
+<sql id="whereClause">
+where 1=1
+<trim  suffixOverrides="," >
+	<if test="condition.id != null" >
+	    and r.id = #{condition.id}
+	</if>
+	<if test="condition.hourlyWage != null" >and  r.hourlyWage = #{condition.hourlyWage}</if>
+<if test="condition.rewardMoney != null" >and  r.rewardMoney = #{condition.rewardMoney}</if>
+<if test="condition.rewardType != null" >and  r.rewardType = #{condition.rewardType}</if>
+<if test="condition.positionID != null" >and  r.positionID = #{condition.positionID}</if>
+<if test="condition.createTime != null" >and  r.createTime = #{condition.createTime}</if>
+<if test="condition.updateTime != null" >and  r.updateTime = #{condition.updateTime}</if>
+<if test="condition.createBy != null" >and  r.createBy = #{condition.createBy}</if>
+<if test="condition.updateBy != null" >and  r.updateBy = #{condition.updateBy}</if>
+<if test="condition.version != null" >and  r.version = #{condition.version}</if>
+<if test="condition.isDeleted != null" >and  r.isDeleted = #{condition.isDeleted}</if>
+
+</trim>
+<include refid="inClause"/>
+</sql>
+
+<!-- 模糊查询条件 -->
+<sql id="whereLikeClause">
+where 1=1
+<trim  suffixOverrides="," >
+	<if test="condition.id != null" >
+	    and r.id = #{condition.id}
+	</if>													 		
+	<if test="condition.hourlyWage != null" >and  UPPER(r.hourlyWage) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.hourlyWage}),'%'))</if>
+<if test="condition.rewardMoney != null" >and  UPPER(r.rewardMoney) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.rewardMoney}),'%'))</if>
+<if test="condition.rewardType != null" >and  UPPER(r.rewardType) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.rewardType}),'%'))</if>
+<if test="condition.positionID != null" >and  UPPER(r.positionID) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.positionID}),'%'))</if>
+<if test="condition.createTime != null" >and  UPPER(r.createTime) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.createTime}),'%'))</if>
+<if test="condition.updateTime != null" >and  UPPER(r.updateTime) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.updateTime}),'%'))</if>
+<if test="condition.createBy != null" >and  UPPER(r.createBy) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.createBy}),'%'))</if>
+<if test="condition.updateBy != null" >and  UPPER(r.updateBy) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.updateBy}),'%'))</if>
+<if test="condition.version != null" >and  UPPER(r.version) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.version}),'%'))</if>
+<if test="condition.isDeleted != null" >and  UPPER(r.isDeleted) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.isDeleted}),'%'))</if>
+
+</trim>
+<include refid="inClause"/>
+</sql>
+
+
+
+
+
+<!-- 插入记录 -->
+<insert id="add"  >
+  insert into reward (id,hourlyWage,rewardMoney,rewardType,positionID,createTime,updateTime,createBy,updateBy,version,isDeleted)
+  values(#{id,jdbcType=VARCHAR},#{hourlyWage},#{rewardMoney},#{rewardType},#{positionID},#{createTime},#{updateTime},#{createBy},#{updateBy},#{version},#{isDeleted})
+</insert>
+
+
+
+<!-- 修改记录，只修改只不为空的字段 -->
+<update id="update" >
+	update reward set
+	<trim  suffixOverrides="," >
+	<if test="hourlyWage != null ">hourlyWage=#{hourlyWage},</if>
+<if test="rewardMoney != null ">rewardMoney=#{rewardMoney},</if>
+<if test="rewardType != null ">rewardType=#{rewardType},</if>
+<if test="positionID != null ">positionID=#{positionID},</if>
+<if test="createTime != null ">createTime=#{createTime},</if>
+<if test="updateTime != null ">updateTime=#{updateTime},</if>
+<if test="createBy != null ">createBy=#{createBy},</if>
+<if test="updateBy != null ">updateBy=#{updateBy},</if>
+<if test="version != null ">version=#{version},</if>
+<if test="isDeleted != null ">isDeleted=#{isDeleted},</if>
+
+	</trim> where id=#{id} and version = #{version}-1
+</update>
+
+<!-- 删除记录 -->
+<delete id="del" >
+	delete from reward where id = #{id}
+</delete>
+
+<!-- 根据id查询  -->
+<select id="get"   resultType="Reward"  parameterType="String">
+	select <include refid="columnList" /> 
+	from reward  r
+	where  r.id = #{id}  and r.isDeleted = false
+</select>
+
+<!-- 列表总数-->
+<select id="count" resultType="java.lang.Long" >
+	select count(1) 
+	from reward  r
+	<include refid="whereClause"/>
+</select>
+
+<!-- 查询page -->
+<select id="findPage" resultType="Reward" >
+	select 
+	<include refid="columnList"/>
+	from reward r
+	<include refid="whereClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 模糊查询page -->
+<select id="findLikePage" resultType="Reward" >
+	select 
+	<include refid="columnList"/>
+	from reward r
+	<include refid="whereLikeClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询列表list -->
+<select id="findList" resultType="Reward" >
+	select
+	<include refid="columnList"/>
+	from reward r
+	<include refid="whereClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!--模糊查询list-->
+<select id="findLikeList" resultType="Reward" >
+	select
+	<include refid="columnList"/>
+	from reward r
+	<include refid="whereLikeClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询符合条件的数据的id集合 -->
+<select id="findIds" resultType="String">
+	select r.${idsColumn}
+	from reward r
+    <include refid="whereClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询符合模糊条件的数据的id集合 -->
+<select id="findLikeIds" resultType="String">
+	select r.${idsColumn}
+	from reward r
+    <include refid="whereLikeClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 获取一个对象通过非id -->
+<select id="one" resultType="Reward" >
+     select
+    <include refid="columnList"/>
+     from reward r
+    <include refid="whereClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+    limit 0,1
+</select>
+
+<!--如果你想返回一个HashMap 就实现这个select标签-->
+<select id="queryHashMap" resultType="java.util.HashMap"  parameterType="Object">
+</select>
+
+	<select id="getNewReward" resultType="com.yskj.models.Reward">
+		SELECT * FROM reward WHERE positionID = #{positionID} ORDER BY createTime DESC LIMIT 0,1
+	</select>
+
+	<sql id="pudetailList">
+		r.id AS 'id',
+				r.version AS 'version',
+				r.hourlyWage AS 'hourlyWage',
+				r.rewardMoney AS 'rewardMoney',
+				r.rewardType AS 'rewardType',
+				r.positionID AS 'positionID',
+				r.createTime AS 'createTime',
+				position.id AS 'position.id',
+				position.version AS 'position.version',
+				position.title AS 'position.title',
+				position.salaryType AS 'position.salaryType',
+				position.recruitStartTime AS 'position.recruitStartTime',
+				position.recruitEndTime AS 'position.recruitEndTime',
+				position.salary AS 'position.salary',
+				position.dailySalary AS 'position.dailySalary',
+				position.liquidatedDamages AS 'position.liquidatedDamages',
+				position.recruitsSum AS 'position.recruitsSum',
+				position.sexRequirements AS 'position.sexRequirements',
+				position.workPalce AS 'position.workPalce',
+				position.workDate AS 'position.workDate',
+				position.aggregate AS 'position.aggregate',
+				position.setDate AS 'position.setDate',
+				position.contacts AS 'position.contacts',
+				position.contactNumber AS 'position.contactNumber',
+				position.settlement AS 'position.settlement',
+				position.matters AS 'position.matters',
+				position.jobRequirements AS 'position.jobRequirements',
+				position.jobContent AS 'position.jobContent',
+				position.includeBoard AS 'position.includeBoard',
+				position.controlSleep AS 'position.controlSleep',
+				position.interview AS 'position.interview',
+				position.baseTask AS 'position.baseTask',
+				position.commission AS 'position.commission',
+				position.train AS 'position.train',
+				position.beenRecruitedSum AS 'position.beenRecruitedSum',
+				position.workTypeID AS 'position.workTypeID',
+				position.userID AS 'position.userID',
+				position.open AS 'position.open',
+				position.type AS 'position.type',
+				position.startTime AS 'position.startTime',
+				position.endTime AS 'position.endTime',
+				position.isDeleted AS 'position.isDeleted',
+				position.publishTime AS 'position.publishTime',
+				position.personNumDay as 'position.personNumDay',
+				publish.id AS 'position.publish.id',
+				publish.version AS 'position.publish.version',
+				publish.qRCode AS 'position.publish.qRCode',
+				publish.bgpID AS 'position.publish.bgpID',
+				publish.userID AS 'position.publish.userID',
+				publish.workNumber AS 'position.publish.workNumber',
+				publish.brief AS 'position.publish.brief',
+				publish.identityType AS 'position.publish.identityType',
+				publish.authentication AS 'position.publish.authentication',
+				publish.payPassword AS 'position.publish.payPassword',
+				workPlace.id AS 'position.workPlace.id',
+				workPlace.version AS 'position.workPlace.version',
+				workPlace.cityID AS 'position.workPlace.cityID',
+				workPlace.detailedAddress AS 'position.workPlace.detailedAddress',
+				workPlace.longitude AS 'position.workPlace.longitude',
+				workPlace.latitude AS 'position.workPlace.latitude',
+				workPlace.geohash AS 'position.workPlace.geohash',
+				city.id AS 'workPlace.city.id',
+        		city.version AS 'workPlace.city.version',city.pinyin AS 'workPlace.city.pinyin',city.cityName AS 'workPlace.city.cityName',city.zipCode AS 'workPlace.city.zipCode',city.openState AS 'workPlace.city.openState',city.cityType AS 'workPlace.city.cityType',city.isHot AS 'workPlace.city.isHot',
+				huntingtype.id AS 'position.huntingtype.id',
+				huntingtype.version AS 'position.huntingtype.version',
+				huntingtype.name AS 'position.huntingtype.name',
+				huntingtype.HTFatCode AS 'position.huntingtype.HTFatCode',
+				huntingtype.state AS 'position.huntingtype.state',
+				huntingtype.codeGrade AS 'position.huntingtype.codeGrade'
+	</sql>
+
+	<!--puInformation映射-->
+	<resultMap id="puInformationMap" type="Information">
+		<id property="id" column="position.publish.id" />
+		<result property="version" column="position.publish.version" />
+		<result property="qRCode" column="position.publish.qRCode" />
+		<result property="bgpID" column="position.publish.bgpID" />
+		<result property="userID" column="position.publish.userID" />
+		<result property="workNumber" column="position.publish.workNumber" />
+		<result property="brief" column="position.publish.brief" />
+		<result property="identityType" column="position.publish.identityType" />
+		<result property="authentication" column="position.publish.authentication" />
+		<result property="payPassword" column="position.publish.payPassword" />
+	</resultMap>
+
+	<!--puHuntingtype映射-->
+	<resultMap id="puHuntingtypeMap" type="Huntingtype">
+		<id property="id" column="position.huntingtype.id" />
+		<result property="version" column="position.huntingtype.version" />
+		<result property="name" column="position.huntingtype.name" />
+		<result property="HTFatCode" column="position.huntingtype.HTFatCode" />
+		<result property="state" column="position.huntingtype.state" />
+		<result property="codeGrade" column="position.huntingtype.codeGrade" />
+	</resultMap>
+
+	<!--puLocaltioninfo映射-->
+	<resultMap id="puLocaltioninfoMap" type="Localtioninfo">
+		<id property="id" column="position.workPlace.id" />
+		<result property="version" column="position.workPlace.version" />
+		<result property="cityID" column="position.workPlace.cityID" />
+		<result property="detailedAddress" column="position.workPlace.detailedAddress" />
+		<result property="longitude" column="position.workPlace.longitude" />
+		<result property="latitude" column="position.workPlace.latitude" />
+		<result property="geohash" column="position.workPlace.geohash" />
+		<result property="distance" column="position.workPlace.distance" />
+		<association property="city"  javaType="City" resultMap="CityMap"/>
+	</resultMap>
+
+	<!--City映射-->
+	<resultMap id="CityMap" type="City">
+		<id property="id" column="workPlace.city.id" />
+		<result property="version" column="workPlace.city.version" />
+		<result property="pinyin" column="workPlace.city.pinyin" />
+		<result property="cityName" column="workPlace.city.cityName" />
+		<result property="zipCode" column="workPlace.city.zipCode" />
+		<result property="openState" column="workPlace.city.openState" />
+		<result property="cityType" column="workPlace.city.cityType" />
+		<result property="isHot" column="workPlace.city.isHot" />
+	</resultMap>
+
+	<!--puPosition映射-->
+	<resultMap id="puPositionMap" type="Position">
+		<id property="id" column="position.id" />
+		<result property="version" column="position.version" />
+		<result property="personNumDay" column="position.personNumDay" />
+		<result property="title" column="position.title" />
+		<result property="salaryType" column="position.salaryType" />
+		<result property="recruitStartTime" column="position.recruitStartTime" />
+		<result property="recruitEndTime" column="position.recruitEndTime" />
+		<result property="salary" column="position.salary" />
+		<result property="dailySalary" column="position.dailySalary" />
+		<result property="liquidatedDamages" column="position.liquidatedDamages" />
+		<result property="recruitsSum" column="position.recruitsSum" />
+		<result property="sexRequirements" column="position.sexRequirements" />
+		<result property="workPalce" column="position.workPalce" />
+		<result property="workDate" column="position.workDate" />
+		<result property="aggregate" column="position.aggregate" />
+		<result property="setDate" column="position.setDate" />
+		<result property="contacts" column="position.contacts" />
+		<result property="contactNumber" column="position.contactNumber" />
+		<result property="settlement" column="position.settlement" />
+		<result property="matters" column="position.matters" />
+		<result property="jobRequirements" column="position.jobRequirements" />
+		<result property="jobContent" column="position.jobContent" />
+		<result property="includeBoard" column="position.includeBoard" />
+		<result property="controlSleep" column="position.controlSleep" />
+		<result property="interview" column="position.interview" />
+		<result property="baseTask" column="position.baseTask" />
+		<result property="commission" column="position.commission" />
+		<result property="train" column="position.train" />
+		<result property="beenRecruitedSum" column="position.beenRecruitedSum" />
+		<result property="workTypeID" column="position.workTypeID" />
+		<result property="userID" column="position.userID" />
+		<result property="open" column="position.open" />
+		<result property="type" column="position.type" />
+		<result property="startTime" column="position.startTime" />
+		<result property="endTime" column="position.endTime" />
+		<result property="publishTime" column="position.publishTime" />
+		<result property="bondStatus" column="position.bondStatus" />
+		<result property="signID" column="position.signID" />
+		<association property="workPlace"  javaType="Localtioninfo" resultMap="puLocaltioninfoMap"/>
+		<association property="publish"  javaType="Information" resultMap="puInformationMap"/>
+		<association property="huntingtype"  javaType="Huntingtype" resultMap="puHuntingtypeMap"/>
+	</resultMap>
+
+	<!--puReward映射-->
+	<resultMap id="puRewardMap" type="Reward">
+		<id property="id" column="id" />
+		<result property="version" column="version" />
+		<result property="hourlyWage" column="hourlyWage" />
+		<result property="rewardMoney" column="rewardMoney" />
+		<result property="rewardType" column="rewardType" />
+		<result property="positionID" column="positionID" />
+		<association property="position"  javaType="Position" resultMap="puPositionMap"/>
+	</resultMap>
+
+	<select id="findPositionByRewardPage" resultMap="puRewardMap" parameterType="com.yskj.models.PageParam">
+		SELECT
+			*
+		FROM
+			(SELECT
+				<include refid="pudetailList"/>
+			FROM
+				reward r
+				LEFT JOIN POSITION POSITION
+					ON r.positionID = position.id
+				LEFT JOIN localtioninfo workPlace
+					ON position.workPalce = workPlace.id
+				left join city city on workPlace.cityID = city.id
+				LEFT JOIN information publish
+					ON position.userID = publish.userID
+				LEFT JOIN huntingtype huntingtype
+					ON position.workTypeID = huntingtype.id
+			WHERE position.`userID` != #{condition.userID} AND position.isDeleted = FALSE
+			ORDER BY r.`createTime` DESC) rw
+		WHERE rw.`position.open` =2 AND (rw.`position.beenRecruitedSum` != rw.`position.recruitsSum` OR rw.`position.beenRecruitedSum` IS NULL) AND rw.`position.isDeleted` = false
+		GROUP BY rw.positionID
+		ORDER BY rw.createTime DESC
+
+	</select>
+</mapper>

@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .list {
+  background-color: #fff;
+}
+.wrap .list > li {
+  height: 1.2rem;
+  border-bottom: 1px solid #f2f5f7;
+  padding: 0 0.453rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .list > li > span:first-child {
+  font-size: 0.4rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .list > li > label > input[type=text] {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.4rem;
+  height: 1.173rem;
+  width: 15em;
+  color: #333;
+}
+.wrap .list > li > label::placeholder {
+  font-size: 0.32rem;
+  text-align: right;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .list > li > span:last-child {
+  font-size: 0.32rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333;
+}
+.wrap .list > li > span:last-child > span {
+  color: #666;
+}
+.wrap .list > li > span:last-child > i {
+  color: #b4b4b4;
+  font-size: 0.347rem;
+}
+.wrap .workText {
+  padding: 0 0.453rem;
+  font-size: 0.4rem;
+  height: 1.2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.2rem;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .textareaBox > textarea {
+  border: none;
+  padding: 5px 0.453rem;
+}
+.wrap .textareaBox::placeholder {
+  font-size: 0.4rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .textareaBox > p {
+  text-align: right;
+  font-size: 0.4rem;
+  padding-right: 0.453rem;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .btn {
+  width: 9.093rem;
+  height: 1.067rem;
+  margin: 0.267rem auto;
+  background-color: #108ee9;
+  border-radius: 0.453rem;
+  font-size: 0.4rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.067rem;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.wrap .btn_fixed {
+/*  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;*/
+}
+.wrap .btn_fixed .btn {
+  width: 9.093rem;
+  height: 0.933rem;
+  background-color: #108ee9;
+  border-radius: 0.533rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.933rem;
+  margin: 0.267rem auto;
+}
+.mui-dtpicker .mui-dtpicker-header {
+  background-color: #fff;
+  border-bottom: 1px solid #f2f5f7;
+}
+.mui-dtpicker .mui-dtpicker-header .mui-btn {
+  border: none;
+  background-color: #fff;
+  color: #108ee9;
+  padding: 0.24rem;
+  font-size: 0.4rem;
+}
+.mui-dtpicker .mui-dtpicker-title {
+  display: none;
+}
+.mui-dtpicker .mui-dtpicker-body .mui-picker {
+  background-color: #fff;
+}
+.mui-dtpicker .mui-dtpicker-body .mui-picker .mui-pciker-list > li.highlight {
+  color: #000;
+}

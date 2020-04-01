@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .main {
+  background-color: #fff;
+}
+.wrap .main .selectList > li {
+  height: 1.200rem;
+  border-bottom: 1px solid #f2f5f7;
+  padding: 0 0.453rem;
+  line-height: 1.200rem;
+}
+.wrap .main .selectList > li > a {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .selectList > li > a > span {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .selectList > li > a > span:last-child {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.200rem;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .selectList .info_avatar .info_avatar_img > img {
+  width: 0.933rem;
+  height: 0.933rem;
+  border-radius: 100%;
+}
+.wrap .main .selectList .info_avatar .info_avatar_img > i {
+  font-size: 0.347rem;
+  color: #b4b4b4;
+}
+.wrap .main .selectList .info_nick .info_nick_modify > i {
+  font-size: 0.347rem;
+  color: #b4b4b4;
+}
+.wrap .main .selectList .info_code .info_code_modify .code-erweima {
+  font-size: 0.747rem;
+  color: #000;
+  vertical-align: middle;
+}
+.wrap .main .selectList .info_code .info_code_modify .code-right {
+  font-size: 0.347rem;
+  color: #b4b4b4;
+}
+.wrap .main .selectList .info_JobNumber .info_JobNumber_sel > i {
+  font-size: 0.347rem;
+  color: #b4b4b4;
+}
+.wrap .main .selectList .info_name .info_name_modify {
+  padding-right: 0.453rem;
+}
+.wrap .main .selectList .info_card .info_card_modify {
+  padding-right: 0.453rem;
+}
+.wrap .main .selectList .info_phone span:last-child > i {
+  font-size: 0.347rem;
+  color: #b4b4b4;
+  vertical-align: middle;
+}
+.wrap .main .selectList .info_hobbies .hobbies_infoBox {
+  position: relative;
+}
+.wrap .main .selectList .info_hobbies .hobbies_infoBox .hobbies_info {
+  display: block;
+  width: 5.333rem;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+.wrap .main .selectList .info_hobbies .hobbies_infoBox > i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.347rem;
+  color: #b4b4b4;
+}

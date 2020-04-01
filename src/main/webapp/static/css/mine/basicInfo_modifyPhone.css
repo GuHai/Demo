@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  background-color: #f2f5f7;
+}
+.wrap {
+  padding: 0 0.453rem;
+}
+.wrap .oldPhone {
+  margin: 0.800rem 0px;
+  text-align: center;
+  font-size: 0.453rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.800rem;
+  letter-spacing: 0px;
+  color: #646464;
+}
+.wrap .newPhone input[type=text] {
+  border: none;
+  background-color: #fff;
+  font-size: 0.373rem;
+  height: 1.067rem;
+  margin-bottom: 0;
+  border-radius: 5px;
+}
+.wrap .newPhone ::placeholder {
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #d6d7d4;
+}
+.wrap .verification {
+  margin-top: 0.400rem;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .verification input[type=text] {
+  width: 4.000rem;
+  border: none;
+  background-color: #fff;
+  font-size: 0.373rem;
+  height: 1.067rem;
+  margin-bottom: 0;
+  border-radius: 5px;
+}
+.wrap .verification ::placeholder {
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #d6d7d4;
+}
+.wrap .verification input[type=button] {
+  width: 4.000rem;
+  height: 1.067rem;
+  background-color: #f2f5f7;
+  padding: 0;
+  border-radius: 0.133rem;
+  border: 1px solid #108EE9;
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.067rem;
+  letter-spacing: 0px;
+  color: #108ee9;
+}
+.wrap .btn {
+  height: 1.067rem;
+  line-height: 1.067rem;
+  text-align: center;
+  background-color: #108EE9;
+  color: #fff;
+  font-size: 0.400rem;
+  border-radius: 0.533rem;
+  margin-top: 0.667rem;
+}

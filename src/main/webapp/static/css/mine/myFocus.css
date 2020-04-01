@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap {
+
+}
+.wrap .mui-table-view-cell {
+  padding: 0 0.453rem;
+  border-bottom: 1px solid #f2f5f7;
+  height: 1.33rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .mui-table-view .mui-table-view-cell>a:not(.mui-btn){
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: inherit;
+  width: 100%;
+}
+.wrap .mui-table-view-cell > a.mui-active {
+  background-color: #fff;
+}
+.wrap .mui-table-view-cell .photo{
+  height: 0.933rem;
+  width: 0.933rem;
+  border-radius: 100%;
+  float: left;
+  margin-right: 0.267rem;
+}
+.wrap .mui-table-view-cell .photo img{
+  width:100%;
+  max-height: 100%;
+  vertical-align: middle;
+  border-radius: 100%;
+}
+.wrap .mui-table-view-cell .mui-media-body {
+  font-size: 0.373rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+  width: 86%;
+}
+.wrap .mui-table-view-cell .mui-media-body .leftName{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1;
+}
+.wrap .mui-table-view-cell .mui-media-body .workNum{
+  color: #999;
+  font-size: 0.293rem;
+  line-height: 1;
+  padding-top: 0.267rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+}
+.wrap .mui-table-view-cell .mui-media-body .mui-ellipsis {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .mui-table-view-cell:after {
+  height: 0;
+}
+.wrap .mui-table-view:before{
+  background: none;
+  background-color: transparent;
+}
+.wrap .mui-table-view:after{
+  background-color: #efeff4;
+}

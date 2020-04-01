@@ -1,0 +1,39 @@
+.new-min-quan{width:100%;padding: 3%;}
+.new-min-quan ul{padding: 0;}
+.new-min-quan ul li{width:100%;overflow:hidden;height: auto;margin-bottom:10px;display: flex;justify-content: center;align-items: center;}
+.new-min-quan ul li .left{width: 70%;height: 90px;background:#fff;overflow:hidden;border-top-left-radius:8px;border-bottom-left-radius:8px;position:relative;padding: 10px;display: flex;align-items: center;}
+.new-min-quan ul li .left .rtdian{ position:absolute;right:0px;top:0px; width:16px; height:16px; background:url(../images/youhuiquan.png) no-repeat; background-size:16px 16px; background-position:8px -8px}
+.new-min-quan ul li .left .rbdian{ position:absolute;right:0px;bottom:0px; width:16px; height:16px; background:url(../images/youhuiquan.png) no-repeat; background-size:16px 16px; background-position:8px 8px}
+.new-min-quan ul li .right{width: 30%;height:90px;overflow:hidden;border-top-right-radius:8px;border-bottom-right-radius:8px;position:relative;}
+.new-min-quan ul li .bg1{background:#999;}
+.new-min-quan ul li .bg2{background:#f60;}
+.new-min-quan ul li .right .ltdian{ position:absolute;left:0px;top:0px; width:16px; height:16px; background:url(../images/youhuiquan.png) no-repeat; background-size:16px 16px; background-position:-8px -8px}
+.new-min-quan ul li .right .lbdian{ position:absolute;left:0px;bottom:0px; width:16px; height:16px; background:url(../images/youhuiquan.png) no-repeat; background-size:16px 16px; background-position:-8px 8px}
+.new-min-quan ul li .right .padding{ margin:10px; overflow:hidden}
+.new-min-quan ul li .right .price{color:#fff; font-size:12px; text-align:center;padding-top:10px; padding-bottom:5px;}
+.new-min-quan ul li .right .price i{ font-style:normal; font-size:24px;}
+.new-min-quan ul li .right .btn{width:60px;height:24px; margin:0 auto}
+.new-min-quan ul li .right .btn button{ padding:0px; margin:0px; border:none; width:60px;height:24px; line-height:24px; border-radius:12px; font-size:13px;}
+.new-min-quan ul li .right .btn .use{background:#FFF;color:#f60;}
+.new-min-quan ul li .right .btn .used{background:#FFF;color:#999;}
+.new-min-quan ul li .left .tit{/* margin:10px; */overflow:hidden;}
+.new-min-quan ul li .left .tit{/* width: 140px; */font-size: 16px;white-space:nowrap;overflow : hidden;text-overflow: ellipsis;line-height: 1.2;}
+.new-min-quan ul li .left .tit p{font-size: 13px;margin-bottom: 0;margin-top: 10px;line-height: 1.2;}
+.new-min-quan ul li .left .sign{float:left;width: 60px;height: 60px;margin-right: 8px;/* margin-left:5px; */}
+.new-min-quan ul li .left .sign img{width: 100%;height: auto;display: block;border: none;}
+.mui-bar-nav~.mui-content{padding-top: 60px;}
+
+body,html{padding: 0;margin: 0;}
+h2{background: no-repeat center / contain;}
+#wrap .hd-notice{background: #fff;position: fixed;top: 0;left: 0;right: 0;width: 100%;display: flex;align-items: center;padding: 5px 10px;}
+#wrap .hd-notice .img{width: 30px;height: 30px;margin-right: 10px;}
+#wrap .hd-notice .img img{width: 100%;height: auto;vertical-align: middle;}
+#wrap {position: relative;padding-top: 0.2rem;width: 100%;height: 100%;background-image: url("../images/pro_bg.png");background-size: 100%;}
+#wrap h2.title {background-image: url(../images/title-active.png);background-position:  center center;margin: 20px auto;width: 50%;height: 38px; margin-top: 60px;}
+.promotion-page .ul-li{padding: 0;margin: 0;position: relative;overflow: hidden;}
+.promotion-page .ul-li li{list-style: none;width: 90%;overflow: hidden;margin: 0 auto;margin-bottom: 25px;position: relative;}
+.promotion-page .ul-li li.removebg img{-webkit-filter: grayscale(1); /* Webkit */filter: gray; /* IE6-9 */filter: grayscale(1); /* W3C */}
+.promotion-page .ul-li li img{width: 100%;height: auto;border: none;vertical-align: top;display: block;border-radius: 10px 10px 0 0;}
+.promotion-page .ul-li li .text{padding: 0 10px;height: 40px;background-color: #fff;border-radius: 0 0 10px 10px;display: flex;justify-content: space-between;align-items: center;width: 100%;position: relative;}
+.promotion-page .ul-li li .text p{margin-bottom: 0;font-size: 14px;}
+.promotion-page .ul-li li .text span{margin-bottom: 0;background-color: #ff340c;display: inline-block;width: 80px;height: 25px;line-height: 25px;text-align: center;color: #fff;font-size: 14px;border-radius: 5px;}

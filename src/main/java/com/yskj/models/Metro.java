@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 metro@Datapublic class Metro extends BaseEntity {	private static final long serialVersionUID = 1L;	public Metro() {		super();	}	    //地铁名字    private String name;    //关联的城市ID    private String cityID;    //站点数    private Integer num;}

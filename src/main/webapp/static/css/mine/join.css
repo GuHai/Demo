@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .joinList {
+  background-color: #fff;
+  padding: 0 0.453rem;
+}
+.wrap .joinList .inputLi {
+  height: 1.067rem;
+}
+.wrap .joinList .inputLi > input[type=text] {
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #f2f5f7;
+  font-size: 0.320rem;
+}
+.wrap .joinList .inputLi ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .select-agents {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 0.453rem;
+  height: 1.067rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .select-agents > span:first-child {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .select-agents > span:last-child {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666;
+}
+.wrap .select-agents > span:last-child > i {
+  color: #999;
+  vertical-align: middle;
+}
+.wrap .diqu {
+  background-color: #fff;
+  padding: 0 0.453rem;
+}
+.wrap .diqu > input[type=text] {
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #f2f5f7;
+  font-size: 0.320rem;
+}
+.wrap .diqu ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .textBox {
+  margin-top: 0.267rem;
+}
+.wrap .textBox .textarea {
+  padding: 5px 0.453rem;
+  border: none;
+  font-size: 0.400rem;
+}
+.wrap .textBox ::placeholder {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .text_info {
+  padding: 0 0.453rem;
+  text-align: right;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.560rem;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .btnBox {
+  margin-top: 0.267rem;
+  width: 100%;
+}
+.wrap .btnBox .btn {
+  display: block;
+  width: 9.093rem;
+  height: 1.067rem;
+  background-color: #108ee9;
+  border-radius: 0.533rem;
+  margin: auto;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  border: none;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.mui-poppicker {
+  background-color: #fff;
+}
+.mui-poppicker .mui-poppicker-header {
+  border-bottom: 1px solid #f2f5f7;
+}
+.mui-poppicker .mui-poppicker-header .mui-btn {
+  border: none;
+  color: #108ee9;
+  font-size: 0.400rem;
+}
+.mui-poppicker .mui-poppicker-header .mui-btn-blue {
+  background-color: #fff;
+}
+.mui-poppicker .mui-poppicker-body {
+  border-top: none;
+}
+.mui-poppicker .mui-poppicker-body .mui-picker {
+  background-color: #fff;
+}
+.mui-poppicker .mui-poppicker-body .mui-picker .visible {
+  font-size: 0.427rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.mui-poppicker .mui-poppicker-body .mui-picker .highlight {
+  font-size: 0.480rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}

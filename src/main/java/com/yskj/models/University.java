@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 university@Datapublic class University extends BaseEntity {	private static final long serialVersionUID = 1L;	public University() {		super();	}	    //    private String name;    //    private String province;    //    private String education;    //    private String badge;}

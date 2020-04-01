@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  .head_title {
+    height: 100px;
+    width: 100%;
+
+    .head_title_lf {
+      float: left;
+      height: 100%;
+      width: 45%;
+      padding: 0.533rem 0.453rem;
+      background-color: rgba(16, 142, 233, .9);
+      font-size: 0.533rem;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      color: #ffffff;
+    }
+    .head_title_rt {
+      position: relative;
+      margin-left: 45%;
+      width: 55%;
+      height: 100%;
+      background-image: radial-gradient(2.667rem 2.667rem at 50% 50%, hsl(201, 94%, 68%), hsla(205, 87%, 49%, .9));
+
+      > img {
+        position: absolute;
+        top: 0px;
+        left: 1.2rem;
+        height: 100%;
+      }
+    }
+  }
+  .main {
+    margin-top: 0.267rem;
+
+    .ulBox {
+      margin-top: 0.267rem;
+
+      .conterList {
+        padding: 0 0.453rem;
+        background-color: #fff;
+
+        .layout {
+          height: 1.067rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #f2f5f7;
+
+          > span:first-child {
+            font-size: 0.347rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #333333;
+          }
+          > span:last-child {
+            font-size: 0.32rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #666666;
+          }
+          > .p_money {
+            font-size: 0.347rem;
+            color: #ff3b30;
+            font-style: normal;
+          }
+        }
+      }
+      .dataPoint {
+        margin-top: 0.533rem;
+        font-size: 0.32rem;
+        letter-spacing: 0px;
+        color: #999999;
+        text-align: center;
+      }
+    }
+  }
+  .foot_fixed {
+    position: fixed;
+    bottom: 0;
+    height: 1.333rem;
+    width: 100%;
+
+    .btn_verify {
+      width: 100%;
+      height: 1.333rem;
+      background-color: #108EE9;
+      color: #fff;
+      font-size: 0.48rem;
+      line-height: 0.667rem;
+      text-align: center;
+    }
+  }
+}

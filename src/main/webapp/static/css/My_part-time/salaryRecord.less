@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrap {
+  .head {
+    height: 1.067rem;
+    background-color: #fff;
+    padding: 0 0.453rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .head_span {
+      font-size: 0.400rem;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      color: #108ee9;
+    }
+    .head_div {
+      height: 1.067rem;
+      padding: 0.213rem 0;
+      .btn_contact {
+        width: 1.733rem;
+        height: 0.613rem;
+        border-radius: 5px;
+        font-size: 0.293rem;
+        color: #666;
+        padding: 0;
+        margin-right: 0.400rem;
+        border: solid 1px #666666;
+      }
+      .btn_contact:active, .btn_advisory:active {
+        background-color: #f2f5f7;
+      }
+      .btn_advisory {
+        width: 1.733rem;
+        height: 0.613rem;
+        border-radius: 5px;
+        border: solid 1px #666666;
+        font-size: 0.293rem;
+        color: #666;
+        padding: 0;
+      }
+    }
+  }
+  .recordList {
+    margin-top: 0.267rem;
+    background-color: #fff;
+    padding: 0 0.453rem;
+    > li {
+      height: 1.440rem;
+      padding-bottom: 0.267rem;
+      padding-top: 0.267rem;
+      border-bottom: 1px solid #f2f5f7;
+      .checkboxs {
+        float: left;
+        width: 0.800rem;
+        height: 0.800rem;
+        line-height: 0.800rem;
+         > input[type=checkbox] {
+            width: 0.400rem;
+            height: 0.400rem;
+            left: 0;
+          }
+        > input[type=checkbox]:before{
+          font-size: 0.533rem;
+        }
+      }
+      .list_content {
+        margin-left: 0.800rem;
+        > div {
+          display: flex;
+          justify-content: space-between;
+        }
+        .divSpan {
+          line-height: 0.347rem;
+          .content_while {
+            font-size: 0.347rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #333333;
+            .content_time {
+              font-style: normal;
+              margin-left: 0.213rem;
+            }
+          }
+          .content_money {
+            font-size: 0.400rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #ff3b30;
+          }
+        }
+        .divP {
+          line-height: 0.747rem;
+          > p {
+            font-size: 0.320rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #999999;
+          }
+        }
+      }
+    }
+  }
+  .btnBox {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    padding: 0.400rem 0.453rem;
+    display: flex;
+    justify-content: space-between;
+    .btn_end {
+      width: 3.200rem;
+      height: 1.067rem;
+      color: #108ee9;
+      font-size: 0.480rem;
+      border-radius: 0.533rem;
+      border: solid 1px #108ee9;
+    }
+    .btn_end:active {
+      background-color: #f2f5f7;
+      color: #108ee9;
+    }
+    .btn_confirm {
+      width: 3.200rem;
+      height: 1.067rem;
+      background-color: #108ee9;
+      border-radius: 0.533rem;
+      color: #fff;
+      font-size: 0.400rem;
+      border: none;
+    }
+    .btn_confirm:active {
+      background-color: #108ee9;
+      color: #fff;
+    }
+  }
+}

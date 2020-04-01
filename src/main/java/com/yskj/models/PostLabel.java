@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 post_label@Datapublic class PostLabel extends BaseEntity {	private static final long serialVersionUID = 1L;	public PostLabel() {		super();	}	    //标签名称    private String name;    //编码 4位字母 便于保存 需要唯一    private String code;    //类型 1 福利标签 2工作标签。。。    private Integer type;}

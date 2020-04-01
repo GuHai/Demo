@@ -1,0 +1,532 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrap {
+  .tabList {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 1.067rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    > li {
+      width: 1.600rem;
+      line-height: 1.067rem;
+      text-align: center;
+      font-size: 0.320rem;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      color: #999999;
+    }
+    .active {
+      border-bottom: 2px solid #108ee9;
+      font-size: 0.400rem;
+      color: #333333;
+    }
+  }
+  .main {
+    .main1 {
+      margin-top: 1.467rem;
+      .formName {
+        padding: 0 0.453rem;
+        height: 100%;
+        background-color: #fff;
+        display: block;
+        .inputBox {
+          height: 1.067rem;
+          border-bottom: 1px solid #f2f5f7;
+          input[type=text] {
+            border: none;
+            height: 1.040rem;
+            font-size: 0.320rem;
+            margin-bottom: 0;
+          }
+          ::placeholder {
+            font-size: 0.320rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #999999;
+          }
+          .code {
+            width: 74%;
+          }
+          .getcode {
+            width: 25%;
+            height: 0.720rem;
+            padding: 0;
+            margin-top: 0.187rem;
+            line-height: 0.720rem;
+            //margin-right: 0.267rem;
+            font-size: 0.320rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #108ee9;
+            border-color: #108EE9;
+            background-color: #fff;
+          }
+        }
+        .fileBox {
+          margin-top: 0.667rem;
+          width: 100%;
+          height: 5.866rem;
+          display: flex;
+          justify-content: space-between;
+          .upload {
+            width: 4.000rem;
+            .info {
+              margin-bottom: 0.267rem;
+              text-align: center;
+              font-size: 0.320rem;
+              font-weight: normal;
+              font-stretch: normal;
+              letter-spacing: 0px;
+              color: #666666;
+            }
+            > img {
+              width: 100%;
+            }
+            input[type=file] {
+              display: none;
+            }
+          }
+        }
+        .btn {
+          width: 100%;
+          height: 1.067rem;
+          font-size: 0.400rem;
+          border-radius: 0.533rem;
+          background-color: #108EE9;
+          color: #fff;
+          text-align: center;
+          line-height: 1.067rem;
+        }
+      }
+      .realName {
+        display: none;
+        .realText {
+          height: 2.533rem;
+          background-color: #fff;
+          padding: 0.400rem 0.453rem;
+          .selfName {
+            font-size: 0.400rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #333333;
+          }
+          .selfCard {
+            font-size: 0.400rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            line-height: 0.800rem;
+            color: #999999;
+          }
+          .selfPhone {
+            font-size: 0.320rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #999999;
+          }
+        }
+        .realImg {
+          > img {
+            display: block;
+            width: 8.000rem;
+            height: 5.333rem;
+            margin: 0.267rem auto;
+          }
+        }
+        .btnBox {
+          display: flex;
+          height: 1.333rem;
+          width: 100%;
+          bottom: 0;
+          background-color: #fff;
+          .btn_back {
+            display: block;
+            margin: 0.187rem auto;
+            width: 9.093rem;
+            height: 0.933rem;
+            background-color: #108ee9;
+            border-radius: 0.453rem;
+            font-size: 0.400rem;
+            color: #fff;
+            text-align: center;
+            border: none;
+          }
+        }
+      }
+    }
+    .main2 {
+      margin-top: 1.467rem;
+      display: none;
+      .formFirm {
+        height: 100%;
+        display: block;
+        .firmInfo {
+          //height: 4.000rem;
+          padding: 0.400rem 0.453rem;
+          background-color: #fff;
+          > h2 {
+            font-size: 0.400rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #333333;
+          }
+          .firmName {
+            > input[type=text] {
+              border: none;
+              border-bottom: 1px solid #f2f5f7;
+              height: 1.067rem;
+              margin-bottom: 0;
+              font-size: 0.320rem;
+            }
+            ::placeholder {
+              font-size: 0.320rem;
+              font-weight: normal;
+              font-stretch: normal;
+              letter-spacing: 0px;
+              color: #999999;
+            }
+          }
+          .creditNub {
+            > input[type=text] {
+              border: none;
+              border-bottom: 1px solid #f2f5f7;
+              height: 1.067rem;
+              margin-bottom: 0;
+              font-size: 0.320rem;
+            }
+            ::placeholder {
+              font-size: 0.320rem;
+              font-weight: normal;
+              font-stretch: normal;
+              letter-spacing: 0px;
+              color: #999999;
+            }
+          }
+          .sub {
+            .sub_text {
+              font-size: 0.320rem;
+              font-weight: normal;
+              font-stretch: normal;
+              letter-spacing: 0px;
+              color: #108ee9;
+              line-height: 0.320rem;
+              text-align: right;
+              margin-top: 0.267rem;
+            }
+            .sub_img {
+              width: 8.000rem;
+            }
+          }
+        }
+        .frInfo {
+          margin-top: 0.267rem;
+          padding: 0.400rem 0.453rem;
+          background-color: #fff;
+          > h2 {
+            font-size: 0.400rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #333333;
+          }
+          .frName {
+            > input[type=text] {
+              border: none;
+              border-bottom: 1px solid #f2f5f7;
+              height: 1.067rem;
+              margin-bottom: 0;
+              font-size: 0.320rem;
+            }
+            ::placeholder {
+              font-size: 0.320rem;
+              font-weight: normal;
+              font-stretch: normal;
+              letter-spacing: 0px;
+              color: #999999;
+            }
+          }
+          .idNub {
+            > input[type=text] {
+              border: none;
+              border-bottom: 1px solid #f2f5f7;
+              height: 1.067rem;
+              margin-bottom: 0;
+              font-size: 0.320rem;
+            }
+            ::placeholder {
+              font-size: 0.320rem;
+              font-weight: normal;
+              font-stretch: normal;
+              letter-spacing: 0px;
+              color: #999999;
+            }
+          }
+          >.fileBox {
+            display: flex;
+            justify-content: space-between;
+            > div {
+              margin-top: 0.400rem;
+              > .info {
+                font-size: 0.320rem;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 0px;
+                color: #666666;
+                text-align: center;
+              }
+              > .attachment {
+                width: 150px;
+              }
+            }
+          }
+        }
+        .runInfo {
+          margin-top: 0.267rem;
+          padding: 0.400rem 0.453rem;
+          background-color: #fff;
+          > h2 {
+            font-size: 0.400rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #333333;
+          }
+          .runName {
+            > input[type=text] {
+              border: none;
+              border-bottom: 1px solid #f2f5f7;
+              height: 1.067rem;
+              margin-bottom: 0;
+              font-size: 0.320rem;
+            }
+            ::placeholder {
+              font-size: 0.320rem;
+              font-weight: normal;
+              font-stretch: normal;
+              letter-spacing: 0px;
+              color: #999999;
+            }
+          }
+          .IdNub {
+            > input[type=text] {
+              border: none;
+              border-bottom: 1px solid #f2f5f7;
+              height: 1.067rem;
+              margin-bottom: 0;
+              font-size: 0.320rem;
+            }
+            ::placeholder {
+              font-size: 0.320rem;
+              font-weight: normal;
+              font-stretch: normal;
+              letter-spacing: 0px;
+              color: #999999;
+            }
+          }
+          .run_phone {
+            > input[type=text] {
+              border: none;
+              border-bottom: 1px solid #f2f5f7;
+              height: 1.067rem;
+              margin-bottom: 0;
+              font-size: 0.320rem;
+            }
+            ::placeholder {
+              font-size: 0.320rem;
+              font-weight: normal;
+              font-stretch: normal;
+              letter-spacing: 0px;
+              color: #999999;
+            }
+          }
+          .run_code {
+            position: relative;
+            > input[type=text] {
+              border: none;
+              border-bottom: 1px solid #f2f5f7;
+              height: 1.067rem;
+              margin-bottom: 0;
+              font-size: 0.320rem;
+            }
+            > input[type=button] {
+              position: absolute;
+              top: -5px;
+              right: 0.267rem;
+              width: 2.000rem;
+              height: 0.720rem;
+              line-height: 0.720rem;
+              padding: 0;
+              margin-bottom: 0;
+              color: #108EE9;
+              font-size: 0.320rem;
+              border-radius: 5px;
+              border: solid 1px #108ee9;
+            }
+            > input[type=button]:active {
+              background-color: #fff;
+            }
+            ::placeholder {
+              font-size: 0.320rem;
+              font-weight: normal;
+              font-stretch: normal;
+              letter-spacing: 0px;
+              color: #999999;
+            }
+          }
+          >.fileBox {
+            display: flex;
+            justify-content: space-between;
+            > div {
+              margin-top: 0.400rem;
+              > .info {
+                font-size: 0.320rem;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 0px;
+                color: #666666;
+                text-align: center;
+              }
+              > .attachment {
+                width: 150px;
+              }
+            }
+          }
+        }
+        .btnBox {
+          width: 100%;
+          margin-top: 0.667rem;
+          padding: 0 0.453rem;
+          .btn {
+            display: block;
+            background-color: #108EE9;
+            width: 9.093rem;
+            height: 1.067rem;
+            border-radius: 0.533rem;
+            margin: auto;
+            font-size: 0.400rem;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 1.067rem;
+            text-align: center;
+            padding: 0;
+            border: none;
+            letter-spacing: 0px;
+            color: #ffffff;
+          }
+        }
+      }
+      .realFirm {
+        display: none;
+        background-color: #fff;
+        padding: 0.400rem 0.453rem;
+        .info1 {
+          > h2 {
+            font-size: 0.400rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #333333;
+            margin-bottom: 0.267rem;
+          }
+          > p {
+            padding-left: 0.267rem;
+            font-size: 0.320rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #333333;
+          }
+          > img {
+            width: 8.000rem;
+            display: block;
+            margin: 5px auto;
+          }
+        }
+        .info2 {
+          margin-top: 0.933rem;
+          > h2 {
+            font-size: 0.400rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #333333;
+            margin-bottom: 0.267rem;
+          }
+          > p {
+            padding-left: 0.267rem;
+            font-size: 0.320rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #333333;
+          }
+          > img {
+            margin: 0.267rem auto;
+            display: block;
+            width: 8.000rem;
+          }
+        }
+        .info3 {
+          margin-top: 0.933rem;
+          > h2 {
+            font-size: 0.400rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #333333;
+            margin-bottom: 0.267rem;
+          }
+          > p {
+            padding-left: 0.267rem;
+            font-size: 0.320rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #333333;
+          }
+          > img {
+            margin: 0.267rem auto;
+            display: block;
+            width: 8.000rem;
+          }
+        }
+        .btnBox {
+          display: flex;
+          height: 1.333rem;
+          width: 100%;
+          bottom: 0;
+          background-color: #fff;
+          .btn_back {
+            display: block;
+            margin: 0.187rem auto;
+            width: 9.093rem;
+            height: 0.933rem;
+            background-color: #108ee9;
+            border-radius: 0.453rem;
+            font-size: 0.400rem;
+            color: #fff;
+            text-align: center;
+            border: none;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+
+

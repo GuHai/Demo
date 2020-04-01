@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 insprofessiontype@Datapublic class InsProfessionType extends BaseEntity {	private static final long serialVersionUID = 1L;	public InsProfessionType() {		super();	}	    //编码    private String code;    //名字    private String name;    //风险等级    private Integer risk;    //职业ID    private String professionID;}

@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  font-size: 0.373rem;
+  background-color: #f2f5f7;
+}
+body title,
+html title {
+  background-color: #108EE9;
+}
+.wrap {
+  background-color: #f2f5f7;
+}
+.wrap .head {
+  height: 1.333333rem;
+  background-color: #fff;
+}
+.wrap .head .head-lf {
+  display: inline-block;
+  position: relative;
+  width: 82%;
+  margin-left: 0.2rem;
+}
+.wrap .head .head-lf > i {
+  font-size: 0.586667rem;
+  position: absolute;
+  top: 0.346667rem;
+  left: 0.266667rem;
+  color: #999;
+}
+.wrap .head .head-lf > input {
+  padding-left: 0.800rem;
+  margin: 0.266667rem 00.266667rem 0.453333rem;
+  width: 100%;
+  height: 0.8rem;
+  border: none;
+  outline: none;
+  font-size: 0.373333rem;
+  background-color: #f2f5f7;
+  border-radius: 0.4rem;
+  margin-right: 0;
+  margin-left: 0;
+}
+.wrap .head .head-lf ::-webkit-input-placeholder {
+  color: #999;
+}
+.wrap .head .mui-input-row .mui-input-clear ~ .mui-icon-clear {
+  top: 0.38rem;
+  right: 0.133rem;
+}
+.wrap .head .head-rt {
+  float: right;
+  width: 16%;
+  text-align: center;
+  overflow: hidden;
+}
+.wrap .head .head-rt > .btn {
+  /* width: 1.226667rem; */
+  height: 1.333333rem;
+  line-height: 1.333333rem;
+  font-size: 0.426667rem;
+  font-weight: normal;
+  font-stretch: normal;
+  color: #333333;
+}
+.wrap .main {
+  margin: 0.346667rem 0.56rem 0 0.453333rem;
+  background-color: #f2f5f7;
+}
+.wrap .main .main-his > h2 {
+  font-size: 0.373333rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .main-his .history {
+  margin-top: 0.266667rem;
+  margin-bottom: 0.266667rem;
+}
+.wrap .main .main-his .history > ul li {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 0.453333rem;
+  padding: 0.213333rem 0.346667rem;
+  margin: 0.266667rem 0.133333rem;
+  font-size: 0.373333rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+  margin-top: 0;
+}
+.wrap .main .main-pop > h2 {
+  font-size: 0.373333rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .main-pop .popular > ul li {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 0.453333rem;
+  padding: 0.213333rem 0.346667rem;
+  margin: 0.266667rem 0.106667rem;
+  font-size: 0.373333rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+  margin-bottom: 0;
+}

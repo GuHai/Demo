@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap {
+  .head {
+    height: 0.800rem;
+    display: flex;
+    top: 0;
+    left: 0;
+    padding: 0 0.453rem;
+    line-height: 0.800rem;
+    background-color: rgba(255, 148, 62, 0.1);
+    font-size: 0.320rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #e8541e;
+  }
+  .selectCard {
+    margin-top: 0.267rem;
+    height: 1.600rem;
+    padding: 0.347rem 0.453rem;
+    background-color: #fff;
+    align-items: center;
+
+    > a {
+      display: flex;
+      justify-content: space-between;
+
+      .card {
+        width: 5.333rem;
+
+        > img {
+          float: left;
+          width: 0.800rem;
+          height: 0.800rem;
+          margin-right: 0.267rem;
+        }
+        .cardDiv {
+          padding-left: 1.067rem;
+          line-height: 0.427rem;
+
+          .smCard {
+            font-size: 0.373rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #414141;
+          }
+          .wsCard {
+            font-size: 0.347rem;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #666666;
+
+            .mantissa {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+      .icon-arrow-right {
+        color: #999;
+        line-height: 1.067rem;
+        font-size: 0.427rem;
+      }
+    }
+  }
+  .amount {
+    margin-top: 0.267rem;
+    height: 3.467rem;
+    background-color: #fff;
+    padding: 0.267rem 0.453rem;
+
+    .sxf {
+      font-size: 0.347rem;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      color: #666666;
+
+      > em {
+        font-style: normal;
+      }
+    }
+    .inputBox {
+      margin-top: 5px;
+
+      > label {
+        margin-right: 5px;
+        font-size: 0.800rem;
+        font-weight: normal;
+        font-stretch: normal;
+        letter-spacing: 0px;
+        color: #333333;
+        vertical-align: middle;
+      }
+      > input[type=text] {
+        width: 8.000rem;
+        height: 1.067rem;
+        font-size: 0.800rem;
+        padding: 0;
+        margin: 0;
+        border: none;
+        border-bottom: 1px solid #999;
+      }
+    }
+    .all_amount {
+      margin-top: 0.533rem;
+      display: flex;
+      justify-content: space-between;
+
+      .yg {
+        font-size: 0.400rem;
+        font-weight: normal;
+        font-stretch: normal;
+        letter-spacing: 0px;
+        color: #999999;
+
+        > em {
+          font-style: normal;
+        }
+      }
+      .zhch {
+        font-size: 0.400rem;
+        font-weight: normal;
+        font-stretch: normal;
+        letter-spacing: 0px;
+        color: #108ee9;
+      }
+    }
+  }
+  .prompt {
+    padding: 0 0.427rem;
+    text-align: right;
+    font-size: 0.293rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 0.933rem;
+    letter-spacing: 0px;
+    color: #999999;
+
+    > a {
+      text-decoration: underline;
+      font-size: 0.293rem;
+      font-weight: normal;
+      letter-spacing: 0px;
+      color: #108ee9;
+    }
+  }
+  .btnBox {
+    width: 100%;
+
+    .btn {
+      display: block;
+      width: 9.093rem;
+      height: 1.067rem;
+      background-color: #108ee9;
+      border-radius: 0.533rem;
+      padding: 0;
+      color: #fff;
+      font-size: 0.400rem;
+      font-weight: normal;
+      font-stretch: normal;
+      line-height: 1.067rem;
+      text-align: center;
+      margin: auto;
+      letter-spacing: 0px;
+    }
+  }
+}
+.mask {
+  display: none;
+  .MSG {
+    z-index: 999;
+    background-color: #fff;
+    opacity: 1;
+    margin: 4.0rem auto;
+    width: 75%;
+    height: 60%;
+    padding: 0 0.4rem;
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    > h1 {
+      font-size: 0.48rem;
+      color: #333;
+      text-align: center;
+      line-height: 1.6rem;
+    }
+    > h2 {
+      font-size: 0.4rem;
+      color: #333;
+      line-height: 0.8rem;
+    }
+    > h3 {
+      font-size: 0.347rem;
+      line-height: 0.533rem;
+      color: #666;
+    }
+    > h4 {
+      font-size: 0.32rem;
+      line-height: 0.48rem;
+      color: #999;
+    }
+    > .btn {
+      display: block;
+      width: 100%;
+      height: 0.933rem;
+      background-color: #108ee9;
+      border-radius: 0.453rem;
+      color: #fff;
+      padding: 0;
+      border: none;
+      margin: 1.333rem auto;
+      text-align: center;
+      font-size: 0.4rem;
+      line-height: 0.933rem;
+      letter-spacing: 0px;
+      color: #ffffff;
+    }
+  }
+  .MSG::-webkit-scrollbar {
+    display: none;
+  }
+}

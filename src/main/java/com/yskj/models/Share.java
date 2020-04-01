@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 share@Datapublic class Share extends BaseEntity {	private static final long serialVersionUID = 1L;	public Share() {		super();	}	    //    private String userID;    //    private String fromUserID;    //1 公众号分享    private Integer type;}

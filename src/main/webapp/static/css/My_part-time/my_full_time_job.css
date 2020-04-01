@@ -1,0 +1,78 @@
+/**************************************** full_part_time_job.jsp ***********************************/
+.full-time-job .hd-list-box .box-list{overflow: hidden;height: 0.933rem;line-height: 0.933rem;background: #fff;position: fixed;width: 100%;top: 0;z-index: 999;left: 0;right: 0;}
+.full-time-job .hd-list-box .box-list li{width: 33.3%;text-align: center;position: relative;color: #666;font-size: 0.373rem;float: left;}
+.full-time-job .hd-list-box .box-list li.current{color: #108EE9;}
+.full-time-job .hd-list-box .box-list li.current:after{content: '';position: absolute;left: 26%;bottom: 0;width: 1.6rem;height: 2px;background: #108ee9;}
+.full-time-job .full-job-list .mainbox .ul-li{background: #fff;margin: 0 0.187rem 0.267rem 0.187rem;padding: 0 0.267rem;border-radius: 0.133rem;}
+.full-time-job .full-job-list .mainbox .ul-li:first-child{margin-top: 1.2rem;}
+.full-time-job .full-job-list .mainbox .ul-li .title{display: flex;justify-content: space-between;align-items: center;padding: 0.267rem 0;}
+.full-time-job .full-job-list .mainbox .ul-li .title .txt{font-size: 0.4rem;color: #333;font-weight: 500;line-height: 1}
+.full-time-job .full-job-list .mainbox .ul-li .title .money{font-size: 0.4rem;color: #ff3b30;font-weight: 500;line-height: 1}
+.full-time-job .full-job-list .mainbox .ul-li .name{font-size: 0.32rem;line-height:1;color: #666;padding-bottom: 0.267rem;}
+.full-time-job .full-job-list .mainbox .ul-li .tag-list{overflow: hidden;position: relative;padding-bottom: 0.133rem;}
+.full-time-job .full-job-list .mainbox .ul-li .tag-list .taglist{overflow: hidden;line-height: 1;margin-bottom: 0.133rem;white-space: nowrap;}
+.full-time-job .full-job-list .mainbox .ul-li .tag-list span{display: inline-block;background: #F2F5F7;border-radius: 0.08rem;color: #999999;font-size: 0.32rem;height: 0.533rem;text-align: center;width: 1.147rem;overflow: hidden;margin-right: 0.133rem;line-height: 0.533rem;}
+.full-time-job .full-job-list .mainbox .ul-li .tag-list span.curr1{background: none;border: 1px solid #f87f26;color: #f87f26}
+.full-time-job .full-job-list .mainbox .ul-li .tag-list span.curr2{background: none;border: 1px solid #ffa601;color: #ffa601}
+.full-time-job .full-job-list .mainbox .ul-li .time{font-size: 0.32rem;color: #108EE9;height: 0.8rem;line-height: 0.8rem;border-top: 1px solid #EFEFF4;}
+.full-time-job .full-job-list .mainbox.interested .ul-li .time{font-size: 0.32rem;color: #108EE9;height: 1.2rem;border-top: 1px solid #EFEFF4;line-height: 1;display: flex;justify-content: space-between;align-items: center;}
+.full-time-job .full-job-list .mainbox.interested .ul-li .time span{font-size: 0.32rem;color: #108EE9;/* height: 0.8rem; *//* line-height: 0.8rem; *//* border-top: 1px solid #EFEFF4; */line-height: 1.2rem;}
+.full-time-job .full-job-list .mainbox.interested .ul-li .time .contact{border:1px solid #108EE9;font-size: 0.293rem;color: #108EE9;display: inline-block;height: 0.613rem;line-height: 0.613rem;width: 1.733rem;text-align: center;border-radius: 0.133rem;}
+
+
+/**************************************** full_time_detail.jsp ***********************************/
+.full-time-detail .hd-list-box{position: relative;padding: 0.4rem 0.267rem 0.267rem 0.267rem;margin: 0 0.187rem;background: #fff;margin-bottom: 0.267rem;border-radius: 0.133rem;margin-top: 0.267rem;box-shadow: 0 0 6px 2px rgba(153,153,153,0.2), 0 0 10px rgba(153,153,153,0.2);}
+.full-time-detail .hd-list-box .title{position: relative;display: flex;justify-content: space-between;align-items: center;margin-bottom: 0.213rem;}
+.full-time-detail .hd-list-box .title .txt{font-size: 0.533rem;color: #333;font-weight: 500;line-height: 1;}
+.full-time-detail .hd-list-box .title .num{font-size: 0.32rem;color: #999;line-height: 1}
+.full-time-detail .hd-list-box .money{color: #ff3b30;font-size: 0.4rem;line-height: 1;padding-bottom: 0.133rem;}
+.full-time-detail .hd-list-box .taglist{overflow: hidden;line-height: 1;}
+.full-time-detail .hd-list-box .taglist h3{line-height: 1;font-size: 0.4rem;padding: 0.267rem 0;}
+.full-time-detail .hd-list-box .taglist.treatment h3{color: #f87f26}
+.full-time-detail .hd-list-box .taglist.work h3{color: #ffa601}
+.full-time-detail .hd-list-box .taglist.other h3{color: #15bc83}
+.full-time-detail .hd-list-box .taglist .list span{display: inline-block;background: #F2F5F7;border-radius: 0.08rem;color: #999999;margin-bottom: 0.133rem;font-size: 0.32rem;height: 0.533rem;text-align: center;width: 1.147rem;overflow: hidden;margin-right: 0.133rem;line-height: 0.533rem;}
+.full-time-detail .full-job-list .address-box{padding: 0.267rem 0.453rem;background: #fff;margin-bottom: 0.267rem;}
+.full-time-detail .full-job-list .address-box .title{color:#333;font-size: 0.4rem;line-height: 1;margin-bottom: 0.267rem;}
+.full-time-detail .full-job-list .address-box .address{display: flex;justify-content: space-between;align-items: center;line-height: 1;}
+.full-time-detail .full-job-list .address-box .address .txt{font-size: 0.347rem;color: #999;}
+.full-time-detail .full-job-list .address-box .address .icon-fujin{font-size: 0.4rem;color: #108ee9;}
+.full-time-detail .full-job-list .details-box{padding: 0.267rem 0.453rem;background: #fff;margin-bottom: 0.267rem;}
+.full-time-detail .full-job-list .details-box .title{color:#333;font-size: 0.4rem;line-height: 1;margin-bottom: 0.267rem;}
+.full-time-detail .full-job-list .details-box .content{color:#999999;font-size: 0.347rem;line-height:0.48rem;word-break: break-all;}
+.full-time-detail .full-job-list .company-box{padding: 0.267rem 0.453rem;background: #fff;margin-bottom: 0.267rem;}
+.full-time-detail .full-job-list .company-box .company-content .company-content-img {float: left;width: 1.333rem;height: 1.333rem;}
+.full-time-detail .full-job-list .company-box .company-content .company-content-img img{width: 100%;height: 100%;vertical-align: middle;border-radius: 100%;}
+.full-time-detail .full-job-list .company-box .company-title {margin-bottom: .267rem;font-size: .400rem;font-weight: normal;font-stretch: normal;letter-spacing: 0;color: #108ee9;line-height: 1;}
+.full-time-detail .full-job-list .company-content{display: flex;justify-content: space-between;align-items: center;}
+.full-time-detail .full-job-list .company-content .left{width: 73%;overflow: hidden;}
+.full-time-detail .full-job-list .company-content .right{width: auto;overflow: hidden;}
+.full-time-detail .full-job-list .company-box .visit_home .link {display: block;border: 1px solid #108ee9;text-align: center;font-size: .400rem;font-weight: normal;font-stretch: normal;letter-spacing: 0;color: #108ee9;border-radius: 5px;margin: auto;width: 2.4rem;height: 0.8rem;line-height: 0.8rem;}
+.full-time-detail .full-job-list .company-content .company-content-msg{overflow: hidden;position: relative;margin-left: 0.267rem;float: left;margin-top: 0.133rem;}
+.full-time-detail .full-job-list .company-content .company-content-msg .name{font-size: 0.4rem;color: #333;line-height: 1;}
+.full-time-detail .full-job-list .company-content .company-content-msg .admin{font-size: 0.347rem;color: #999;margin-top:0.373rem;line-height: 1;}
+.full-time-detail .full-job-list .mainbox.recommend .title{padding: 0 0.453rem;height: 1.067rem;line-height: 1.067rem;color: #333;background: #fff;font-size: 0.4rem;margin-bottom: 0.267rem}
+.full-time-detail .full-job-list .mainbox .ul-li{background: #fff;margin: 0 0.187rem 0.267rem 0.187rem;padding: 0 0.267rem;border-radius: 0.133rem;}
+.full-time-detail .full-job-list .mainbox .ul-li .title{display: flex;justify-content: space-between;align-items: center;padding: 0.267rem 0;margin-bottom: 0;}
+.full-time-detail .full-job-list .mainbox .ul-li .title .txt{font-size: 0.4rem;color: #333;font-weight: 500;line-height: 1}
+.full-time-detail .full-job-list .mainbox .ul-li .title .money{font-size: 0.4rem;color: #ff3b30;font-weight: 500;line-height: 1}
+.full-time-detail .full-job-list .mainbox .ul-li .name{font-size: 0.32rem;line-height:1;color: #666;padding-bottom: 0.267rem;}
+.full-time-detail .full-job-list .mainbox .ul-li .tag-list{overflow: hidden;position: relative;padding-bottom: 0.133rem;}
+.full-time-detail .full-job-list .mainbox .ul-li .tag-list .taglist{overflow: hidden;line-height: 1;margin-bottom: 0.133rem;white-space: nowrap;}
+.full-time-detail .full-job-list .mainbox .ul-li .tag-list .taglist.requiretag{margin-bottom:0}
+.full-time-detail .full-job-list .mainbox .ul-li .tag-list span{display: inline-block;background: #F2F5F7;border-radius: 0.08rem;color: #999999;font-size: 0.32rem;height: 0.533rem;text-align: center;width: 1.147rem;overflow: hidden;margin-right: 0.133rem;line-height: 0.533rem;}
+.full-time-detail .full-job-list .mainbox .ul-li .tag-list span.curr1{background: none;border: 1px solid #f87f26;color: #f87f26}
+.full-time-detail .full-job-list .mainbox .ul-li .tag-list span.curr2{background: none;border: 1px solid #ffa601;color: #ffa601}
+.full-time-detail .bar-footer{background-color: #fff;height: 1.33rem;width: 100%;position: fixed;bottom: 0;left: 0;right: 0;z-index: 999;display: flex;justify-content: center;align-items: center;}
+.full-time-detail .bar-footer .linkbtns{display: inline-block;}
+.full-time-detail .bar-footer .linkbtns span{display: block;line-height: 1;text-align: center;}
+.full-time-detail .bar-footer .linkbtns span.txt{font-size: 0.32rem;color: #999;padding-top: 0.133rem;}
+.full-time-detail .bar-footer .linkbtns span.icon-dadianhua{font-size: 0.587rem;color: #108ee9;}
+.full-time-detail .bar-footer .linkbtns span.icon-zixun{font-size: 0.587rem;color:#15bc83;}
+.full-time-detail .bar-footer .linkbtns span.icon-guanzhu{font-size: 0.587rem;color: #ff3b30;}
+.full-time-detail .bar-footer .linkbtns span.icon-weibiaoti105{font-size: 0.587rem;color: #ff3b30;}
+.full-time-detail .bar-footer .tel{width: 16.66%;}
+.full-time-detail .bar-footer .consult{width: 16.66%;}
+.full-time-detail .bar-footer .collection{width: 16.66%;}
+.full-time-detail .bar-footer .resumes{width: 50%;background-color: #108EE9;color: #fff;font-size: 0.4rem;height: 100%;line-height: 1.33rem;}
+.full-time-detail .bar-footer .resumes span.postxt{color: #fff;line-height: 1.33rem}

@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap > div {
+  height: 1.173rem;
+  padding: 0 0.453rem;
+  background-color: #fff;
+  border-bottom: 1px solid #f2f5f7;
+}
+.wrap > div > a {
+  height: 1.173rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap > div > a > span {
+  font-size: 0.400rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap > div > a .iconfont {
+  margin-left: 5px;
+  color: #b4b4b4;
+}
+.wrap > div > a > small {
+  font-size: 0.320rem;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap div:nth-child(2) {
+  margin: 0.267rem 0;
+}

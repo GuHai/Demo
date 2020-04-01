@@ -1,0 +1,35 @@
+/************************* 选择问题类型 using_help.jsp********************************/
+
+.page_using_help .hd-main .list-box ul{position: relative;overflow: hidden;}
+.page_using_help .hd-main .list-box li{background-color: #fff;width: 33.3%;float: left;text-align: center;position: relative;height: 2.667rem;padding: 0.747rem 0;}
+.page_using_help .hd-main .list-box li:after{content: '';border-right: 1px solid #efeff4;position: absolute;top: 0;right: 0;height: 100%;}
+.page_using_help .hd-main .list-box li span{display: block;line-height: 1;font-size: 23px;}
+.page_using_help .hd-main .list-box li span.icon-baozhengjin{color: #15bc83}
+.page_using_help .hd-main .list-box li span.icon-qia{color: #ff943e}
+.page_using_help .hd-main .list-box li span.icon-zhaoshanghezuo{color: #e8541e}
+.page_using_help .hd-main .list-box li span.txt{font-size: 0.347rem;color: #333;margin-top: 0.187rem;}
+
+
+
+/************************* deposit.jsp 保证金******************************/
+.page_deposit .hd-main .list-box ul{position: relative;overflow: hidden;/* padding: 0 0.453rem; */}
+.page_deposit .hd-main .list-box li{background-color: #fff;display: flex;justify-content: space-between;width: 100%;height: 1.2rem;line-height: 1.2rem;padding: 0 0.453rem;border-bottom: 1px solid #EFEFF4;}
+.page_deposit .hd-main .list-box li:last-child{border-bottom: 0;}
+.page_deposit .hd-main .list-box li span.txt{font-size: 0.4rem;color: #333;}
+.page_deposit .hd-main .list-box li span.iconfont{font-size: 0.4rem;color: #b4b4b4;}
+
+
+/************************* help_details.jsp 详情******************************/
+.page_help_details .hd-main{padding: 0 0.453rem;overflow: hidden;position: relative;border-bottom: 1px solid #d7d7d7;height: 1.067rem;line-height: 1.067rem;}
+.page_help_details .hd-main .title{font-size: 0.4rem;color: #333}
+.page_help_details .content_details{padding:0.453rem;padding-bottom: 0}
+.page_help_details .content_details .box{overflow: hidden;position: relative;font-size: 0.373rem;color: #333;}
+.page_help_details .content_details .box p{line-height: 0.533rem;font-size: 0.373rem;color: #333;margin-bottom: 0.933rem;}
+.page_help_details .details-foot{display: flex;justify-content: center;justify-items: center;margin-top: 0.8rem}
+.page_help_details .details-foot .btns{display: inline-block;width: 2.667rem;height: 0.8rem;line-height: 0.8rem;border: 1px solid #999999;color: #999999;text-align: center;font-size: 0.427rem;border-radius: 0.1333rem;margin-right: 0.667rem;background: none;padding: 0;}
+.page_help_details .details-foot .btns > span{font-size: 0.427rem;margin-right: 0.08rem}
+.page_help_details .details-foot .btns:last-child{margin-right: 0;}
+.page_help_details .details-foot .btns.useful.active{background-color: #108EE9;color: #fff;border: 1px solid #108EE9;}
+.page_help_details .details-foot .btns.useless.active{background-color: #108EE9;color: #fff;border: 1px solid #108EE9}
+.page_help_details .details-foot .btns.active > span{color: #fff}
+.page_help_details .details-foot .btns.useless.disabled{color: #ccc;border: 1px solid #ccc;}

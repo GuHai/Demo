@@ -1,0 +1,547 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap .tabList {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 1.067rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+.wrap .tabList > li {
+  width: 1.600rem;
+  line-height: 1.067rem;
+  text-align: center;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .tabList .active {
+  border-bottom: 2px solid #108ee9;
+  font-size: 0.400rem;
+  color: #333333;
+}
+.wrap .main .main1 {
+  margin-top: 1.467rem;
+}
+.wrap .main .main1 .formName {
+  padding: 0 0.453rem;
+  height: 100%;
+  background-color: #fff;
+  display: block;
+}
+.wrap .main .main1 .formName .inputBox {
+  height: 1.067rem;
+  border-bottom: 1px solid #f2f5f7;
+}
+.wrap .main .main1 .formName .inputBox input[type=text] {
+  border: none;
+  height: 1.040rem;
+  font-size: 0.320rem;
+  margin-bottom: 0;
+}
+.wrap .main .main1 .formName .inputBox ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .main1 .formName .inputBox .code {
+  width: 73%;
+}
+.wrap .main .main1 .formName .inputBox .getcode {
+  width: 25%;
+  height: 0.720rem;
+  padding: 0;
+  margin-top: 0.187rem;
+  line-height: 0.720rem;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #108ee9;
+  border-color: #108EE9;
+  background-color: #fff;
+}
+.wrap .main .main1 .formName .fileBox {
+  margin-top: 0.667rem;
+  width: 100%;
+  height: 5.866rem;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .main1 .formName .fileBox .upload {
+  /*width: 4.000rem;*/
+}
+.wrap .main .main1 .formName .fileBox .upload .info {
+  margin-bottom: 0.267rem;
+  text-align: center;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .main1 .formName .fileBox .upload > img {
+  width: 100%;
+}
+.wrap .main .main1 .formName .fileBox .upload input[type=file] {
+  display: none;
+}
+.wrap .main .main1 .formName .foot{
+  height: 1.333rem;
+  padding: 0.2rem 0.453rem;
+}
+.wrap .main .main1 .formName .btn {
+  width: 100%;
+  height: 0.933rem;
+  font-size: 0.400rem;
+  border-radius: 0.533rem;
+  background-color: #108EE9;
+  color: #fff;
+  text-align: center;
+  line-height: 0.933rem;
+}
+.wrap .main .main1 .realName {
+  display: none;
+}
+.wrap .main .main1 .realName .realText {
+  height: 2.933rem;
+  background-color: #fff;
+  padding: 0.400rem 0.453rem;
+}
+.wrap .main .main1 .realName .realText .selfName,
+.wrap .main .main1 .realName .realText .selfCard,
+.wrap .main .main1 .realName .realText .selfPhone {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .main1 .realName .realImg > img {
+  display: block;
+  width: 8.000rem;
+  height: 5.333rem;
+  margin: 0.267rem auto;
+}
+.wrap .main .main1 .realName .btnBox {
+  display: flex;
+  height: 1.333rem;
+  width: 100%;
+  bottom: 0;
+  background-color: #fff;
+}
+.wrap .main .main1 .realName .btnBox .btn_back {
+  display: block;
+  margin: 0.187rem auto;
+  width: 9.093rem;
+  height: 0.933rem;
+  background-color: #108ee9;
+  border-radius: 0.453rem;
+  font-size: 0.400rem;
+  color: #fff;
+  text-align: center;
+  border: none;
+}
+.wrap .main .main2 {
+  margin-top: 1.467rem;
+  display: none;
+}
+.wrap .main .main2 .formFirm {
+  height: 100%;
+  display: block;
+}
+.wrap .main .main2 .formFirm .firmInfo {
+  padding: 0.400rem 0.453rem;
+  background-color: #fff;
+}
+.wrap .main .main2 .formFirm .firmInfo > h2 {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .main2  .sub .info {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+  padding: 0.3rem 0;
+}
+.wrap .main .main2 .formFirm .firmInfo .firmName > input[type=text] {
+  border: none;
+  border-bottom: 1px solid #f2f5f7;
+  height: 1.067rem;
+  margin-bottom: 0;
+  font-size: 0.320rem;
+}
+.wrap .main .main2 .formFirm .firmInfo .firmName ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .main2 .formFirm .firmInfo .creditNub > input[type=text] {
+  border: none;
+  border-bottom: 1px solid #f2f5f7;
+  height: 1.067rem;
+  margin-bottom: 0;
+  font-size: 0.320rem;
+}
+.wrap .main .main2 .formFirm .firmInfo .creditNub ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .main2 .formFirm .firmInfo .sub .sub_text {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #108ee9;
+  line-height: 0.320rem;
+  text-align: right;
+  margin-top: 0.267rem;
+}
+.wrap .main .main2 .formFirm .firmInfo .sub .sub_img {
+  width: 8.000rem;
+}
+.wrap .main .main2 .formFirm .frInfo {
+  margin-top: 0.267rem;
+  padding: 0.400rem 0.453rem;
+  background-color: #fff;
+}
+.wrap .main .main2 .formFirm .frInfo > h2 {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .main2 .formFirm .frInfo .frName > input[type=text] {
+  border: none;
+  border-bottom: 1px solid #f2f5f7;
+  height: 1.067rem;
+  margin-bottom: 0;
+  font-size: 0.320rem;
+}
+.wrap .main .main2 .formFirm .frInfo .frName ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .main2 .formFirm .frInfo .idNub > input[type=text] {
+  border: none;
+  border-bottom: 1px solid #f2f5f7;
+  height: 1.067rem;
+  margin-bottom: 0;
+  font-size: 0.320rem;
+}
+.wrap .main .main2 .formFirm .frInfo .idNub ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .main2 .formFirm .frInfo > .fileBox {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .main2 .formFirm .frInfo > .fileBox > div {
+  margin-top: 0.400rem;
+}
+.wrap .main .main2 .formFirm .frInfo > .fileBox > div > .info {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+  text-align: center;
+}
+.wrap .main .main2 .formFirm .frInfo > .fileBox > div > .attachment {
+  width: 150px;
+}
+.wrap .main .main2 .formFirm .runInfo {
+  margin-top: 0.267rem;
+  padding: 0.400rem 0.453rem;
+  background-color: #fff;
+}
+.wrap .main .main2 .formFirm .runInfo > h2 {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .main2 .formFirm .runInfo .runName > input[type=text] {
+  border: none;
+  border-bottom: 1px solid #f2f5f7;
+  height: 1.067rem;
+  margin-bottom: 0;
+  font-size: 0.320rem;
+}
+.wrap .main .main2 .formFirm .runInfo .runName ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .main2 .formFirm .runInfo .IdNub > input[type=text] {
+  border: none;
+  border-bottom: 1px solid #f2f5f7;
+  height: 1.067rem;
+  margin-bottom: 0;
+  font-size: 0.320rem;
+}
+.wrap .main .main2 .formFirm .runInfo .IdNub ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .main2 .formFirm .runInfo .run_phone > input[type=text] {
+  border: none;
+  border-bottom: 1px solid #f2f5f7;
+  height: 1.067rem;
+  margin-bottom: 0;
+  font-size: 0.320rem;
+}
+.wrap .main .main2 .formFirm .runInfo .run_phone ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .main2 .formFirm .runInfo .run_code {
+  position: relative;
+}
+.wrap .main .main2 .formFirm .runInfo .run_code > input[type=text] {
+  border: none;
+  border-bottom: 1px solid #f2f5f7;
+  height: 1.067rem;
+  margin-bottom: 0;
+  font-size: 0.320rem;
+}
+.wrap .main .main2 .formFirm .runInfo .run_code > input[type=button] {
+  position: absolute;
+  top: -5px;
+  right: 0.267rem;
+  width: 2.000rem;
+  height: 0.720rem;
+  line-height: 0.720rem;
+  padding: 0;
+  margin-bottom: 0;
+  color: #108EE9;
+  font-size: 0.320rem;
+  border-radius: 5px;
+  border: solid 1px #108ee9;
+}
+.wrap .main .main2 .formFirm .runInfo .run_code > input[type=button]:active {
+  background-color: #fff;
+}
+.wrap .main .main2 .formFirm .runInfo .run_code ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .main2 .formFirm .runInfo > .fileBox {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .main2 .formFirm .runInfo > .fileBox > div {
+  margin-top: 0.400rem;
+}
+.wrap .main .main2 .formFirm .runInfo > .fileBox > div > .info {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+  text-align: center;
+}
+.wrap .main .main2 .formFirm .runInfo > .fileBox > div > .attachment {
+  width: 150px;
+}
+.wrap .main .main2 .formFirm .btnBox {
+  width: 100%;
+  height: 70px;
+ /* margin-top: 0.667rem;*/
+  padding: 0 0.453rem;
+}
+.wrap .main .main2 .formFirm .btnBox .btn {
+  display: block;
+  background-color: #108EE9;
+  width: 9.093rem;
+  height: 1.067rem;
+  border-radius: 0.533rem;
+  margin: auto;
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.067rem;
+  text-align: center;
+  padding: 0;
+  border: none;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.wrap .main .main2 .realFirm {
+  display: none;
+  background-color: #fff;
+  padding: 0.400rem 0.453rem;
+}
+.wrap .main .main2 .realFirm .info1 > h2 {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+  margin-bottom: 0.267rem;
+}
+.wrap .main .main2 .realFirm .info1 > p {
+  padding-left: 0.267rem;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .main2 .realFirm .info1 > img {
+  width: 8.000rem;
+  height: 5.5rem;
+  display: block;
+  margin: 5px auto;
+  overflow: hidden;
+}
+.wrap .main .main2 .realFirm .info2 {
+  margin-top: 0.933rem;
+}
+.wrap .main .main2 .realFirm .info2 > h2 {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+  margin-bottom: 0.267rem;
+}
+.wrap .main .main2 .realFirm .info2 > p {
+  padding-left: 0.267rem;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .main2 .realFirm .info2 > img {
+  margin: 0.267rem auto;
+  display: block;
+  width: 8.000rem;
+  height: 5.5rem;
+  overflow: hidden;
+}
+.wrap .main .main2 .realFirm .info3 {
+  margin-top: 0.933rem;
+}
+.wrap .main .main2 .realFirm .info3 > h2 {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+  margin-bottom: 0.267rem;
+}
+.wrap .main .main2 .realFirm .info3 > p {
+  padding-left: 0.267rem;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .main2 .realFirm .info3 > img {
+  margin: 0.267rem auto;
+  display: block;
+  width: 8.000rem;
+  height: 5.5rem;
+  overflow: hidden;
+}
+.wrap .main .main2 .realFirm .btnBox {
+  display: flex;
+  height: 1.333rem;
+  width: 100%;
+  bottom: 0;
+  background-color: #fff;
+}
+.wrap .main .main2 .realFirm .btnBox .btn_back {
+  display: block;
+  margin: 0.187rem auto;
+  width: 9.093rem;
+  height: 0.933rem;
+  background-color: #108ee9;
+  border-radius: 0.453rem;
+  font-size: 0.400rem;
+  color: #fff;
+  text-align: center;
+  border: none;
+}
+.wrap .main .realFirm{
+  padding: 0 0.453rem;
+  margin-top: 1.33rem;
+}
+.wrap .main .realFirm .info1{
+  margin: 0.267rem 0;
+}
+.wrap .main .realFirm .info1 h2,.wrap .main .realFirm .info3 h2{
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .realFirm .info1 img,.wrap .main .realFirm .info3 img{
+  display: block;
+  width: 8.000rem;
+  height: 5.333rem;
+  margin: 0.267rem auto;
+}
+.btnBox .btn-input-button{
+  display: flex;
+  justify-content: center;
+}
+.btnBox .btn-input-button input{
+  font-size: 0.4rem;
+  border-radius: 0.5rem;
+  width: 40%;
+  display: inline-block;
+}
+.btnBox .btn-input-button input.pass{
+  background-color: #108ee9;
+  color: #fff;
+  margin-right: 0.3rem;
+}
+.btnBox .btn-input-button input.fail{
+  border: 1px solid #108ee9;
+  color: #108ee9;
+  background: none;
+
+}

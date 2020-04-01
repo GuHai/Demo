@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yskj.dao.ForwardDao" >
+
+<!-- 查询字段 -->
+<sql id="columnList" >
+	f.id,
+	 f.version, f.isDeleted, f.createBy, f.createTime, f.updateBy, f.updateTime, f.userId, f.positionId, f.forwardingCode,f.rewardID
+</sql>
+
+
+<!--通过id集合in查询-->
+<sql id="inClause">
+    <if test="column!=null">
+        <if test="ids==null">
+            and 1=0
+        </if>
+        <if test="ids!=null">
+            <if test="ids.size>0">
+                and  f.${column} in
+                <foreach item="items" index="index" collection="ids" open="(" separator="," close=")">
+                    #{items}
+                </foreach>
+            </if>
+            <if test="ids.size==0">
+                and 1=0
+            </if>
+        </if>
+    </if>
+</sql>
+
+<!-- 查询条件 -->
+<sql id="whereClause">
+where 1=1
+<trim  suffixOverrides="," >
+	<if test="condition.id != null" >
+	    and f.id = #{condition.id}
+	</if>
+	<if test="condition.version != null" >and  f.version = #{condition.version}</if>
+<if test="condition.isDeleted != null" >and  f.isDeleted = #{condition.isDeleted}</if>
+<if test="condition.createBy != null" >and  f.createBy = #{condition.createBy}</if>
+<if test="condition.createTime != null" >and  f.createTime = #{condition.createTime}</if>
+<if test="condition.updateBy != null" >and  f.updateBy = #{condition.updateBy}</if>
+<if test="condition.updateTime != null" >and  f.updateTime = #{condition.updateTime}</if>
+<if test="condition.userId != null" >and  f.userId = #{condition.userId}</if>
+<if test="condition.positionId != null" >and  f.positionId = #{condition.positionId}</if>
+<if test="condition.forwardingCode != null" >and  f.forwardingCode = #{condition.forwardingCode}</if>
+<if test="condition.rewardID != null" >and  f.rewardID = #{condition.rewardID}</if>
+
+</trim>
+<include refid="inClause"/>
+</sql>
+
+<!-- 模糊查询条件 -->
+<sql id="whereLikeClause">
+where 1=1
+<trim  suffixOverrides="," >
+	<if test="condition.id != null" >
+	    and f.id = #{condition.id}
+	</if>													 		
+	<if test="condition.version != null" >and  UPPER(f.version) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.version}),'%'))</if>
+<if test="condition.isDeleted != null" >and  UPPER(f.isDeleted) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.isDeleted}),'%'))</if>
+<if test="condition.createBy != null" >and  UPPER(f.createBy) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.createBy}),'%'))</if>
+<if test="condition.createTime != null" >and  UPPER(f.createTime) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.createTime}),'%'))</if>
+<if test="condition.updateBy != null" >and  UPPER(f.updateBy) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.updateBy}),'%'))</if>
+<if test="condition.updateTime != null" >and  UPPER(f.updateTime) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.updateTime}),'%'))</if>
+<if test="condition.userId != null" >and  UPPER(f.userId) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.userId}),'%'))</if>
+<if test="condition.positionId != null" >and  UPPER(f.positionId) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.positionId}),'%'))</if>
+<if test="condition.forwardingCode != null" >and  UPPER(f.forwardingCode) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.forwardingCode}),'%'))</if>
+<if test="condition.rewardID != null" >and  UPPER(f.rewardID) LIKE   UPPER(CONCAT(CONCAT('%',#{condition.rewardID}),'%'))</if>
+
+</trim>
+<include refid="inClause"/>
+</sql>
+
+
+
+
+
+<!-- 插入记录 -->
+<insert id="add"  >
+  insert into forward (id,version,isDeleted,createBy,createTime,updateBy,updateTime,userId,positionId,forwardingCode,rewardID)
+  values(#{id,jdbcType=VARCHAR},#{version},#{isDeleted},#{createBy},#{createTime},#{updateBy},#{updateTime},#{userId},#{positionId},#{forwardingCode},#{rewardID})
+</insert>
+
+
+
+<!-- 修改记录，只修改只不为空的字段 -->
+<update id="update" >
+	update forward set
+	<trim  suffixOverrides="," >
+	<if test="version != null ">version=#{version},</if>
+<if test="isDeleted != null ">isDeleted=#{isDeleted},</if>
+<if test="createBy != null ">createBy=#{createBy},</if>
+<if test="createTime != null ">createTime=#{createTime},</if>
+<if test="updateBy != null ">updateBy=#{updateBy},</if>
+<if test="updateTime != null ">updateTime=#{updateTime},</if>
+<if test="userId != null ">userId=#{userId},</if>
+<if test="positionId != null ">positionId=#{positionId},</if>
+<if test="forwardingCode != null ">forwardingCode=#{forwardingCode},</if>
+<if test="rewardID != null ">rewardID=#{rewardID},</if>
+
+	</trim> where id=#{id} and version = #{version}-1
+</update>
+
+<!-- 删除记录 -->
+<delete id="del" >
+	delete from forward where id = #{id}
+</delete>
+
+<!-- 根据id查询  -->
+<select id="get"   resultType="Forward"  parameterType="String">
+	select <include refid="columnList" /> 
+	from forward  f
+	where  f.id = #{id}  and f.isDeleted = false
+</select>
+
+<!-- 列表总数-->
+<select id="count" resultType="java.lang.Long" >
+	select count(1) 
+	from forward  f
+	<include refid="whereClause"/>
+</select>
+
+<!-- 查询page -->
+<select id="findPage" resultType="Forward" >
+	select 
+	<include refid="columnList"/>
+	from forward f
+	<include refid="whereClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 模糊查询page -->
+<select id="findLikePage" resultType="Forward" >
+	select 
+	<include refid="columnList"/>
+	from forward f
+	<include refid="whereLikeClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询列表list -->
+<select id="findList" resultType="Forward" >
+	select
+	<include refid="columnList"/>
+	from forward f
+	<include refid="whereClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!--模糊查询list-->
+<select id="findLikeList" resultType="Forward" >
+	select
+	<include refid="columnList"/>
+	from forward f
+	<include refid="whereLikeClause"/>
+	<if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询符合条件的数据的id集合 -->
+<select id="findIds" resultType="String">
+	select f.${idsColumn}
+	from forward f
+    <include refid="whereClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 查询符合模糊条件的数据的id集合 -->
+<select id="findLikeIds" resultType="String">
+	select f.${idsColumn}
+	from forward f
+    <include refid="whereLikeClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+</select>
+
+<!-- 获取一个对象通过非id -->
+<select id="one" resultType="Forward" >
+     select
+    <include refid="columnList"/>
+     from forward f
+    <include refid="whereClause"/>
+    <if test="orderByClause!=null">${orderByClause}</if>
+    limit 0,1
+</select>
+
+<!--如果你想返回一个HashMap 就实现这个select标签-->
+<select id="queryHashMap" resultType="java.util.HashMap"  parameterType="Object">
+</select>
+
+	<select id="checkPosition" resultType="com.yskj.models.Forward" parameterType="com.yskj.models.QueryParam">
+		SELECT * FROM forward WHERE userId = #{condition.forwardUser} AND positionId = #{condition.positionID} AND isDeleted = false ORDER BY createTime DESC limit 0,1
+	</select>
+
+	<select id="getRewardMoney" resultType="java.util.Map" parameterType="QueryParam">
+		SELECT
+			forwardUser.nickName AS 'forwardName',reward.`rewardMoney` AS 'reawrdMoney',fsb.id AS 'fsbID',reward.`hourlyWage`,reward.`rewardMoney` AS 'oneHourMoney',p.id AS 'positionID',forward.userId AS 'userID'
+		FROM
+			forward_shareuser_beenrecruited fsb
+			LEFT JOIN beenrecruited b
+				ON fsb.beenrecruitedId = b.id
+			LEFT JOIN POSITION p
+			ON b.positionID = p.id
+			LEFT JOIN forward forward
+				ON forward.id = fsb.forwardId
+			LEFT JOIN shiro_user forwardUser
+			ON forwardUser.id = forward.`userId`
+			LEFT JOIN reward reward
+				ON reward.id = forward.`rewardID`
+		WHERE fsb.shareUserId = #{condition.userID} AND b.positionID = #{condition.positionID}
+
+	</select>
+</mapper>

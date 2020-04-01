@@ -1,0 +1,236 @@
+.wrap .details{padding:0;}
+.wrap{background-color:#f2f5f7;}
+.wrap .main .details{background-color:#f2f5f7;}
+.box{background-color:#fff;}
+.date>ol{background:#fff;}
+.date>ul{background:#fff;}
+.mui-checkbox, .mui-radio{float:left;width:0.800rem;height:0.800rem;margin-top:3px;}
+.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{padding-left:2px;}
+input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea{height:auto;}
+.mui-checkbox input[type=checkbox]{top:0.266rem;}
+
+.wrap .h-close {overflow: hidden;background: #108ee9;font-size: 18px;color: #333;text-align: center;color: #333;margin-bottom: 10px;height: 35px;line-height: 35px;color: #fff;}
+.wrap .evList {width: 100%;overflow: hidden;margin: 0.493rem 0 1.733rem 0;background: #fff;}
+.wrap .evList .evLbox {display: block;height: auto;overflow: hidden;/*padding: 0.267rem 0 5px 0.453rem;*/border-bottom: 1px solid #d7d7d7;padding:0;}
+.wrap .evLb-man {position: relative;height: auto;overflow: hidden;}
+.wrap .evLb-man .evLb-mT {position: relative;width: 100%;overflow: hidden;/*padding: 5px 0;*/padding: 0.3rem 0;padding-left: 0.2rem;}
+.wrap .evLb-man .evLb-mT .evLb-qq {float: left;/*width: 80%;*/width: 75%;overflow: hidden;}
+.wrap .evLb-man .evLb-mT .evLb-qq .qqbox {float: left;width: 1.067rem;height: 1.067rem;border-radius: 50%;overflow: hidden;background: #ddd;}
+.wrap .evLb-man .evLb-mT .evLb-qq .qqbox img {width: 100%;height: 100%;}
+.wrap .evLb-man .evLb-mT .evLb-qq .tbox {padding-left: 10px;height: auto;overflow: hidden;font-size: 0.347rem;color: #999;}
+.wrap .evLb-man .evLb-mT .evLb-qq .tbox > p {margin: 0;padding: 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 0.32rem;color: #999;}
+.wrap .evLb-man .evLb-mT .evLb-qq .tbox .tboxS {font-size: 0.4rem;color: #333;}
+.wrap .evLb-man .evLb-mT .evLb-qq .tbox .tsala {font-size: 0.347rem;color: #999;}
+.wrap .evLb-man .evLb-mT .evLb-qq .tbox .reward{font-size: 0.32rem;color: #999;}
+.wrap .evLb-man .evLb-mT .evLb-qq .tbox .reward span{color: #ff3b30;margin-left: 0.15rem;}
+.wrap .evLb-man .evLb-mT .evLb-link {font-size: 0.4rem;color: #108ee9;float: right;}
+.wrap .evLb-man .evLb-mp {height: auto;overflow: hidden;font-size: 0.32rem;color: #666;line-height: 0.587rem;}
+.wrap .evList .evLbox .mui-checkbox.mui-left input[type=checkbox]{left: 8px;top: 50%;}
+.wrap .evList .evLbox .mui-checkbox{height: 50px;margin-top: 0;width: 0.9rem;}
+.wrap .evLb-man .evLb-mT .h-settle {position:absolute;right: 0;top: 40%;width: 25%;height: auto;overflow: hidden;}
+.wrap .evLb-man .evLb-mT .press{position:absolute;right: 0.5rem;top: 0;background-color: #14bd83;color: #fff;padding: 0 0.2rem;border-bottom-right-radius: 0.1rem;border-bottom-left-radius: 0.1rem;}
+.wrap .evLb-man .evLb-mT .h-settle .setput {width: 1.5rem;border-radius: 0px; padding: 0;margin: 0;border-top: 0;border-left: 0;border-right: 0;font-size: 0.533rem;color: #ff3b30;text-align: center; float: left;}
+.wrap .evLb-man .evLb-mT .h-settle .yuan{font-size: 0.4rem}
+
+/*已结算*/
+.wrap .main .endList > li{overflow: hidden;margin-bottom: 0.267rem;background-color: #fff;margin: 0.347rem 0.16rem;padding: 0.3rem;padding-top: 0;margin-top: 0;}
+.wrap .main .endList > li > a {/* display: block; *//* margin: 0.347rem 0.453rem; */}
+.wrap .main .endList > li .pers-list {position: relative;}
+.wrap .main .endList > li .duty-man {height: auto;overflow: hidden;background: #fff;padding-top: 0;}
+.wrap .main .endList > li .duty-man .Dman-name {width: 100%;height: auto;overflow: hidden;}
+.wrap .main .endList > li .duty-man .Dman-name .pers-img {float: left;width: 1.2rem;/* height: 1.2rem; */border-radius: 50%;overflow: hidden;line-height: 1.2rem;background: #ddd;width: 15%;}
+.wrap .main .endList > li .duty-man .Dman-name .pers-img img {width: 100%;height: 100%;}
+.wrap .main .endList > li .duty-man .Dman-name .pers-name {position: relative;padding-left: 0.267rem;height: auto;overflow: hidden;font-size: 0.427rem;color: #333;width: 65%;float:  left;}
+.wrap .main .endList > li .duty-man .Dman-name .pers-name .Dnam-tT {width: 100%;overflow: hidden;line-height: 0.693rem;position: relative;}
+.wrap .main .endList > li .duty-man .Dman-name .pers-name .Dnam-tT .DT-p1 {float: left;overflow: hidden;color: #333;}
+.wrap .main .endList > li .duty-man .Dman-name .pers-name .Dnam-tF {width: 100%;overflow: hidden;font-size: 0.267rem;color: #999;}
+.wrap .main .endList > li .duty-man .Dman-name .pers-name .Dnam-tF > p {float: left;color: #ff3b30;}
+.wrap .main .endList > li .duty-man .statu{float:  left; width: 20%;text-align:  right;color: #ff3b30;}
+.wrap .main .endList > li .record{border-bottom: 1px solid #d7d7d7;padding: 0.2rem 0;}
+.wrap .main .endList > li .record span.txt{color: #999;}
+.wrap .main .endList > li .accounts{padding-top: 0.2rem;}
+.wrap .main .endList > li .accounts span.txt{color: #999;}
+.wrap .main .endList > li .accounts span.txt span.yen{color: #ff3b30;}
+.wrap .main .endList > li .icon-arrow-right{float: right;color: #999;}
+.wrap .main .endList > li span.txt i{color: #000;font-style: normal;}
+
+/*底部*/
+.payment-bar{clear:both;overflow:hidden;width:100%;height: 50px;position:fixed;bottom:0;border-top:1px solid #e0e0e0;background:#fff;margin-top: 0;}
+.payment-bar .all-checkbox{float:left;line-height: 50px;height: 50px;width: 20%;text-align:  center;color: #666;font-size: 0.4rem;margin-top: 0;}
+.payment-bar .mui-checkbox.mui-left input[type=checkbox]{left: 8px;top: 0.366rem;}
+.payment-bar .mui-checkbox.mui-left label{margin-left: 0.4rem;}
+.payment-bar .shop-total{float:left;-webkit-box-flex:1.0;text-align: right;width: 40%;line-height:  50px;}
+.payment-bar .shop-total strong{display:block;font-size:16px;color: #108ee9;margin-right: 0.2rem;}
+.payment-bar .shop-total span{display:block;font-size:12px;}
+.payment-bar .settlement{display:inline-block;float:right;width: 40%;height: 50px;line-height:50px;text-align:center;color:#fff;font-size:16px;background:#108ee9;}
+
+/*提现*/
+.wrap .page_withdraw .wd_list{background: #fff;padding: 0 0.453rem;height:  1.067rem;line-height: 1.067rem;font-size:  0.4rem;display:  flex;justify-content:  space-between;}
+.wrap .page_withdraw .wd_list label{display: inline-block;text-align: right;width: 22%;float:  left;color: #333;}
+.wrap .page_withdraw .wd_list span,.wrap .page_withdraw .wd_list input{display: inline-block;width: 75%;border: 0;color: #666;margin-left: 0.2rem;font-size: 0.4rem;}
+.wrap .page_withdraw .wd_list.password{margin-top: 0.267rem}
+.wrap .page_withdraw .btns{text-align: center;margin: 1.667rem auto;}
+#ratification{width: 90%;background-color: #108ee9;color: #fff;border-radius: 1rem;border: 0;height: 1.067rem;font-size:  0.4rem;margin: 0 0.453rem;}
+
+/*已结算头部*/
+.wrap .head-flex-top .head-flex .list-ul{position: fixed;top: 0;height: 50px;background: #fff;display: flex;justify-content: space-around;padding: 0.2rem 0;}
+.wrap .head-flex-top .head-flex .list-ul li{position: relative;text-align:  center;width: 50%;}
+.wrap .head-flex-top .head-flex .list-ul li .num{color: #108ee9;font-size: 0.693rem}
+.wrap .head-flex-top .head-flex .list-ul li .txt{color: #666666;font-size: 0.32rem;}
+.wrap .head-flex-top .head-flex .list-ul li:last-child:before{content: '';position: absolute;left: 0;border-left: 1px solid #d7d7d7;height: 30px;top: 2px;}
+.wrap .main .endList{margin-top: 1.7rem;}
+
+/*已结算列表*/
+.list-container {
+    margin: 0.267rem;
+    margin-top: 0;
+    height: auto;
+}
+.list-container .list-title {
+    display: flex;
+    justify-content: space-between;
+    height: 0.933rem;
+    width: 100%;
+    border-bottom: 1px solid #d7d7d7;
+}
+.list-container .list-title .title-content {
+    line-height: 0.933rem;
+    font-size: 0.400rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #333333;
+}
+.list-container .list-content {
+    margin-top: 0.267rem;
+}
+.list-container .list-content .content-tit {
+    float: left;
+    margin-right: 0.213rem;
+    margin-top: 0.160rem;
+    width: 1.333rem;
+    height: 1.333rem;
+    border-radius: 0.667rem;
+    background-color: #108ee9;
+    color: #fff;
+    text-align: center;
+    line-height: 1.333rem;
+    font-size: 0.400rem;
+}
+.list-container .list-content .content-msg .content-msg1 {
+    display: flex;
+    justify-content: space-between;
+}
+.list-container .list-content .content-msg .content-msg1 .content-msg1-lf {
+    font-size: 0.293rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #999999;
+}
+.list-container .list-content .content-msg .content-msg1 .content-msg1-rt {
+    font-size: 0.400rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #ff3b30;
+}
+.list-content .content-msg .content-msg1 .content-msg1-lf > i {
+    margin-right: 5px;
+    font-size: 0.400rem;
+    color: #15bc83;
+}
+.list-container .list-content .content-msg .content-msg2 {
+    display: flex;
+    justify-content: space-between;
+}
+.list-container .list-content .content-msg .content-msg2 .content-msg2-lf {
+    font-size: 0.293rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #999999;
+}
+.list-container .list-content .content-msg .content-msg2 .content-msg2-lf .line {
+    display: inline-block;
+    height: 0.207rem;
+    margin: 0 2px;
+    border-left: 1px solid #d7d7d7;
+}
+.list-container .list-content .content-msg .content-msg2 .content-msg2-rt {
+    font-size: 0.293rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #666666;
+}
+.list-container .list-content .content-msg .content-msg3 {
+    display: flex;
+    justify-content: space-between;
+}
+.list-container .list-content .content-msg .content-msg3 .content-msg3-lf {
+    font-size: 0.293rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #999999;
+}
+.list-container .list-content .content-msg .content-msg3 .content-msg3-rt {
+    font-size: 0.293rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #999999;
+}
+.main .list .list-ul .list-li {
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 0.2rem;
+    margin: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+.main .list .list-ul .list-li .more .duty-more{
+    border: 1px solid #108ee9;
+    padding: 0.11rem 0;
+    border-radius: 1rem;
+    width: 100%;
+    text-align:  center;
+    display:  inline-block;
+}
+.main .list .list-ul .list-li:first-child{
+    margin-top: 0;
+}
+@media screen and (max-width: 330px){
+    .payment-bar .mui-checkbox.mui-left input[type=checkbox]{top: 0.51rem;}
+    .wrap .evList .evLbox .mui-checkbox{width: 1.1rem}
+}
+/*历史职位*/
+.page_history_content .tabList {position: fixed;top: 0px;width: 100%;height: 1.067rem;background-color: #fff;display: flex;justify-content: space-around;z-index: 99;}
+.page_history_content .tabList li {width: 50%; position:relative;line-height: 1.067rem;text-align: center;font-size: 0.373rem;font-weight: normal;font-stretch: normal;letter-spacing: 0px;color: #666;}
+.page_history_content .tabList li a{color: #666;}
+.page_history_content .tabList li:last-child:before{content:'';border-left: 1px solid #efeff4;position: absolute;left: 0;top: 25%;height: 0.567rem;}
+.page_history_content .tabList li.active a{border-bottom: 2px solid #108ee9;padding-bottom: 0.25rem;}
+.page_history_content .history_list_box{margin-top: 1.067rem}
+.page_history_content .main .accountsList .account-list-ul{margin-top: 1.3rem;}
+.page_history_content .main .accountsList .account-list-ul .posi-list{padding: 0.4rem 0.453rem;background-color: #fff;margin-bottom: 0.267rem;}
+.page_history_content .main .accountsList .account-list-ul .posi-list .head-flex{display: flex;justify-content: space-between;}
+.page_history_content .main .accountsList .account-list-ul .posi-list .head-flex .title{font-size: 0.4rem;color: #333;}
+.page_history_content .main .accountsList .account-list-ul .posi-list .head-flex .mui-switch{width: 60px;height: 20px;}
+.page_history_content .main .accountsList .account-list-ul .posi-list .head-flex .mui-switch .mui-switch-handle{width: 18px;height: 18px;}
+.page_history_content .main .accountsList .account-list-ul .posi-list .head-flex .mui-switch:before{top: -2px;font-size: 0.267rem;}
+.page_history_content .main .accountsList .account-list-ul .posi-list .head-flex .mui-switch.mui-active {border-color: #108ee9;background-color: #108ee9;}
+.page_history_content .main .accountsList .account-list-ul .posi-list .inform-list{border-radius:5px;background-color: #f2f5f7;overflow: hidden;height: 1.067rem;margin: 0.267rem 0;}
+.page_history_content .main .accountsList .account-list-ul .posi-list .inform-list .ul-list li{float: left;margin-left: 0.133rem;overflow: hidden;}
+.page_history_content .main .accountsList .account-list-ul .posi-list .inform-list .ul-list li.ellipsis{color: #108ee9;font-weight: bold;line-height: 40px;}
+.page_history_content .main .accountsList .account-list-ul .posi-list .inform-list .ul-list li:first-child{margin-left: 0.267rem;}
+.page_history_content .main .accountsList .account-list-ul .posi-list .inform-list .ul-list li img{vertical-align: middle;border-radius: 100%;height: 0.8rem;width: 0.8rem;margin: 0.133rem 0;}
+.page_history_content .main .accountsList .account-list-ul .edit-btns{display: flex;justify-content: space-between;}
+.page_history_content .main .accountsList .account-list-ul .edit-btns .left{height: 0.693rem;line-height: 0.893rem;overflow: hidden;position: relative;}
+.page_history_content .main .accountsList .account-list-ul .edit-btns .left .icon-shanchu2{font-size: 0.48rem;color: #666;position: absolute;top: 1px;}
+.page_history_content .main .accountsList .account-list-ul .edit-btns .left i{font-size: 0.4rem;color: #666;margin-left: 0.5rem;}
+.page_history_content .main .accountsList .account-list-ul .edit-btns .right{overflow:hidden;}
+.page_history_content .main .accountsList .account-list-ul .edit-btns .right a{width: 2.0rem;height: 0.693rem;line-height: 0.73rem;font-size: 0.32rem;display: inline-block;border-radius: 0.133rem;text-align: center;float: left;}
+.page_history_content .main .accountsList .account-list-ul .edit-btns a.share-btn{border: 1px solid #108ee9;color: #108ee9;}
+.page_history_content .main .accountsList .account-list-ul .edit-btns a.salary-btn{background-color: #108ee9;color: #fff;margin-left: 0.4rem;}
+.page_history_content .main .accountsList .account-list-ul .edit-btns .moreview{text-align:center;border: 1px solid #108ee9;height: 0.8rem;line-height:0.8rem;color: #108ee9;border-radius: 0.547rem;display: block;width: 90%;font-size: 0.32rem;margin: 0 0.45rem;}
+.page_history_content .main .accountsList .account-list-ul .posi-list .head-flex .time{font-size: 0.267rem;color: #666}

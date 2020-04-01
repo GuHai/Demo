@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 jump@Datapublic class Jump extends BaseEntity {	private static final long serialVersionUID = 1L;	public Jump() {		super();	}	    //内容    private String json;    //类型：01签到数据    private String type;}

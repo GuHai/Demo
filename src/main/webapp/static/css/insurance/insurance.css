@@ -1,0 +1,289 @@
+/******************************* 保险套餐 insurance.jsp **************************************/
+.insurance-index .index-hd .list-box{position: relative;overflow: hidden}
+.insurance-index .index-hd .list-box li{background: #fff;margin: 0.267rem 0.453rem;border-radius: 0.133rem;box-shadow: 0 0 6px 2px rgba(153,153,153,0.3);}
+.insurance-index .index-hd .list-box li .img{overflow: hidden;height: 4.533rem;border-radius: 0.133rem 0.133rem 0 0;}
+.insurance-index .index-hd .list-box li .img img{width: 100%;height: 100%;vertical-align: middle}
+.insurance-index .index-hd .list-box li .txt{overflow: hidden;padding: 0.267rem;}
+.insurance-index .index-hd .list-box li .txt .title{display: flex;justify-content: space-between;align-items: center;line-height: 1;}
+.insurance-index .index-hd .list-box li .txt .title span{font-size: 0.453rem;}
+.insurance-index .index-hd .list-box li .txt .title span.money{color: #ff3b30}
+.insurance-index .index-hd .list-box li .txt .tips{display: flex;justify-content: space-between;align-items: center;font-size: 0.32rem;line-height: 1;padding-top: 0.4rem;}
+.insurance-index .index-hd .list-box li .txt .tips span{font-size: 0.32rem;color: #999;}
+.insurance-index .index-hd .list-box li .txt .tips a{font-size: 0.293rem;width: 1.6rem;display: block;background: #108ee9;color: #fff;text-align: center;border-radius: 0.293rem;height: 0.587rem;line-height: 0.587rem;}
+.insurance-index .foot-flex{padding: 0 0.453rem;position: fixed;width: 100%;bottom: 0;height: 60px;background: #f2f5f7;display: flex;justify-content: center;align-items: center;}
+.insurance-index .foot-flex .record{color: #fff;text-align: center;background: #108EE9;font-size: 0.4rem;display: block;border-radius: 0.533rem;height: 1.067rem;line-height: 1.067rem;width: 100%;}
+
+
+
+
+/******************************* 参保记录 insured_record.jsp **************************************/
+.record-list .list-box{position: relative;overflow: hidden;}
+.record-list .list-box li{background: #fff;margin: 0.267rem 0.187rem 0 0.187rem;padding: 0.267rem;border-radius: 0.08rem;}
+.record-list .list-box li .title{display: flex;justify-content: space-between;align-items: center;line-height: 1;}
+.record-list .list-box li .title span.txt{font-size: 0.427rem;color: #333}
+.record-list .list-box li .title span.time{font-size: 0.347rem;color: #ff3b30;}
+.record-list .list-box li .title span.icon-arrow-right{color: #999;font-size: 0.293rem}
+.record-list .list-box li .ensure{font-size: 0.373rem;line-height: 1;padding: 0.267rem 0;color: #999;}
+.record-list .list-box li .ensure em{color: #108EE9}
+.record-list .list-box li .flex-box{display: flex;justify-content: space-between;align-items: center;line-height: 1;}
+.record-list .list-box li .flex-box span{color: #999;font-size: 0.373rem;line-height: 1}
+
+
+
+/******************************* insured_details.jsp **************************************/
+.insured-details .index-hd .list-box{position: relative;overflow: hidden}
+.insured-details .index-hd .list-box li{background: #fff;margin: 0.267rem 0.453rem;border-radius: 0.133rem;box-shadow: 0 0 6px 2px rgba(153,153,153,0.3);}
+.insured-details .index-hd .list-box li .img{overflow: hidden;height: 4.533rem;border-radius: 0.133rem 0.133rem 0 0;}
+.insured-details .index-hd .list-box li .img img{width: 100%;height: 100%;vertical-align: middle}
+.insured-details .index-hd .list-box li .txt{overflow: hidden;padding: 0.267rem;}
+.insured-details .index-hd .list-box li .txt .title{display: flex;justify-content: space-between;align-items: center;line-height: 1;}
+.insured-details .index-hd .list-box li .txt .title span{font-size: 0.453rem;color: #108ee9;}
+.insured-details .index-hd .list-box li .txt .title span.money{color: #ff3b30}
+.insured-details .index-hd .list-box li .txt .tips{display: flex;justify-content: space-between;align-items: center;font-size: 0.32rem;line-height: 1;padding-top: 0.4rem;}
+.insured-details .index-hd .list-box li .txt .tips span{font-size: 0.32rem;color: #333333;}
+.insured-details .index-hd .list-box li .txt .tips .details{font-size: 0.32rem;color: #999;}
+.insured-details .main-list-box{background: #fff;padding: 0.4rem 0.453rem;margin-top: 0.267rem;}
+.insured-details .main-list-box .title{font-size: 0.347rem;color: #333;position: relative;padding-left: 0.32rem;line-height: 1;}
+.insured-details .main-list-box .title:before{content: '';position: absolute;top: -1px;width: 3px;height: 0.4rem;background: #108ee9;left: 0;}
+.insured-details .main-list-box .details{padding-top: 0.373rem}
+.insured-details .main-list-box .details p{font-size: 0.32rem;color: #999;line-height: 0.48rem;position: relative;padding-left: 0.32rem;margin-bottom: 0.267rem;}
+.insured-details .main-list-box .details p:last-child{margin-bottom: 0;}
+.insured-details .main-list-box .details p:before{content: '';position: absolute;top: 8px;width: 4px;height: 4px;background: #108ee9;border-radius: 100%;left: 0;}
+.insured-details .main-list-box .details p em{color: #108EE9}
+.insured-details .business{text-align: center;padding-top: 0.373rem}
+.insured-details .business p{text-align: center;color: #999;line-height: 0.48rem;font-size: 0.32rem;}
+.insured-details .foot-flex{position: fixed;width: 100%;bottom: 0;display: flex;justify-content: center;align-items: center;}
+.insured-details .foot-flex .consult-btns{color: #333;text-align: center;background: #fff;font-size: 0.4rem;height: 1.33rem;width: 30%;display: block;padding: 0.187rem 0;}
+.insured-details .foot-flex .consult-btns p{line-height: 1;display: block;margin-top: 0.133rem;font-size: .32rem;}
+.insured-details .foot-flex .consult-btns span.iconfont{color: #108EE9;line-height: 1;font-size: 0.533rem;}
+.insured-details .foot-flex .upload-btns{color: #fff;text-align: center;background: #108EE9;font-size: 0.4rem;display: block;height: 1.33rem;width: 70%;line-height: 1.33rem;}
+
+
+/******************************* uploadList.jsp **************************************/
+.upload-list .input-list-box .input-row{background: #fff;padding: 0 0.453rem;display: flex;justify-content: space-between;align-items: center;line-height: 1;height: 44px;border-bottom: 1px solid #efeff4;}
+.upload-list .input-list-box .input-row .txt{font-size: 0.4rem;color: #333;width: 30%;}
+.upload-list .input-list-box .input-row .link{font-size: 0.32rem;color: #999999;}
+.upload-list .input-list-box .input-row .link input{margin-bottom: 0;padding: 0;width: auto;text-align: right;border: 0;font-size: 0.32rem;}
+.upload-list .input-list-box .input-row .icon-arrow-right{color: #b4b4b4;font-size: 0.293rem;margin-left: 0.267rem;}
+.upload-list .input-list-box .input-row .enterpriseName{margin-bottom: 0;padding: 0.267rem 0;border: 0;font-size: 0.32rem;}
+.upload-list .input-list-box .input-row.posiName{margin-top: 0.267rem}
+.upload-list .input-list-box .row-inform{margin-top: 0.267rem}
+.upload-list .input-list-box .row-inform h3{font-size: 0.32rem;color: #333;padding: 0 0.453rem;line-height: 1;}
+.upload-list .input-list-box .row-inform .insured-box{position: relative;overflow: hidden;margin-top: 0.267rem;}
+.upload-list .input-list-box .row-inform .insured-box li{background: #fff;padding: 0.347rem 0.453rem 0.453rem 0.453rem;border-bottom: 1px solid #EFEFF4;}
+.upload-list .input-list-box .row-inform .insured-box li .flex{display: flex;justify-content: space-between;align-items: center;line-height: 1;margin-bottom: 0.267rem;}
+.upload-list .input-list-box .row-inform .insured-box li .flex:last-child{margin-bottom: 0}
+.upload-list .input-list-box .row-inform .insured-box li .flex .name{color: #333;font-size: 0.4rem}
+.upload-list .input-list-box .row-inform .insured-box li .flex .sex{color: #999;font-size: 0.32rem;margin-left: 0.267rem;}
+.upload-list .input-list-box .row-inform .insured-box li .flex .position{color: #999;font-size: 0.32rem}
+.upload-list .input-list-box .row-inform .insured-box li .flex .identity{color: #999;font-size: 0.32rem}
+.upload-list .input-list-box .row-inform .insured-box li .flex .type{color: #108EE9;font-size: 0.32rem}
+.upload-list .input-list-box .add_inform{margin-top: 0.4rem;display: flex;justify-content: center;align-items: center;}
+.upload-list .input-list-box .add_inform a{color: #108EE9;width: 3.2rem;text-align: center;display: block;height: 0.8rem;line-height: 0.8rem;font-size: 0.347rem;border-radius: 0.4rem;border: 1px solid #108ee9;}
+.upload-list .input-list-box .add_inform a span.iconfont{font-size: 0.32rem;color: #108EE9}
+.upload-list .foot-flex{padding: 0 0.453rem;position: fixed;width: 100%;bottom: 0;height: 60px;background: #f2f5f7;display: flex;justify-content: center;align-items: center;}
+.upload-list .foot-flex .uploadbtns{color: #fff;text-align: center;background: #108EE9;font-size: 0.4rem;display: block;border-radius: 0.533rem;height: 1.067rem;line-height: 1.067rem;width: 100%;}
+.upload-list .popup-backdrop{position: fixed;z-index: 998;top: 0;left:0;right:0;bottom:0;background: rgba(0,0,0,.4);width: 100%;height: 100%;}
+.upload-list .popup-backdrop .popup-inner{position: fixed;z-index: 1001;background: #ffffff;width: 100%;height: 100%;/*overflow: scroll;*/}
+.upload-list .popup-backdrop .popup-inner .popup-head{border-bottom: 1px solid #d7d7d7;background:#fff;width:100%;display:  flex;overflow:  hidden;padding: 0.267rem 0.453rem;justify-content: space-between;align-items: center;}
+.upload-list .popup-backdrop .popup-inner .popup-head .head-lf.mui-input-row{width: 85%;}
+.upload-list .popup-backdrop .popup-inner .popup-head .head-lf .mui-icon-search{font-size: 0.5rem;position: absolute;top: 0.15rem;left: .266667rem;color: #999;}
+.upload-list .popup-backdrop .popup-inner .popup-head .head-lf .mui-input{padding-left: .800rem;width: 100%;height: .8rem;border: 0;outline: 0;font-size: .373333rem;background-color: #f2f5f7;border-radius: .4rem;margin: 0;}
+.upload-list .popup-backdrop .popup-inner .popup-head .icon{position: relative;overflow: hidden;width: 15%;text-align: right;}
+.upload-list .popup-backdrop .popup-inner .popup-head .icon a{color:#333;font-size: 0.427rem;}
+.upload-list .popup-backdrop .popup-inner .popup-list{position: relative;overflow: hidden;}
+.upload-list .popup-backdrop .popup-inner .popup-list ul{overflow: scroll;position: relative;height: 90%;}
+.upload-list .popup-backdrop .popup-inner .popup-list ul.floating{float: left;width: 30%;border-right: 1px solid #d7d7d7;height: 90%;}
+.upload-list .popup-backdrop .popup-inner .popup-list ul.drift{float: left;width: 70%;border-right: 1px solid #d7d7d7;height: 90%;}
+.upload-list .popup-backdrop .popup-inner .popup-list ul.floating li{padding: 0.187rem 0.32rem;}
+.upload-list .popup-backdrop .popup-inner .popup-list ul.drift li{padding: 0.187rem 0.453rem 0.187rem  0.32rem;}
+.upload-list .popup-backdrop .popup-inner .popup-list li{line-height: 0.48rem;padding: 0.187rem  0.32rem;}
+.upload-list .popup-backdrop .popup-inner .popup-list li a{color: #333;font-size: 0.373rem;}
+.upload-list .popup-backdrop .popup-inner .popup-list li.active{background: #f2f5f7;}
+.upload-list .popup-backdrop .popup-inner .popup-list li.active a{color: #108EE9;}
+.upload-list .popup-backdrop .popup-inner .search-list-box{overflow: scroll;position: relative;height: 90%;}
+.upload-list .popup-backdrop .popup-inner .search-list-box li{height: 1.067rem;line-height: 1.067rem;color: #333;font-size: 0.373rem;padding: 0 0.453rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.upload-list .popup-backdrop .popup-inner .mui-input-row .mui-input-clear~.mui-icon-clear{top: 0.133rem;height: auto}
+
+
+
+
+/******************************* add_insurance.jsp **************************************/
+.page_add_insurance .inform-list-box .input-row{background: #fff;padding: 0 0.453rem;display: flex;justify-content: space-between;align-items: center;line-height: 1;height: 44px;border-bottom: 1px solid #efeff4;}
+.page_add_insurance .inform-list-box .input-row .txt{font-size: 0.4rem;color: #333;width: 20%;}
+.page_add_insurance .inform-list-box .input-row .link{font-size: 0.32rem;color: #999999;}
+.page_add_insurance .inform-list-box .input-row .icon-arrow-right{color: #b4b4b4;}
+.page_add_insurance .inform-list-box .input-row input[type=text]{margin-bottom: 0;padding: 0.267rem 0;border: 0;font-size: 0.32rem;width: 80%;}
+.page_add_insurance .inform-list-box .mg-top{margin-top: 0.267rem;}
+.page_add_insurance .foot-flex{margin-top: 1.067rem;position: relative;overflow: hidden;padding: 0 0.453rem}
+.page_add_insurance .foot-flex .conserve{color: #fff;text-align: center;background: #108EE9;font-size: 0.48rem;display: block;border-radius: 0.533rem;height: 1.067rem;line-height: 1.067rem;width: 100%;}
+.page_add_insurance .mui-row-input.sex{display: flex;height: 1.067rem;line-height: 1.067rem;justify-content: space-between;align-items: center}
+.page_add_insurance .mui-row-input.sex label{position: relative;width: auto;padding-right: 0rem;margin-left: 1.067rem;}
+.page_add_insurance .mui-row-input.sex label:first-child{margin-left: 0}
+.page_add_insurance .mui-row-input.sex label input[type=radio]{position: static;width: auto;height: auto;}
+.page_add_insurance .mui-row-input.sex .mui-radio input[type=radio]:checked:before{content: '\e442';}
+.page_add_insurance .popup-backdrop{position: fixed;z-index: 998;top: 0;left:0;right:0;bottom:0;background: rgba(0,0,0,.4);width: 100%}
+.page_add_insurance .popup-backdrop .popup-inner{position: fixed;z-index: 1001;background: #ffffff;width: 100%;height: 100%;/*overflow: scroll;*/}
+.page_add_insurance .popup-backdrop .popup-inner .popup-head{border-bottom: 1px solid #d7d7d7;background:#fff;width:100%;display:  flex;overflow:  hidden;padding: 0.267rem 0.453rem;justify-content: space-between;align-items: center;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-head .head-lf.mui-input-row{width: 85%;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-head .head-lf .mui-icon-search{font-size: 0.5rem;position: absolute;top: 0.15rem;left: .266667rem;color: #999;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-head .head-lf .mui-input{padding-left: .800rem;width: 100%;height: .8rem;border: 0;outline: 0;font-size: .373333rem;background-color: #f2f5f7;border-radius: .4rem;margin: 0;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-head .icon{position: relative;overflow: hidden;width: 15%;text-align: right;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-head .icon a{color:#333;font-size: 0.427rem;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-list{position: relative;overflow: hidden;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-list ul{overflow: scroll;position: relative}
+.page_add_insurance .popup-backdrop .popup-inner .popup-list ul.floating{float: left;width: 30%;border-right: 1px solid #d7d7d7;height: 90%;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-list ul.drift{float: left;width: 70%;border-right: 1px solid #d7d7d7;height: 90%;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-list ul.floating li{padding: 0.187rem 0.32rem;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-list ul.drift li{padding: 0.187rem 0.453rem 0.187rem  0.32rem;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-list li{line-height: 0.48rem;padding: 0.187rem  0.32rem;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-list li a{color: #333;font-size: 0.373rem;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-list li.active{background: #f2f5f7;}
+.page_add_insurance .popup-backdrop .popup-inner .popup-list li.active a{color: #108EE9;}
+.page_add_insurance .popup-backdrop .popup-inner .search-list-box{overflow: scroll;position: relative;height: 90%;}
+.page_add_insurance .popup-backdrop .popup-inner .search-list-box li{height: 1.067rem;line-height: 1.067rem;color: #333;font-size: 0.373rem;padding: 0 0.453rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.page_add_insurance .popup-backdrop .popup-inner .mui-input-row .mui-input-clear~.mui-icon-clear{top: 0.133rem;height: auto}
+
+
+/******************************* prompt.jsp **************************************/
+.page_prompt .icon-box{text-align: center;overflow: hidden;padding-top: 2.67rem;}
+.page_prompt .icon-box span.icon-shijian{font-size: 100px;color: #108EE9;line-height: 1;display: block;}
+.page_prompt .icon-box .success{font-size: 0.533rem;color: #333;line-height: 0.4rem;margin-top: 0.4rem;}
+.page_prompt .icon-box .tips{font-size: 0.373rem;color: #999;line-height: 0.4rem;margin-top: 0.133rem;}
+.page_prompt .foot-flex{padding: 0 0.453rem;overflow: hidden;margin-top: 1.6rem;}
+.page_prompt .foot-flex .note{font-size: 0.373rem;color: #999;line-height: 0.4rem;text-align: center;margin-bottom: 0.267rem;}
+.page_prompt .foot-flex .reback{color: #fff;text-align: center;background: #108EE9;font-size: 0.48rem;display: block;border-radius: 0.533rem;height: 1.067rem;line-height: 1.067rem;width: 100%;}
+
+
+
+/******************************* insured_coverage_detail.jsp **************************************/
+.insured_coverage_detail .list-box{position: relative;overflow: hidden;}
+.insured_coverage_detail .list-box li{background: #fff;padding: 0.267rem 0.453rem;border-radius: 0.08rem;}
+.insured_coverage_detail .list-box li .title{display: flex;justify-content: space-between;align-items: center;line-height: 0.4rem;}
+.insured_coverage_detail .list-box li .title span.txt{font-size: 0.453rem;color: #333;}
+.insured_coverage_detail .list-box li .title span.time{font-size: 0.347rem;color: #ff3b30;}
+.insured_coverage_detail .list-box li .title span.icon-arrow-right{color: #999;font-size: 0.293rem}
+.insured_coverage_detail .list-box li .flex-box .ensure{font-size: 0.373rem;line-height: 1;color: #333;}
+.insured_coverage_detail .list-box li .flex-box .ensure em{color: #108EE9}
+.insured_coverage_detail .list-box li .flex-box{display: flex;justify-content: space-between;align-items: center;line-height: 0.4rem;margin-top: 0.4rem;}
+.insured_coverage_detail .list-box li .flex-box span{color: #999;font-size: 0.373rem;line-height: 0.4rem;}
+.insured_coverage_detail .insured-inform{margin-top: 0.267rem}
+.insured_coverage_detail .insured-inform .title{display: flex;justify-content: space-between;align-items: center;padding: 0 0.453rem;}
+.insured_coverage_detail .insured-inform .title h3{font-size: 0.32rem;color: #333;}
+.insured_coverage_detail .insured-inform .title .num{color: #333;font-size: 0.32rem}
+.insured_coverage_detail .insured-inform .insured-box{position: relative;overflow: hidden;margin-top: 0.267rem;}
+.insured_coverage_detail .insured-inform .insured-box li{background: #fff;padding: 0.347rem 0.453rem 0.453rem 0.453rem;border-bottom: 1px solid #EFEFF4;}
+.insured_coverage_detail .insured-inform .insured-box li:last-child{border-bottom: 0}
+.insured_coverage_detail .insured-inform .insured-box li .flex{display: flex;justify-content: space-between;align-items: center;line-height: 1;margin-bottom: 0.267rem;}
+.insured_coverage_detail .insured-inform .insured-box li .flex:last-child{margin-bottom: 0}
+.insured_coverage_detail .insured-inform .insured-box li .flex .name{color: #333;font-size: 0.4rem}
+.insured_coverage_detail .insured-inform .insured-box li .flex .sex{color: #999;font-size: 0.32rem;margin-left: 0.267rem;}
+.insured_coverage_detail .insured-inform .insured-box li .flex .position{color: #999;font-size: 0.32rem}
+.insured_coverage_detail .insured-inform .insured-box li .flex .identity{color: #999;font-size: 0.32rem}
+.insured_coverage_detail .insured-inform .insured-box li .flex .type{color: #108EE9;font-size: 0.32rem}
+.insured_coverage_detail .foot-flex{padding: 0 0.453rem;position: fixed;width: 100%;bottom: 0;height: 60px;background: #f2f5f7;display: flex;justify-content: center;align-items: center;}
+.insured_coverage_detail .foot-flex .rules{color: #fff;text-align: center;background: #108EE9;font-size: 0.4rem;display: block;border-radius: 0.533rem;height: 1.067rem;line-height: 1.067rem;width: 100%;}
+
+
+
+
+
+/******************************* insured_coverage_detail.jsp **************************************/
+.choose_insured .head{position:fixed;z-index: 990;top:0;background:#fff;width:100%;display:  flex;overflow:  hidden;padding: 0.267rem 0.453rem;justify-content: space-between;align-items: center;}
+.choose_insured .head .head-lf.mui-input-row{width: 78%;}
+.choose_insured .head .head-lf .mui-icon-search{font-size: 0.5rem;position: absolute;top: 0.15rem;left: .266667rem;color: #999;}
+.choose_insured .head .head-lf .mui-input-clear{padding-left: .800rem;width: 100%;height: .8rem;border: 0;outline: 0;font-size: .373333rem;background-color: #f2f5f7;border-radius: .4rem;margin: 0;}
+.choose_insured .head .icon{position: relative;overflow: hidden;width: 22%;}
+.choose_insured .head .icon span{color: #108EE9;font-size: 0.533rem;margin-left: 0.4rem;line-height: 1}
+.choose_insured .head .icon span.icon-erweima{}
+.choose_insured .head .icon span.icon--jia{}
+.choose_insured .head .mui-input-row .mui-input-clear~.mui-icon-clear{top: 0.133rem;height: auto}
+.choose_insured .head .searchbtns{font-size: 0.4rem;color: #333;margin-left: 0.267rem}
+.choose_insured .popup-backdrop{display:none;position: fixed;z-index: 998;top: 0;right: 0;bottom: 0;left: 0;-webkit-transition-duration: 400ms;transition-duration: 400ms;background: rgba(0,0,0,.4);}
+.choose_insured .popup-backdrop .popup-inner{background: #fff;position: absolute;top: 45%;left: 50%;z-index:999;width: 6.667rem;height: auto;text-align: center;border-radius: 0.133rem;padding: 0.267rem 0 0.427rem 0;-webkit-transition-duration: 400ms;transition-duration: 400ms;-webkit-transform: translate3d(-50%,-50%,0) scale(1);transform: translate3d(-50%,-50%,0) scale(1);}
+.choose_insured .popup-backdrop .popup-inner .portrait{}
+.choose_insured .popup-backdrop .popup-inner .portrait .pohto{width: 1.33rem;height: 1.33rem;overflow: hidden;border-radius: 100%;text-align: center;margin: 0 auto;}
+.choose_insured .popup-backdrop .popup-inner .portrait .pohto img{width: 100%;height: 100%;vertical-align: middle}
+.choose_insured .popup-backdrop .popup-inner .portrait .name{font-size: 0.4rem;color: #333333;line-height: 0.4rem;margin-top: 0.08rem;}
+.choose_insured .popup-backdrop .popup-inner .popup-title{font-size: 0.427rem;color: #333333;line-height: 0.4rem;margin-top: 0.267rem;}
+.choose_insured .popup-backdrop .popup-inner .code{height: 3.467rem;width: 3.467rem;overflow: hidden;margin: 0.453rem auto;/* padding: 0.453rem 0; */}
+.choose_insured .popup-backdrop .popup-inner .code img{width: 100%;height: 100%;vertical-align: middle}
+.choose_insured .popup-backdrop .popup-inner .popup-txt{font-size: 0.293rem;color: #999;line-height: 0.48rem;}
+.choose_insured .popup-backdrop .popup-inner .close .icon-guanbi{position: absolute;top: 0.267rem;left: 0.267rem;color: #333;font-size: 0.32rem;}
+.choose_insured .popup-backdrop .down-box{position:fixed;bottom: 20.8%;left: 45%;text-align: center;z-index: 11;}
+.choose_insured .popup-backdrop .down-box .line{position: relative}
+.choose_insured .popup-backdrop .down-box .line:after{content: '';position: absolute;top: -100px;left: 47%;width: 1px;height: 100px;background: #ffff;z-index: 11;}
+.choose_insured .popup-backdrop .down-box .icon-shanchu1{color: #fff;font-size: 0.6rem;}
+.choose_insured .list-box{margin-top: 1.6rem}
+.choose_insured .list-box .insured-inform{margin-bottom: 0.267rem}
+.choose_insured .list-box .insured-inform .title{display: flex;justify-content: space-between;align-items: center;padding: 0 0.453rem;}
+.choose_insured .list-box .insured-inform .title h3{font-size: 0.32rem;color: #333;}
+.choose_insured .list-box .insured-inform .title .num{color: #333;font-size: 0.32rem}
+.choose_insured .list-box .insured-inform .insured-box{position: relative;overflow: hidden;margin-top: 0.267rem;}
+.choose_insured .list-box .insured-inform .insured-box li{background: #fff;padding: 0.347rem 0.453rem 0.453rem 0.453rem;border-bottom: 1px solid #EFEFF4;display: flex;align-items: center;}
+.choose_insured .list-box .insured-inform .insured-box li:last-child{border-bottom: 0}
+.choose_insured .list-box .insured-inform .insured-box li .flex{display: flex;justify-content: space-between;align-items: center;line-height: 1;margin-bottom: 0.267rem;}
+.choose_insured .list-box .insured-inform .insured-box li .flex:last-child{margin-bottom: 0}
+.choose_insured .list-box .insured-inform .insured-box li .flex .name{color: #333;font-size: 0.4rem}
+.choose_insured .list-box .insured-inform .insured-box li .flex .sex{color: #999;font-size: 0.32rem;margin-left: 0.267rem;}
+.choose_insured .list-box .insured-inform .insured-box li .flex .edit{color: #108EE9;font-size: 0.347rem;margin-left: 0.267rem;}
+.choose_insured .list-box .insured-inform .insured-box li .flex .position{color: #999;font-size: 0.32rem}
+.choose_insured .list-box .insured-inform .insured-box li .flex .identity{color: #999;font-size: 0.32rem}
+.choose_insured .list-box .insured-inform .insured-box li .flex .type{color: #108EE9;font-size: 0.32rem}
+.choose_insured .list-box .insured-inform .insured-box li .flex .type.refuse{color: #ff3b30;}
+.choose_insured .list-box .insured-inform .insured-box li .pull-left{overflow: hidden;width: 10%;}
+.choose_insured .list-box .insured-inform .insured-box li .pull-left input{position: static}
+.choose_insured .list-box .insured-inform .insured-box li .pull-right{overflow: hidden;width: 90%;}
+.choose_insured .foot-flex{padding: 0 0.453rem;position: fixed;width: 100%;bottom: 0;height: 60px;background: #f2f5f7;display: flex;justify-content: center;align-items: center;}
+.choose_insured .foot-flex .rules{color: #fff;text-align: center;background: #108EE9;font-size: 0.4rem;display: block;border-radius: 0.533rem;height: 1.067rem;line-height: 1.067rem;width: 100%;}
+
+
+
+/******************************* claimRules.jsp **************************************/
+.page-claim-rules .rules-list{padding-top: 0.267rem;overflow: hidden;}
+.page-claim-rules .rules-list .main-content{background: #fff;overflow: hidden;position: relative;margin: 0 0.32rem;border-radius: 0.133rem;box-shadow: 0 0 6px 0 rgba(153,153,153,0.3);margin-top: 0.267rem;padding-top: 0.267rem;}
+.page-claim-rules .rules-list .main-content:first-child{margin-top: 0}
+.page-claim-rules .rules-list .main-content.process .title{width: 3.52rem;}
+.page-claim-rules .rules-list .main-content.prepareData .title{width: 4.267rem;}
+.page-claim-rules .rules-list .main-content.treatment .title{width: 5.6rem;}
+.page-claim-rules .rules-list .main-content.injury .title{width: 8.267rem;}
+.page-claim-rules .rules-list .main-content.death .title{width: 3.893rem;}
+.page-claim-rules .rules-list .main-content .title{/*background: #108ee9;*/width: 1.867rem;height: 0.8rem;position: relative;}
+.page-claim-rules .rules-list .main-content .title:before{content: '';background:url("../../images/rectangle.png") no-repeat;position: absolute;left: 0;top: 0;z-index:1;width: 15px;height: 0.8rem;background-size: 100% 100%;overflow: hidden;/* display: flex; *//* align-items: center; */}
+.page-claim-rules .rules-list .main-content .title:after{content: '';background:url("../../images/triangle.png") no-repeat;position: absolute;left: 3.52rem;top: 0;z-index:1;width: 10px;height: 0.8rem;background-size: 100% 100%;overflow: hidden;}
+
+.page-claim-rules .rules-list .main-content.process .title:before{width: 3.52rem;}
+.page-claim-rules .rules-list .main-content.prepareData .title:before{width: 4.267rem;}
+.page-claim-rules .rules-list .main-content.treatment .title:before{width: 5.6rem;}
+.page-claim-rules .rules-list .main-content.injury .title:before{width: 8.267rem;}
+.page-claim-rules .rules-list .main-content.death .title:before{width: 3.893rem;}
+.page-claim-rules .rules-list .main-content.deformity .title:before{width: 1.867rem;}
+
+.page-claim-rules .rules-list .main-content.process .title:after{left: 3.52rem;}
+.page-claim-rules .rules-list .main-content.prepareData .title:after{left: 4.267rem;}
+.page-claim-rules .rules-list .main-content.treatment .title:after{left: 5.6rem;}
+.page-claim-rules .rules-list .main-content.injury .title:after{left: 8.267rem;}
+.page-claim-rules .rules-list .main-content.death .title:after{left: 3.893rem;}
+.page-claim-rules .rules-list .main-content.deformity .title:after{left: 1.867rem;}
+
+
+.page-claim-rules .rules-list .main-content .title h3{font-size: 0.4rem;color: #ffffff;text-align: center;line-height: 0.8rem;position: relative;z-index: 1;}
+.page-claim-rules .rules-list .main-content .details{overflow: hidden;position: relative;margin-top: 0.267rem;padding: 0 0.4rem;}
+.page-claim-rules .rules-list .main-content .details{overflow: hidden;position: relative;margin-top: 0.267rem;padding: 0 0.4rem;padding-bottom: 0.427rem;}
+.page-claim-rules .rules-list .main-content .details p{font-size: 0.32rem;color: #999999;line-height: 0.48rem;padding-left: 0.32rem;position: relative;}
+.page-claim-rules .rules-list .main-content .details p:before{content: '';position: absolute;top: 8px;width: 4px;height: 4px;background: #108ee9;border-radius: 100%;left: 0;}
+.page-claim-rules .rules-list .main-content .details img{width: 100%;vertical-align: middle;}
+.page-claim-rules .rules-list .main-content .details .table-responsive {background-color:#f2f5f7;width: 100%;margin-top: 0.267rem;overflow-y: hidden;border: 1px solid #ddd;}
+.page-claim-rules .rules-list .main-content .details .table-responsive .table {width: 100%;max-width: 100%;}
+.page-claim-rules .rules-list .main-content .details .table-responsive .table tr{text-align: center;font-size: 0.293rem;color: #666666;border-bottom: 1px solid #d7d7d7;}
+.page-claim-rules .rules-list .main-content .details .table-responsive .table th{text-align: center;border-right: 1px solid #d7d7d7;font-style: normal;font-weight: normal;padding: 0.107rem 0;font-size: 0.293rem;}
+.page-claim-rules .rules-list .main-content .details .table-responsive .table td{text-align: center;border-right: 1px solid #d7d7d7;line-height: 0.48rem;padding: 0.107rem 0;font-size: 0.293rem;}
+.page-claim-rules .rules-list .main-content .details .table-responsive .table th:nth-child(2n+2){border-right: 0}
+.page-claim-rules .rules-list .main-content .details .table-responsive .table td:nth-child(2n+2){border-right: 0}
+.page-claim-rules .rules-list .main-content .details .table-responsive .table tbody tr:last-child{border-bottom: 0}
+.page-claim-rules .rules-list .main-content .details .table-responsive .table .left{width: 40%;}
+.page-claim-rules .foot-flex{padding: 0 0.453rem;overflow: hidden;position: fixed;width: 100%;bottom: 0;left: 0;z-index:999;height: 60px;display: flex;align-items: center;justify-content: center;background: #dceafa;}
+.page-claim-rules .foot-flex .reback{color: #fff;text-align: center;background: #108EE9;font-size: 0.48rem;display: block;border-radius: 0.533rem;height: 1.067rem;line-height: 1.067rem;width: 100%;}
+
+
+

@@ -1,0 +1,1 @@
+package com.yskj.models;import lombok.Data;//表名称 follow@Datapublic class Follow extends BaseEntity {	private static final long serialVersionUID = 1L;	public Follow() {		super();	}	    private String openID;	private Boolean zw;	private Integer zwtimes;}

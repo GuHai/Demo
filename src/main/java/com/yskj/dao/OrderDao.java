@@ -1,0 +1,1 @@
+package com.yskj.dao;import java.util.HashMap;import java.util.List;import com.yskj.models.PageParam;public interface OrderDao extends Dao {	List<HashMap> queryHashMap(PageParam pageParam);}

@@ -1,0 +1,234 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrap {
+  background-color: #fff;
+}
+.wrap .summary {
+  height: 2.213rem;
+  padding: 0.560rem 0.453rem;
+  border-bottom: 1px solid #f2f5f7;
+}
+.wrap .summary .headerImg {
+  width: 1.267rem;
+  height: 1.267rem;
+  float: left;
+  margin-right: 0.267rem;
+  border-radius: 100%;
+}
+.wrap .summary .contentBox > p:first-child {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #414141;
+}
+.wrap .summary .contentBox > p:first-child > span {
+  margin-left: 0.533rem;
+  font-size: 0.347rem;
+  color: #666666;
+}
+.wrap .summary .contentBox > p span .ver-line {
+  display: inline-block;
+  height: 0.267rem;
+  border-left: 1px solid #999;
+  margin: 0 5px;
+}
+.wrap .summary .contentBox > p:last-child {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+  margin-top: 0.15rem;
+}
+.wrap .summary .contentBox > p:last-child > span {
+  margin-left: 1.067rem;
+}
+.wrap .summary .contentBox > p span.mar-left {
+  margin-left: 0;
+  font-size: 0.373rem;
+}
+.wrap .details {
+  padding: 0px 0.453rem;
+  background-color: #fff;
+}
+.wrap .details > dt {
+  margin-top: 0.267rem;
+}
+.wrap .details > dt > h1 {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .details > dd {
+  margin: 0.267rem 0;
+  padding-left: 0.267rem;
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+  word-wrap: break-word;
+}
+.wrap .details > dd .school {
+  border-bottom: 1px solid #f2f5f7;
+  padding-bottom: 0.267rem;
+}
+.wrap .details > dd .school > h2 {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .details > dd .school .discipline {
+  margin-top: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .details > dd .school .discipline > p {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .details > dd .school .discipline > p .line {
+  display: inline-block;
+  height: 0.213rem;
+  margin: 0px 5px;
+  border-left: 1px solid #999;
+}
+.wrap .details > dd .school .specialty {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.400rem;
+  letter-spacing: 0px;
+  color: #999999;
+  word-wrap: break-word;
+}
+.wrap .details > dd .school + .school {
+  margin-top: 0.267rem;
+}
+.wrap .details > dd .work {
+  /*border-bottom: 1px solid #f2f5f7;*/
+  padding-bottom: 0.267rem;
+}
+.wrap .details > dd .work > h2 {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .details > dd .work .post {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .details > dd .work .post > p {
+  font-size: 0.293rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .details > dd .work .post > p .line {
+  display: inline-block;
+  height: 0.213rem;
+  margin: 0px 5px;
+  border-left: 1px solid #999;
+}
+.wrap .details > dd .work .work_msg {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.400rem;
+  letter-spacing: 0px;
+  color: #999999;
+  word-wrap: break-word;
+}
+.wrap .details > dd .certificate {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #d7d7d7;
+  padding-top: 10px;
+}
+.wrap .details > dd .certificate:first-child{
+    border-top:0;
+}
+.wrap .details > dd .certificate > p:first-child {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .details > dd .certificate > p:last-child {
+  font-size: 0.267rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .details > dd .imgBox {
+  margin: 0.267rem auto;
+  /*width: 8.000rem;*/
+  /*height: 4.800rem;*/
+}
+.wrap .details > dd .imgBox > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btnBox {
+  padding: 0 17px;
+  width: 100%;
+  height: 50px;
+}
+.btnBox > .btn_back {
+  display: block;
+  width: auto;
+  height: 35px;
+  background-color: #108ee9;
+  border-radius: 17px;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+/*兼职详情打招呼*/
+.mui-hbutton.mui-hbutTwo.rx_fixed{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+.mui-hbutton.mui-hbutTwo.rx_fixed > a {
+  width: 100%;
+  height: 0.933rem;
+  background: #108ee9;
+  border-radius: 0.667rem;
+  margin: 0.4rem 0.453rem;
+  font-size: 0.373rem;
+  color: #fff;
+  line-height: 0.933rem;
+}
+
+.mui-hbutton.mui-hbutTwo.rx_fixed > a.mui-hbut-on {
+  background: #f2f5f7;
+  border: 1px solid #108ee9;
+  color: #108ee9;
+}

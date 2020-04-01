@@ -1,0 +1,194 @@
+* {
+  padding: 0;
+  margin: 0px;
+}
+body,
+html {
+  background-color: #f2f5f7;
+}
+.wrap .main {
+  /*background-color: #fff;*/
+}
+.wrap .main .selectList > li {
+  height: 1.200rem;
+  border-bottom: 1px solid #f2f5f7;
+  padding: 0 0.453rem;
+  line-height: 1.200rem;
+  background: #fff;
+}
+.wrap .main .selectList > li.title{
+  background: none;
+  border: 0;
+  line-height: 1;
+  height: auto;
+  padding: 0.267rem 0.453rem;
+}
+.wrap .main .selectList > li.title h3{
+  color: #999;
+  font-size: 0.32rem;
+}
+.wrap .main .selectList > li > a {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .main .selectList > li > a > span {
+  font-size: 0.400rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.wrap .main .selectList > li > a > span:last-child {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.wrap .main .selectList .info_avatar .info_avatar_img > img {
+  width: 0.933rem;
+  height: 0.933rem;
+  border-radius: 100%;
+}
+.wrap .main .selectList .info_avatar .info_avatar_img > i {
+  font-size: 0.347rem;
+  color: #b4b4b4;
+}
+.wrap .main .selectList .info_gender .info_gender_radio {
+  width: 2.400rem;
+  height: 1.200rem;
+}
+.wrap .main .selectList .info_gender .info_gender_radio .radios {
+  display: inline-block;
+  width: 1.147rem;
+  height: 1.200rem;
+  line-height: 1.200rem;
+}
+.wrap .main .selectList .info_gender .info_gender_radio .radios > span {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+  margin-left: 0.667rem;
+  width: 100%;
+  display: inline-block;
+}
+.wrap .main .selectList .info_gender .info_gender_radio .radios > input[type=radio] {
+  width: 0.400rem;
+  height: 0.400rem;
+  left: 0;
+  top: 0.347rem;
+}
+.wrap .main .selectList .info_gender .info_gender_radio .radios > input[type=radio]:before {
+  font-size: 0.533rem;
+}
+.wrap .main .selectList .info_height .info_height_input > input {
+  width: 3.533rem;
+  font-size: 0.320rem;
+  border: none;
+  text-align: right;
+  height: 1rem;
+  margin-bottom: 0;
+}
+.wrap .main .selectList .info_height .info_height_input ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .selectList .info_weight .info_weight_input > input,.info_name_modify > input {
+  width: 4.933rem;
+  font-size: 0.320rem;
+  border: none;
+  text-align: right;
+  height: 1rem;
+  margin-bottom: 0;
+}
+.wrap .main .selectList .info_weight .info_weight_input ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .selectList .info_marriage .info_marriage_sel > i,.wrap .main .selectList .select_education .education1 > i {
+  font-size: 0.347rem;
+  line-height: 1rem;
+  color: #b4b4b4;
+}
+.wrap .main .selectList .info_email .info_email_input > input {
+  width: 3.467rem;
+  font-size: 0.320rem;
+  border: none;
+  height: 1.147rem;
+  padding: 0;
+  text-align: right;
+  margin-bottom: 0;
+}
+.wrap .main .selectList .info_email .info_email_input ::placeholder {
+  font-size: 0.320rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #999999;
+}
+.wrap .main .selectList .info_address span:last-child > i {
+  font-size: 0.347rem;
+  line-height: 1.200rem;
+  color: #b4b4b4;
+}
+.wrap .save {
+  margin: 0 0.453rem;
+  height: 1.067rem;
+  background-color: #108EE9;
+  color: #fff;
+  line-height: 1.067rem;
+  text-align: center;
+  font-size: 0.400rem;
+  border-radius: 0.533rem;
+  width: 91%;
+  /*position: absolute;*/
+  /*bottom: 10px;*/
+  margin-top: 1.5rem;
+}
+.mui-poppicker {
+  background-color: #fff;
+}
+.mui-poppicker .mui-poppicker-header {
+  border-bottom: 1px solid #f2f5f7;
+}
+.mui-poppicker .mui-poppicker-header .mui-btn {
+  border: none;
+  color: #108ee9;
+  font-size: 0.400rem;
+}
+.mui-poppicker .mui-poppicker-header .mui-btn-blue {
+  background-color: #fff;
+}
+.mui-poppicker .mui-poppicker-body {
+  border-top: none;
+}
+.mui-poppicker .mui-poppicker-body .mui-picker {
+  background-color: #fff;
+}
+.mui-poppicker .mui-poppicker-body .mui-picker .visible {
+  font-size: 0.427rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #666666;
+}
+.mui-poppicker .mui-poppicker-body .mui-picker .highlight {
+  font-size: 0.480rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #333333;
+}
+@media screen and (max-width: 330px){
+  .wrap .main .selectList .info_gender .info_gender_radio .radios > input[type=radio]{
+    top: 0.247rem;
+  }
+}
